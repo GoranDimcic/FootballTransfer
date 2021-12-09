@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FootballTransfer.ViewPage;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace FootballTransfer.Login
         public LoginManager()
         {
             InitializeComponent();
+        }
+
+        private void btnLoginAsManager_Click(object sender, EventArgs e)
+        {
+            ManagerView form = new ManagerView();
+            form.ShowDialog();
         }
     }
 }

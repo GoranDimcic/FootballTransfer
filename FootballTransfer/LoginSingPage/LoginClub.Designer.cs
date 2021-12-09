@@ -46,6 +46,7 @@ namespace FootballTransfer.Login
             this.btnLoginAsPlayer.TabIndex = 11;
             this.btnLoginAsPlayer.Text = "Login";
             this.btnLoginAsPlayer.UseVisualStyleBackColor = true;
+            this.btnLoginAsPlayer.Click += new System.EventHandler(this.btnLoginAsPlayer_Click);
             // 
             // lblPassword
             // 

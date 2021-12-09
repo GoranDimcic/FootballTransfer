@@ -90,6 +90,24 @@
     <Compile Include="LoginSingPage\SingUpPlayer.Designer.cs">
       <DependentUpon>SingUpPlayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewPage\ClubView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPage\ClubView.Designer.cs">
+      <DependentUpon>ClubView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPage\ManagerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPage\ManagerView.Designer.cs">
+      <DependentUpon>ManagerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPage\PlayerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPage\PlayerView.Designer.cs">
+      <DependentUpon>PlayerView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LoginSingPage\LoginClub.resx">
       <DependentUpon>LoginClub.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +138,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ViewPage\ClubView.resx">
+      <DependentUpon>ClubView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPage\ManagerView.resx">
+      <DependentUpon>ManagerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPage\PlayerView.resx">
+      <DependentUpon>PlayerView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -135,7 +162,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
-    <Folder Include="ViewPage\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

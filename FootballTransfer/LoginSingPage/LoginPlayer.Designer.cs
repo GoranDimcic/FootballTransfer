@@ -93,6 +93,7 @@ namespace FootballTransfer
             this.btnLoginAsPlayer.TabIndex = 5;
             this.btnLoginAsPlayer.Text = "Login";
             this.btnLoginAsPlayer.UseVisualStyleBackColor = true;
+            this.btnLoginAsPlayer.Click += new System.EventHandler(this.btnLoginAsPlayer_Click);
             // 
             // LoginPlayer
             // 
