@@ -112,6 +112,7 @@ namespace FootballTransfer
             this.btnRegistryPlayer.Text = "Sign up";
             this.btnRegistryPlayer.UseVisualStyleBackColor = true;
             this.btnRegistryPlayer.Visible = false;
+            this.btnRegistryPlayer.Click += new System.EventHandler(this.btnRegistryPlayer_Click);
             // 
             // lblPlayer
             // 
@@ -230,7 +231,7 @@ namespace FootballTransfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(734, 461);
             this.Controls.Add(this.lblClub);
             this.Controls.Add(this.btnX3);
             this.Controls.Add(this.btnRegistryClub);

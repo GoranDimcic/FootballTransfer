@@ -73,7 +73,14 @@ namespace FootballTransfer
 
         private void btnLoginPlayer_Click(object sender, EventArgs e)
         {
+            LoginPlayer form = new LoginPlayer();
+            form.ShowDialog();
+        }
 
+        private void btnRegistryPlayer_Click(object sender, EventArgs e)
+        {
+            SingUpPlayer form = new SingUpPlayer();
+            form.ShowDialog();
         }
     }
 }
