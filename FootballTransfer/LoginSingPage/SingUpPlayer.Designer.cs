@@ -33,16 +33,16 @@ namespace FootballTransfer
             this.lblEmail = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSurnamePlayerSign = new System.Windows.Forms.TextBox();
+            this.txtPasswordPlayerSign = new System.Windows.Forms.TextBox();
+            this.txtNamePlayerSign = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtEmailPlayerSign = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRegistryAsPlayer = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCountryPlayerSign = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtPositionPlayerSign = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblLoginPlayer
@@ -85,44 +85,30 @@ namespace FootballTransfer
             this.label2.TabIndex = 6;
             this.label2.Text = "Position";
             // 
-            // textBox1
+            // txtSurnamePlayerSign
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(220, 250);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 29);
-            this.textBox1.TabIndex = 8;
+            this.txtSurnamePlayerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSurnamePlayerSign.Location = new System.Drawing.Point(220, 250);
+            this.txtSurnamePlayerSign.Name = "txtSurnamePlayerSign";
+            this.txtSurnamePlayerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtSurnamePlayerSign.TabIndex = 8;
             // 
-            // txtEmail
+            // txtPasswordPlayerSign
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(220, 150);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(150, 29);
-            this.txtEmail.TabIndex = 7;
-            this.txtEmail.UseSystemPasswordChar = true;
+            this.txtPasswordPlayerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasswordPlayerSign.Location = new System.Drawing.Point(220, 150);
+            this.txtPasswordPlayerSign.Name = "txtPasswordPlayerSign";
+            this.txtPasswordPlayerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtPasswordPlayerSign.TabIndex = 7;
+            this.txtPasswordPlayerSign.UseSystemPasswordChar = true;
             // 
-            // comboBox1
+            // txtNamePlayerSign
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Goalkeeper",
-            "Defense",
-            "Center",
-            "Attack"});
-            this.comboBox1.Location = new System.Drawing.Point(220, 350);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 32);
-            this.comboBox1.TabIndex = 11;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(220, 200);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 29);
-            this.textBox2.TabIndex = 13;
+            this.txtNamePlayerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamePlayerSign.Location = new System.Drawing.Point(220, 200);
+            this.txtNamePlayerSign.Name = "txtNamePlayerSign";
+            this.txtNamePlayerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtNamePlayerSign.TabIndex = 13;
             // 
             // label3
             // 
@@ -134,13 +120,13 @@ namespace FootballTransfer
             this.label3.TabIndex = 12;
             this.label3.Text = "Name";
             // 
-            // textBox3
+            // txtEmailPlayerSign
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(220, 100);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 29);
-            this.textBox3.TabIndex = 15;
+            this.txtEmailPlayerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailPlayerSign.Location = new System.Drawing.Point(220, 100);
+            this.txtEmailPlayerSign.Name = "txtEmailPlayerSign";
+            this.txtEmailPlayerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtEmailPlayerSign.TabIndex = 15;
             // 
             // label4
             // 
@@ -161,14 +147,15 @@ namespace FootballTransfer
             this.btnRegistryAsPlayer.TabIndex = 16;
             this.btnRegistryAsPlayer.Text = "Sign up";
             this.btnRegistryAsPlayer.UseVisualStyleBackColor = true;
+            this.btnRegistryAsPlayer.Click += new System.EventHandler(this.btnRegistryAsPlayer_Click);
             // 
-            // textBox4
+            // txtCountryPlayerSign
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(220, 300);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(150, 29);
-            this.textBox4.TabIndex = 17;
+            this.txtCountryPlayerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCountryPlayerSign.Location = new System.Drawing.Point(220, 300);
+            this.txtCountryPlayerSign.Name = "txtCountryPlayerSign";
+            this.txtCountryPlayerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtCountryPlayerSign.TabIndex = 17;
             // 
             // label5
             // 
@@ -180,21 +167,29 @@ namespace FootballTransfer
             this.label5.TabIndex = 18;
             this.label5.Text = "Country";
             // 
+            // txtPositionPlayerSign
+            // 
+            this.txtPositionPlayerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPositionPlayerSign.Location = new System.Drawing.Point(220, 350);
+            this.txtPositionPlayerSign.Name = "txtPositionPlayerSign";
+            this.txtPositionPlayerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtPositionPlayerSign.TabIndex = 19;
+            // 
             // SingUpPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 511);
+            this.Controls.Add(this.txtPositionPlayerSign);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtCountryPlayerSign);
             this.Controls.Add(this.btnRegistryAsPlayer);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtEmailPlayerSign);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtNamePlayerSign);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtSurnamePlayerSign);
+            this.Controls.Add(this.txtPasswordPlayerSign);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblEmail);
@@ -212,15 +207,15 @@ namespace FootballTransfer
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSurnamePlayerSign;
+        private System.Windows.Forms.TextBox txtPasswordPlayerSign;
+        private System.Windows.Forms.TextBox txtNamePlayerSign;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtEmailPlayerSign;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnRegistryAsPlayer;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCountryPlayerSign;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtPositionPlayerSign;
     }
 }

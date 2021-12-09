@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FootballTransfer.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,26 @@ namespace FootballTransfer.ViewPage
         public PlayerView()
         {
             InitializeComponent();
+            this.fillManagerOffer();
+            this.fillClubOffer();
+        }
+
+        public void fillClubOffer()
+        {
+            listViewClubOffer.View = View.Details;
+            listViewClubOffer.FullRowSelect = true;
+            listViewClubOffer.Columns.Add("Club", 120);
+            listViewClubOffer.Columns.Add("Offer", 120);
+            listViewClubOffer.Columns.Add("Contract date", 120);
+        }
+
+        public void fillManagerOffer()
+        {
+            listViewManagerOffer.View = View.Details;
+            listViewManagerOffer.FullRowSelect = true;
+            listViewManagerOffer.Columns.Add("Name", 120);
+            listViewManagerOffer.Columns.Add("Surname", 120);
+            listViewManagerOffer.Columns.Add("Contract date", 120);
         }
     }
 }
