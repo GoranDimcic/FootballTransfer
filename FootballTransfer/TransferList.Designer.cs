@@ -1,7 +1,7 @@
 ﻿
 namespace FootballTransfer
 {
-    partial class Form1
+    partial class TransferList
     {
         /// <summary>
         /// Required designer variable.
@@ -227,7 +227,7 @@ namespace FootballTransfer
             this.lblClub.Text = "Club";
             this.lblClub.Visible = false;
             // 
-            // Form1
+            // TransferList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -248,8 +248,8 @@ namespace FootballTransfer
             this.Controls.Add(this.btnManager);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnPlayer);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "TransferList";
+            this.Text = "TransferList";
             this.ResumeLayout(false);
             this.PerformLayout();
 

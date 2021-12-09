@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FootballTransfer
 {
-    public partial class Form1 : Form
+    public partial class TransferList : Form
     {
-        public Form1()
+        public TransferList()
         {
             InitializeComponent();
         }

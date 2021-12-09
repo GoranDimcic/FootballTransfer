@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="TransferList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="TransferList.Designer.cs">
+      <DependentUpon>TransferList.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\LoginPlayer.cs">
       <SubType>Form</SubType>
@@ -66,8 +66,8 @@
     <Compile Include="Login\SingUpPlayer.Designer.cs">
       <DependentUpon>SingUpPlayer.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="TransferList.resx">
+      <DependentUpon>TransferList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\LoginPlayer.resx">
       <DependentUpon>LoginPlayer.cs</DependentUpon>
