@@ -46,28 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login\LoginClub.cs">
+    <Compile Include="LoginSingPage\LoginClub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\LoginClub.Designer.cs">
+    <Compile Include="LoginSingPage\LoginClub.Designer.cs">
       <DependentUpon>LoginClub.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\LoginManager.cs">
+    <Compile Include="LoginSingPage\LoginManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\LoginManager.Designer.cs">
+    <Compile Include="LoginSingPage\LoginManager.Designer.cs">
       <DependentUpon>LoginManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\SingUpClub.cs">
+    <Compile Include="LoginSingPage\SingUpClub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\SingUpClub.Designer.cs">
+    <Compile Include="LoginSingPage\SingUpClub.Designer.cs">
       <DependentUpon>SingUpClub.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\SingUpManager.cs">
+    <Compile Include="LoginSingPage\SingUpManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\SingUpManager.Designer.cs">
+    <Compile Include="LoginSingPage\SingUpManager.Designer.cs">
       <DependentUpon>SingUpManager.cs</DependentUpon>
     </Compile>
     <Compile Include="TransferList.cs">
@@ -76,39 +76,39 @@
     <Compile Include="TransferList.Designer.cs">
       <DependentUpon>TransferList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\LoginPlayer.cs">
+    <Compile Include="LoginSingPage\LoginPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\LoginPlayer.Designer.cs">
+    <Compile Include="LoginSingPage\LoginPlayer.Designer.cs">
       <DependentUpon>LoginPlayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Login\SingUpPlayer.cs">
+    <Compile Include="LoginSingPage\SingUpPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\SingUpPlayer.Designer.cs">
+    <Compile Include="LoginSingPage\SingUpPlayer.Designer.cs">
       <DependentUpon>SingUpPlayer.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Login\LoginClub.resx">
+    <EmbeddedResource Include="LoginSingPage\LoginClub.resx">
       <DependentUpon>LoginClub.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\LoginManager.resx">
+    <EmbeddedResource Include="LoginSingPage\LoginManager.resx">
       <DependentUpon>LoginManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\SingUpClub.resx">
+    <EmbeddedResource Include="LoginSingPage\SingUpClub.resx">
       <DependentUpon>SingUpClub.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\SingUpManager.resx">
+    <EmbeddedResource Include="LoginSingPage\SingUpManager.resx">
       <DependentUpon>SingUpManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransferList.resx">
       <DependentUpon>TransferList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\LoginPlayer.resx">
+    <EmbeddedResource Include="LoginSingPage\LoginPlayer.resx">
       <DependentUpon>LoginPlayer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\SingUpPlayer.resx">
+    <EmbeddedResource Include="LoginSingPage\SingUpPlayer.resx">
       <DependentUpon>SingUpPlayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -135,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
+    <Folder Include="ViewPage\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
