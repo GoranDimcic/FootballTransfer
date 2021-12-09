@@ -194,6 +194,7 @@ namespace FootballTransfer
             this.btnLoginClub.Text = "Login";
             this.btnLoginClub.UseVisualStyleBackColor = true;
             this.btnLoginClub.Visible = false;
+            this.btnLoginClub.Click += new System.EventHandler(this.btnLoginClub_Click);
             // 
             // btnRegistryClub
             // 
@@ -205,6 +206,7 @@ namespace FootballTransfer
             this.btnRegistryClub.Text = "Sign up";
             this.btnRegistryClub.UseVisualStyleBackColor = true;
             this.btnRegistryClub.Visible = false;
+            this.btnRegistryClub.Click += new System.EventHandler(this.btnRegistryClub_Click);
             // 
             // btnX3
             // 

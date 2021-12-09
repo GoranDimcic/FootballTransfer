@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Login\LoginClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\LoginClub.Designer.cs">
+      <DependentUpon>LoginClub.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\LoginManager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login\LoginManager.Designer.cs">
       <DependentUpon>LoginManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\SingUpClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\SingUpClub.Designer.cs">
+      <DependentUpon>SingUpClub.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\SingUpManager.cs">
       <SubType>Form</SubType>
@@ -78,8 +90,14 @@
     <Compile Include="Login\SingUpPlayer.Designer.cs">
       <DependentUpon>SingUpPlayer.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Login\LoginClub.resx">
+      <DependentUpon>LoginClub.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\LoginManager.resx">
       <DependentUpon>LoginManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\SingUpClub.resx">
+      <DependentUpon>SingUpClub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\SingUpManager.resx">
       <DependentUpon>SingUpManager.cs</DependentUpon>

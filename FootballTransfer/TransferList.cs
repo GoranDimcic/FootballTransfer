@@ -95,5 +95,17 @@ namespace FootballTransfer
             SingUpManager form = new SingUpManager();
             form.ShowDialog();
         }
+
+        private void btnLoginClub_Click(object sender, EventArgs e)
+        {
+            LoginClub form = new LoginClub();
+            form.ShowDialog();
+        }
+
+        private void btnRegistryClub_Click(object sender, EventArgs e)
+        {
+            SingUpClub form = new SingUpClub();
+            form.ShowDialog();
+        }
     }
 }
