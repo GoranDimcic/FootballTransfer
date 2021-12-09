@@ -25,6 +25,18 @@ namespace FootballTransfer
             btnRegistryPlayer.Visible = true;
             btnX1.Visible = true;
             lblPlayer.Visible = true;
+
+            btnManager.Visible = true;
+            btnLoginManager.Visible = false;
+            btnRegistryManager.Visible = false;
+            btnX2.Visible = false;
+            lblManager.Visible = false;
+
+            btnClub.Visible = true;
+            btnLoginClub.Visible = false;
+            btnRegistryClub.Visible = false;
+            btnX3.Visible = false;
+            lblClub.Visible = false;
         }
 
         private void btnX_Click(object sender, EventArgs e)
@@ -43,6 +55,18 @@ namespace FootballTransfer
             btnRegistryManager.Visible = true;
             btnX2.Visible = true;
             lblManager.Visible = true;
+
+            btnPlayer.Visible = true;
+            btnLoginPlayer.Visible = false;
+            btnRegistryPlayer.Visible = false;
+            btnX1.Visible = false;
+            lblPlayer.Visible = false;
+
+            btnClub.Visible = true;
+            btnLoginClub.Visible = false;
+            btnRegistryClub.Visible = false;
+            btnX3.Visible = false;
+            lblClub.Visible = false;
         }
 
         private void btnX2_Click(object sender, EventArgs e)
@@ -61,6 +85,18 @@ namespace FootballTransfer
             btnRegistryClub.Visible = true;
             btnX3.Visible = true;
             lblClub.Visible = true;
+
+            btnManager.Visible = true;
+            btnLoginManager.Visible = false;
+            btnRegistryManager.Visible = false;
+            btnX2.Visible = false;
+            lblManager.Visible = false;
+
+            btnPlayer.Visible = true;
+            btnLoginPlayer.Visible = false;
+            btnRegistryPlayer.Visible = false;
+            btnX1.Visible = false;
+            lblPlayer.Visible = false;
         }
 
         private void btnX3_Click(object sender, EventArgs e)
