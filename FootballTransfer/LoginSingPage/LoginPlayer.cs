@@ -21,6 +21,7 @@ namespace FootballTransfer
         private void btnLoginAsPlayer_Click(object sender, EventArgs e)
         {
             PlayerView form = new PlayerView();
+            this.Visible = false;
             form.ShowDialog();
         }
     }

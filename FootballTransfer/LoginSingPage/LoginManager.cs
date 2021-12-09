@@ -21,6 +21,7 @@ namespace FootballTransfer.Login
         private void btnLoginAsManager_Click(object sender, EventArgs e)
         {
             ManagerView form = new ManagerView();
+            this.Visible = false;
             form.ShowDialog();
         }
     }
