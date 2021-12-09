@@ -41,6 +41,8 @@ namespace FootballTransfer
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRegistryAsPlayer = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblLoginPlayer
@@ -77,7 +79,7 @@ namespace FootballTransfer
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 302);
+            this.label2.Location = new System.Drawing.Point(50, 352);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 25);
             this.label2.TabIndex = 6;
@@ -109,7 +111,7 @@ namespace FootballTransfer
             "Defense",
             "Center",
             "Attack"});
-            this.comboBox1.Location = new System.Drawing.Point(220, 300);
+            this.comboBox1.Location = new System.Drawing.Point(220, 350);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(150, 32);
             this.comboBox1.TabIndex = 11;
@@ -153,18 +155,38 @@ namespace FootballTransfer
             // btnRegistryAsPlayer
             // 
             this.btnRegistryAsPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistryAsPlayer.Location = new System.Drawing.Point(220, 350);
+            this.btnRegistryAsPlayer.Location = new System.Drawing.Point(220, 400);
             this.btnRegistryAsPlayer.Name = "btnRegistryAsPlayer";
             this.btnRegistryAsPlayer.Size = new System.Drawing.Size(150, 50);
             this.btnRegistryAsPlayer.TabIndex = 16;
             this.btnRegistryAsPlayer.Text = "Sign in";
             this.btnRegistryAsPlayer.UseVisualStyleBackColor = true;
             // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(220, 300);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(150, 29);
+            this.textBox4.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(50, 302);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 25);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Country";
+            // 
             // SingUpPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.ClientSize = new System.Drawing.Size(484, 511);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.btnRegistryAsPlayer);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label4);
@@ -198,5 +220,7 @@ namespace FootballTransfer
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnRegistryAsPlayer;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label5;
     }
 }
