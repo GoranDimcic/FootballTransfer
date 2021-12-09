@@ -159,7 +159,7 @@ namespace FootballTransfer
             this.btnRegistryAsPlayer.Name = "btnRegistryAsPlayer";
             this.btnRegistryAsPlayer.Size = new System.Drawing.Size(150, 50);
             this.btnRegistryAsPlayer.TabIndex = 16;
-            this.btnRegistryAsPlayer.Text = "Sign in";
+            this.btnRegistryAsPlayer.Text = "Sign up";
             this.btnRegistryAsPlayer.UseVisualStyleBackColor = true;
             // 
             // textBox4

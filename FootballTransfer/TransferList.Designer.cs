@@ -158,6 +158,7 @@ namespace FootballTransfer
             this.btnLoginManager.Text = "Login";
             this.btnLoginManager.UseVisualStyleBackColor = true;
             this.btnLoginManager.Visible = false;
+            this.btnLoginManager.Click += new System.EventHandler(this.btnLoginManager_Click);
             // 
             // btnRegistryManager
             // 
@@ -169,6 +170,7 @@ namespace FootballTransfer
             this.btnRegistryManager.Text = "Sign up";
             this.btnRegistryManager.UseVisualStyleBackColor = true;
             this.btnRegistryManager.Visible = false;
+            this.btnRegistryManager.Click += new System.EventHandler(this.btnRegistryManager_Click);
             // 
             // btnX2
             // 

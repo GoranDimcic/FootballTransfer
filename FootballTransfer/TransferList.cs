@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FootballTransfer.Login;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -80,6 +81,18 @@ namespace FootballTransfer
         private void btnRegistryPlayer_Click(object sender, EventArgs e)
         {
             SingUpPlayer form = new SingUpPlayer();
+            form.ShowDialog();
+        }
+
+        private void btnLoginManager_Click(object sender, EventArgs e)
+        {
+            LoginManager form = new LoginManager();
+            form.ShowDialog();
+        }
+
+        private void btnRegistryManager_Click(object sender, EventArgs e)
+        {
+            SingUpManager form = new SingUpManager();
             form.ShowDialog();
         }
     }
