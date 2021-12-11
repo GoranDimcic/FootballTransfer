@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FootballTransfer.Entities
 {
-    class Player
+    class Manager
     {
         public string name { get; set; }
 
@@ -16,8 +16,6 @@ namespace FootballTransfer.Entities
 
         public string email { get; set; }
 
-        public string pasword { get; set; }
-
-        public string position { get; set; }
+        public string password { get; set; }
     }
 }

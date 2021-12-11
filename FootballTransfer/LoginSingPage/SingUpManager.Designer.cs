@@ -30,14 +30,14 @@ namespace FootballTransfer.Login
         private void InitializeComponent()
         {
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCountryManagerSign = new System.Windows.Forms.TextBox();
             this.btnRegistryAsManager = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtEmailManagerSign = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNameManagerSign = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtSurnameManagerSign = new System.Windows.Forms.TextBox();
+            this.txtPasswordManagerSign = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblLoginPlayer = new System.Windows.Forms.Label();
@@ -53,13 +53,13 @@ namespace FootballTransfer.Login
             this.label5.TabIndex = 32;
             this.label5.Text = "Country";
             // 
-            // textBox4
+            // txtCountryManagerSign
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(220, 300);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(150, 29);
-            this.textBox4.TabIndex = 31;
+            this.txtCountryManagerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCountryManagerSign.Location = new System.Drawing.Point(220, 300);
+            this.txtCountryManagerSign.Name = "txtCountryManagerSign";
+            this.txtCountryManagerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtCountryManagerSign.TabIndex = 31;
             // 
             // btnRegistryAsManager
             // 
@@ -70,14 +70,15 @@ namespace FootballTransfer.Login
             this.btnRegistryAsManager.TabIndex = 30;
             this.btnRegistryAsManager.Text = "Sign up";
             this.btnRegistryAsManager.UseVisualStyleBackColor = true;
+            this.btnRegistryAsManager.Click += new System.EventHandler(this.btnRegistryAsManager_Click);
             // 
-            // textBox3
+            // txtEmailManagerSign
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(220, 100);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 29);
-            this.textBox3.TabIndex = 29;
+            this.txtEmailManagerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailManagerSign.Location = new System.Drawing.Point(220, 100);
+            this.txtEmailManagerSign.Name = "txtEmailManagerSign";
+            this.txtEmailManagerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtEmailManagerSign.TabIndex = 29;
             // 
             // label4
             // 
@@ -89,13 +90,13 @@ namespace FootballTransfer.Login
             this.label4.TabIndex = 28;
             this.label4.Text = "E-mail";
             // 
-            // textBox2
+            // txtNameManagerSign
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(220, 200);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 29);
-            this.textBox2.TabIndex = 27;
+            this.txtNameManagerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameManagerSign.Location = new System.Drawing.Point(220, 200);
+            this.txtNameManagerSign.Name = "txtNameManagerSign";
+            this.txtNameManagerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtNameManagerSign.TabIndex = 27;
             // 
             // label3
             // 
@@ -107,22 +108,22 @@ namespace FootballTransfer.Login
             this.label3.TabIndex = 26;
             this.label3.Text = "Name";
             // 
-            // textBox1
+            // txtSurnameManagerSign
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(220, 250);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 29);
-            this.textBox1.TabIndex = 24;
+            this.txtSurnameManagerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSurnameManagerSign.Location = new System.Drawing.Point(220, 250);
+            this.txtSurnameManagerSign.Name = "txtSurnameManagerSign";
+            this.txtSurnameManagerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtSurnameManagerSign.TabIndex = 24;
             // 
-            // txtEmail
+            // txtPasswordManagerSign
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(220, 150);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(150, 29);
-            this.txtEmail.TabIndex = 23;
-            this.txtEmail.UseSystemPasswordChar = true;
+            this.txtPasswordManagerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasswordManagerSign.Location = new System.Drawing.Point(220, 150);
+            this.txtPasswordManagerSign.Name = "txtPasswordManagerSign";
+            this.txtPasswordManagerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtPasswordManagerSign.TabIndex = 23;
+            this.txtPasswordManagerSign.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -160,14 +161,14 @@ namespace FootballTransfer.Login
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtCountryManagerSign);
             this.Controls.Add(this.btnRegistryAsManager);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtEmailManagerSign);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtNameManagerSign);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtSurnameManagerSign);
+            this.Controls.Add(this.txtPasswordManagerSign);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblLoginPlayer);
@@ -181,14 +182,14 @@ namespace FootballTransfer.Login
         #endregion
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCountryManagerSign;
         private System.Windows.Forms.Button btnRegistryAsManager;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtEmailManagerSign;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNameManagerSign;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtSurnameManagerSign;
+        private System.Windows.Forms.TextBox txtPasswordManagerSign;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblLoginPlayer;

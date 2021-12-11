@@ -42,7 +42,40 @@ namespace FootballTransfer
             }
             return matching;
         }
-        //provera da li postoji email u bazi
+        //provera da li postoji email igraca u bazi
+
+        public static void addManager(Manager manager)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+            RowSet playerData = session.Execute("insert into \"Manager\" (\"email\", country, name, pasword, surname)  values ('" + manager.email + "', '" + manager.country + "', '" + manager.name + "', '" + manager.password + "', '" + manager.surname + "')");
+        }
+
+        public static Boolean CheckManagerRegistration(string newEmail)
+        {
+            Boolean matching = true;
+
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return false;
+
+            var managersData = session.Execute("select * from \"Manager\"");
+
+            foreach (var managerData in managersData)
+            {
+                Manager manager = new Manager();
+                manager.email = managerData["email"] != null ? managerData["email"].ToString() : string.Empty;
+                if (manager.email == newEmail)
+                {
+                    matching = false;
+                }
+            }
+            return matching;
+        }
+        //provera da li postoji email menadzera u bazi
 
         public static Player proveriSifruKupca(string emailCheck, string passwordCheck)
         {

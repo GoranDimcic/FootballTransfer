@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProvider.cs" />
+    <Compile Include="Entities\Manager.cs" />
     <Compile Include="Entities\Player.cs" />
     <Compile Include="Entities\Ponuda.cs" />
     <Compile Include="LoginSingPage\LoginClub.cs">
