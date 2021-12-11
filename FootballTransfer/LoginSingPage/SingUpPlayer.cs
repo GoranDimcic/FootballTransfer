@@ -15,8 +15,6 @@ namespace FootballTransfer
 {
     public partial class SingUpPlayer : Form
     {
-        private Player newPlayer;
-
         public SingUpPlayer()
         {
             InitializeComponent();
@@ -24,8 +22,8 @@ namespace FootballTransfer
 
         private void btnRegistryAsPlayer_Click(object sender, EventArgs e)
         {
-            Boolean correct = DataProvider.emailForPlayerRegistration(txtEmailPlayerSign.Text);
-            if(correct == true)
+            Boolean correct = DataProvider.checkPlayerRegistration(txtEmailPlayerSign.Text);
+            if (correct == true)
             {
                 Player player = new Player();
                 player.email = txtEmailPlayerSign.Text;
@@ -35,9 +33,15 @@ namespace FootballTransfer
                 player.country = txtCountryPlayerSign.Text;
                 player.position = txtPositionPlayerSign.Text;
 
-                newPlayer = player;
-                DataProvider.addPlayer(newPlayer);
-                this.DialogResult = DialogResult.OK;
+                if (player.pasword == "")
+                {
+                    MessageBox.Show("You didn't enter a password, try again!");
+                }
+                else
+                {
+                    DataProvider.addPlayer(player);
+                    this.DialogResult = DialogResult.OK;
+                }
             }
             else
             {

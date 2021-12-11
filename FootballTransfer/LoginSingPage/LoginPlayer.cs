@@ -1,4 +1,5 @@
-﻿using FootballTransfer.ViewPage;
+﻿using FootballTransfer.Entities;
+using FootballTransfer.ViewPage;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,8 @@ namespace FootballTransfer
 {
     public partial class LoginPlayer : Form
     {
+        private Player newPlayer;
+
         public LoginPlayer()
         {
             InitializeComponent();
@@ -20,6 +23,17 @@ namespace FootballTransfer
 
         private void btnLoginAsPlayer_Click(object sender, EventArgs e)
         {
+            string email, password;
+            email = txtEmail.Text;
+            password = txtPassword.Text;
+
+            newPlayer = DataProvider.proveriSifruKupca(txtEmail.Text, txtPassword.Text);
+            if (newPlayer == null)
+            {
+                txtEmail.Text = "";
+                txtPassword.Text = "";
+            }
+
             PlayerView form = new PlayerView();
             this.Visible = false;
             form.ShowDialog();
