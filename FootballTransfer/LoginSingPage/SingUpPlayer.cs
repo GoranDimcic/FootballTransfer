@@ -31,7 +31,7 @@ namespace FootballTransfer
                 player.name = txtNamePlayerSign.Text;
                 player.surname = txtSurnamePlayerSign.Text;
                 player.country = txtCountryPlayerSign.Text;
-                player.position = txtPositionPlayerSign.Text;
+                player.position = comboBoxPosition.Text;
 
                 if (player.pasword == "")
                 {

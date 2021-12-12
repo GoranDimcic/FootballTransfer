@@ -42,7 +42,7 @@ namespace FootballTransfer
             this.btnRegistryPlayer = new System.Windows.Forms.Button();
             this.txtCountryPlayerSign = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtPositionPlayerSign = new System.Windows.Forms.TextBox();
+            this.comboBoxPosition = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblLoginPlayer
@@ -167,20 +167,26 @@ namespace FootballTransfer
             this.label5.TabIndex = 18;
             this.label5.Text = "Country";
             // 
-            // txtPositionPlayerSign
+            // comboBoxPosition
             // 
-            this.txtPositionPlayerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPositionPlayerSign.Location = new System.Drawing.Point(220, 350);
-            this.txtPositionPlayerSign.Name = "txtPositionPlayerSign";
-            this.txtPositionPlayerSign.Size = new System.Drawing.Size(150, 29);
-            this.txtPositionPlayerSign.TabIndex = 19;
+            this.comboBoxPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPosition.FormattingEnabled = true;
+            this.comboBoxPosition.Items.AddRange(new object[] {
+            "Attack",
+            "Middlefield",
+            "Defence",
+            "Goalkeeper"});
+            this.comboBoxPosition.Location = new System.Drawing.Point(220, 350);
+            this.comboBoxPosition.Name = "comboBoxPosition";
+            this.comboBoxPosition.Size = new System.Drawing.Size(150, 32);
+            this.comboBoxPosition.TabIndex = 20;
             // 
             // SingUpPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 511);
-            this.Controls.Add(this.txtPositionPlayerSign);
+            this.Controls.Add(this.comboBoxPosition);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCountryPlayerSign);
             this.Controls.Add(this.btnRegistryPlayer);
@@ -216,6 +222,6 @@ namespace FootballTransfer
         private System.Windows.Forms.Button btnRegistryPlayer;
         private System.Windows.Forms.TextBox txtCountryPlayerSign;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtPositionPlayerSign;
+        private System.Windows.Forms.ComboBox comboBoxPosition;
     }
 }
