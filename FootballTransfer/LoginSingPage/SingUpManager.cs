@@ -30,7 +30,11 @@ namespace FootballTransfer.Login
                 manager.surname = txtSurnameManagerSign.Text;
                 manager.country = txtCountryManagerSign.Text;
 
-                if (manager.password == "")
+                if (manager.email == "")
+                {
+                    MessageBox.Show("You didn't enter an email, try again!");
+                }
+                else if (manager.password == "")
                 {
                     MessageBox.Show("You didn't enter a password, try again!");
                 }

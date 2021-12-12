@@ -31,16 +31,14 @@ namespace FootballTransfer.Login
         {
             this.label5 = new System.Windows.Forms.Label();
             this.btnRegistryAsPlayer = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtEmailClubSign = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNameClubSign = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPasswordClubSign = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblLoginPlayer = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxClubCountry = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label5
@@ -49,27 +47,28 @@ namespace FootballTransfer.Login
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(50, 252);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 25);
+            this.label5.Size = new System.Drawing.Size(143, 25);
             this.label5.TabIndex = 32;
-            this.label5.Text = "Country";
+            this.label5.Text = "League name";
             // 
             // btnRegistryAsPlayer
             // 
             this.btnRegistryAsPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistryAsPlayer.Location = new System.Drawing.Point(220, 350);
+            this.btnRegistryAsPlayer.Location = new System.Drawing.Point(220, 300);
             this.btnRegistryAsPlayer.Name = "btnRegistryAsPlayer";
             this.btnRegistryAsPlayer.Size = new System.Drawing.Size(150, 50);
             this.btnRegistryAsPlayer.TabIndex = 30;
             this.btnRegistryAsPlayer.Text = "Sign up";
             this.btnRegistryAsPlayer.UseVisualStyleBackColor = true;
+            this.btnRegistryAsPlayer.Click += new System.EventHandler(this.btnRegistryAsPlayer_Click);
             // 
-            // textBox3
+            // txtEmailClubSign
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(220, 100);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 29);
-            this.textBox3.TabIndex = 29;
+            this.txtEmailClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailClubSign.Location = new System.Drawing.Point(220, 100);
+            this.txtEmailClubSign.Name = "txtEmailClubSign";
+            this.txtEmailClubSign.Size = new System.Drawing.Size(150, 29);
+            this.txtEmailClubSign.TabIndex = 29;
             // 
             // label4
             // 
@@ -81,13 +80,13 @@ namespace FootballTransfer.Login
             this.label4.TabIndex = 28;
             this.label4.Text = "E-mail";
             // 
-            // textBox2
+            // txtNameClubSign
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(220, 200);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 29);
-            this.textBox2.TabIndex = 27;
+            this.txtNameClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameClubSign.Location = new System.Drawing.Point(220, 200);
+            this.txtNameClubSign.Name = "txtNameClubSign";
+            this.txtNameClubSign.Size = new System.Drawing.Size(150, 29);
+            this.txtNameClubSign.TabIndex = 27;
             // 
             // label3
             // 
@@ -99,14 +98,14 @@ namespace FootballTransfer.Login
             this.label3.TabIndex = 26;
             this.label3.Text = "Name";
             // 
-            // txtEmail
+            // txtPasswordClubSign
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(220, 150);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(150, 29);
-            this.txtEmail.TabIndex = 23;
-            this.txtEmail.UseSystemPasswordChar = true;
+            this.txtPasswordClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasswordClubSign.Location = new System.Drawing.Point(220, 150);
+            this.txtPasswordClubSign.Name = "txtPasswordClubSign";
+            this.txtPasswordClubSign.Size = new System.Drawing.Size(150, 29);
+            this.txtPasswordClubSign.TabIndex = 23;
+            this.txtPasswordClubSign.UseSystemPasswordChar = true;
             // 
             // lblEmail
             // 
@@ -128,54 +127,34 @@ namespace FootballTransfer.Login
             this.lblLoginPlayer.TabIndex = 19;
             this.lblLoginPlayer.Text = "Registry your club";
             // 
-            // label1
+            // comboBoxClubCountry
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 302);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 25);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Budget";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(220, 300);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 29);
-            this.textBox1.TabIndex = 33;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxClubCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxClubCountry.FormattingEnabled = true;
+            this.comboBoxClubCountry.Items.AddRange(new object[] {
             "La Liga",
             "Premier League",
             "Serie A",
             "Ligue 1",
             "Bundesliga"});
-            this.comboBox1.Location = new System.Drawing.Point(220, 250);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 32);
-            this.comboBox1.TabIndex = 35;
+            this.comboBoxClubCountry.Location = new System.Drawing.Point(220, 250);
+            this.comboBoxClubCountry.Name = "comboBoxClubCountry";
+            this.comboBoxClubCountry.Size = new System.Drawing.Size(150, 32);
+            this.comboBoxClubCountry.TabIndex = 35;
             // 
             // SingUpClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 461);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(484, 411);
+            this.Controls.Add(this.comboBoxClubCountry);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnRegistryAsPlayer);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtEmailClubSign);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtNameClubSign);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtPasswordClubSign);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblLoginPlayer);
             this.Name = "SingUpClub";
@@ -189,15 +168,13 @@ namespace FootballTransfer.Login
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnRegistryAsPlayer;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtEmailClubSign;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNameClubSign;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPasswordClubSign;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblLoginPlayer;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxClubCountry;
     }
 }

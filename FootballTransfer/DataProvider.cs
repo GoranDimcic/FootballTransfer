@@ -77,6 +77,39 @@ namespace FootballTransfer
         }
         //provera da li postoji email menadzera u bazi
 
+        public static void addClub(Club club)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+            RowSet playerData = session.Execute("insert into \"Club\" (\"email\", leaguename, name, pasword)  values ('" + club.email + "', '" + club.leagueName + "', '" + club.name + "', '" + club.password + "')");
+        }
+
+        public static Boolean CheckClubRegistration(string newEmail)
+        {
+            Boolean matching = true;
+
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return false;
+
+            var clubsData = session.Execute("select * from \"Club\"");
+
+            foreach (var clubData in clubsData)
+            {
+                Club club = new Club();
+                club.email = clubData["email"] != null ? clubData["email"].ToString() : string.Empty;
+                if (club.email == newEmail)
+                {
+                    matching = false;
+                }
+            }
+            return matching;
+        }
+        //provera da li postoji email kluba u bazi
+
         public static Player proveriSifruKupca(string emailCheck, string passwordCheck)
         {
             ISession session = SessionManager.GetSession();

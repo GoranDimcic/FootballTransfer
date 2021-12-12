@@ -149,7 +149,7 @@ namespace FootballTransfer.Login
             // 
             this.lblLoginPlayer.AutoSize = true;
             this.lblLoginPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoginPlayer.Location = new System.Drawing.Point(173, 54);
+            this.lblLoginPlayer.Location = new System.Drawing.Point(175, 50);
             this.lblLoginPlayer.Name = "lblLoginPlayer";
             this.lblLoginPlayer.Size = new System.Drawing.Size(221, 25);
             this.lblLoginPlayer.TabIndex = 19;
