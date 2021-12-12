@@ -39,6 +39,8 @@ namespace FootballTransfer.Login
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblLoginPlayer = new System.Windows.Forms.Label();
             this.comboBoxClubCountry = new System.Windows.Forms.ComboBox();
+            this.dateFoundationDate = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label5
@@ -54,7 +56,7 @@ namespace FootballTransfer.Login
             // btnRegistryAsPlayer
             // 
             this.btnRegistryAsPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistryAsPlayer.Location = new System.Drawing.Point(220, 300);
+            this.btnRegistryAsPlayer.Location = new System.Drawing.Point(220, 350);
             this.btnRegistryAsPlayer.Name = "btnRegistryAsPlayer";
             this.btnRegistryAsPlayer.Size = new System.Drawing.Size(150, 50);
             this.btnRegistryAsPlayer.TabIndex = 30;
@@ -142,11 +144,31 @@ namespace FootballTransfer.Login
             this.comboBoxClubCountry.Size = new System.Drawing.Size(150, 32);
             this.comboBoxClubCountry.TabIndex = 35;
             // 
+            // dateFoundationDate
+            // 
+            this.dateFoundationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateFoundationDate.Location = new System.Drawing.Point(220, 300);
+            this.dateFoundationDate.Name = "dateFoundationDate";
+            this.dateFoundationDate.Size = new System.Drawing.Size(150, 29);
+            this.dateFoundationDate.TabIndex = 36;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(50, 303);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 25);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Foundation date";
+            // 
             // SingUpClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 411);
+            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dateFoundationDate);
             this.Controls.Add(this.comboBoxClubCountry);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnRegistryAsPlayer);
@@ -176,5 +198,7 @@ namespace FootballTransfer.Login
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblLoginPlayer;
         private System.Windows.Forms.ComboBox comboBoxClubCountry;
+        private System.Windows.Forms.DateTimePicker dateFoundationDate;
+        private System.Windows.Forms.Label label1;
     }
 }

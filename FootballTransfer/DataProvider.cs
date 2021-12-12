@@ -83,7 +83,7 @@ namespace FootballTransfer
 
             if (session == null)
                 return;
-            RowSet playerData = session.Execute("insert into \"Club\" (\"email\", leaguename, name, pasword)  values ('" + club.email + "', '" + club.leagueName + "', '" + club.name + "', '" + club.password + "')");
+            RowSet playerData = session.Execute("insert into \"Club\" (\"email\", foundationdate, leaguename, name, pasword)  values ('" + club.email + "', '" + club.foundationDate + "', '" + club.leagueName + "', '" + club.name + "', '" + club.password + "')");
         }
 
         public static Boolean CheckClubRegistration(string newEmail)
