@@ -23,20 +23,30 @@ namespace FootballTransfer
 
         private void btnLoginAsPlayer_Click(object sender, EventArgs e)
         {
-            string email, password;
-            email = txtEmail.Text;
-            password = txtPassword.Text;
-
-            newPlayer = DataProvider.proveriSifruKupca(txtEmail.Text, txtPassword.Text);
-            if (newPlayer == null)
+            if (txtEmailLoginPlayer.Text == "")
             {
-                txtEmail.Text = "";
-                txtPassword.Text = "";
+                MessageBox.Show("You didn't enter an email, try again!");
             }
-
-            PlayerView form = new PlayerView();
-            this.Visible = false;
-            form.ShowDialog();
+            else if (txtPasswordLoginPlayer.Text == "")
+            {
+                MessageBox.Show("You didn't enter a password, try again!");
+            }
+            else
+            {
+                newPlayer = DataProvider.CheckPlayerLogin(txtEmailLoginPlayer.Text, txtPasswordLoginPlayer.Text);
+                if (newPlayer == null)
+                {
+                    txtEmailLoginPlayer.Text = "";
+                    txtPasswordLoginPlayer.Text = "";
+                    MessageBox.Show("Incorrect login, try again!");
+                }
+                else
+                {
+                    PlayerView form = new PlayerView();
+                    this.Visible = false;
+                    form.ShowDialog();
+                }
+            }
         }
     }
 }

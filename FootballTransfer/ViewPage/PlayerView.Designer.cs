@@ -39,7 +39,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtProba = new System.Windows.Forms.TextBox();
+            this.txtProbaName = new System.Windows.Forms.TextBox();
+            this.txtProbaSurname = new System.Windows.Forms.TextBox();
+            this.txtProbaCountry = new System.Windows.Forms.TextBox();
+            this.txtProbaPosition = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewClubOffer
@@ -64,7 +70,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(388, 45);
+            this.button1.Location = new System.Drawing.Point(218, 9);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 40);
             this.button1.TabIndex = 4;
@@ -73,7 +79,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(521, 45);
+            this.button2.Location = new System.Drawing.Point(689, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 40);
             this.button2.TabIndex = 5;
@@ -82,11 +88,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(651, 45);
+            this.button3.Location = new System.Drawing.Point(197, 84);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(99, 40);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Dodaj igraca";
+            this.button3.Text = "prihvati ponudu";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // listViewManagerOffer
@@ -143,21 +149,75 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Pozition";
+            this.label6.Text = "Position";
             // 
-            // txtProba
+            // txtProbaName
             // 
-            this.txtProba.Location = new System.Drawing.Point(91, 9);
-            this.txtProba.Name = "txtProba";
-            this.txtProba.Size = new System.Drawing.Size(100, 20);
-            this.txtProba.TabIndex = 13;
+            this.txtProbaName.Location = new System.Drawing.Point(91, 9);
+            this.txtProbaName.Name = "txtProbaName";
+            this.txtProbaName.Size = new System.Drawing.Size(100, 20);
+            this.txtProbaName.TabIndex = 13;
+            // 
+            // txtProbaSurname
+            // 
+            this.txtProbaSurname.Location = new System.Drawing.Point(91, 42);
+            this.txtProbaSurname.Name = "txtProbaSurname";
+            this.txtProbaSurname.Size = new System.Drawing.Size(100, 20);
+            this.txtProbaSurname.TabIndex = 14;
+            // 
+            // txtProbaCountry
+            // 
+            this.txtProbaCountry.Location = new System.Drawing.Point(91, 69);
+            this.txtProbaCountry.Name = "txtProbaCountry";
+            this.txtProbaCountry.Size = new System.Drawing.Size(100, 20);
+            this.txtProbaCountry.TabIndex = 15;
+            // 
+            // txtProbaPosition
+            // 
+            this.txtProbaPosition.Location = new System.Drawing.Point(91, 95);
+            this.txtProbaPosition.Name = "txtProbaPosition";
+            this.txtProbaPosition.Size = new System.Drawing.Size(100, 20);
+            this.txtProbaPosition.TabIndex = 16;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(651, 84);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(99, 40);
+            this.button4.TabIndex = 17;
+            this.button4.Text = "Odbi ponudu";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(546, 84);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(99, 40);
+            this.button5.TabIndex = 18;
+            this.button5.Text = "prihvati ponudu";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(302, 84);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(99, 40);
+            this.button6.TabIndex = 19;
+            this.button6.Text = "Odbi ponudu";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // PlayerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 461);
-            this.Controls.Add(this.txtProba);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.txtProbaPosition);
+            this.Controls.Add(this.txtProbaCountry);
+            this.Controls.Add(this.txtProbaSurname);
+            this.Controls.Add(this.txtProbaName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -188,6 +248,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtProba;
+        private System.Windows.Forms.TextBox txtProbaName;
+        private System.Windows.Forms.TextBox txtProbaSurname;
+        private System.Windows.Forms.TextBox txtProbaCountry;
+        private System.Windows.Forms.TextBox txtProbaPosition;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }

@@ -42,7 +42,7 @@ namespace FootballTransfer
             }
             return matching;
         }
-        //provera da li postoji email igraca u bazi
+        //provera da li postoji email igraca
 
         public static void addManager(Manager manager)
         {
@@ -75,7 +75,7 @@ namespace FootballTransfer
             }
             return matching;
         }
-        //provera da li postoji email menadzera u bazi
+        //provera da li postoji email menadzera
 
         public static void addClub(Club club)
         {
@@ -108,12 +108,11 @@ namespace FootballTransfer
             }
             return matching;
         }
-        //provera da li postoji email kluba u bazi
+        //provera da li postoji email kluba
 
-        public static Player proveriSifruKupca(string emailCheck, string passwordCheck)
+        public static Player CheckPlayerLogin(string emailCheck, string passwordCheck)
         {
             ISession session = SessionManager.GetSession();
-            List<Player> players = new List<Player>();
             Player playerReturn = new Player();
 
             if (session == null)
@@ -124,34 +123,25 @@ namespace FootballTransfer
             foreach (var playerData in playersData)
             {
                 Player player = new Player();
+                player.email = playerData["email"] != null ? playerData["email"].ToString() : string.Empty;
+                player.pasword = playerData["pasword"] != null ? playerData["pasword"].ToString() : string.Empty;
                 player.name = playerData["name"] != null ? playerData["name"].ToString() : string.Empty;
                 player.surname = playerData["surname"] != null ? playerData["surname"].ToString() : string.Empty;
                 player.country = playerData["country"] != null ? playerData["country"].ToString() : string.Empty;
-                player.email = playerData["email"] != null ? playerData["email"].ToString() : string.Empty;
-                player.pasword = playerData["pasword"] != null ? playerData["pasword"].ToString() : string.Empty;
-                players.Add(player);
+                player.position = playerData["position"] != null ? playerData["position"].ToString() : string.Empty;
 
-                if (player.email == emailCheck)
-                {
-                    playerReturn = player;
-                }
+                playerReturn = player;
             }
 
-            if (playerReturn.email == null)
+            if (playerReturn.email == emailCheck && playerReturn.pasword == passwordCheck)
             {
-                MessageBox.Show("Email does not exist!");
-                return null;
+                return playerReturn;
             }
             else
             {
-                if (playerReturn.pasword != passwordCheck)
-                {
-                    MessageBox.Show("Incorect password!");
-                    return null;
-                }
+                return null;
             }
-
-            return playerReturn;
         }
+        //provera da li je postoji email i sifra igraca
     }
 }

@@ -33,7 +33,7 @@ namespace FootballTransfer
                 player.country = txtCountryPlayerSign.Text;
                 player.position = comboBoxPosition.Text;
 
-                if(player.email == "")
+                if (player.email == "")
                 {
                     MessageBox.Show("You didn't enter an email, try again!");
                 }

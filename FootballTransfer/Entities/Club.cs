@@ -16,6 +16,8 @@ namespace FootballTransfer.Entities
 
         public string leagueName { get; set; }
 
+        public string stadionName { get; set; }
+
         public DateTime foundationDate { get; set; }
     }
 }
