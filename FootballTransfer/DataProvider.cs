@@ -83,7 +83,7 @@ namespace FootballTransfer
 
             if (session == null)
                 return;
-            RowSet playerData = session.Execute("insert into \"Club\" (\"email\", foundationdate, leaguename, name, pasword)  values ('" + club.email + "', '" + club.foundationDate + "', '" + club.leagueName + "', '" + club.name + "', '" + club.password + "')");
+            RowSet playerData = session.Execute("insert into \"Club\" (\"email\", foundationdate, leaguename, name, pasword, stadionname)  values ('" + club.email + "', '" + club.foundationDate + "', '" + club.leagueName + "', '" + club.name + "', '" + club.password + "', '" + club.stadionName + "')");
         }
 
         public static Boolean CheckClubRegistration(string newEmail)
@@ -177,5 +177,37 @@ namespace FootballTransfer
         }
         //provera da li je postoji email i sifra menadzera
 
+        public static Club CheckClubLogin(string emailCheck, string passwordCheck)
+        {
+            ISession session = SessionManager.GetSession();
+            Club clubReturn = new Club();
+
+            if (session == null)
+                return null;
+
+            var clubsData = session.Execute("select * from \"Club\" where \"email\"='" + emailCheck + "'");
+
+            foreach (var clubData in clubsData)
+            {
+                Club club = new Club();
+                club.email = clubData["email"] != null ? clubData["email"].ToString() : string.Empty;
+                club.password = clubData["pasword"] != null ? clubData["pasword"].ToString() : string.Empty;
+                club.name = clubData["name"] != null ? clubData["name"].ToString() : string.Empty;
+                club.stadionName = clubData["stadionname"] != null ? clubData["stadionname"].ToString() : string.Empty;
+                club.leagueName = clubData["leaguename"] != null ? clubData["leaguename"].ToString() : string.Empty;
+                //club.foundationDate = (DateTime)clubData["foundationdate"] != null ? (DateTime)clubData["foundationdate"] : (DateTime?) null;
+
+                clubReturn = club;
+            }
+
+            if (clubReturn.email == emailCheck && clubReturn.password == passwordCheck)
+            {
+                return clubReturn;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

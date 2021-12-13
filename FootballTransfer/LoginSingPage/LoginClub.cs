@@ -1,4 +1,5 @@
-﻿using FootballTransfer.ViewPage;
+﻿using FootballTransfer.Entities;
+using FootballTransfer.ViewPage;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,8 @@ namespace FootballTransfer.Login
 {
     public partial class LoginClub : Form
     {
+        private Club newClub;
+
         public LoginClub()
         {
             InitializeComponent();
@@ -20,9 +23,30 @@ namespace FootballTransfer.Login
 
         private void btnLoginAsPlayer_Click(object sender, EventArgs e)
         {
-            ClubView form = new ClubView();
-            this.Visible = false;
-            form.ShowDialog();
+            if (txtEmailLoginClub.Text == "")
+            {
+                MessageBox.Show("You didn't enter an email, try again!");
+            }
+            else if (txtPasswordLoginClub.Text == "")
+            {
+                MessageBox.Show("You didn't enter a password, try again!");
+            }
+            else
+            {
+                newClub = DataProvider.CheckClubLogin(txtEmailLoginClub.Text, txtPasswordLoginClub.Text);
+                if (newClub == null)
+                {
+                    txtEmailLoginClub.Text = "";
+                    txtPasswordLoginClub.Text = "";
+                    MessageBox.Show("Incorrect login, try again!");
+                }
+                else
+                {
+                    ClubView form = new ClubView();
+                    this.Visible = false;
+                    form.ShowDialog();
+                }
+            }
         }
     }
 }

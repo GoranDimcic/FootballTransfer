@@ -32,8 +32,8 @@ namespace FootballTransfer.Login
             this.btnLoginAsPlayer = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPasswordLoginClub = new System.Windows.Forms.TextBox();
+            this.txtEmailLoginClub = new System.Windows.Forms.TextBox();
             this.lblLoginPlayer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -68,22 +68,22 @@ namespace FootballTransfer.Login
             this.lblEmail.TabIndex = 9;
             this.lblEmail.Text = "E-mail";
             // 
-            // textBox1
+            // txtPasswordLoginClub
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(150, 175);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 29);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.UseSystemPasswordChar = true;
+            this.txtPasswordLoginClub.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasswordLoginClub.Location = new System.Drawing.Point(150, 175);
+            this.txtPasswordLoginClub.Name = "txtPasswordLoginClub";
+            this.txtPasswordLoginClub.Size = new System.Drawing.Size(150, 29);
+            this.txtPasswordLoginClub.TabIndex = 8;
+            this.txtPasswordLoginClub.UseSystemPasswordChar = true;
             // 
-            // txtEmail
+            // txtEmailLoginClub
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(150, 125);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(150, 29);
-            this.txtEmail.TabIndex = 7;
+            this.txtEmailLoginClub.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailLoginClub.Location = new System.Drawing.Point(150, 125);
+            this.txtEmailLoginClub.Name = "txtEmailLoginClub";
+            this.txtEmailLoginClub.Size = new System.Drawing.Size(150, 29);
+            this.txtEmailLoginClub.TabIndex = 7;
             // 
             // lblLoginPlayer
             // 
@@ -103,8 +103,8 @@ namespace FootballTransfer.Login
             this.Controls.Add(this.btnLoginAsPlayer);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtPasswordLoginClub);
+            this.Controls.Add(this.txtEmailLoginClub);
             this.Controls.Add(this.lblLoginPlayer);
             this.Name = "LoginClub";
             this.Text = "LoginClub";
@@ -118,8 +118,8 @@ namespace FootballTransfer.Login
         private System.Windows.Forms.Button btnLoginAsPlayer;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPasswordLoginClub;
+        private System.Windows.Forms.TextBox txtEmailLoginClub;
         private System.Windows.Forms.Label lblLoginPlayer;
     }
 }
