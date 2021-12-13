@@ -143,5 +143,39 @@ namespace FootballTransfer
             }
         }
         //provera da li je postoji email i sifra igraca
+
+        public static Manager CheckManagerLogin(string emailCheck, string passwordCheck)
+        {
+            ISession session = SessionManager.GetSession();
+            Manager managerReturn = new Manager();
+
+            if (session == null)
+                return null;
+
+            var managersData = session.Execute("select * from \"Manager\" where \"email\"='" + emailCheck + "'");
+
+            foreach (var managerData in managersData)
+            {
+                Manager manager = new Manager();
+                manager.email = managerData["email"] != null ? managerData["email"].ToString() : string.Empty;
+                manager.password = managerData["pasword"] != null ? managerData["pasword"].ToString() : string.Empty;
+                manager.name = managerData["name"] != null ? managerData["name"].ToString() : string.Empty;
+                manager.surname = managerData["surname"] != null ? managerData["surname"].ToString() : string.Empty;
+                manager.country = managerData["country"] != null ? managerData["country"].ToString() : string.Empty;
+
+                managerReturn = manager;
+            }
+
+            if (managerReturn.email == emailCheck && managerReturn.password == passwordCheck)
+            {
+                return managerReturn;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        //provera da li je postoji email i sifra menadzera
+
     }
 }

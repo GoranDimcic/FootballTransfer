@@ -32,8 +32,8 @@ namespace FootballTransfer.Login
             this.btnLoginAsManager = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPasswordLoginManager = new System.Windows.Forms.TextBox();
+            this.txtEmailLoginManager = new System.Windows.Forms.TextBox();
             this.lblLoginPlayer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -68,22 +68,22 @@ namespace FootballTransfer.Login
             this.lblEmail.TabIndex = 9;
             this.lblEmail.Text = "E-mail";
             // 
-            // textBox1
+            // txtPasswordLoginManager
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(150, 175);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 29);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.UseSystemPasswordChar = true;
+            this.txtPasswordLoginManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasswordLoginManager.Location = new System.Drawing.Point(150, 175);
+            this.txtPasswordLoginManager.Name = "txtPasswordLoginManager";
+            this.txtPasswordLoginManager.Size = new System.Drawing.Size(150, 29);
+            this.txtPasswordLoginManager.TabIndex = 8;
+            this.txtPasswordLoginManager.UseSystemPasswordChar = true;
             // 
-            // txtEmail
+            // txtEmailLoginManager
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(150, 125);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(150, 29);
-            this.txtEmail.TabIndex = 7;
+            this.txtEmailLoginManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailLoginManager.Location = new System.Drawing.Point(150, 125);
+            this.txtEmailLoginManager.Name = "txtEmailLoginManager";
+            this.txtEmailLoginManager.Size = new System.Drawing.Size(150, 29);
+            this.txtEmailLoginManager.TabIndex = 7;
             // 
             // lblLoginPlayer
             // 
@@ -103,8 +103,8 @@ namespace FootballTransfer.Login
             this.Controls.Add(this.btnLoginAsManager);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtPasswordLoginManager);
+            this.Controls.Add(this.txtEmailLoginManager);
             this.Controls.Add(this.lblLoginPlayer);
             this.Name = "LoginManager";
             this.Text = "LoginManager";
@@ -118,8 +118,8 @@ namespace FootballTransfer.Login
         private System.Windows.Forms.Button btnLoginAsManager;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPasswordLoginManager;
+        private System.Windows.Forms.TextBox txtEmailLoginManager;
         private System.Windows.Forms.Label lblLoginPlayer;
     }
 }
