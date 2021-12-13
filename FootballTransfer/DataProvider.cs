@@ -17,7 +17,7 @@ namespace FootballTransfer
 
             if (session == null)
                 return;
-            RowSet playerData = session.Execute("insert into \"Player\" (\"email\", country, name, pasword, position, surname)  values ('" + player.email + "', '" + player.country + "', '" + player.name + "', '" + player.pasword + "', '" + player.position + "', '" + player.surname + "')");
+            RowSet playerData = session.Execute("insert into \"Player\" (\"email\", country, name, pasword, position, surname)  values ('" + player.email + "', '" + player.country + "', '" + player.name + "', '" + player.password + "', '" + player.position + "', '" + player.surname + "')");
         }
 
         public static Boolean checkPlayerRegistration(string newEmail)
@@ -124,7 +124,7 @@ namespace FootballTransfer
             {
                 Player player = new Player();
                 player.email = playerData["email"] != null ? playerData["email"].ToString() : string.Empty;
-                player.pasword = playerData["pasword"] != null ? playerData["pasword"].ToString() : string.Empty;
+                player.password = playerData["pasword"] != null ? playerData["pasword"].ToString() : string.Empty;
                 player.name = playerData["name"] != null ? playerData["name"].ToString() : string.Empty;
                 player.surname = playerData["surname"] != null ? playerData["surname"].ToString() : string.Empty;
                 player.country = playerData["country"] != null ? playerData["country"].ToString() : string.Empty;
@@ -133,7 +133,7 @@ namespace FootballTransfer
                 playerReturn = player;
             }
 
-            if (playerReturn.email == emailCheck && playerReturn.pasword == passwordCheck)
+            if (playerReturn.email == emailCheck && playerReturn.password == passwordCheck)
             {
                 return playerReturn;
             }

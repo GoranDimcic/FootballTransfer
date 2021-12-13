@@ -16,7 +16,7 @@ namespace FootballTransfer.Entities
 
         public string email { get; set; }
 
-        public string pasword { get; set; }
+        public string password { get; set; }
 
         public string position { get; set; }
     }

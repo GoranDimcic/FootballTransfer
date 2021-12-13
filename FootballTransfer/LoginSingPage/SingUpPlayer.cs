@@ -27,7 +27,7 @@ namespace FootballTransfer
             {
                 Player player = new Player();
                 player.email = txtEmailPlayerSign.Text;
-                player.pasword = txtPasswordPlayerSign.Text;
+                player.password = txtPasswordPlayerSign.Text;
                 player.name = txtNamePlayerSign.Text;
                 player.surname = txtSurnamePlayerSign.Text;
                 player.country = txtCountryPlayerSign.Text;
@@ -37,7 +37,7 @@ namespace FootballTransfer
                 {
                     MessageBox.Show("You didn't enter an email, try again!");
                 }
-                else if (player.pasword == "")
+                else if (player.password == "")
                 {
                     MessageBox.Show("You didn't enter a password, try again!");
                 }
