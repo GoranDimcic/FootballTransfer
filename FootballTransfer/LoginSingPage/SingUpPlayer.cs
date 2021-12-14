@@ -22,7 +22,7 @@ namespace FootballTransfer
 
         private void btnRegistryAsPlayer_Click(object sender, EventArgs e)
         {
-            Boolean correct = DataProvider.checkPlayerRegistration(txtEmailPlayerSign.Text);
+            Boolean correct = DataProvider.CheckPlayerRegistration(txtEmailPlayerSign.Text);
             if (correct == true)
             {
                 Player player = new Player();
@@ -43,7 +43,7 @@ namespace FootballTransfer
                 }
                 else
                 {
-                    DataProvider.addPlayer(player);
+                    DataProvider.AddPlayer(player);
                     this.DialogResult = DialogResult.OK;
                 }
             }

@@ -40,7 +40,7 @@ namespace FootballTransfer.Login
                 }
                 else
                 {
-                    DataProvider.addManager(manager);
+                    DataProvider.AddManager(manager);
                     this.DialogResult = DialogResult.OK;
                 }
             }

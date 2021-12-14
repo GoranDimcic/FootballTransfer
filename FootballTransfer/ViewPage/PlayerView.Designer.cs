@@ -39,13 +39,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtProbaName = new System.Windows.Forms.TextBox();
-            this.txtProbaSurname = new System.Windows.Forms.TextBox();
-            this.txtProbaCountry = new System.Windows.Forms.TextBox();
+            this.txtPlayerName = new System.Windows.Forms.TextBox();
+            this.txtPlayerSurname = new System.Windows.Forms.TextBox();
+            this.txtPlayerCountry = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.txtProbaPosition = new System.Windows.Forms.TextBox();
+            this.txtPlayerPosition = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // listViewClubOffer
@@ -156,32 +156,32 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Position";
             // 
-            // txtProbaName
+            // txtPlayerName
             // 
-            this.txtProbaName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProbaName.Location = new System.Drawing.Point(125, 22);
-            this.txtProbaName.Name = "txtProbaName";
-            this.txtProbaName.ReadOnly = true;
-            this.txtProbaName.Size = new System.Drawing.Size(123, 26);
-            this.txtProbaName.TabIndex = 13;
+            this.txtPlayerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlayerName.Location = new System.Drawing.Point(125, 22);
+            this.txtPlayerName.Name = "txtPlayerName";
+            this.txtPlayerName.ReadOnly = true;
+            this.txtPlayerName.Size = new System.Drawing.Size(123, 26);
+            this.txtPlayerName.TabIndex = 13;
             // 
-            // txtProbaSurname
+            // txtPlayerSurname
             // 
-            this.txtProbaSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProbaSurname.Location = new System.Drawing.Point(125, 57);
-            this.txtProbaSurname.Name = "txtProbaSurname";
-            this.txtProbaSurname.ReadOnly = true;
-            this.txtProbaSurname.Size = new System.Drawing.Size(123, 26);
-            this.txtProbaSurname.TabIndex = 14;
+            this.txtPlayerSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlayerSurname.Location = new System.Drawing.Point(125, 57);
+            this.txtPlayerSurname.Name = "txtPlayerSurname";
+            this.txtPlayerSurname.ReadOnly = true;
+            this.txtPlayerSurname.Size = new System.Drawing.Size(123, 26);
+            this.txtPlayerSurname.TabIndex = 14;
             // 
-            // txtProbaCountry
+            // txtPlayerCountry
             // 
-            this.txtProbaCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProbaCountry.Location = new System.Drawing.Point(125, 92);
-            this.txtProbaCountry.Name = "txtProbaCountry";
-            this.txtProbaCountry.ReadOnly = true;
-            this.txtProbaCountry.Size = new System.Drawing.Size(123, 26);
-            this.txtProbaCountry.TabIndex = 15;
+            this.txtPlayerCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlayerCountry.Location = new System.Drawing.Point(125, 92);
+            this.txtPlayerCountry.Name = "txtPlayerCountry";
+            this.txtPlayerCountry.ReadOnly = true;
+            this.txtPlayerCountry.Size = new System.Drawing.Size(123, 26);
+            this.txtPlayerCountry.TabIndex = 15;
             // 
             // button4
             // 
@@ -210,14 +210,14 @@
             this.button6.Text = "Odbi ponudu";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // txtProbaPosition
+            // txtPlayerPosition
             // 
-            this.txtProbaPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProbaPosition.Location = new System.Drawing.Point(125, 127);
-            this.txtProbaPosition.Name = "txtProbaPosition";
-            this.txtProbaPosition.ReadOnly = true;
-            this.txtProbaPosition.Size = new System.Drawing.Size(123, 26);
-            this.txtProbaPosition.TabIndex = 16;
+            this.txtPlayerPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlayerPosition.Location = new System.Drawing.Point(125, 127);
+            this.txtPlayerPosition.Name = "txtPlayerPosition";
+            this.txtPlayerPosition.ReadOnly = true;
+            this.txtPlayerPosition.Size = new System.Drawing.Size(123, 26);
+            this.txtPlayerPosition.TabIndex = 16;
             // 
             // PlayerView
             // 
@@ -227,10 +227,10 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.txtProbaPosition);
-            this.Controls.Add(this.txtProbaCountry);
-            this.Controls.Add(this.txtProbaSurname);
-            this.Controls.Add(this.txtProbaName);
+            this.Controls.Add(this.txtPlayerPosition);
+            this.Controls.Add(this.txtPlayerCountry);
+            this.Controls.Add(this.txtPlayerSurname);
+            this.Controls.Add(this.txtPlayerName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -261,12 +261,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtProbaName;
-        private System.Windows.Forms.TextBox txtProbaSurname;
-        private System.Windows.Forms.TextBox txtProbaCountry;
+        private System.Windows.Forms.TextBox txtPlayerName;
+        private System.Windows.Forms.TextBox txtPlayerSurname;
+        private System.Windows.Forms.TextBox txtPlayerCountry;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox txtProbaPosition;
+        private System.Windows.Forms.TextBox txtPlayerPosition;
     }
 }

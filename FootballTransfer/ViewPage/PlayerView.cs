@@ -14,16 +14,15 @@ namespace FootballTransfer.ViewPage
 {
     public partial class PlayerView : Form
     {
+        public Player updatePlayer;
+
         public PlayerView(Player player)
         {
             InitializeComponent();
             this.fillManagerOffer();
             this.fillClubOffer();
             this.fillDescription(player);
-        }
-
-        public PlayerView()
-        {
+            updatePlayer = player;
         }
 
         public void fillClubOffer()
@@ -46,15 +45,15 @@ namespace FootballTransfer.ViewPage
 
         public void fillDescription(Player player)
         {
-            txtProbaName.Text = player.name;
-            txtProbaSurname.Text = player.surname;
-            txtProbaCountry.Text = player.country;
-            txtProbaPosition.Text = player.position;
+            txtPlayerName.Text = player.name;
+            txtPlayerSurname.Text = player.surname;
+            txtPlayerCountry.Text = player.country;
+            txtPlayerPosition.Text = player.position;
         }
 
         private void btnUpdatePlayer_Click(object sender, EventArgs e)
         {
-            UpdatePlayer form = new UpdatePlayer();
+            UpdatePlayer form = new UpdatePlayer(updatePlayer);
             form.ShowDialog();
         }
     }

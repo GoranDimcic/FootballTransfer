@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FootballTransfer.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,22 @@ namespace FootballTransfer.Update
 {
     public partial class UpdatePlayer : Form
     {
-        public UpdatePlayer()
+        public Player updatePlayer;
+
+        public UpdatePlayer(Player newPlayer)
         {
             InitializeComponent();
+            updatePlayer = newPlayer;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            updatePlayer.name = txtUpdatePlayerName.Text;
+            //updatePlayer.surname = txtUpdatePlayerSurname.Text;
+            //updatePlayer.country = txtUpdatePlayerCountry.Text;
+            //updatePlayer.position = comboBoxUpdatePlayerPosition.Text;
+
+            DataProvider.UpdatePlayer(updatePlayer);
         }
     }
 }

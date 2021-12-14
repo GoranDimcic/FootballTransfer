@@ -13,7 +13,29 @@ namespace FootballTransfer
     {
         #region Player
 
-        public static void addPlayer(Player player)
+        public static Player GetPlayer(Player player)
+        {
+            ISession session = SessionManager.GetSession();
+            Player getPlayer = new Player();
+
+            if (session == null)
+                return null;
+
+            Row playerData = session.Execute("select * from \"Player\" where \"email\"='" + player.email + "'").FirstOrDefault();
+
+            if (playerData != null)
+            {
+                getPlayer.email = playerData["email"].ToString();
+                getPlayer.password = playerData["pasword"].ToString();
+                getPlayer.name = playerData["name"].ToString();
+                getPlayer.surname = playerData["surname"].ToString();
+                getPlayer.country = playerData["country"].ToString();
+                getPlayer.position = playerData["position"].ToString();
+            }
+            return getPlayer;
+        }
+
+        public static void AddPlayer(Player player)
         {
             ISession session = SessionManager.GetSession();
 
@@ -22,7 +44,7 @@ namespace FootballTransfer
             RowSet playerData = session.Execute("insert into \"Player\" (\"email\", country, name, pasword, position, surname)  values ('" + player.email + "', '" + player.country + "', '" + player.name + "', '" + player.password + "', '" + player.position + "', '" + player.surname + "')");
         }
 
-        public static Boolean checkPlayerRegistration(string newEmail)
+        public static Boolean CheckPlayerRegistration(string newEmail)
         {
             Boolean matching = true;
 
@@ -36,7 +58,7 @@ namespace FootballTransfer
             foreach (var playerData in playersData)
             {
                 Player player = new Player();
-                player.email = playerData["email"] != null ? playerData["email"].ToString() : string.Empty;
+                player.email = playerData["email"].ToString();
                 if (player.email == newEmail)
                 {
                     matching = false;
@@ -59,12 +81,12 @@ namespace FootballTransfer
             foreach (var playerData in playersData)
             {
                 Player player = new Player();
-                player.email = playerData["email"] != null ? playerData["email"].ToString() : string.Empty;
-                player.password = playerData["pasword"] != null ? playerData["pasword"].ToString() : string.Empty;
-                player.name = playerData["name"] != null ? playerData["name"].ToString() : string.Empty;
-                player.surname = playerData["surname"] != null ? playerData["surname"].ToString() : string.Empty;
-                player.country = playerData["country"] != null ? playerData["country"].ToString() : string.Empty;
-                player.position = playerData["position"] != null ? playerData["position"].ToString() : string.Empty;
+                player.email = playerData["email"].ToString();
+                player.password = playerData["pasword"].ToString();
+                player.name = playerData["name"].ToString();
+                player.surname = playerData["surname"].ToString();
+                player.country = playerData["country"].ToString();
+                player.position = playerData["position"].ToString();
 
                 playerReturn = player;
             }
@@ -80,11 +102,21 @@ namespace FootballTransfer
         }
         //provera da li je postoji email i sifra igraca
 
+        public static void UpdatePlayer(Player player)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            RowSet playerUpdateData = session.Execute("update \"Player\" set name=" + player.name + " where \"email\"='" + player.email + "' ");
+        }
+
         #endregion
 
         #region Manager
 
-        public static void addManager(Manager manager)
+        public static void AddManager(Manager manager)
         {
             ISession session = SessionManager.GetSession();
 
@@ -107,7 +139,7 @@ namespace FootballTransfer
             foreach (var managerData in managersData)
             {
                 Manager manager = new Manager();
-                manager.email = managerData["email"] != null ? managerData["email"].ToString() : string.Empty;
+                manager.email = managerData["email"].ToString();
                 if (manager.email == newEmail)
                 {
                     matching = false;
@@ -130,11 +162,11 @@ namespace FootballTransfer
             foreach (var managerData in managersData)
             {
                 Manager manager = new Manager();
-                manager.email = managerData["email"] != null ? managerData["email"].ToString() : string.Empty;
-                manager.password = managerData["pasword"] != null ? managerData["pasword"].ToString() : string.Empty;
-                manager.name = managerData["name"] != null ? managerData["name"].ToString() : string.Empty;
-                manager.surname = managerData["surname"] != null ? managerData["surname"].ToString() : string.Empty;
-                manager.country = managerData["country"] != null ? managerData["country"].ToString() : string.Empty;
+                manager.email = managerData["email"].ToString();
+                manager.password = managerData["pasword"].ToString();
+                manager.name = managerData["name"].ToString();
+                manager.surname = managerData["surname"].ToString();
+                manager.country = managerData["country"].ToString();
 
                 managerReturn = manager;
             }
@@ -154,7 +186,7 @@ namespace FootballTransfer
 
         #region Club
 
-        public static void addClub(Club club)
+        public static void AddClub(Club club)
         {
             ISession session = SessionManager.GetSession();
 
@@ -177,7 +209,7 @@ namespace FootballTransfer
             foreach (var clubData in clubsData)
             {
                 Club club = new Club();
-                club.email = clubData["email"] != null ? clubData["email"].ToString() : string.Empty;
+                club.email = clubData["email"].ToString();
                 if (club.email == newEmail)
                 {
                     matching = false;
@@ -200,11 +232,11 @@ namespace FootballTransfer
             foreach (var clubData in clubsData)
             {
                 Club club = new Club();
-                club.email = clubData["email"] != null ? clubData["email"].ToString() : string.Empty;
-                club.password = clubData["pasword"] != null ? clubData["pasword"].ToString() : string.Empty;
-                club.name = clubData["name"] != null ? clubData["name"].ToString() : string.Empty;
-                club.stadionName = clubData["stadionname"] != null ? clubData["stadionname"].ToString() : string.Empty;
-                club.leagueName = clubData["leaguename"] != null ? clubData["leaguename"].ToString() : string.Empty;
+                club.email = clubData["email"].ToString();
+                club.password = clubData["pasword"].ToString();
+                club.name = clubData["name"].ToString();
+                club.stadionName = clubData["stadionname"].ToString();
+                club.leagueName = clubData["leaguename"].ToString();
                 club.foundationDate = DateTime.Parse(clubData["foundationdate"].ToString());
 
                 clubReturn = club;
