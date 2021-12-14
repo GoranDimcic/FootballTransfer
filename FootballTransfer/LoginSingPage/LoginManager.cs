@@ -42,7 +42,7 @@ namespace FootballTransfer.Login
                 }
                 else
                 {
-                    ManagerView form = new ManagerView();
+                    ManagerView form = new ManagerView(newManager);
                     this.Visible = false;
                     form.ShowDialog();
                 }
