@@ -16,7 +16,7 @@ namespace FootballTransfer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TransferList());
+            Application.Run(new UserPage());
         }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.listViewClubOffer = new System.Windows.Forms.ListView();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUpdatePlayer = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.listViewManagerOffer = new System.Windows.Forms.ListView();
@@ -42,10 +42,10 @@
             this.txtProbaName = new System.Windows.Forms.TextBox();
             this.txtProbaSurname = new System.Windows.Forms.TextBox();
             this.txtProbaCountry = new System.Windows.Forms.TextBox();
-            this.txtProbaPosition = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.txtProbaPosition = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // listViewClubOffer
@@ -62,20 +62,21 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 214);
+            this.label2.Location = new System.Drawing.Point(8, 185);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Lista ponuda klubova";
             // 
-            // button1
+            // btnUpdatePlayer
             // 
-            this.button1.Location = new System.Drawing.Point(339, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 40);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Izmeni podatke";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUpdatePlayer.Location = new System.Drawing.Point(270, 22);
+            this.btnUpdatePlayer.Name = "btnUpdatePlayer";
+            this.btnUpdatePlayer.Size = new System.Drawing.Size(91, 26);
+            this.btnUpdatePlayer.TabIndex = 4;
+            this.btnUpdatePlayer.Text = "Update";
+            this.btnUpdatePlayer.UseVisualStyleBackColor = true;
+            this.btnUpdatePlayer.Click += new System.EventHandler(this.btnUpdatePlayer_Click);
             // 
             // button2
             // 
@@ -109,7 +110,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(437, 214);
+            this.label3.Location = new System.Drawing.Point(420, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 13);
             this.label3.TabIndex = 8;
@@ -129,7 +130,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 50);
+            this.label4.Location = new System.Drawing.Point(25, 60);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 20);
             this.label4.TabIndex = 10;
@@ -139,7 +140,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 75);
+            this.label5.Location = new System.Drawing.Point(25, 95);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 20);
             this.label5.TabIndex = 11;
@@ -149,7 +150,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 100);
+            this.label6.Location = new System.Drawing.Point(25, 130);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 20);
             this.label6.TabIndex = 12;
@@ -157,35 +158,30 @@
             // 
             // txtProbaName
             // 
-            this.txtProbaName.Location = new System.Drawing.Point(125, 27);
+            this.txtProbaName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProbaName.Location = new System.Drawing.Point(125, 22);
             this.txtProbaName.Name = "txtProbaName";
             this.txtProbaName.ReadOnly = true;
-            this.txtProbaName.Size = new System.Drawing.Size(123, 20);
+            this.txtProbaName.Size = new System.Drawing.Size(123, 26);
             this.txtProbaName.TabIndex = 13;
             // 
             // txtProbaSurname
             // 
-            this.txtProbaSurname.Location = new System.Drawing.Point(125, 52);
+            this.txtProbaSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProbaSurname.Location = new System.Drawing.Point(125, 57);
             this.txtProbaSurname.Name = "txtProbaSurname";
             this.txtProbaSurname.ReadOnly = true;
-            this.txtProbaSurname.Size = new System.Drawing.Size(123, 20);
+            this.txtProbaSurname.Size = new System.Drawing.Size(123, 26);
             this.txtProbaSurname.TabIndex = 14;
             // 
             // txtProbaCountry
             // 
-            this.txtProbaCountry.Location = new System.Drawing.Point(125, 78);
+            this.txtProbaCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProbaCountry.Location = new System.Drawing.Point(125, 92);
             this.txtProbaCountry.Name = "txtProbaCountry";
             this.txtProbaCountry.ReadOnly = true;
-            this.txtProbaCountry.Size = new System.Drawing.Size(123, 20);
+            this.txtProbaCountry.Size = new System.Drawing.Size(123, 26);
             this.txtProbaCountry.TabIndex = 15;
-            // 
-            // txtProbaPosition
-            // 
-            this.txtProbaPosition.Location = new System.Drawing.Point(125, 104);
-            this.txtProbaPosition.Name = "txtProbaPosition";
-            this.txtProbaPosition.ReadOnly = true;
-            this.txtProbaPosition.Size = new System.Drawing.Size(123, 20);
-            this.txtProbaPosition.TabIndex = 16;
             // 
             // button4
             // 
@@ -214,6 +210,15 @@
             this.button6.Text = "Odbi ponudu";
             this.button6.UseVisualStyleBackColor = true;
             // 
+            // txtProbaPosition
+            // 
+            this.txtProbaPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProbaPosition.Location = new System.Drawing.Point(125, 127);
+            this.txtProbaPosition.Name = "txtProbaPosition";
+            this.txtProbaPosition.ReadOnly = true;
+            this.txtProbaPosition.Size = new System.Drawing.Size(123, 26);
+            this.txtProbaPosition.TabIndex = 16;
+            // 
             // PlayerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,7 +239,7 @@
             this.Controls.Add(this.listViewManagerOffer);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnUpdatePlayer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listViewClubOffer);
             this.Name = "PlayerView";
@@ -247,7 +252,7 @@
         #endregion
         private System.Windows.Forms.ListView listViewClubOffer;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUpdatePlayer;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListView listViewManagerOffer;
@@ -259,9 +264,9 @@
         private System.Windows.Forms.TextBox txtProbaName;
         private System.Windows.Forms.TextBox txtProbaSurname;
         private System.Windows.Forms.TextBox txtProbaCountry;
-        private System.Windows.Forms.TextBox txtProbaPosition;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox txtProbaPosition;
     }
 }

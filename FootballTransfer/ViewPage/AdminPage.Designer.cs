@@ -253,7 +253,7 @@ namespace FootballTransfer
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnPlayer);
             this.Name = "TransferList";
-            this.Text = "TransferList";
+            this.Text = "Admin page";
             this.ResumeLayout(false);
             this.PerformLayout();
 

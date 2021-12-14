@@ -1,4 +1,5 @@
 ﻿using FootballTransfer.Entities;
+using FootballTransfer.Update;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,20 +14,16 @@ namespace FootballTransfer.ViewPage
 {
     public partial class PlayerView : Form
     {
-        public Player globalPlayer;
-
-        //public PlayerView()
-        //{
-        //    InitializeComponent();
-        //}
-
         public PlayerView(Player player)
         {
             InitializeComponent();
-            globalPlayer = player;
             this.fillManagerOffer();
             this.fillClubOffer();
-            this.fillDescription(globalPlayer);
+            this.fillDescription(player);
+        }
+
+        public PlayerView()
+        {
         }
 
         public void fillClubOffer()
@@ -47,12 +44,18 @@ namespace FootballTransfer.ViewPage
             listViewManagerOffer.Columns.Add("Contract date", 120);
         }
 
-        public void fillDescription(Player globalPlayer)
+        public void fillDescription(Player player)
         {
-            txtProbaName.Text = globalPlayer.name;
-            txtProbaSurname.Text = globalPlayer.surname;
-            txtProbaCountry.Text = globalPlayer.country;
-            txtProbaPosition.Text = globalPlayer.position;
+            txtProbaName.Text = player.name;
+            txtProbaSurname.Text = player.surname;
+            txtProbaCountry.Text = player.country;
+            txtProbaPosition.Text = player.position;
+        }
+
+        private void btnUpdatePlayer_Click(object sender, EventArgs e)
+        {
+            UpdatePlayer form = new UpdatePlayer();
+            form.ShowDialog();
         }
     }
 }

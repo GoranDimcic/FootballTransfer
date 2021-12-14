@@ -164,11 +164,23 @@
       <DependentUpon>SingUpManager.cs</DependentUpon>
     </Compile>
     <Compile Include="SessionManager.cs" />
-    <Compile Include="TransferList.cs">
+    <Compile Include="Update\UpdatePlayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TransferList.Designer.cs">
-      <DependentUpon>TransferList.cs</DependentUpon>
+    <Compile Include="Update\UpdatePlayer.Designer.cs">
+      <DependentUpon>UpdatePlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPage.Designer.cs">
+      <DependentUpon>UserPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPage\AdminPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPage\AdminPage.Designer.cs">
+      <DependentUpon>AdminPage.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginSingPage\LoginPlayer.cs">
       <SubType>Form</SubType>
@@ -214,8 +226,14 @@
     <EmbeddedResource Include="LoginSingPage\SingUpManager.resx">
       <DependentUpon>SingUpManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransferList.resx">
-      <DependentUpon>TransferList.cs</DependentUpon>
+    <EmbeddedResource Include="Update\UpdatePlayer.resx">
+      <DependentUpon>UpdatePlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPage.resx">
+      <DependentUpon>UserPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPage\AdminPage.resx">
+      <DependentUpon>AdminPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginSingPage\LoginPlayer.resx">
       <DependentUpon>LoginPlayer.cs</DependentUpon>
