@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FootballTransfer.Entities
 {
-    class Player
+    public class Player
     {
         public string name { get; set; }
 

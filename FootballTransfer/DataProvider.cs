@@ -205,7 +205,7 @@ namespace FootballTransfer
                 club.name = clubData["name"] != null ? clubData["name"].ToString() : string.Empty;
                 club.stadionName = clubData["stadionname"] != null ? clubData["stadionname"].ToString() : string.Empty;
                 club.leagueName = clubData["leaguename"] != null ? clubData["leaguename"].ToString() : string.Empty;
-                club.foundationDate = clubData["foundationdate"] == null ? DateTime.MinValue : DateTime.Parse(clubData["foundationdate"].ToString());
+                club.foundationDate = DateTime.Parse(clubData["foundationdate"].ToString());
 
                 clubReturn = club;
             }

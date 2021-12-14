@@ -14,7 +14,7 @@ namespace FootballTransfer.Login
 {
     public partial class LoginClub : Form
     {
-        private Club newClub;
+        public Club newClub;
 
         public LoginClub()
         {

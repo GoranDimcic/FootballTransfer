@@ -14,7 +14,7 @@ namespace FootballTransfer.Login
 {
     public partial class LoginManager : Form
     {
-        private Manager newManager;
+        public Manager newManager;
 
         public LoginManager()
         {

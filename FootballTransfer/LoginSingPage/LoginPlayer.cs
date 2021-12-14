@@ -14,7 +14,7 @@ namespace FootballTransfer
 {
     public partial class LoginPlayer : Form
     {
-        private Player newPlayer;
+        public Player newPlayer;
 
         public LoginPlayer()
         {
@@ -42,7 +42,7 @@ namespace FootballTransfer
                 }
                 else
                 {
-                    PlayerView form = new PlayerView();
+                    PlayerView form = new PlayerView(newPlayer);
                     this.Visible = false;
                     form.ShowDialog();
                 }

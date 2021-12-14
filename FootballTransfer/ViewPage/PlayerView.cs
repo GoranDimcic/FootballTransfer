@@ -13,11 +13,20 @@ namespace FootballTransfer.ViewPage
 {
     public partial class PlayerView : Form
     {
-        public PlayerView()
+        public Player globalPlayer;
+
+        //public PlayerView()
+        //{
+        //    InitializeComponent();
+        //}
+
+        public PlayerView(Player player)
         {
             InitializeComponent();
+            globalPlayer = player;
             this.fillManagerOffer();
             this.fillClubOffer();
+            this.fillDescription(globalPlayer);
         }
 
         public void fillClubOffer()
@@ -36,6 +45,14 @@ namespace FootballTransfer.ViewPage
             listViewManagerOffer.Columns.Add("Name", 120);
             listViewManagerOffer.Columns.Add("Surname", 120);
             listViewManagerOffer.Columns.Add("Contract date", 120);
+        }
+
+        public void fillDescription(Player globalPlayer)
+        {
+            txtProbaName.Text = globalPlayer.name;
+            txtProbaSurname.Text = globalPlayer.surname;
+            txtProbaCountry.Text = globalPlayer.country;
+            txtProbaPosition.Text = globalPlayer.position;
         }
     }
 }
