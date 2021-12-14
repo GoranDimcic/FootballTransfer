@@ -33,7 +33,7 @@ namespace FootballTransfer.Login
             }
             else
             {
-                newManager = DataProvider.CheckManagerLogin(txtEmailLoginManager.Text, txtPasswordLoginManager.Text);
+                newManager = DataProvider.ManagerLogin(txtEmailLoginManager.Text, txtPasswordLoginManager.Text);
                 if (newManager == null)
                 {
                     txtEmailLoginManager.Text = "";

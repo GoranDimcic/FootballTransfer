@@ -33,7 +33,7 @@ namespace FootballTransfer.Login
             }
             else
             {
-                newClub = DataProvider.CheckClubLogin(txtEmailLoginClub.Text, txtPasswordLoginClub.Text);
+                newClub = DataProvider.ClubLogin(txtEmailLoginClub.Text, txtPasswordLoginClub.Text);
                 if (newClub == null)
                 {
                     txtEmailLoginClub.Text = "";

@@ -46,7 +46,7 @@ namespace FootballTransfer
         }
         //provera da li postoji email igraca
 
-        public static Player CheckPlayerLogin(string emailCheck, string passwordCheck)
+        public static Player PlayerLogin(string emailCheck, string passwordCheck)
         {
             ISession session = SessionManager.GetSession();
             Player playerReturn = new Player();
@@ -117,7 +117,7 @@ namespace FootballTransfer
         }
         //provera da li postoji email menadzera
 
-        public static Manager CheckManagerLogin(string emailCheck, string passwordCheck)
+        public static Manager ManagerLogin(string emailCheck, string passwordCheck)
         {
             ISession session = SessionManager.GetSession();
             Manager managerReturn = new Manager();
@@ -187,7 +187,7 @@ namespace FootballTransfer
         }
         //provera da li postoji email kluba
 
-        public static Club CheckClubLogin(string emailCheck, string passwordCheck)
+        public static Club ClubLogin(string emailCheck, string passwordCheck)
         {
             ISession session = SessionManager.GetSession();
             Club clubReturn = new Club();
@@ -205,7 +205,7 @@ namespace FootballTransfer
                 club.name = clubData["name"] != null ? clubData["name"].ToString() : string.Empty;
                 club.stadionName = clubData["stadionname"] != null ? clubData["stadionname"].ToString() : string.Empty;
                 club.leagueName = clubData["leaguename"] != null ? clubData["leaguename"].ToString() : string.Empty;
-                //club.foundationDate = (DateTime)clubData["foundationdate"] != null ? (DateTime)clubData["foundationdate"] : (DateTime?) null;
+                club.foundationDate = clubData["foundationdate"] == null ? DateTime.MinValue : DateTime.Parse(clubData["foundationdate"].ToString());
 
                 clubReturn = club;
             }
