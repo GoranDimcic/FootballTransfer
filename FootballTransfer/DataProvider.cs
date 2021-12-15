@@ -237,6 +237,8 @@ namespace FootballTransfer
                 club.name = clubData["name"].ToString();
                 club.stadionName = clubData["stadionname"].ToString();
                 club.leagueName = clubData["leaguename"].ToString();
+                club.stadionCapacity = clubData["capacity"].ToString();
+                club.town = clubData["town"].ToString();
                 club.foundationDate = DateTime.Parse(clubData["foundationdate"].ToString());
 
                 clubReturn = club;

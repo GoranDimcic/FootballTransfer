@@ -20,7 +20,6 @@ namespace FootballTransfer.ViewPage
         {
             InitializeComponent();
             fillDescription(manager);
-            updateManager = manager;
         }
 
         public void fillDescription(Manager manager)

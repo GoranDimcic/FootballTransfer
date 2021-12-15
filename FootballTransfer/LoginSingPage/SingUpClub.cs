@@ -32,7 +32,7 @@ namespace FootballTransfer.Login
                 club.stadionName = txtStadionNameClubSign.Text;
                 club.foundationDate = dateFoundationDate.Value.Date;
                 club.town = txtTownClubSign.Text;
-                club.stadionCapacity = Int32.Parse(txtCapacityClubSign.Text);
+                club.stadionCapacity = txtCapacityClubSign.Text;
 
                 if (club.email == "")
                 {

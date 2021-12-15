@@ -158,29 +158,32 @@
             // 
             // txtPlayerName
             // 
+            this.txtPlayerName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPlayerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlayerName.Location = new System.Drawing.Point(125, 22);
+            this.txtPlayerName.Location = new System.Drawing.Point(125, 26);
             this.txtPlayerName.Name = "txtPlayerName";
             this.txtPlayerName.ReadOnly = true;
-            this.txtPlayerName.Size = new System.Drawing.Size(123, 26);
+            this.txtPlayerName.Size = new System.Drawing.Size(123, 19);
             this.txtPlayerName.TabIndex = 13;
             // 
             // txtPlayerSurname
             // 
+            this.txtPlayerSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPlayerSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlayerSurname.Location = new System.Drawing.Point(125, 57);
+            this.txtPlayerSurname.Location = new System.Drawing.Point(125, 61);
             this.txtPlayerSurname.Name = "txtPlayerSurname";
             this.txtPlayerSurname.ReadOnly = true;
-            this.txtPlayerSurname.Size = new System.Drawing.Size(123, 26);
+            this.txtPlayerSurname.Size = new System.Drawing.Size(123, 19);
             this.txtPlayerSurname.TabIndex = 14;
             // 
             // txtPlayerCountry
             // 
+            this.txtPlayerCountry.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPlayerCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlayerCountry.Location = new System.Drawing.Point(125, 92);
+            this.txtPlayerCountry.Location = new System.Drawing.Point(125, 96);
             this.txtPlayerCountry.Name = "txtPlayerCountry";
             this.txtPlayerCountry.ReadOnly = true;
-            this.txtPlayerCountry.Size = new System.Drawing.Size(123, 26);
+            this.txtPlayerCountry.Size = new System.Drawing.Size(123, 19);
             this.txtPlayerCountry.TabIndex = 15;
             // 
             // button4
@@ -212,11 +215,12 @@
             // 
             // txtPlayerPosition
             // 
+            this.txtPlayerPosition.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPlayerPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlayerPosition.Location = new System.Drawing.Point(125, 127);
+            this.txtPlayerPosition.Location = new System.Drawing.Point(125, 131);
             this.txtPlayerPosition.Name = "txtPlayerPosition";
             this.txtPlayerPosition.ReadOnly = true;
-            this.txtPlayerPosition.Size = new System.Drawing.Size(123, 26);
+            this.txtPlayerPosition.Size = new System.Drawing.Size(123, 19);
             this.txtPlayerPosition.TabIndex = 16;
             // 
             // PlayerView

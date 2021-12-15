@@ -24,9 +24,11 @@ namespace FootballTransfer.ViewPage
 
         public void fillDescription(Club club)
         {
+            txtClubTown.Text = club.town;
             txtClubName.Text = club.name;
-            txtClubLeagueName.Text = club.leagueName;
             txtClubStadionName.Text = club.stadionName;
+            txtClubCapacity.Text = club.stadionCapacity.ToString();
+            txtClubLeagueName.Text = club.leagueName;
             txtClubFoundationDate.Text = club.foundationDate.ToString();
         }
 

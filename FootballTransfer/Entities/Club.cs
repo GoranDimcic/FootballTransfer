@@ -20,7 +20,7 @@ namespace FootballTransfer.Entities
 
         public string stadionName { get; set; }
 
-        public int stadionCapacity { get; set; }
+        public string stadionCapacity { get; set; }
 
         public DateTime foundationDate { get; set; }
     }

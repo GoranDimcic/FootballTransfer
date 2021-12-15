@@ -93,29 +93,32 @@ namespace FootballTransfer.ViewPage
             // 
             // txtManagerCountry
             // 
+            this.txtManagerCountry.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtManagerCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtManagerCountry.Location = new System.Drawing.Point(125, 92);
+            this.txtManagerCountry.Location = new System.Drawing.Point(125, 96);
             this.txtManagerCountry.Name = "txtManagerCountry";
             this.txtManagerCountry.ReadOnly = true;
-            this.txtManagerCountry.Size = new System.Drawing.Size(123, 26);
+            this.txtManagerCountry.Size = new System.Drawing.Size(123, 19);
             this.txtManagerCountry.TabIndex = 24;
             // 
             // txtManagerSurname
             // 
+            this.txtManagerSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtManagerSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtManagerSurname.Location = new System.Drawing.Point(125, 57);
+            this.txtManagerSurname.Location = new System.Drawing.Point(125, 61);
             this.txtManagerSurname.Name = "txtManagerSurname";
             this.txtManagerSurname.ReadOnly = true;
-            this.txtManagerSurname.Size = new System.Drawing.Size(123, 26);
+            this.txtManagerSurname.Size = new System.Drawing.Size(123, 19);
             this.txtManagerSurname.TabIndex = 23;
             // 
             // txtManagerName
             // 
+            this.txtManagerName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtManagerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtManagerName.Location = new System.Drawing.Point(125, 22);
+            this.txtManagerName.Location = new System.Drawing.Point(125, 26);
             this.txtManagerName.Name = "txtManagerName";
             this.txtManagerName.ReadOnly = true;
-            this.txtManagerName.Size = new System.Drawing.Size(123, 26);
+            this.txtManagerName.Size = new System.Drawing.Size(123, 19);
             this.txtManagerName.TabIndex = 22;
             // 
             // label5
