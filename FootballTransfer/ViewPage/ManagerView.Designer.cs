@@ -39,7 +39,7 @@ namespace FootballTransfer.ViewPage
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnUpdatePlayer = new System.Windows.Forms.Button();
+            this.btnUpdateManager = new System.Windows.Forms.Button();
             this.btnDeleteManager = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -142,15 +142,15 @@ namespace FootballTransfer.ViewPage
             this.label1.TabIndex = 18;
             this.label1.Text = "Name";
             // 
-            // btnUpdatePlayer
+            // btnUpdateManager
             // 
-            this.btnUpdatePlayer.Location = new System.Drawing.Point(270, 22);
-            this.btnUpdatePlayer.Name = "btnUpdatePlayer";
-            this.btnUpdatePlayer.Size = new System.Drawing.Size(91, 26);
-            this.btnUpdatePlayer.TabIndex = 17;
-            this.btnUpdatePlayer.Text = "Update";
-            this.btnUpdatePlayer.UseVisualStyleBackColor = true;
-            this.btnUpdatePlayer.Click += new System.EventHandler(this.btnUpdatePlayer_Click);
+            this.btnUpdateManager.Location = new System.Drawing.Point(270, 22);
+            this.btnUpdateManager.Name = "btnUpdateManager";
+            this.btnUpdateManager.Size = new System.Drawing.Size(91, 26);
+            this.btnUpdateManager.TabIndex = 17;
+            this.btnUpdateManager.Text = "Update";
+            this.btnUpdateManager.UseVisualStyleBackColor = true;
+            this.btnUpdateManager.Click += new System.EventHandler(this.btnUpdatePlayer_Click);
             // 
             // btnDeleteManager
             // 
@@ -174,7 +174,7 @@ namespace FootballTransfer.ViewPage
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnUpdatePlayer);
+            this.Controls.Add(this.btnUpdateManager);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
@@ -198,7 +198,7 @@ namespace FootballTransfer.ViewPage
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnUpdatePlayer;
+        private System.Windows.Forms.Button btnUpdateManager;
         private System.Windows.Forms.Button btnDeleteManager;
     }
 }

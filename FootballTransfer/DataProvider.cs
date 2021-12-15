@@ -35,15 +35,6 @@ namespace FootballTransfer
             return getPlayer;
         }
 
-        public static void AddPlayer(Player player)
-        {
-            ISession session = SessionManager.GetSession();
-
-            if (session == null)
-                return;
-            RowSet playerData = session.Execute("insert into \"Player\" (\"email\", country, name, pasword, position, surname)  values ('" + player.email + "', '" + player.country + "', '" + player.name + "', '" + player.password + "', '" + player.position + "', '" + player.surname + "')");
-        }
-
         public static Boolean CheckPlayerRegistration(string newEmail)
         {
             Boolean matching = true;
@@ -66,7 +57,6 @@ namespace FootballTransfer
             }
             return matching;
         }
-        //provera da li postoji email igraca
 
         public static Player PlayerLogin(string emailCheck, string passwordCheck)
         {
@@ -100,7 +90,15 @@ namespace FootballTransfer
                 return null;
             }
         }
-        //provera da li je postoji email i sifra igraca
+
+        public static void AddPlayer(Player player)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+            RowSet playerData = session.Execute("insert into \"Player\" (\"email\", country, name, pasword, position, surname)  values ('" + player.email + "', '" + player.country + "', '" + player.name + "', '" + player.password + "', '" + player.position + "', '" + player.surname + "')");
+        }
 
         public static void UpdatePlayer(Player player)
         {
@@ -120,21 +118,11 @@ namespace FootballTransfer
                 return;
 
             RowSet playerData = session.Execute("delete from \"Player\" where \"email\" = '" + player.email + "'");
-
         }
 
         #endregion
 
         #region Manager
-
-        public static void AddManager(Manager manager)
-        {
-            ISession session = SessionManager.GetSession();
-
-            if (session == null)
-                return;
-            RowSet playerData = session.Execute("insert into \"Manager\" (\"email\", country, name, pasword, surname)  values ('" + manager.email + "', '" + manager.country + "', '" + manager.name + "', '" + manager.password + "', '" + manager.surname + "')");
-        }
 
         public static Boolean CheckManagerRegistration(string newEmail)
         {
@@ -158,7 +146,6 @@ namespace FootballTransfer
             }
             return matching;
         }
-        //provera da li postoji email menadzera
 
         public static Manager ManagerLogin(string emailCheck, string passwordCheck)
         {
@@ -191,7 +178,17 @@ namespace FootballTransfer
                 return null;
             }
         }
-        //provera da li je postoji email i sifra menadzera
+
+        public static void AddManager(Manager manager)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+            RowSet playerData = session.Execute("insert into \"Manager\" (\"email\", country, name, pasword, surname)  values ('" + manager.email + "', '" + manager.country + "', '" + manager.name + "', '" + manager.password + "', '" + manager.surname + "')");
+        }
+
+        public static void UpdateManager() { }
 
         public static void DeleteManager(Manager manager)
         {
@@ -201,21 +198,11 @@ namespace FootballTransfer
                 return;
 
             RowSet managerData = session.Execute("delete from \"Manager\" where \"email\" = '" + manager.email + "'");
-
         }
 
         #endregion
 
         #region Club
-
-        public static void AddClub(Club club)
-        {
-            ISession session = SessionManager.GetSession();
-
-            if (session == null)
-                return;
-            RowSet playerData = session.Execute("insert into \"Club\" (\"email\", capacity, foundationdate, leaguename, name, pasword, stadionname, town)  values ('" + club.email + "', '" + club.stadionCapacity + "', '" + club.foundationDate + "', '" + club.leagueName + "', '" + club.name + "', '" + club.password + "', '" + club.stadionName + "', '" + club.town + "')");
-        }
 
         public static Boolean CheckClubRegistration(string newEmail)
         {
@@ -239,7 +226,6 @@ namespace FootballTransfer
             }
             return matching;
         }
-        //provera da li postoji email kluba
 
         public static Club ClubLogin(string emailCheck, string passwordCheck)
         {
@@ -275,7 +261,27 @@ namespace FootballTransfer
                 return null;
             }
         }
-        //provera da li je postoji email i sifra kluba
+
+        public static void AddClub(Club club)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+            RowSet playerData = session.Execute("insert into \"Club\" (\"email\", capacity, foundationdate, leaguename, name, pasword, stadionname, town)  values ('" + club.email + "', '" + club.stadionCapacity + "', '" + club.foundationDate + "', '" + club.leagueName + "', '" + club.name + "', '" + club.password + "', '" + club.stadionName + "', '" + club.town + "')");
+        }
+
+        public static void UpdateClub() { }
+
+        public static void DeleteClub(Club club)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            RowSet clubData = session.Execute("delete from \"Club\" where \"email\" = '" + club.email + "'");
+        }
 
         #endregion
     }
