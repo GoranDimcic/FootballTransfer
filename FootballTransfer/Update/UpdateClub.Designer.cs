@@ -1,7 +1,7 @@
 ﻿
 namespace FootballTransfer.Update
 {
-    partial class UpdateManager
+    partial class UpdateClub
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,12 @@ namespace FootballTransfer.Update
         private void InitializeComponent()
         {
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.txtUpdateManagerCountry = new System.Windows.Forms.TextBox();
-            this.txtUpdateManagerSurname = new System.Windows.Forms.TextBox();
-            this.txtUpdateManagerName = new System.Windows.Forms.TextBox();
+            this.txtUpdateClubStadionName = new System.Windows.Forms.TextBox();
+            this.txtUpdateClubName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxUpdateClubLeagueName = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnUpdate
@@ -47,29 +47,21 @@ namespace FootballTransfer.Update
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // txtUpdateManagerCountry
+            // txtUpdateClubStadionName
             // 
-            this.txtUpdateManagerCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUpdateManagerCountry.Location = new System.Drawing.Point(150, 147);
-            this.txtUpdateManagerCountry.Name = "txtUpdateManagerCountry";
-            this.txtUpdateManagerCountry.Size = new System.Drawing.Size(125, 26);
-            this.txtUpdateManagerCountry.TabIndex = 34;
+            this.txtUpdateClubStadionName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateClubStadionName.Location = new System.Drawing.Point(175, 97);
+            this.txtUpdateClubStadionName.Name = "txtUpdateClubStadionName";
+            this.txtUpdateClubStadionName.Size = new System.Drawing.Size(125, 26);
+            this.txtUpdateClubStadionName.TabIndex = 34;
             // 
-            // txtUpdateManagerSurname
+            // txtUpdateClubName
             // 
-            this.txtUpdateManagerSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUpdateManagerSurname.Location = new System.Drawing.Point(150, 97);
-            this.txtUpdateManagerSurname.Name = "txtUpdateManagerSurname";
-            this.txtUpdateManagerSurname.Size = new System.Drawing.Size(125, 26);
-            this.txtUpdateManagerSurname.TabIndex = 33;
-            // 
-            // txtUpdateManagerName
-            // 
-            this.txtUpdateManagerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUpdateManagerName.Location = new System.Drawing.Point(150, 47);
-            this.txtUpdateManagerName.Name = "txtUpdateManagerName";
-            this.txtUpdateManagerName.Size = new System.Drawing.Size(125, 26);
-            this.txtUpdateManagerName.TabIndex = 32;
+            this.txtUpdateClubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateClubName.Location = new System.Drawing.Point(175, 47);
+            this.txtUpdateClubName.Name = "txtUpdateClubName";
+            this.txtUpdateClubName.Size = new System.Drawing.Size(125, 26);
+            this.txtUpdateClubName.TabIndex = 33;
             // 
             // label5
             // 
@@ -77,9 +69,9 @@ namespace FootballTransfer.Update
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(50, 150);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 20);
+            this.label5.Size = new System.Drawing.Size(107, 20);
             this.label5.TabIndex = 30;
-            this.label5.Text = "Country";
+            this.label5.Text = "League name";
             // 
             // label4
             // 
@@ -87,9 +79,9 @@ namespace FootballTransfer.Update
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(50, 100);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
+            this.label4.Size = new System.Drawing.Size(108, 20);
             this.label4.TabIndex = 29;
-            this.label4.Text = "Surname";
+            this.label4.Text = "Stadion name";
             // 
             // label1
             // 
@@ -101,20 +93,36 @@ namespace FootballTransfer.Update
             this.label1.TabIndex = 28;
             this.label1.Text = "Name";
             // 
-            // UpdateManager
+            // comboBoxUpdateClubLeagueName
+            // 
+            this.comboBoxUpdateClubLeagueName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUpdateClubLeagueName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxUpdateClubLeagueName.FormattingEnabled = true;
+            this.comboBoxUpdateClubLeagueName.Items.AddRange(new object[] {
+            "La Liga",
+            "Premier League",
+            "Serie A",
+            "Ligue 1",
+            "Bundesliga"});
+            this.comboBoxUpdateClubLeagueName.Location = new System.Drawing.Point(175, 147);
+            this.comboBoxUpdateClubLeagueName.Name = "comboBoxUpdateClubLeagueName";
+            this.comboBoxUpdateClubLeagueName.Size = new System.Drawing.Size(125, 28);
+            this.comboBoxUpdateClubLeagueName.TabIndex = 37;
+            // 
+            // UpdateClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 311);
+            this.Controls.Add(this.comboBoxUpdateClubLeagueName);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.txtUpdateManagerCountry);
-            this.Controls.Add(this.txtUpdateManagerSurname);
-            this.Controls.Add(this.txtUpdateManagerName);
+            this.Controls.Add(this.txtUpdateClubStadionName);
+            this.Controls.Add(this.txtUpdateClubName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Name = "UpdateManager";
-            this.Text = "UpdateManager";
+            this.Name = "UpdateClub";
+            this.Text = "ClubUpdate";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,11 +130,11 @@ namespace FootballTransfer.Update
 
         #endregion
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.TextBox txtUpdateManagerCountry;
-        private System.Windows.Forms.TextBox txtUpdateManagerSurname;
-        private System.Windows.Forms.TextBox txtUpdateManagerName;
+        private System.Windows.Forms.TextBox txtUpdateClubStadionName;
+        private System.Windows.Forms.TextBox txtUpdateClubName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBoxUpdateClubLeagueName;
     }
 }

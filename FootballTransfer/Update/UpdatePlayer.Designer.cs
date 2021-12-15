@@ -45,7 +45,7 @@ namespace FootballTransfer.Update
             this.txtUpdatePlayerCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUpdatePlayerCountry.Location = new System.Drawing.Point(150, 147);
             this.txtUpdatePlayerCountry.Name = "txtUpdatePlayerCountry";
-            this.txtUpdatePlayerCountry.Size = new System.Drawing.Size(123, 26);
+            this.txtUpdatePlayerCountry.Size = new System.Drawing.Size(125, 26);
             this.txtUpdatePlayerCountry.TabIndex = 24;
             // 
             // txtUpdatePlayerSurname
@@ -53,7 +53,7 @@ namespace FootballTransfer.Update
             this.txtUpdatePlayerSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUpdatePlayerSurname.Location = new System.Drawing.Point(150, 94);
             this.txtUpdatePlayerSurname.Name = "txtUpdatePlayerSurname";
-            this.txtUpdatePlayerSurname.Size = new System.Drawing.Size(123, 26);
+            this.txtUpdatePlayerSurname.Size = new System.Drawing.Size(125, 26);
             this.txtUpdatePlayerSurname.TabIndex = 23;
             // 
             // txtUpdatePlayerName
@@ -61,7 +61,7 @@ namespace FootballTransfer.Update
             this.txtUpdatePlayerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUpdatePlayerName.Location = new System.Drawing.Point(150, 47);
             this.txtUpdatePlayerName.Name = "txtUpdatePlayerName";
-            this.txtUpdatePlayerName.Size = new System.Drawing.Size(123, 26);
+            this.txtUpdatePlayerName.Size = new System.Drawing.Size(125, 26);
             this.txtUpdatePlayerName.TabIndex = 22;
             // 
             // label6
@@ -126,7 +126,7 @@ namespace FootballTransfer.Update
             "Goalkeeper"});
             this.comboBoxUpdatePlayerPosition.Location = new System.Drawing.Point(150, 194);
             this.comboBoxUpdatePlayerPosition.Name = "comboBoxUpdatePlayerPosition";
-            this.comboBoxUpdatePlayerPosition.Size = new System.Drawing.Size(123, 28);
+            this.comboBoxUpdatePlayerPosition.Size = new System.Drawing.Size(125, 28);
             this.comboBoxUpdatePlayerPosition.TabIndex = 27;
             // 
             // UpdatePlayer

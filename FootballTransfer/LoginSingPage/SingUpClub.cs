@@ -29,8 +29,9 @@ namespace FootballTransfer.Login
                 club.password = txtPasswordClubSign.Text;
                 club.name = txtNameClubSign.Text;
                 club.leagueName = comboBoxClubCountry.Text;
-                club.foundationDate = dateFoundationDate.Value;
-                //club.foundationDate = dateTimePicker1.Value.ToLongDateString();
+                club.stadionName = txtStadionNameClubSign.Text;
+                //club.foundationDate = dateFoundationDate.Value;
+                club.foundationDate = dateFoundationDate.Value.Date;
 
                 if (club.email == "")
                 {

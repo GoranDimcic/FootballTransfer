@@ -19,7 +19,15 @@ namespace FootballTransfer.ViewPage
         public ManagerView(Manager manager)
         {
             InitializeComponent();
+            fillDescription(manager);
             updateManager = manager;
+        }
+
+        public void fillDescription(Manager manager)
+        {
+            txtManagerName.Text = manager.name;
+            txtManagerSurname.Text = manager.surname;
+            txtManagerCountry.Text = manager.country;
         }
 
         private void btnUpdatePlayer_Click(object sender, EventArgs e)

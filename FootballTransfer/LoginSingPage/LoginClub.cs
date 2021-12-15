@@ -42,7 +42,7 @@ namespace FootballTransfer.Login
                 }
                 else
                 {
-                    ClubView form = new ClubView();
+                    ClubView form = new ClubView(newClub);
                     this.Visible = false;
                     form.ShowDialog();
                 }
