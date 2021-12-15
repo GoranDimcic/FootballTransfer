@@ -14,7 +14,7 @@ namespace FootballTransfer.ViewPage
 {
     public partial class PlayerView : Form
     {
-        public Player updatePlayer;
+        public Player newPlayer;
 
         public PlayerView(Player player)
         {
@@ -22,7 +22,7 @@ namespace FootballTransfer.ViewPage
             this.fillManagerOffer();
             this.fillClubOffer();
             this.fillDescription(player);
-            updatePlayer = player;
+            newPlayer = player;
         }
 
         public void fillClubOffer()
@@ -53,8 +53,14 @@ namespace FootballTransfer.ViewPage
 
         private void btnUpdatePlayer_Click(object sender, EventArgs e)
         {
-            UpdatePlayer form = new UpdatePlayer(updatePlayer);
+            UpdatePlayer form = new UpdatePlayer(newPlayer);
             form.ShowDialog();
+        }
+
+        private void btnDeletePlayer_Click(object sender, EventArgs e)
+        {
+            DataProvider.DeletePlayer(newPlayer);
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

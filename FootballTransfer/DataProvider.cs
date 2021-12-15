@@ -109,7 +109,18 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet playerUpdateData = session.Execute("update \"Player\" set name=" + player.name + "' ");
+            RowSet playerUpdateData = session.Execute("update \"Player\" set name=" + player.name + " where \"email\"='" + player.email + "' ");
+        }
+
+        public static void DeletePlayer(Player player)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            RowSet oglasData = session.Execute("delete from \"Player\" where \"email\" = '" + player.email + "'");
+
         }
 
         #endregion

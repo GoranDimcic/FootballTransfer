@@ -31,7 +31,6 @@
             this.listViewClubOffer = new System.Windows.Forms.ListView();
             this.label2 = new System.Windows.Forms.Label();
             this.btnUpdatePlayer = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.listViewManagerOffer = new System.Windows.Forms.ListView();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.txtPlayerPosition = new System.Windows.Forms.TextBox();
+            this.btnDeletePlayer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewClubOffer
@@ -78,18 +78,9 @@
             this.btnUpdatePlayer.UseVisualStyleBackColor = true;
             this.btnUpdatePlayer.Click += new System.EventHandler(this.btnUpdatePlayer_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(640, 18);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 40);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Obrisi igraca";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(318, 137);
+            this.button3.Location = new System.Drawing.Point(237, 261);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(99, 40);
             this.button3.TabIndex = 6;
@@ -188,7 +179,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(651, 84);
+            this.button4.Location = new System.Drawing.Point(651, 307);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(99, 40);
             this.button4.TabIndex = 17;
@@ -197,7 +188,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(546, 84);
+            this.button5.Location = new System.Drawing.Point(651, 261);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(99, 40);
             this.button5.TabIndex = 18;
@@ -206,7 +197,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(423, 137);
+            this.button6.Location = new System.Drawing.Point(237, 307);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(99, 40);
             this.button6.TabIndex = 19;
@@ -223,11 +214,22 @@
             this.txtPlayerPosition.Size = new System.Drawing.Size(123, 19);
             this.txtPlayerPosition.TabIndex = 16;
             // 
+            // btnDeletePlayer
+            // 
+            this.btnDeletePlayer.Location = new System.Drawing.Point(370, 22);
+            this.btnDeletePlayer.Name = "btnDeletePlayer";
+            this.btnDeletePlayer.Size = new System.Drawing.Size(91, 26);
+            this.btnDeletePlayer.TabIndex = 20;
+            this.btnDeletePlayer.Text = "Delete";
+            this.btnDeletePlayer.UseVisualStyleBackColor = true;
+            this.btnDeletePlayer.Click += new System.EventHandler(this.btnDeletePlayer_Click);
+            // 
             // PlayerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 511);
+            this.Controls.Add(this.btnDeletePlayer);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -242,7 +244,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listViewManagerOffer);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnUpdatePlayer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listViewClubOffer);
@@ -257,7 +258,6 @@
         private System.Windows.Forms.ListView listViewClubOffer;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnUpdatePlayer;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListView listViewManagerOffer;
         private System.Windows.Forms.Label label3;
@@ -272,5 +272,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox txtPlayerPosition;
+        private System.Windows.Forms.Button btnDeletePlayer;
     }
 }
