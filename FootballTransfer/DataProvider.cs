@@ -119,7 +119,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet oglasData = session.Execute("delete from \"Player\" where \"email\" = '" + player.email + "'");
+            RowSet playerData = session.Execute("delete from \"Player\" where \"email\" = '" + player.email + "'");
 
         }
 
@@ -192,6 +192,17 @@ namespace FootballTransfer
             }
         }
         //provera da li je postoji email i sifra menadzera
+
+        public static void DeleteManager(Manager manager)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            RowSet managerData = session.Execute("delete from \"Manager\" where \"email\" = '" + manager.email + "'");
+
+        }
 
         #endregion
 

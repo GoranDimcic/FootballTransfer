@@ -32,7 +32,6 @@ namespace FootballTransfer.ViewPage
             this.label2 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.txtManagerCountry = new System.Windows.Forms.TextBox();
             this.txtManagerSurname = new System.Windows.Forms.TextBox();
@@ -41,6 +40,7 @@ namespace FootballTransfer.ViewPage
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnUpdatePlayer = new System.Windows.Forms.Button();
+            this.btnDeleteManager = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -72,15 +72,6 @@ namespace FootballTransfer.ViewPage
             this.button1.TabIndex = 7;
             this.button1.Text = "Izmeni podatke";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(577, 173);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 47);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Obrisi menadzera";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -161,11 +152,22 @@ namespace FootballTransfer.ViewPage
             this.btnUpdatePlayer.UseVisualStyleBackColor = true;
             this.btnUpdatePlayer.Click += new System.EventHandler(this.btnUpdatePlayer_Click);
             // 
+            // btnDeleteManager
+            // 
+            this.btnDeleteManager.Location = new System.Drawing.Point(370, 22);
+            this.btnDeleteManager.Name = "btnDeleteManager";
+            this.btnDeleteManager.Size = new System.Drawing.Size(91, 26);
+            this.btnDeleteManager.TabIndex = 25;
+            this.btnDeleteManager.Text = "Delete";
+            this.btnDeleteManager.UseVisualStyleBackColor = true;
+            this.btnDeleteManager.Click += new System.EventHandler(this.btnDeleteManager_Click);
+            // 
             // ManagerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.btnDeleteManager);
             this.Controls.Add(this.txtManagerCountry);
             this.Controls.Add(this.txtManagerSurname);
             this.Controls.Add(this.txtManagerName);
@@ -174,7 +176,6 @@ namespace FootballTransfer.ViewPage
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnUpdatePlayer);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listView1);
@@ -190,7 +191,6 @@ namespace FootballTransfer.ViewPage
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtManagerCountry;
         private System.Windows.Forms.TextBox txtManagerSurname;
@@ -199,5 +199,6 @@ namespace FootballTransfer.ViewPage
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnUpdatePlayer;
+        private System.Windows.Forms.Button btnDeleteManager;
     }
 }
