@@ -43,13 +43,17 @@ namespace FootballTransfer.Login
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtStadionNameClubSign = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtTownClubSign = new System.Windows.Forms.TextBox();
+            this.txtCapacityClubSign = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(50, 302);
+            this.label5.Location = new System.Drawing.Point(405, 202);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 25);
             this.label5.TabIndex = 32;
@@ -58,7 +62,7 @@ namespace FootballTransfer.Login
             // btnRegistryAsPlayer
             // 
             this.btnRegistryAsPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistryAsPlayer.Location = new System.Drawing.Point(220, 400);
+            this.btnRegistryAsPlayer.Location = new System.Drawing.Point(300, 325);
             this.btnRegistryAsPlayer.Name = "btnRegistryAsPlayer";
             this.btnRegistryAsPlayer.Size = new System.Drawing.Size(150, 50);
             this.btnRegistryAsPlayer.TabIndex = 30;
@@ -125,7 +129,7 @@ namespace FootballTransfer.Login
             // 
             this.lblLoginPlayer.AutoSize = true;
             this.lblLoginPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoginPlayer.Location = new System.Drawing.Point(200, 50);
+            this.lblLoginPlayer.Location = new System.Drawing.Point(300, 50);
             this.lblLoginPlayer.Name = "lblLoginPlayer";
             this.lblLoginPlayer.Size = new System.Drawing.Size(185, 25);
             this.lblLoginPlayer.TabIndex = 19;
@@ -142,7 +146,7 @@ namespace FootballTransfer.Login
             "Serie A",
             "Ligue 1",
             "Bundesliga"});
-            this.comboBoxClubCountry.Location = new System.Drawing.Point(220, 300);
+            this.comboBoxClubCountry.Location = new System.Drawing.Point(575, 200);
             this.comboBoxClubCountry.Name = "comboBoxClubCountry";
             this.comboBoxClubCountry.Size = new System.Drawing.Size(150, 32);
             this.comboBoxClubCountry.TabIndex = 35;
@@ -150,7 +154,7 @@ namespace FootballTransfer.Login
             // dateFoundationDate
             // 
             this.dateFoundationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateFoundationDate.Location = new System.Drawing.Point(220, 350);
+            this.dateFoundationDate.Location = new System.Drawing.Point(575, 249);
             this.dateFoundationDate.Name = "dateFoundationDate";
             this.dateFoundationDate.Size = new System.Drawing.Size(150, 29);
             this.dateFoundationDate.TabIndex = 36;
@@ -159,7 +163,7 @@ namespace FootballTransfer.Login
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 352);
+            this.label1.Location = new System.Drawing.Point(405, 252);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 25);
             this.label1.TabIndex = 37;
@@ -169,7 +173,7 @@ namespace FootballTransfer.Login
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 252);
+            this.label2.Location = new System.Drawing.Point(405, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 25);
             this.label2.TabIndex = 38;
@@ -178,16 +182,56 @@ namespace FootballTransfer.Login
             // txtStadionNameClubSign
             // 
             this.txtStadionNameClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStadionNameClubSign.Location = new System.Drawing.Point(220, 250);
+            this.txtStadionNameClubSign.Location = new System.Drawing.Point(575, 100);
             this.txtStadionNameClubSign.Name = "txtStadionNameClubSign";
             this.txtStadionNameClubSign.Size = new System.Drawing.Size(150, 29);
             this.txtStadionNameClubSign.TabIndex = 39;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(50, 252);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 25);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "Town";
+            // 
+            // txtTownClubSign
+            // 
+            this.txtTownClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTownClubSign.Location = new System.Drawing.Point(220, 250);
+            this.txtTownClubSign.Name = "txtTownClubSign";
+            this.txtTownClubSign.Size = new System.Drawing.Size(150, 29);
+            this.txtTownClubSign.TabIndex = 41;
+            // 
+            // txtCapacityClubSign
+            // 
+            this.txtCapacityClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCapacityClubSign.Location = new System.Drawing.Point(575, 150);
+            this.txtCapacityClubSign.Name = "txtCapacityClubSign";
+            this.txtCapacityClubSign.Size = new System.Drawing.Size(150, 29);
+            this.txtCapacityClubSign.TabIndex = 42;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(405, 152);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(96, 25);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "Capacity";
             // 
             // SingUpClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 511);
+            this.ClientSize = new System.Drawing.Size(784, 411);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtCapacityClubSign);
+            this.Controls.Add(this.txtTownClubSign);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtStadionNameClubSign);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -225,5 +269,9 @@ namespace FootballTransfer.Login
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtStadionNameClubSign;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtTownClubSign;
+        private System.Windows.Forms.TextBox txtCapacityClubSign;
+        private System.Windows.Forms.Label label7;
     }
 }
