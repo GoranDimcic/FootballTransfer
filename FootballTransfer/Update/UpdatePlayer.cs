@@ -22,7 +22,7 @@ namespace FootballTransfer.Update
             updatePlayer = player;
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
             updatePlayer.name = GetCorrentField(txtUpdatePlayerName.Text, updatePlayer.name);
             updatePlayer.surname = GetCorrentField(txtUpdatePlayerSurname.Text, updatePlayer.surname);

@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listViewClubOffer = new System.Windows.Forms.ListView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnUpdatePlayer = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnUpdatePlayer = new System.Windows.Forms.Button();
             this.listViewManagerOffer = new System.Windows.Forms.ListView();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,55 +40,31 @@
             this.txtPlayerCountry = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.txtPlayerPosition = new System.Windows.Forms.TextBox();
-            this.btnDeletePlayer = new System.Windows.Forms.Button();
+            this.BtnDeletePlayer = new System.Windows.Forms.Button();
+            this.BtnShowManagerOffer = new System.Windows.Forms.Button();
+            this.BtnShowClubOffer = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.listViewClubOffer = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
-            // listViewClubOffer
+            // BtnUpdatePlayer
             // 
-            this.listViewClubOffer.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.listViewClubOffer.HideSelection = false;
-            this.listViewClubOffer.Location = new System.Drawing.Point(11, 200);
-            this.listViewClubOffer.Margin = new System.Windows.Forms.Padding(2);
-            this.listViewClubOffer.Name = "listViewClubOffer";
-            this.listViewClubOffer.Size = new System.Drawing.Size(350, 300);
-            this.listViewClubOffer.TabIndex = 2;
-            this.listViewClubOffer.UseCompatibleStateImageBehavior = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 185);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Lista ponuda klubova";
-            // 
-            // btnUpdatePlayer
-            // 
-            this.btnUpdatePlayer.Location = new System.Drawing.Point(270, 22);
-            this.btnUpdatePlayer.Name = "btnUpdatePlayer";
-            this.btnUpdatePlayer.Size = new System.Drawing.Size(91, 26);
-            this.btnUpdatePlayer.TabIndex = 4;
-            this.btnUpdatePlayer.Text = "Update";
-            this.btnUpdatePlayer.UseVisualStyleBackColor = true;
-            this.btnUpdatePlayer.Click += new System.EventHandler(this.btnUpdatePlayer_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(237, 261);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 40);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "prihvati ponudu";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnUpdatePlayer.Location = new System.Drawing.Point(270, 22);
+            this.BtnUpdatePlayer.Name = "BtnUpdatePlayer";
+            this.BtnUpdatePlayer.Size = new System.Drawing.Size(91, 26);
+            this.BtnUpdatePlayer.TabIndex = 4;
+            this.BtnUpdatePlayer.Text = "Update";
+            this.BtnUpdatePlayer.UseVisualStyleBackColor = true;
+            this.BtnUpdatePlayer.Click += new System.EventHandler(this.BtnUpdatePlayer_Click);
             // 
             // listViewManagerOffer
             // 
             this.listViewManagerOffer.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.listViewManagerOffer.HideSelection = false;
-            this.listViewManagerOffer.Location = new System.Drawing.Point(423, 200);
+            this.listViewManagerOffer.Location = new System.Drawing.Point(29, 200);
             this.listViewManagerOffer.Margin = new System.Windows.Forms.Padding(2);
             this.listViewManagerOffer.Name = "listViewManagerOffer";
             this.listViewManagerOffer.Size = new System.Drawing.Size(350, 300);
@@ -101,7 +74,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(420, 185);
+            this.label3.Location = new System.Drawing.Point(26, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 13);
             this.label3.TabIndex = 8;
@@ -179,7 +152,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(651, 307);
+            this.button4.Location = new System.Drawing.Point(257, 307);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(99, 40);
             this.button4.TabIndex = 17;
@@ -188,21 +161,12 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(651, 261);
+            this.button5.Location = new System.Drawing.Point(257, 261);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(99, 40);
             this.button5.TabIndex = 18;
             this.button5.Text = "prihvati ponudu";
             this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(237, 307);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(99, 40);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "Odbi ponudu";
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // txtPlayerPosition
             // 
@@ -214,23 +178,84 @@
             this.txtPlayerPosition.Size = new System.Drawing.Size(123, 19);
             this.txtPlayerPosition.TabIndex = 16;
             // 
-            // btnDeletePlayer
+            // BtnDeletePlayer
             // 
-            this.btnDeletePlayer.Location = new System.Drawing.Point(370, 22);
-            this.btnDeletePlayer.Name = "btnDeletePlayer";
-            this.btnDeletePlayer.Size = new System.Drawing.Size(91, 26);
-            this.btnDeletePlayer.TabIndex = 20;
-            this.btnDeletePlayer.Text = "Delete";
-            this.btnDeletePlayer.UseVisualStyleBackColor = true;
-            this.btnDeletePlayer.Click += new System.EventHandler(this.btnDeletePlayer_Click);
+            this.BtnDeletePlayer.Location = new System.Drawing.Point(370, 22);
+            this.BtnDeletePlayer.Name = "BtnDeletePlayer";
+            this.BtnDeletePlayer.Size = new System.Drawing.Size(91, 26);
+            this.BtnDeletePlayer.TabIndex = 20;
+            this.BtnDeletePlayer.Text = "Delete";
+            this.BtnDeletePlayer.UseVisualStyleBackColor = true;
+            this.BtnDeletePlayer.Click += new System.EventHandler(this.BtnDeletePlayer_Click);
+            // 
+            // BtnShowManagerOffer
+            // 
+            this.BtnShowManagerOffer.Location = new System.Drawing.Point(525, 150);
+            this.BtnShowManagerOffer.Name = "BtnShowManagerOffer";
+            this.BtnShowManagerOffer.Size = new System.Drawing.Size(91, 26);
+            this.BtnShowManagerOffer.TabIndex = 21;
+            this.BtnShowManagerOffer.Text = "Manager offer";
+            this.BtnShowManagerOffer.UseVisualStyleBackColor = true;
+            // 
+            // BtnShowClubOffer
+            // 
+            this.BtnShowClubOffer.Location = new System.Drawing.Point(625, 150);
+            this.BtnShowClubOffer.Name = "BtnShowClubOffer";
+            this.BtnShowClubOffer.Size = new System.Drawing.Size(91, 26);
+            this.BtnShowClubOffer.TabIndex = 22;
+            this.BtnShowClubOffer.Text = "Club offer";
+            this.BtnShowClubOffer.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(635, 307);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(99, 40);
+            this.button6.TabIndex = 26;
+            this.button6.Text = "Odbi ponudu";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(635, 261);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(99, 40);
+            this.button3.TabIndex = 25;
+            this.button3.Text = "prihvati ponudu";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(406, 185);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Lista ponuda klubova";
+            // 
+            // listViewClubOffer
+            // 
+            this.listViewClubOffer.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.listViewClubOffer.HideSelection = false;
+            this.listViewClubOffer.Location = new System.Drawing.Point(409, 200);
+            this.listViewClubOffer.Margin = new System.Windows.Forms.Padding(2);
+            this.listViewClubOffer.Name = "listViewClubOffer";
+            this.listViewClubOffer.Size = new System.Drawing.Size(350, 300);
+            this.listViewClubOffer.TabIndex = 23;
+            this.listViewClubOffer.UseCompatibleStateImageBehavior = false;
             // 
             // PlayerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 511);
-            this.Controls.Add(this.btnDeletePlayer);
             this.Controls.Add(this.button6);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.listViewClubOffer);
+            this.Controls.Add(this.BtnShowClubOffer);
+            this.Controls.Add(this.BtnShowManagerOffer);
+            this.Controls.Add(this.BtnDeletePlayer);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtPlayerPosition);
@@ -243,10 +268,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listViewManagerOffer);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.btnUpdatePlayer);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.listViewClubOffer);
+            this.Controls.Add(this.BtnUpdatePlayer);
             this.Name = "PlayerView";
             this.Text = "PlayerView";
             this.ResumeLayout(false);
@@ -255,10 +277,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.ListView listViewClubOffer;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnUpdatePlayer;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtnUpdatePlayer;
         private System.Windows.Forms.ListView listViewManagerOffer;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
@@ -270,8 +289,13 @@
         private System.Windows.Forms.TextBox txtPlayerCountry;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox txtPlayerPosition;
-        private System.Windows.Forms.Button btnDeletePlayer;
+        private System.Windows.Forms.Button BtnDeletePlayer;
+        private System.Windows.Forms.Button BtnShowManagerOffer;
+        private System.Windows.Forms.Button BtnShowClubOffer;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListView listViewClubOffer;
     }
 }

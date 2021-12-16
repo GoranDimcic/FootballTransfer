@@ -36,7 +36,7 @@ namespace FootballTransfer.Update
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.BtnUpdate = new System.Windows.Forms.Button();
             this.comboBoxUpdatePlayerPosition = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -104,15 +104,15 @@ namespace FootballTransfer.Update
             this.label1.TabIndex = 18;
             this.label1.Text = "Name";
             // 
-            // btnUpdate
+            // BtnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(150, 250);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(109, 44);
-            this.btnUpdate.TabIndex = 26;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.BtnUpdate.Location = new System.Drawing.Point(150, 250);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(109, 44);
+            this.BtnUpdate.TabIndex = 26;
+            this.BtnUpdate.Text = "Update";
+            this.BtnUpdate.UseVisualStyleBackColor = true;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // comboBoxUpdatePlayerPosition
             // 
@@ -135,7 +135,7 @@ namespace FootballTransfer.Update
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 361);
             this.Controls.Add(this.comboBoxUpdatePlayerPosition);
-            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.BtnUpdate);
             this.Controls.Add(this.txtUpdatePlayerCountry);
             this.Controls.Add(this.txtUpdatePlayerSurname);
             this.Controls.Add(this.txtUpdatePlayerName);
@@ -158,7 +158,7 @@ namespace FootballTransfer.Update
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button BtnUpdate;
         private System.Windows.Forms.ComboBox comboBoxUpdatePlayerPosition;
     }
 }

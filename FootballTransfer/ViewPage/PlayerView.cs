@@ -19,13 +19,13 @@ namespace FootballTransfer.ViewPage
         public PlayerView(Player player)
         {
             InitializeComponent();
-            this.fillDescription(player);
-            this.fillManagerOffer();
-            this.fillClubOffer();
+            this.FillDescription(player);
+            this.FillManagerOffer();
+            this.FillClubOffer();
             loggedPlayer = player;
         }
 
-        public void fillDescription(Player player)
+        public void FillDescription(Player player)
         {
             txtPlayerName.Text = player.name;
             txtPlayerSurname.Text = player.surname;
@@ -33,7 +33,7 @@ namespace FootballTransfer.ViewPage
             txtPlayerPosition.Text = player.position;
         }
 
-        public void fillClubOffer()
+        public void FillClubOffer()
         {
             listViewClubOffer.View = View.Details;
             listViewClubOffer.FullRowSelect = true;
@@ -42,22 +42,23 @@ namespace FootballTransfer.ViewPage
             listViewClubOffer.Columns.Add("Contract date", 120);
         }
 
-        public void fillManagerOffer()
+        public void FillManagerOffer()
         {
             listViewManagerOffer.View = View.Details;
             listViewManagerOffer.FullRowSelect = true;
-            listViewManagerOffer.Columns.Add("Name", 120);
-            listViewManagerOffer.Columns.Add("Surname", 120);
+            listViewManagerOffer.Columns.Add("email", 80);
+            listViewManagerOffer.Columns.Add("Name", 80);
+            listViewManagerOffer.Columns.Add("Price", 80);
             listViewManagerOffer.Columns.Add("Contract date", 120);
         }
 
-        private void btnUpdatePlayer_Click(object sender, EventArgs e)
+        private void BtnUpdatePlayer_Click(object sender, EventArgs e)
         {
             UpdatePlayer form = new UpdatePlayer(loggedPlayer);
             form.ShowDialog();
         }
 
-        private void btnDeletePlayer_Click(object sender, EventArgs e)
+        private void BtnDeletePlayer_Click(object sender, EventArgs e)
         {
             DataProvider.DeletePlayer(loggedPlayer);
             this.DialogResult = DialogResult.OK;

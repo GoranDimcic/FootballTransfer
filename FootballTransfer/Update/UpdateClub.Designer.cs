@@ -29,7 +29,7 @@ namespace FootballTransfer.Update
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.BtnUpdate = new System.Windows.Forms.Button();
             this.txtUpdateClubStadionName = new System.Windows.Forms.TextBox();
             this.txtUpdateClubName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,15 +40,15 @@ namespace FootballTransfer.Update
             this.txtUpdateClubCapacity = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btnUpdate
+            // BtnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(150, 250);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(109, 44);
-            this.btnUpdate.TabIndex = 35;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.BtnUpdate.Location = new System.Drawing.Point(150, 250);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(109, 44);
+            this.BtnUpdate.TabIndex = 35;
+            this.BtnUpdate.Text = "Update";
+            this.BtnUpdate.UseVisualStyleBackColor = true;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // txtUpdateClubStadionName
             // 
@@ -138,7 +138,7 @@ namespace FootballTransfer.Update
             this.Controls.Add(this.txtUpdateClubCapacity);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxUpdateClubLeagueName);
-            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.BtnUpdate);
             this.Controls.Add(this.txtUpdateClubStadionName);
             this.Controls.Add(this.txtUpdateClubName);
             this.Controls.Add(this.label5);
@@ -152,7 +152,7 @@ namespace FootballTransfer.Update
         }
 
         #endregion
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button BtnUpdate;
         private System.Windows.Forms.TextBox txtUpdateClubStadionName;
         private System.Windows.Forms.TextBox txtUpdateClubName;
         private System.Windows.Forms.Label label5;

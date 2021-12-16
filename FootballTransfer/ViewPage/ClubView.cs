@@ -19,11 +19,11 @@ namespace FootballTransfer.ViewPage
         public ClubView(Club club)
         {
             InitializeComponent();
-            fillDescription(club);
+            FillDescription(club);
             loggedClub = club;
         }
 
-        public void fillDescription(Club club)
+        public void FillDescription(Club club)
         {
             txtClubTown.Text = club.town;
             txtClubName.Text = club.name;
@@ -33,13 +33,13 @@ namespace FootballTransfer.ViewPage
             txtClubFoundationDate.Text = club.foundationDate.ToString();
         }
 
-        private void btnUpdatePlayer_Click(object sender, EventArgs e)
+        private void BtnUpdatePlayer_Click(object sender, EventArgs e)
         {
             UpdateClub form = new UpdateClub(loggedClub);
             form.ShowDialog();
         }
 
-        private void btnDeleteClub_Click(object sender, EventArgs e)
+        private void BtnDeleteClub_Click(object sender, EventArgs e)
         {
             DataProvider.DeleteClub(loggedClub);
             this.DialogResult = DialogResult.OK;

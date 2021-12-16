@@ -39,8 +39,10 @@ namespace FootballTransfer.ViewPage
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnUpdateManager = new System.Windows.Forms.Button();
-            this.btnDeleteManager = new System.Windows.Forms.Button();
+            this.BtnUpdateManager = new System.Windows.Forms.Button();
+            this.BtnDeleteManager = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtManagerRepresent = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -142,39 +144,61 @@ namespace FootballTransfer.ViewPage
             this.label1.TabIndex = 18;
             this.label1.Text = "Name";
             // 
-            // btnUpdateManager
+            // BtnUpdateManager
             // 
-            this.btnUpdateManager.Location = new System.Drawing.Point(270, 22);
-            this.btnUpdateManager.Name = "btnUpdateManager";
-            this.btnUpdateManager.Size = new System.Drawing.Size(91, 26);
-            this.btnUpdateManager.TabIndex = 17;
-            this.btnUpdateManager.Text = "Update";
-            this.btnUpdateManager.UseVisualStyleBackColor = true;
-            this.btnUpdateManager.Click += new System.EventHandler(this.btnUpdatePlayer_Click);
+            this.BtnUpdateManager.Location = new System.Drawing.Point(270, 22);
+            this.BtnUpdateManager.Name = "BtnUpdateManager";
+            this.BtnUpdateManager.Size = new System.Drawing.Size(91, 26);
+            this.BtnUpdateManager.TabIndex = 17;
+            this.BtnUpdateManager.Text = "Update";
+            this.BtnUpdateManager.UseVisualStyleBackColor = true;
+            this.BtnUpdateManager.Click += new System.EventHandler(this.BtnUpdatePlayer_Click);
             // 
-            // btnDeleteManager
+            // BtnDeleteManager
             // 
-            this.btnDeleteManager.Location = new System.Drawing.Point(370, 22);
-            this.btnDeleteManager.Name = "btnDeleteManager";
-            this.btnDeleteManager.Size = new System.Drawing.Size(91, 26);
-            this.btnDeleteManager.TabIndex = 25;
-            this.btnDeleteManager.Text = "Delete";
-            this.btnDeleteManager.UseVisualStyleBackColor = true;
-            this.btnDeleteManager.Click += new System.EventHandler(this.btnDeleteManager_Click);
+            this.BtnDeleteManager.Location = new System.Drawing.Point(370, 22);
+            this.BtnDeleteManager.Name = "BtnDeleteManager";
+            this.BtnDeleteManager.Size = new System.Drawing.Size(91, 26);
+            this.BtnDeleteManager.TabIndex = 25;
+            this.BtnDeleteManager.Text = "Delete";
+            this.BtnDeleteManager.UseVisualStyleBackColor = true;
+            this.BtnDeleteManager.Click += new System.EventHandler(this.BtnDeleteManager_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(25, 130);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 20);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Represent";
+            // 
+            // txtManagerRepresent
+            // 
+            this.txtManagerRepresent.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtManagerRepresent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtManagerRepresent.Location = new System.Drawing.Point(125, 130);
+            this.txtManagerRepresent.Name = "txtManagerRepresent";
+            this.txtManagerRepresent.ReadOnly = true;
+            this.txtManagerRepresent.Size = new System.Drawing.Size(123, 19);
+            this.txtManagerRepresent.TabIndex = 27;
             // 
             // ManagerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.btnDeleteManager);
+            this.Controls.Add(this.txtManagerRepresent);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.BtnDeleteManager);
             this.Controls.Add(this.txtManagerCountry);
             this.Controls.Add(this.txtManagerSurname);
             this.Controls.Add(this.txtManagerName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnUpdateManager);
+            this.Controls.Add(this.BtnUpdateManager);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
@@ -198,7 +222,9 @@ namespace FootballTransfer.ViewPage
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnUpdateManager;
-        private System.Windows.Forms.Button btnDeleteManager;
+        private System.Windows.Forms.Button BtnUpdateManager;
+        private System.Windows.Forms.Button BtnDeleteManager;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtManagerRepresent;
     }
 }

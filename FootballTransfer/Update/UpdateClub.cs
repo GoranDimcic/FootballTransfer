@@ -21,7 +21,7 @@ namespace FootballTransfer.Update
             updateClub = club;
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
             updateClub.name = GetCorrentField(txtUpdateClubName.Text, updateClub.name);
             updateClub.stadionName = GetCorrentField(txtUpdateClubStadionName.Text, updateClub.stadionName);

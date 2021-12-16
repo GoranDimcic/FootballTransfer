@@ -21,7 +21,7 @@ namespace FootballTransfer.Update
             updateManager = manager;
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
             updateManager.name = GetCorrentField(txtUpdateManagerName.Text, updateManager.name);
             updateManager.surname = GetCorrentField(txtUpdateManagerSurname.Text, updateManager.surname);

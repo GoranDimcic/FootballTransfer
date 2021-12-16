@@ -43,13 +43,13 @@ namespace FootballTransfer.ViewPage
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnUpdateClub = new System.Windows.Forms.Button();
+            this.BtnUpdateClub = new System.Windows.Forms.Button();
             this.txtClubCapacity = new System.Windows.Forms.TextBox();
             this.txtClubFoundationDate = new System.Windows.Forms.TextBox();
             this.txtClubLeagueName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnDeleteClub = new System.Windows.Forms.Button();
+            this.BtnDeleteClub = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -189,15 +189,15 @@ namespace FootballTransfer.ViewPage
             this.label1.TabIndex = 18;
             this.label1.Text = "Town";
             // 
-            // btnUpdateClub
+            // BtnUpdateClub
             // 
-            this.btnUpdateClub.Location = new System.Drawing.Point(300, 22);
-            this.btnUpdateClub.Name = "btnUpdateClub";
-            this.btnUpdateClub.Size = new System.Drawing.Size(91, 26);
-            this.btnUpdateClub.TabIndex = 17;
-            this.btnUpdateClub.Text = "Update";
-            this.btnUpdateClub.UseVisualStyleBackColor = true;
-            this.btnUpdateClub.Click += new System.EventHandler(this.btnUpdatePlayer_Click);
+            this.BtnUpdateClub.Location = new System.Drawing.Point(300, 22);
+            this.BtnUpdateClub.Name = "BtnUpdateClub";
+            this.BtnUpdateClub.Size = new System.Drawing.Size(91, 26);
+            this.BtnUpdateClub.TabIndex = 17;
+            this.BtnUpdateClub.Text = "Update";
+            this.BtnUpdateClub.UseVisualStyleBackColor = true;
+            this.BtnUpdateClub.Click += new System.EventHandler(this.BtnUpdatePlayer_Click);
             // 
             // txtClubCapacity
             // 
@@ -249,22 +249,22 @@ namespace FootballTransfer.ViewPage
             this.label10.TabIndex = 26;
             this.label10.Text = "League name";
             // 
-            // btnDeleteClub
+            // BtnDeleteClub
             // 
-            this.btnDeleteClub.Location = new System.Drawing.Point(400, 22);
-            this.btnDeleteClub.Name = "btnDeleteClub";
-            this.btnDeleteClub.Size = new System.Drawing.Size(91, 26);
-            this.btnDeleteClub.TabIndex = 34;
-            this.btnDeleteClub.Text = "Delete";
-            this.btnDeleteClub.UseVisualStyleBackColor = true;
-            this.btnDeleteClub.Click += new System.EventHandler(this.btnDeleteClub_Click);
+            this.BtnDeleteClub.Location = new System.Drawing.Point(400, 22);
+            this.BtnDeleteClub.Name = "BtnDeleteClub";
+            this.BtnDeleteClub.Size = new System.Drawing.Size(91, 26);
+            this.BtnDeleteClub.TabIndex = 34;
+            this.BtnDeleteClub.Text = "Delete";
+            this.BtnDeleteClub.UseVisualStyleBackColor = true;
+            this.BtnDeleteClub.Click += new System.EventHandler(this.BtnDeleteClub_Click);
             // 
             // ClubView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 511);
-            this.Controls.Add(this.btnDeleteClub);
+            this.Controls.Add(this.BtnDeleteClub);
             this.Controls.Add(this.txtClubFoundationDate);
             this.Controls.Add(this.txtClubLeagueName);
             this.Controls.Add(this.label9);
@@ -277,7 +277,7 @@ namespace FootballTransfer.ViewPage
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnUpdateClub);
+            this.Controls.Add(this.BtnUpdateClub);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -308,12 +308,12 @@ namespace FootballTransfer.ViewPage
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnUpdateClub;
+        private System.Windows.Forms.Button BtnUpdateClub;
         private System.Windows.Forms.TextBox txtClubCapacity;
         private System.Windows.Forms.TextBox txtClubFoundationDate;
         private System.Windows.Forms.TextBox txtClubLeagueName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnDeleteClub;
+        private System.Windows.Forms.Button BtnDeleteClub;
     }
 }

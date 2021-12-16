@@ -19,24 +19,24 @@ namespace FootballTransfer.ViewPage
         public ManagerView(Manager manager)
         {
             InitializeComponent();
-            fillDescription(manager);
+            FillDescription(manager);
             loggedManager = manager;
         }
 
-        public void fillDescription(Manager manager)
+        public void FillDescription(Manager manager)
         {
             txtManagerName.Text = manager.name;
             txtManagerSurname.Text = manager.surname;
             txtManagerCountry.Text = manager.country;
         }
 
-        private void btnUpdatePlayer_Click(object sender, EventArgs e)
+        private void BtnUpdatePlayer_Click(object sender, EventArgs e)
         {
             UpdateManager form = new UpdateManager(loggedManager);
             form.ShowDialog();
         }
 
-        private void btnDeleteManager_Click(object sender, EventArgs e)
+        private void BtnDeleteManager_Click(object sender, EventArgs e)
         {
             DataProvider.DeleteManager(loggedManager);
             this.DialogResult = DialogResult.OK;

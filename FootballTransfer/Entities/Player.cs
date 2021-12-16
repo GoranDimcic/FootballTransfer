@@ -19,5 +19,7 @@ namespace FootballTransfer.Entities
         public string password { get; set; }
 
         public string position { get; set; }
+
+        public Boolean taken { get; set; }
     }
 }

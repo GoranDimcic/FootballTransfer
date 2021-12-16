@@ -29,7 +29,7 @@ namespace FootballTransfer.Update
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.BtnUpdate = new System.Windows.Forms.Button();
             this.txtUpdateManagerCountry = new System.Windows.Forms.TextBox();
             this.txtUpdateManagerSurname = new System.Windows.Forms.TextBox();
             this.txtUpdateManagerName = new System.Windows.Forms.TextBox();
@@ -38,15 +38,15 @@ namespace FootballTransfer.Update
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnUpdate
+            // BtnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(150, 200);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(109, 44);
-            this.btnUpdate.TabIndex = 35;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.BtnUpdate.Location = new System.Drawing.Point(150, 200);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(109, 44);
+            this.BtnUpdate.TabIndex = 35;
+            this.BtnUpdate.Text = "Update";
+            this.BtnUpdate.UseVisualStyleBackColor = true;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // txtUpdateManagerCountry
             // 
@@ -107,7 +107,7 @@ namespace FootballTransfer.Update
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 311);
-            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.BtnUpdate);
             this.Controls.Add(this.txtUpdateManagerCountry);
             this.Controls.Add(this.txtUpdateManagerSurname);
             this.Controls.Add(this.txtUpdateManagerName);
@@ -122,7 +122,7 @@ namespace FootballTransfer.Update
         }
 
         #endregion
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button BtnUpdate;
         private System.Windows.Forms.TextBox txtUpdateManagerCountry;
         private System.Windows.Forms.TextBox txtUpdateManagerSurname;
         private System.Windows.Forms.TextBox txtUpdateManagerName;
