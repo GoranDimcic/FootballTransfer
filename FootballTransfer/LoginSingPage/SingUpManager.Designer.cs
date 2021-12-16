@@ -115,6 +115,7 @@ namespace FootballTransfer.Login
             this.txtAgeManagerSign.Name = "txtAgeManagerSign";
             this.txtAgeManagerSign.Size = new System.Drawing.Size(150, 29);
             this.txtAgeManagerSign.TabIndex = 24;
+            this.txtAgeManagerSign.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAgeManagerSign_KeyPress);
             // 
             // txtPasswordManagerSign
             // 
