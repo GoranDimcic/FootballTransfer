@@ -1,4 +1,5 @@
 ﻿using FootballTransfer.Entities;
+using FootballTransfer.ViewPage;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,11 +25,15 @@ namespace FootballTransfer.Update
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             updatePlayer.name = txtUpdatePlayerName.Text;
-            //updatePlayer.surname = txtUpdatePlayerSurname.Text;
-            //updatePlayer.country = txtUpdatePlayerCountry.Text;
-            //updatePlayer.position = comboBoxUpdatePlayerPosition.Text;
+            updatePlayer.surname = txtUpdatePlayerSurname.Text;
+            updatePlayer.country = txtUpdatePlayerCountry.Text;
+            updatePlayer.position = comboBoxUpdatePlayerPosition.Text;
 
             DataProvider.UpdatePlayer(updatePlayer);
+            this.DialogResult = DialogResult.OK;
+
+
+
         }
     }
 }
