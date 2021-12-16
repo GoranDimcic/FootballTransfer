@@ -24,13 +24,18 @@ namespace FootballTransfer.Update
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            updatePlayer.name = txtUpdatePlayerName.Text ?? updatePlayer.name;
-            updatePlayer.surname = txtUpdatePlayerSurname.Text ?? updatePlayer.surname;
-            updatePlayer.country = txtUpdatePlayerCountry.Text ?? updatePlayer.country;
-            updatePlayer.position = comboBoxUpdatePlayerPosition.Text ?? updatePlayer.position;
+            updatePlayer.name = GetCorrentField(txtUpdatePlayerName.Text, updatePlayer.name);
+            updatePlayer.surname = GetCorrentField(txtUpdatePlayerSurname.Text, updatePlayer.surname);
+            updatePlayer.country = GetCorrentField(txtUpdatePlayerCountry.Text, updatePlayer.country);
+            updatePlayer.position = GetCorrentField(comboBoxUpdatePlayerPosition.Text, updatePlayer.position);
 
             DataProvider.UpdatePlayer(updatePlayer);
             this.DialogResult = DialogResult.OK;
         }
+
+        private string GetCorrentField(string valueTxt, string valuePlayer)
+            => string.IsNullOrEmpty(valueTxt)
+                ? valuePlayer
+                : valueTxt;
     }
 }

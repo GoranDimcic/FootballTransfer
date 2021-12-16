@@ -23,12 +23,17 @@ namespace FootballTransfer.Update
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            updateManager.name = txtUpdateManagerName.Text ?? updateManager.name;
-            updateManager.surname = txtUpdateManagerSurname.Text ?? updateManager.surname;
-            updateManager.country = txtUpdateManagerCountry.Text ?? updateManager.country;
+            updateManager.name = GetCorrentField(txtUpdateManagerName.Text, updateManager.name);
+            updateManager.surname = GetCorrentField(txtUpdateManagerSurname.Text, updateManager.surname);
+            updateManager.country = GetCorrentField(txtUpdateManagerCountry.Text, updateManager.country);
 
             DataProvider.UpdateManager(updateManager);
             this.DialogResult = DialogResult.OK;
         }
+
+        private string GetCorrentField(string valueTxt, string valueManager)
+            => string.IsNullOrEmpty(valueTxt)
+                ? valueManager
+                : valueTxt;
     }
 }
