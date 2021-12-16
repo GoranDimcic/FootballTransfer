@@ -196,6 +196,7 @@
             this.BtnShowManagerOffer.TabIndex = 21;
             this.BtnShowManagerOffer.Text = "Manager offer";
             this.BtnShowManagerOffer.UseVisualStyleBackColor = true;
+            this.BtnShowManagerOffer.Click += new System.EventHandler(this.BtnShowManagerOffer_Click);
             // 
             // BtnShowClubOffer
             // 

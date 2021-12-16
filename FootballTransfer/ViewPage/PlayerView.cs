@@ -15,6 +15,7 @@ namespace FootballTransfer.ViewPage
     public partial class PlayerView : Form
     {
         public Player loggedPlayer;
+        public List<Player> players;
 
         public PlayerView(Player player)
         {
@@ -62,6 +63,15 @@ namespace FootballTransfer.ViewPage
         {
             DataProvider.DeletePlayer(loggedPlayer);
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void BtnShowManagerOffer_Click(object sender, EventArgs e)
+        {
+            players = DataProvider.GetPlayers();
+            foreach(Player player in players)
+            {
+                MessageBox.Show("Ime " + player.Name + " " + player.Position);
+            }
         }
     }
 }
