@@ -51,20 +51,10 @@ namespace FootballTransfer.ViewPage
             listViewManagerOffer.Columns.Add("Contract date", 120);
         }
 
-
         private void btnUpdatePlayer_Click(object sender, EventArgs e)
         {
-            //txtPlayerName.BorderStyle = BorderStyle.Fixed3D;
-            //txtPlayerName.ReadOnly = false;
-            //txtPlayerSurname.BorderStyle = BorderStyle.Fixed3D;
-            //txtPlayerSurname.ReadOnly = false;
-            //txtPlayerCountry.BorderStyle = BorderStyle.Fixed3D;
-            //txtPlayerCountry.ReadOnly = false;
-            //btnConfirmUpdate.Visible = true;
-
             UpdatePlayer form = new UpdatePlayer(newPlayer);
             form.ShowDialog();
-            //btnDeletePlayer.Location = new System.Drawing.Point(400, 22);
         }
 
         private void btnDeletePlayer_Click(object sender, EventArgs e)

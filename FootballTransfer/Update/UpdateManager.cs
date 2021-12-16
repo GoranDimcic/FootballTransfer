@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FootballTransfer.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,22 @@ namespace FootballTransfer.Update
 {
     public partial class UpdateManager : Form
     {
-        public UpdateManager()
+        public Manager updateManager;
+
+        public UpdateManager(Manager manager)
         {
             InitializeComponent();
+            updateManager = manager;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            updateManager.name = txtUpdateManagerName.Text ?? updateManager.name;
+            updateManager.surname = txtUpdateManagerSurname.Text ?? updateManager.surname;
+            updateManager.country = txtUpdateManagerCountry.Text ?? updateManager.country;
+
+            DataProvider.UpdateManager(updateManager);
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

@@ -32,7 +32,7 @@ namespace FootballTransfer.ViewPage
 
         private void btnUpdatePlayer_Click(object sender, EventArgs e)
         {
-            UpdateManager form = new UpdateManager();
+            UpdateManager form = new UpdateManager(newManager);
             form.ShowDialog();
         }
 

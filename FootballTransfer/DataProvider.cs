@@ -188,7 +188,15 @@ namespace FootballTransfer
             RowSet playerData = session.Execute("insert into \"Manager\" (\"email\", country, name, pasword, surname)  values ('" + manager.email + "', '" + manager.country + "', '" + manager.name + "', '" + manager.password + "', '" + manager.surname + "')");
         }
 
-        public static void UpdateManager() { }
+        public static void UpdateManager(Manager manager)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            RowSet managerUpdateData = session.Execute("update \"Manager\" set name='" + manager.name + "' , surname='" + manager.surname + "' , country='" + manager.country + "'where \"email\"='" + manager.email + "'");
+        }
 
         public static void DeleteManager(Manager manager)
         {
