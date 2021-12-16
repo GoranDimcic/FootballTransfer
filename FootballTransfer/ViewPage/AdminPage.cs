@@ -18,127 +18,127 @@ namespace FootballTransfer
             InitializeComponent();
         }
 
-        private void btnPlayer_Click(object sender, EventArgs e)
+        private void BtnPlayer_Click(object sender, EventArgs e)
         {
-            btnPlayer.Visible = false;
-            btnLoginPlayer.Visible = true;
-            btnRegistryPlayer.Visible = true;
-            btnX1.Visible = true;
+            BtnPlayer.Visible = false;
+            BtnLoginPlayer.Visible = true;
+            BtnRegistryPlayer.Visible = true;
+            BtnX1.Visible = true;
             lblPlayer.Visible = true;
 
-            btnManager.Visible = true;
-            btnLoginManager.Visible = false;
-            btnRegistryManager.Visible = false;
-            btnX2.Visible = false;
+            BtnManager.Visible = true;
+            BtnLoginManager.Visible = false;
+            BtnRegistryManager.Visible = false;
+            BtnX2.Visible = false;
             lblManager.Visible = false;
 
-            btnClub.Visible = true;
-            btnLoginClub.Visible = false;
-            btnRegistryClub.Visible = false;
-            btnX3.Visible = false;
+            BtnClub.Visible = true;
+            BtnLoginClub.Visible = false;
+            BtnRegistryClub.Visible = false;
+            BtnX3.Visible = false;
             lblClub.Visible = false;
         }
 
-        private void btnX_Click(object sender, EventArgs e)
+        private void BtnX1_Click(object sender, EventArgs e)
         {
-            btnPlayer.Visible = true;
-            btnLoginPlayer.Visible = false;
-            btnRegistryPlayer.Visible = false;
-            btnX1.Visible = false;
+            BtnPlayer.Visible = true;
+            BtnLoginPlayer.Visible = false;
+            BtnRegistryPlayer.Visible = false;
+            BtnX1.Visible = false;
             lblPlayer.Visible = false;
         }
 
-        private void btnManager_Click(object sender, EventArgs e)
+        private void BtnManager_Click(object sender, EventArgs e)
         {
-            btnManager.Visible = false;
-            btnLoginManager.Visible = true;
-            btnRegistryManager.Visible = true;
-            btnX2.Visible = true;
+            BtnManager.Visible = false;
+            BtnLoginManager.Visible = true;
+            BtnRegistryManager.Visible = true;
+            BtnX2.Visible = true;
             lblManager.Visible = true;
 
-            btnPlayer.Visible = true;
-            btnLoginPlayer.Visible = false;
-            btnRegistryPlayer.Visible = false;
-            btnX1.Visible = false;
+            BtnPlayer.Visible = true;
+            BtnLoginPlayer.Visible = false;
+            BtnRegistryPlayer.Visible = false;
+            BtnX1.Visible = false;
             lblPlayer.Visible = false;
 
-            btnClub.Visible = true;
-            btnLoginClub.Visible = false;
-            btnRegistryClub.Visible = false;
-            btnX3.Visible = false;
+            BtnClub.Visible = true;
+            BtnLoginClub.Visible = false;
+            BtnRegistryClub.Visible = false;
+            BtnX3.Visible = false;
             lblClub.Visible = false;
         }
 
-        private void btnX2_Click(object sender, EventArgs e)
+        private void BtnX2_Click(object sender, EventArgs e)
         {
-            btnManager.Visible = true;
-            btnLoginManager.Visible = false;
-            btnRegistryManager.Visible = false;
-            btnX2.Visible = false;
+            BtnManager.Visible = true;
+            BtnLoginManager.Visible = false;
+            BtnRegistryManager.Visible = false;
+            BtnX2.Visible = false;
             lblManager.Visible = false;
         }
 
-        private void btnClub_Click(object sender, EventArgs e)
+        private void BtnClub_Click(object sender, EventArgs e)
         {
-            btnClub.Visible = false;
-            btnLoginClub.Visible = true;
-            btnRegistryClub.Visible = true;
-            btnX3.Visible = true;
+            BtnClub.Visible = false;
+            BtnLoginClub.Visible = true;
+            BtnRegistryClub.Visible = true;
+            BtnX3.Visible = true;
             lblClub.Visible = true;
 
-            btnManager.Visible = true;
-            btnLoginManager.Visible = false;
-            btnRegistryManager.Visible = false;
-            btnX2.Visible = false;
+            BtnManager.Visible = true;
+            BtnLoginManager.Visible = false;
+            BtnRegistryManager.Visible = false;
+            BtnX2.Visible = false;
             lblManager.Visible = false;
 
-            btnPlayer.Visible = true;
-            btnLoginPlayer.Visible = false;
-            btnRegistryPlayer.Visible = false;
-            btnX1.Visible = false;
+            BtnPlayer.Visible = true;
+            BtnLoginPlayer.Visible = false;
+            BtnRegistryPlayer.Visible = false;
+            BtnX1.Visible = false;
             lblPlayer.Visible = false;
         }
 
-        private void btnX3_Click(object sender, EventArgs e)
+        private void BtnX3_Click(object sender, EventArgs e)
         {
-            btnClub.Visible = true;
-            btnLoginClub.Visible = false;
-            btnRegistryClub.Visible = false;
-            btnX3.Visible = false;
+            BtnClub.Visible = true;
+            BtnLoginClub.Visible = false;
+            BtnRegistryClub.Visible = false;
+            BtnX3.Visible = false;
             lblClub.Visible = false;
         }
 
-        private void btnLoginPlayer_Click(object sender, EventArgs e)
+        private void BtnLoginPlayer_Click(object sender, EventArgs e)
         {
             LoginPlayer form = new LoginPlayer();
             form.ShowDialog();
         }
 
-        private void btnRegistryPlayer_Click(object sender, EventArgs e)
+        private void BtnRegistryPlayer_Click(object sender, EventArgs e)
         {
             SingUpPlayer form = new SingUpPlayer();
             form.ShowDialog();
         }
 
-        private void btnLoginManager_Click(object sender, EventArgs e)
+        private void BtnLoginManager_Click(object sender, EventArgs e)
         {
             LoginManager form = new LoginManager();
             form.ShowDialog();
         }
 
-        private void btnRegistryManager_Click(object sender, EventArgs e)
+        private void BtnRegistryManager_Click(object sender, EventArgs e)
         {
             SingUpManager form = new SingUpManager();
             form.ShowDialog();
         }
 
-        private void btnLoginClub_Click(object sender, EventArgs e)
+        private void BtnLoginClub_Click(object sender, EventArgs e)
         {
             LoginClub form = new LoginClub();
             form.ShowDialog();
         }
 
-        private void btnRegistryClub_Click(object sender, EventArgs e)
+        private void BtnRegistryClub_Click(object sender, EventArgs e)
         {
             SingUpClub form = new SingUpClub();
             form.ShowDialog();

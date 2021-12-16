@@ -17,10 +17,15 @@ namespace FootballTransfer
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnAdmin_Click(object sender, EventArgs e)
         {
             TransferList form = new TransferList();
             form.ShowDialog();
+        }
+
+        private void BtnUser_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,36 +29,37 @@ namespace FootballTransfer
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAdmin = new System.Windows.Forms.Button();
-            this.btnUser = new System.Windows.Forms.Button();
+            this.BtnAdmin = new System.Windows.Forms.Button();
+            this.BtnUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnAdmin
+            // BtnAdmin
             // 
-            this.btnAdmin.Location = new System.Drawing.Point(129, 161);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(136, 60);
-            this.btnAdmin.TabIndex = 0;
-            this.btnAdmin.Text = "Admin";
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            this.btnAdmin.Click += new System.EventHandler(this.button1_Click);
+            this.BtnAdmin.Location = new System.Drawing.Point(129, 161);
+            this.BtnAdmin.Name = "BtnAdmin";
+            this.BtnAdmin.Size = new System.Drawing.Size(136, 60);
+            this.BtnAdmin.TabIndex = 0;
+            this.BtnAdmin.Text = "Admin";
+            this.BtnAdmin.UseVisualStyleBackColor = true;
+            this.BtnAdmin.Click += new System.EventHandler(this.BtnAdmin_Click);
             // 
-            // btnUser
+            // BtnUser
             // 
-            this.btnUser.Location = new System.Drawing.Point(490, 161);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(136, 60);
-            this.btnUser.TabIndex = 1;
-            this.btnUser.Text = "User";
-            this.btnUser.UseVisualStyleBackColor = true;
+            this.BtnUser.Location = new System.Drawing.Point(490, 161);
+            this.BtnUser.Name = "BtnUser";
+            this.BtnUser.Size = new System.Drawing.Size(136, 60);
+            this.BtnUser.TabIndex = 1;
+            this.BtnUser.Text = "User";
+            this.BtnUser.UseVisualStyleBackColor = true;
+            this.BtnUser.Click += new System.EventHandler(this.BtnUser_Click);
             // 
             // UserPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnUser);
-            this.Controls.Add(this.btnAdmin);
+            this.Controls.Add(this.BtnUser);
+            this.Controls.Add(this.BtnAdmin);
             this.Name = "UserPage";
             this.Text = "UserPage";
             this.ResumeLayout(false);
@@ -67,7 +68,7 @@ namespace FootballTransfer
 
         #endregion
 
-        private System.Windows.Forms.Button btnAdmin;
-        private System.Windows.Forms.Button btnUser;
+        private System.Windows.Forms.Button BtnAdmin;
+        private System.Windows.Forms.Button BtnUser;
     }
 }

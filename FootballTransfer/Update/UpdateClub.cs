@@ -23,16 +23,16 @@ namespace FootballTransfer.Update
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            updateClub.name = GetCorrentField(txtUpdateClubName.Text, updateClub.name);
-            updateClub.stadionName = GetCorrentField(txtUpdateClubStadionName.Text, updateClub.stadionName);
-            updateClub.stadionCapacity = GetCorrentField(txtUpdateClubCapacity.Text, updateClub.stadionCapacity);
-            updateClub.leagueName = GetCorrentField(comboBoxUpdateClubLeagueName.Text, updateClub.leagueName);
+            updateClub.name = GetCorrectField(txtUpdateClubName.Text, updateClub.name);
+            updateClub.stadionName = GetCorrectField(txtUpdateClubStadionName.Text, updateClub.stadionName);
+            updateClub.stadionCapacity = GetCorrectField(txtUpdateClubCapacity.Text, updateClub.stadionCapacity);
+            updateClub.leagueName = GetCorrectField(comboBoxUpdateClubLeagueName.Text, updateClub.leagueName);
 
             DataProvider.UpdateClub(updateClub);
             this.DialogResult = DialogResult.OK;
         }
 
-        private string GetCorrentField(string valueTxt, string valueClub)
+        private string GetCorrectField(string valueTxt, string valueClub)
             => string.IsNullOrEmpty(valueTxt)
                 ? valueClub
                 : valueTxt;

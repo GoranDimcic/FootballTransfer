@@ -29,34 +29,34 @@ namespace FootballTransfer
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnPlayer = new System.Windows.Forms.Button();
+            this.BtnPlayer = new System.Windows.Forms.Button();
             this.lblWelcome = new System.Windows.Forms.Label();
-            this.btnManager = new System.Windows.Forms.Button();
-            this.btnClub = new System.Windows.Forms.Button();
-            this.btnLoginPlayer = new System.Windows.Forms.Button();
-            this.btnRegistryPlayer = new System.Windows.Forms.Button();
+            this.BtnManager = new System.Windows.Forms.Button();
+            this.BtnClub = new System.Windows.Forms.Button();
+            this.BtnLoginPlayer = new System.Windows.Forms.Button();
+            this.BtnRegistryPlayer = new System.Windows.Forms.Button();
             this.lblPlayer = new System.Windows.Forms.Label();
-            this.btnX1 = new System.Windows.Forms.Button();
+            this.BtnX1 = new System.Windows.Forms.Button();
             this.lblManager = new System.Windows.Forms.Label();
-            this.btnLoginManager = new System.Windows.Forms.Button();
-            this.btnRegistryManager = new System.Windows.Forms.Button();
-            this.btnX2 = new System.Windows.Forms.Button();
-            this.btnLoginClub = new System.Windows.Forms.Button();
-            this.btnRegistryClub = new System.Windows.Forms.Button();
-            this.btnX3 = new System.Windows.Forms.Button();
+            this.BtnLoginManager = new System.Windows.Forms.Button();
+            this.BtnRegistryManager = new System.Windows.Forms.Button();
+            this.BtnX2 = new System.Windows.Forms.Button();
+            this.BtnLoginClub = new System.Windows.Forms.Button();
+            this.BtnRegistryClub = new System.Windows.Forms.Button();
+            this.BtnX3 = new System.Windows.Forms.Button();
             this.lblClub = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnPlayer
+            // BtnPlayer
             // 
-            this.btnPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlayer.Location = new System.Drawing.Point(50, 175);
-            this.btnPlayer.Name = "btnPlayer";
-            this.btnPlayer.Size = new System.Drawing.Size(150, 100);
-            this.btnPlayer.TabIndex = 0;
-            this.btnPlayer.Text = "Player";
-            this.btnPlayer.UseVisualStyleBackColor = true;
-            this.btnPlayer.Click += new System.EventHandler(this.btnPlayer_Click);
+            this.BtnPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPlayer.Location = new System.Drawing.Point(50, 175);
+            this.BtnPlayer.Name = "BtnPlayer";
+            this.BtnPlayer.Size = new System.Drawing.Size(150, 100);
+            this.BtnPlayer.TabIndex = 0;
+            this.BtnPlayer.Text = "Player";
+            this.BtnPlayer.UseVisualStyleBackColor = true;
+            this.BtnPlayer.Click += new System.EventHandler(this.BtnPlayer_Click);
             // 
             // lblWelcome
             // 
@@ -68,51 +68,51 @@ namespace FootballTransfer
             this.lblWelcome.TabIndex = 1;
             this.lblWelcome.Text = "Transfer market";
             // 
-            // btnManager
+            // BtnManager
             // 
-            this.btnManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManager.Location = new System.Drawing.Point(300, 175);
-            this.btnManager.Name = "btnManager";
-            this.btnManager.Size = new System.Drawing.Size(150, 100);
-            this.btnManager.TabIndex = 2;
-            this.btnManager.Text = "Manager";
-            this.btnManager.UseVisualStyleBackColor = true;
-            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
+            this.BtnManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnManager.Location = new System.Drawing.Point(300, 175);
+            this.BtnManager.Name = "BtnManager";
+            this.BtnManager.Size = new System.Drawing.Size(150, 100);
+            this.BtnManager.TabIndex = 2;
+            this.BtnManager.Text = "Manager";
+            this.BtnManager.UseVisualStyleBackColor = true;
+            this.BtnManager.Click += new System.EventHandler(this.BtnManager_Click);
             // 
-            // btnClub
+            // BtnClub
             // 
-            this.btnClub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClub.Location = new System.Drawing.Point(550, 175);
-            this.btnClub.Name = "btnClub";
-            this.btnClub.Size = new System.Drawing.Size(150, 100);
-            this.btnClub.TabIndex = 3;
-            this.btnClub.Text = "Club";
-            this.btnClub.UseVisualStyleBackColor = true;
-            this.btnClub.Click += new System.EventHandler(this.btnClub_Click);
+            this.BtnClub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClub.Location = new System.Drawing.Point(550, 175);
+            this.BtnClub.Name = "BtnClub";
+            this.BtnClub.Size = new System.Drawing.Size(150, 100);
+            this.BtnClub.TabIndex = 3;
+            this.BtnClub.Text = "Club";
+            this.BtnClub.UseVisualStyleBackColor = true;
+            this.BtnClub.Click += new System.EventHandler(this.BtnClub_Click);
             // 
-            // btnLoginPlayer
+            // BtnLoginPlayer
             // 
-            this.btnLoginPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoginPlayer.Location = new System.Drawing.Point(50, 175);
-            this.btnLoginPlayer.Name = "btnLoginPlayer";
-            this.btnLoginPlayer.Size = new System.Drawing.Size(150, 50);
-            this.btnLoginPlayer.TabIndex = 4;
-            this.btnLoginPlayer.Text = "Login";
-            this.btnLoginPlayer.UseVisualStyleBackColor = true;
-            this.btnLoginPlayer.Visible = false;
-            this.btnLoginPlayer.Click += new System.EventHandler(this.btnLoginPlayer_Click);
+            this.BtnLoginPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLoginPlayer.Location = new System.Drawing.Point(50, 175);
+            this.BtnLoginPlayer.Name = "BtnLoginPlayer";
+            this.BtnLoginPlayer.Size = new System.Drawing.Size(150, 50);
+            this.BtnLoginPlayer.TabIndex = 4;
+            this.BtnLoginPlayer.Text = "Login";
+            this.BtnLoginPlayer.UseVisualStyleBackColor = true;
+            this.BtnLoginPlayer.Visible = false;
+            this.BtnLoginPlayer.Click += new System.EventHandler(this.BtnLoginPlayer_Click);
             // 
-            // btnRegistryPlayer
+            // BtnRegistryPlayer
             // 
-            this.btnRegistryPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistryPlayer.Location = new System.Drawing.Point(50, 225);
-            this.btnRegistryPlayer.Name = "btnRegistryPlayer";
-            this.btnRegistryPlayer.Size = new System.Drawing.Size(150, 50);
-            this.btnRegistryPlayer.TabIndex = 5;
-            this.btnRegistryPlayer.Text = "Sign up";
-            this.btnRegistryPlayer.UseVisualStyleBackColor = true;
-            this.btnRegistryPlayer.Visible = false;
-            this.btnRegistryPlayer.Click += new System.EventHandler(this.btnRegistryPlayer_Click);
+            this.BtnRegistryPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistryPlayer.Location = new System.Drawing.Point(50, 225);
+            this.BtnRegistryPlayer.Name = "BtnRegistryPlayer";
+            this.BtnRegistryPlayer.Size = new System.Drawing.Size(150, 50);
+            this.BtnRegistryPlayer.TabIndex = 5;
+            this.BtnRegistryPlayer.Text = "Sign up";
+            this.BtnRegistryPlayer.UseVisualStyleBackColor = true;
+            this.BtnRegistryPlayer.Visible = false;
+            this.BtnRegistryPlayer.Click += new System.EventHandler(this.BtnRegistryPlayer_Click);
             // 
             // lblPlayer
             // 
@@ -125,17 +125,17 @@ namespace FootballTransfer
             this.lblPlayer.Text = "Player";
             this.lblPlayer.Visible = false;
             // 
-            // btnX1
+            // BtnX1
             // 
-            this.btnX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnX1.Location = new System.Drawing.Point(100, 280);
-            this.btnX1.Name = "btnX1";
-            this.btnX1.Size = new System.Drawing.Size(40, 40);
-            this.btnX1.TabIndex = 7;
-            this.btnX1.Text = "X";
-            this.btnX1.UseVisualStyleBackColor = true;
-            this.btnX1.Visible = false;
-            this.btnX1.Click += new System.EventHandler(this.btnX_Click);
+            this.BtnX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnX1.Location = new System.Drawing.Point(100, 280);
+            this.BtnX1.Name = "BtnX1";
+            this.BtnX1.Size = new System.Drawing.Size(40, 40);
+            this.BtnX1.TabIndex = 7;
+            this.BtnX1.Text = "X";
+            this.BtnX1.UseVisualStyleBackColor = true;
+            this.BtnX1.Visible = false;
+            this.BtnX1.Click += new System.EventHandler(this.BtnX1_Click);
             // 
             // lblManager
             // 
@@ -148,77 +148,77 @@ namespace FootballTransfer
             this.lblManager.Text = "Manager";
             this.lblManager.Visible = false;
             // 
-            // btnLoginManager
+            // BtnLoginManager
             // 
-            this.btnLoginManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoginManager.Location = new System.Drawing.Point(300, 175);
-            this.btnLoginManager.Name = "btnLoginManager";
-            this.btnLoginManager.Size = new System.Drawing.Size(150, 50);
-            this.btnLoginManager.TabIndex = 9;
-            this.btnLoginManager.Text = "Login";
-            this.btnLoginManager.UseVisualStyleBackColor = true;
-            this.btnLoginManager.Visible = false;
-            this.btnLoginManager.Click += new System.EventHandler(this.btnLoginManager_Click);
+            this.BtnLoginManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLoginManager.Location = new System.Drawing.Point(300, 175);
+            this.BtnLoginManager.Name = "BtnLoginManager";
+            this.BtnLoginManager.Size = new System.Drawing.Size(150, 50);
+            this.BtnLoginManager.TabIndex = 9;
+            this.BtnLoginManager.Text = "Login";
+            this.BtnLoginManager.UseVisualStyleBackColor = true;
+            this.BtnLoginManager.Visible = false;
+            this.BtnLoginManager.Click += new System.EventHandler(this.BtnLoginManager_Click);
             // 
-            // btnRegistryManager
+            // BtnRegistryManager
             // 
-            this.btnRegistryManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistryManager.Location = new System.Drawing.Point(300, 225);
-            this.btnRegistryManager.Name = "btnRegistryManager";
-            this.btnRegistryManager.Size = new System.Drawing.Size(150, 50);
-            this.btnRegistryManager.TabIndex = 10;
-            this.btnRegistryManager.Text = "Sign up";
-            this.btnRegistryManager.UseVisualStyleBackColor = true;
-            this.btnRegistryManager.Visible = false;
-            this.btnRegistryManager.Click += new System.EventHandler(this.btnRegistryManager_Click);
+            this.BtnRegistryManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistryManager.Location = new System.Drawing.Point(300, 225);
+            this.BtnRegistryManager.Name = "BtnRegistryManager";
+            this.BtnRegistryManager.Size = new System.Drawing.Size(150, 50);
+            this.BtnRegistryManager.TabIndex = 10;
+            this.BtnRegistryManager.Text = "Sign up";
+            this.BtnRegistryManager.UseVisualStyleBackColor = true;
+            this.BtnRegistryManager.Visible = false;
+            this.BtnRegistryManager.Click += new System.EventHandler(this.BtnRegistryManager_Click);
             // 
-            // btnX2
+            // BtnX2
             // 
-            this.btnX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnX2.Location = new System.Drawing.Point(350, 280);
-            this.btnX2.Name = "btnX2";
-            this.btnX2.Size = new System.Drawing.Size(40, 40);
-            this.btnX2.TabIndex = 11;
-            this.btnX2.Text = "X";
-            this.btnX2.UseVisualStyleBackColor = true;
-            this.btnX2.Visible = false;
-            this.btnX2.Click += new System.EventHandler(this.btnX2_Click);
+            this.BtnX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnX2.Location = new System.Drawing.Point(350, 280);
+            this.BtnX2.Name = "BtnX2";
+            this.BtnX2.Size = new System.Drawing.Size(40, 40);
+            this.BtnX2.TabIndex = 11;
+            this.BtnX2.Text = "X";
+            this.BtnX2.UseVisualStyleBackColor = true;
+            this.BtnX2.Visible = false;
+            this.BtnX2.Click += new System.EventHandler(this.BtnX2_Click);
             // 
-            // btnLoginClub
+            // BtnLoginClub
             // 
-            this.btnLoginClub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoginClub.Location = new System.Drawing.Point(550, 175);
-            this.btnLoginClub.Name = "btnLoginClub";
-            this.btnLoginClub.Size = new System.Drawing.Size(150, 50);
-            this.btnLoginClub.TabIndex = 12;
-            this.btnLoginClub.Text = "Login";
-            this.btnLoginClub.UseVisualStyleBackColor = true;
-            this.btnLoginClub.Visible = false;
-            this.btnLoginClub.Click += new System.EventHandler(this.btnLoginClub_Click);
+            this.BtnLoginClub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLoginClub.Location = new System.Drawing.Point(550, 175);
+            this.BtnLoginClub.Name = "BtnLoginClub";
+            this.BtnLoginClub.Size = new System.Drawing.Size(150, 50);
+            this.BtnLoginClub.TabIndex = 12;
+            this.BtnLoginClub.Text = "Login";
+            this.BtnLoginClub.UseVisualStyleBackColor = true;
+            this.BtnLoginClub.Visible = false;
+            this.BtnLoginClub.Click += new System.EventHandler(this.BtnLoginClub_Click);
             // 
-            // btnRegistryClub
+            // BtnRegistryClub
             // 
-            this.btnRegistryClub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistryClub.Location = new System.Drawing.Point(550, 225);
-            this.btnRegistryClub.Name = "btnRegistryClub";
-            this.btnRegistryClub.Size = new System.Drawing.Size(150, 50);
-            this.btnRegistryClub.TabIndex = 13;
-            this.btnRegistryClub.Text = "Sign up";
-            this.btnRegistryClub.UseVisualStyleBackColor = true;
-            this.btnRegistryClub.Visible = false;
-            this.btnRegistryClub.Click += new System.EventHandler(this.btnRegistryClub_Click);
+            this.BtnRegistryClub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistryClub.Location = new System.Drawing.Point(550, 225);
+            this.BtnRegistryClub.Name = "BtnRegistryClub";
+            this.BtnRegistryClub.Size = new System.Drawing.Size(150, 50);
+            this.BtnRegistryClub.TabIndex = 13;
+            this.BtnRegistryClub.Text = "Sign up";
+            this.BtnRegistryClub.UseVisualStyleBackColor = true;
+            this.BtnRegistryClub.Visible = false;
+            this.BtnRegistryClub.Click += new System.EventHandler(this.BtnRegistryClub_Click);
             // 
-            // btnX3
+            // BtnX3
             // 
-            this.btnX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnX3.Location = new System.Drawing.Point(600, 280);
-            this.btnX3.Name = "btnX3";
-            this.btnX3.Size = new System.Drawing.Size(40, 40);
-            this.btnX3.TabIndex = 14;
-            this.btnX3.Text = "X";
-            this.btnX3.UseVisualStyleBackColor = true;
-            this.btnX3.Visible = false;
-            this.btnX3.Click += new System.EventHandler(this.btnX3_Click);
+            this.BtnX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnX3.Location = new System.Drawing.Point(600, 280);
+            this.BtnX3.Name = "BtnX3";
+            this.BtnX3.Size = new System.Drawing.Size(40, 40);
+            this.BtnX3.TabIndex = 14;
+            this.BtnX3.Text = "X";
+            this.BtnX3.UseVisualStyleBackColor = true;
+            this.BtnX3.Visible = false;
+            this.BtnX3.Click += new System.EventHandler(this.BtnX3_Click);
             // 
             // lblClub
             // 
@@ -237,21 +237,21 @@ namespace FootballTransfer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 461);
             this.Controls.Add(this.lblClub);
-            this.Controls.Add(this.btnX3);
-            this.Controls.Add(this.btnRegistryClub);
-            this.Controls.Add(this.btnLoginClub);
-            this.Controls.Add(this.btnX2);
-            this.Controls.Add(this.btnRegistryManager);
-            this.Controls.Add(this.btnLoginManager);
+            this.Controls.Add(this.BtnX3);
+            this.Controls.Add(this.BtnRegistryClub);
+            this.Controls.Add(this.BtnLoginClub);
+            this.Controls.Add(this.BtnX2);
+            this.Controls.Add(this.BtnRegistryManager);
+            this.Controls.Add(this.BtnLoginManager);
             this.Controls.Add(this.lblManager);
-            this.Controls.Add(this.btnX1);
+            this.Controls.Add(this.BtnX1);
             this.Controls.Add(this.lblPlayer);
-            this.Controls.Add(this.btnRegistryPlayer);
-            this.Controls.Add(this.btnLoginPlayer);
-            this.Controls.Add(this.btnClub);
-            this.Controls.Add(this.btnManager);
+            this.Controls.Add(this.BtnRegistryPlayer);
+            this.Controls.Add(this.BtnLoginPlayer);
+            this.Controls.Add(this.BtnClub);
+            this.Controls.Add(this.BtnManager);
             this.Controls.Add(this.lblWelcome);
-            this.Controls.Add(this.btnPlayer);
+            this.Controls.Add(this.BtnPlayer);
             this.Name = "TransferList";
             this.Text = "Admin page";
             this.ResumeLayout(false);
@@ -261,21 +261,21 @@ namespace FootballTransfer
 
         #endregion
 
-        private System.Windows.Forms.Button btnPlayer;
+        private System.Windows.Forms.Button BtnPlayer;
         private System.Windows.Forms.Label lblWelcome;
-        private System.Windows.Forms.Button btnManager;
-        private System.Windows.Forms.Button btnClub;
-        private System.Windows.Forms.Button btnLoginPlayer;
-        private System.Windows.Forms.Button btnRegistryPlayer;
+        private System.Windows.Forms.Button BtnManager;
+        private System.Windows.Forms.Button BtnClub;
+        private System.Windows.Forms.Button BtnLoginPlayer;
+        private System.Windows.Forms.Button BtnRegistryPlayer;
         private System.Windows.Forms.Label lblPlayer;
-        private System.Windows.Forms.Button btnX1;
+        private System.Windows.Forms.Button BtnX1;
         private System.Windows.Forms.Label lblManager;
-        private System.Windows.Forms.Button btnLoginManager;
-        private System.Windows.Forms.Button btnRegistryManager;
-        private System.Windows.Forms.Button btnX2;
-        private System.Windows.Forms.Button btnLoginClub;
-        private System.Windows.Forms.Button btnRegistryClub;
-        private System.Windows.Forms.Button btnX3;
+        private System.Windows.Forms.Button BtnLoginManager;
+        private System.Windows.Forms.Button BtnRegistryManager;
+        private System.Windows.Forms.Button BtnX2;
+        private System.Windows.Forms.Button BtnLoginClub;
+        private System.Windows.Forms.Button BtnRegistryClub;
+        private System.Windows.Forms.Button BtnX3;
         private System.Windows.Forms.Label lblClub;
     }
 }
