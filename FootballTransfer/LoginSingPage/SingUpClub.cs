@@ -19,20 +19,22 @@ namespace FootballTransfer.Login
             InitializeComponent();
         }
 
-        private void btnRegistryAsPlayer_Click(object sender, EventArgs e)
+        private void BtnRegistryAsPlayer_Click(object sender, EventArgs e)
         {
             Boolean correct = DataProvider.CheckClubRegistration(txtEmailClubSign.Text);
             if (correct == true)
             {
-                Club club = new Club();
-                club.email = txtEmailClubSign.Text;
-                club.password = txtPasswordClubSign.Text;
-                club.name = txtNameClubSign.Text;
-                club.leagueName = comboBoxClubCountry.Text;
-                club.stadionName = txtStadionNameClubSign.Text;
-                club.foundationDate = dateFoundationDate.Value.Date;
-                club.town = txtTownClubSign.Text;
-                club.stadionCapacity = txtCapacityClubSign.Text;
+                Club club = new Club
+                {
+                    email = txtEmailClubSign.Text,
+                    password = txtPasswordClubSign.Text,
+                    name = txtNameClubSign.Text,
+                    leagueName = comboBoxClubCountry.Text,
+                    stadionName = txtStadionNameClubSign.Text,
+                    foundationDate = dateFoundationDate.Value.Date,
+                    town = txtTownClubSign.Text,
+                    stadionCapacity = txtCapacityClubSign.Text
+                };
 
                 if (club.email == "")
                 {

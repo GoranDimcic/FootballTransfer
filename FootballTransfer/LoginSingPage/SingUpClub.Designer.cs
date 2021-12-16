@@ -30,7 +30,7 @@ namespace FootballTransfer.Login
         private void InitializeComponent()
         {
             this.label5 = new System.Windows.Forms.Label();
-            this.btnRegistryAsPlayer = new System.Windows.Forms.Button();
+            this.BtnRegistryAsPlayer = new System.Windows.Forms.Button();
             this.txtEmailClubSign = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNameClubSign = new System.Windows.Forms.TextBox();
@@ -59,16 +59,16 @@ namespace FootballTransfer.Login
             this.label5.TabIndex = 32;
             this.label5.Text = "League name";
             // 
-            // btnRegistryAsPlayer
+            // BtnRegistryAsPlayer
             // 
-            this.btnRegistryAsPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistryAsPlayer.Location = new System.Drawing.Point(300, 325);
-            this.btnRegistryAsPlayer.Name = "btnRegistryAsPlayer";
-            this.btnRegistryAsPlayer.Size = new System.Drawing.Size(150, 50);
-            this.btnRegistryAsPlayer.TabIndex = 30;
-            this.btnRegistryAsPlayer.Text = "Sign up";
-            this.btnRegistryAsPlayer.UseVisualStyleBackColor = true;
-            this.btnRegistryAsPlayer.Click += new System.EventHandler(this.btnRegistryAsPlayer_Click);
+            this.BtnRegistryAsPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistryAsPlayer.Location = new System.Drawing.Point(300, 325);
+            this.BtnRegistryAsPlayer.Name = "BtnRegistryAsPlayer";
+            this.BtnRegistryAsPlayer.Size = new System.Drawing.Size(150, 50);
+            this.BtnRegistryAsPlayer.TabIndex = 30;
+            this.BtnRegistryAsPlayer.Text = "Sign up";
+            this.BtnRegistryAsPlayer.UseVisualStyleBackColor = true;
+            this.BtnRegistryAsPlayer.Click += new System.EventHandler(this.BtnRegistryAsPlayer_Click);
             // 
             // txtEmailClubSign
             // 
@@ -238,7 +238,7 @@ namespace FootballTransfer.Login
             this.Controls.Add(this.dateFoundationDate);
             this.Controls.Add(this.comboBoxClubCountry);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnRegistryAsPlayer);
+            this.Controls.Add(this.BtnRegistryAsPlayer);
             this.Controls.Add(this.txtEmailClubSign);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNameClubSign);
@@ -256,7 +256,7 @@ namespace FootballTransfer.Login
         #endregion
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnRegistryAsPlayer;
+        private System.Windows.Forms.Button BtnRegistryAsPlayer;
         private System.Windows.Forms.TextBox txtEmailClubSign;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNameClubSign;

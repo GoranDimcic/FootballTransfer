@@ -18,17 +18,19 @@ namespace FootballTransfer.Login
             InitializeComponent();
         }
 
-        private void btnRegistryAsManager_Click(object sender, EventArgs e)
+        private void BtnRegistryAsManager_Click(object sender, EventArgs e)
         {
             Boolean correct = DataProvider.CheckManagerRegistration(txtEmailManagerSign.Text);
             if (correct == true)
             {
-                Manager manager = new Manager();
-                manager.email = txtEmailManagerSign.Text;
-                manager.password = txtPasswordManagerSign.Text;
-                manager.name = txtNameManagerSign.Text;
-                manager.surname = txtSurnameManagerSign.Text;
-                manager.country = txtCountryManagerSign.Text;
+                Manager manager = new Manager
+                {
+                    email = txtEmailManagerSign.Text,
+                    password = txtPasswordManagerSign.Text,
+                    name = txtNameManagerSign.Text,
+                    surname = txtSurnameManagerSign.Text,
+                    country = txtCountryManagerSign.Text
+                };
 
                 if (manager.email == "")
                 {

@@ -31,7 +31,7 @@ namespace FootballTransfer.Login
         {
             this.label5 = new System.Windows.Forms.Label();
             this.txtCountryManagerSign = new System.Windows.Forms.TextBox();
-            this.btnRegistryAsManager = new System.Windows.Forms.Button();
+            this.BtnRegistryAsManager = new System.Windows.Forms.Button();
             this.txtEmailManagerSign = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNameManagerSign = new System.Windows.Forms.TextBox();
@@ -61,16 +61,16 @@ namespace FootballTransfer.Login
             this.txtCountryManagerSign.Size = new System.Drawing.Size(150, 29);
             this.txtCountryManagerSign.TabIndex = 31;
             // 
-            // btnRegistryAsManager
+            // BtnRegistryAsManager
             // 
-            this.btnRegistryAsManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistryAsManager.Location = new System.Drawing.Point(220, 350);
-            this.btnRegistryAsManager.Name = "btnRegistryAsManager";
-            this.btnRegistryAsManager.Size = new System.Drawing.Size(150, 50);
-            this.btnRegistryAsManager.TabIndex = 30;
-            this.btnRegistryAsManager.Text = "Sign up";
-            this.btnRegistryAsManager.UseVisualStyleBackColor = true;
-            this.btnRegistryAsManager.Click += new System.EventHandler(this.btnRegistryAsManager_Click);
+            this.BtnRegistryAsManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistryAsManager.Location = new System.Drawing.Point(220, 350);
+            this.BtnRegistryAsManager.Name = "BtnRegistryAsManager";
+            this.BtnRegistryAsManager.Size = new System.Drawing.Size(150, 50);
+            this.BtnRegistryAsManager.TabIndex = 30;
+            this.BtnRegistryAsManager.Text = "Sign up";
+            this.BtnRegistryAsManager.UseVisualStyleBackColor = true;
+            this.BtnRegistryAsManager.Click += new System.EventHandler(this.BtnRegistryAsManager_Click);
             // 
             // txtEmailManagerSign
             // 
@@ -162,7 +162,7 @@ namespace FootballTransfer.Login
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCountryManagerSign);
-            this.Controls.Add(this.btnRegistryAsManager);
+            this.Controls.Add(this.BtnRegistryAsManager);
             this.Controls.Add(this.txtEmailManagerSign);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNameManagerSign);
@@ -183,7 +183,7 @@ namespace FootballTransfer.Login
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCountryManagerSign;
-        private System.Windows.Forms.Button btnRegistryAsManager;
+        private System.Windows.Forms.Button BtnRegistryAsManager;
         private System.Windows.Forms.TextBox txtEmailManagerSign;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNameManagerSign;

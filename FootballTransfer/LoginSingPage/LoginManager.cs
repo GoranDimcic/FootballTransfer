@@ -21,7 +21,7 @@ namespace FootballTransfer.Login
             InitializeComponent();
         }
 
-        private void btnLoginAsManager_Click(object sender, EventArgs e)
+        private void BtnLoginAsManager_Click(object sender, EventArgs e)
         {
             if (txtEmailLoginManager.Text == "")
             {

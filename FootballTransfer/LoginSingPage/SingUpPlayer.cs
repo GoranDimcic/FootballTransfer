@@ -20,18 +20,20 @@ namespace FootballTransfer
             InitializeComponent();
         }
 
-        private void btnRegistryAsPlayer_Click(object sender, EventArgs e)
+        private void BtnRegistryAsPlayer_Click(object sender, EventArgs e)
         {
             Boolean correct = DataProvider.CheckPlayerRegistration(txtEmailPlayerSign.Text);
             if (correct == true)
             {
-                Player player = new Player();
-                player.email = txtEmailPlayerSign.Text;
-                player.password = txtPasswordPlayerSign.Text;
-                player.name = txtNamePlayerSign.Text;
-                player.surname = txtSurnamePlayerSign.Text;
-                player.country = txtCountryPlayerSign.Text;
-                player.position = comboBoxPosition.Text;
+                Player player = new Player
+                {
+                    email = txtEmailPlayerSign.Text,
+                    password = txtPasswordPlayerSign.Text,
+                    name = txtNamePlayerSign.Text,
+                    surname = txtSurnamePlayerSign.Text,
+                    country = txtCountryPlayerSign.Text,
+                    position = comboBoxPosition.Text
+                };
 
                 if (player.email == "")
                 {

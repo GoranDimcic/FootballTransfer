@@ -29,7 +29,7 @@ namespace FootballTransfer.Login
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLoginAsManager = new System.Windows.Forms.Button();
+            this.BtnLoginAsManager = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtPasswordLoginManager = new System.Windows.Forms.TextBox();
@@ -37,16 +37,16 @@ namespace FootballTransfer.Login
             this.lblLoginPlayer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnLoginAsManager
+            // BtnLoginAsManager
             // 
-            this.btnLoginAsManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoginAsManager.Location = new System.Drawing.Point(150, 225);
-            this.btnLoginAsManager.Name = "btnLoginAsManager";
-            this.btnLoginAsManager.Size = new System.Drawing.Size(150, 50);
-            this.btnLoginAsManager.TabIndex = 11;
-            this.btnLoginAsManager.Text = "Login";
-            this.btnLoginAsManager.UseVisualStyleBackColor = true;
-            this.btnLoginAsManager.Click += new System.EventHandler(this.btnLoginAsManager_Click);
+            this.BtnLoginAsManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLoginAsManager.Location = new System.Drawing.Point(150, 225);
+            this.BtnLoginAsManager.Name = "BtnLoginAsManager";
+            this.BtnLoginAsManager.Size = new System.Drawing.Size(150, 50);
+            this.BtnLoginAsManager.TabIndex = 11;
+            this.BtnLoginAsManager.Text = "Login";
+            this.BtnLoginAsManager.UseVisualStyleBackColor = true;
+            this.BtnLoginAsManager.Click += new System.EventHandler(this.BtnLoginAsManager_Click);
             // 
             // lblPassword
             // 
@@ -100,7 +100,7 @@ namespace FootballTransfer.Login
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 361);
-            this.Controls.Add(this.btnLoginAsManager);
+            this.Controls.Add(this.BtnLoginAsManager);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtPasswordLoginManager);
@@ -115,7 +115,7 @@ namespace FootballTransfer.Login
 
         #endregion
 
-        private System.Windows.Forms.Button btnLoginAsManager;
+        private System.Windows.Forms.Button BtnLoginAsManager;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtPasswordLoginManager;
