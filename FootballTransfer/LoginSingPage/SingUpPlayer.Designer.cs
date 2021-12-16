@@ -33,7 +33,7 @@ namespace FootballTransfer
             this.lblEmail = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtSurnamePlayerSign = new System.Windows.Forms.TextBox();
+            this.txtAgePlayerSign = new System.Windows.Forms.TextBox();
             this.txtPasswordPlayerSign = new System.Windows.Forms.TextBox();
             this.txtNamePlayerSign = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -71,9 +71,9 @@ namespace FootballTransfer
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(50, 252);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 25);
+            this.label1.Size = new System.Drawing.Size(50, 25);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Surname";
+            this.label1.Text = "Age";
             // 
             // label2
             // 
@@ -85,13 +85,14 @@ namespace FootballTransfer
             this.label2.TabIndex = 6;
             this.label2.Text = "Position";
             // 
-            // txtSurnamePlayerSign
+            // txtAgePlayerSign
             // 
-            this.txtSurnamePlayerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSurnamePlayerSign.Location = new System.Drawing.Point(220, 250);
-            this.txtSurnamePlayerSign.Name = "txtSurnamePlayerSign";
-            this.txtSurnamePlayerSign.Size = new System.Drawing.Size(150, 29);
-            this.txtSurnamePlayerSign.TabIndex = 8;
+            this.txtAgePlayerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgePlayerSign.Location = new System.Drawing.Point(220, 250);
+            this.txtAgePlayerSign.Name = "txtAgePlayerSign";
+            this.txtAgePlayerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtAgePlayerSign.TabIndex = 8;
+            this.txtAgePlayerSign.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAgePlayerSign_KeyPress);
             // 
             // txtPasswordPlayerSign
             // 
@@ -195,7 +196,7 @@ namespace FootballTransfer
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNamePlayerSign);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtSurnamePlayerSign);
+            this.Controls.Add(this.txtAgePlayerSign);
             this.Controls.Add(this.txtPasswordPlayerSign);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -214,7 +215,7 @@ namespace FootballTransfer
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSurnamePlayerSign;
+        private System.Windows.Forms.TextBox txtAgePlayerSign;
         private System.Windows.Forms.TextBox txtPasswordPlayerSign;
         private System.Windows.Forms.TextBox txtNamePlayerSign;
         private System.Windows.Forms.Label label3;

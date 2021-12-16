@@ -29,7 +29,7 @@ namespace FootballTransfer.ViewPage
         public void FillDescription(Player player)
         {
             txtPlayerName.Text = player.Name;
-            txtPlayerSurname.Text = player.Surname;
+            txtPlayerAge.Text = player.Age;
             txtPlayerCountry.Text = player.Country;
             txtPlayerPosition.Text = player.Position;
         }

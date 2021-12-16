@@ -28,7 +28,7 @@ namespace FootballTransfer
                 getPlayer.Email = playerData["email"].ToString();
                 getPlayer.Password = playerData["pasword"].ToString();
                 getPlayer.Name = playerData["name"].ToString();
-                getPlayer.Surname = playerData["surname"].ToString();
+                getPlayer.Age = playerData["age"].ToString();
                 getPlayer.Country = playerData["country"].ToString();
                 getPlayer.Position = playerData["position"].ToString();
             }
@@ -52,7 +52,7 @@ namespace FootballTransfer
                     Email = playerData["email"].ToString(),
                     Password = playerData["pasword"].ToString(),
                     Name = playerData["name"].ToString(),
-                    Surname = playerData["surname"].ToString(),
+                    Age = playerData["age"].ToString(),
                     Country = playerData["country"].ToString(),
                     Position = playerData["position"].ToString()
                 };
@@ -103,7 +103,7 @@ namespace FootballTransfer
                     Email = playerData["email"].ToString(),
                     Password = playerData["pasword"].ToString(),
                     Name = playerData["name"].ToString(),
-                    Surname = playerData["surname"].ToString(),
+                    Age = playerData["age"].ToString(),
                     Country = playerData["country"].ToString(),
                     Position = playerData["position"].ToString()
                 };
@@ -127,7 +127,7 @@ namespace FootballTransfer
 
             if (session == null)
                 return;
-            RowSet playerData = session.Execute("insert into \"Player\" (\"email\", country, name, pasword, position, surname)  values ('" + player.Email + "', '" + player.Country + "', '" + player.Name + "', '" + player.Password + "', '" + player.Position + "', '" + player.Surname + "')");
+            RowSet playerData = session.Execute("insert into \"Player\" (\"email\", age, country, name, pasword, position)  values ('" + player.Email + "', '" + player.Age + "', '" + player.Country + "', '" + player.Name + "', '" + player.Password + "', '" + player.Position + "')");
         }
 
         public static void UpdatePlayer(Player player)
@@ -137,7 +137,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            var playerUpdateData = session.Execute("update \"Player\" set name='" + player.Name + "' , surname='" + player.Surname + "' , country='" + player.Country + "' , position='" + player.Position + "'where \"email\"='" + player.Email + "'");
+            var playerUpdateData = session.Execute("update \"Player\" set name='" + player.Name + "' , country='" + player.Country + "' , position='" + player.Position + "'where \"email\"='" + player.Email + "'");
         }
 
         public static void DeletePlayer(Player player)

@@ -30,7 +30,7 @@ namespace FootballTransfer.ViewPage
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewFreePlayers = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.txtManagerCountry = new System.Windows.Forms.TextBox();
@@ -48,27 +48,27 @@ namespace FootballTransfer.ViewPage
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 207);
+            this.label2.Location = new System.Drawing.Point(9, 173);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(401, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Lista igraca koje zastupam / lista slobodnih igraca kojima mogu da posaljem ponud" +
     "u";
             // 
-            // listView1
+            // listViewFreePlayers
             // 
-            this.listView1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 193);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(434, 247);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listViewFreePlayers.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.listViewFreePlayers.HideSelection = false;
+            this.listViewFreePlayers.Location = new System.Drawing.Point(12, 193);
+            this.listViewFreePlayers.Margin = new System.Windows.Forms.Padding(2);
+            this.listViewFreePlayers.Name = "listViewFreePlayers";
+            this.listViewFreePlayers.Size = new System.Drawing.Size(500, 250);
+            this.listViewFreePlayers.TabIndex = 5;
+            this.listViewFreePlayers.UseCompatibleStateImageBehavior = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(480, 173);
+            this.button1.Location = new System.Drawing.Point(567, 173);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 47);
             this.button1.TabIndex = 7;
@@ -202,7 +202,7 @@ namespace FootballTransfer.ViewPage
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewFreePlayers);
             this.Name = "ManagerView";
             this.Text = "ManagerView";
             this.ResumeLayout(false);
@@ -213,7 +213,7 @@ namespace FootballTransfer.ViewPage
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewFreePlayers;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtManagerCountry;

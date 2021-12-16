@@ -25,7 +25,6 @@ namespace FootballTransfer.Update
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
             updatePlayer.Name = GetCorrectField(txtUpdatePlayerName.Text, updatePlayer.Name);
-            updatePlayer.Surname = GetCorrectField(txtUpdatePlayerSurname.Text, updatePlayer.Surname);
             updatePlayer.Country = GetCorrectField(txtUpdatePlayerCountry.Text, updatePlayer.Country);
             updatePlayer.Position = GetCorrectField(comboBoxUpdatePlayerPosition.Text, updatePlayer.Position);
 

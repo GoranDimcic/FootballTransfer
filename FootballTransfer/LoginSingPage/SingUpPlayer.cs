@@ -30,7 +30,7 @@ namespace FootballTransfer
                     Email = txtEmailPlayerSign.Text,
                     Password = txtPasswordPlayerSign.Text,
                     Name = txtNamePlayerSign.Text,
-                    Surname = txtSurnamePlayerSign.Text,
+                    Age = txtAgePlayerSign.Text,
                     Country = txtCountryPlayerSign.Text,
                     Position = comboBoxPosition.Text
                 };
@@ -53,6 +53,19 @@ namespace FootballTransfer
             {
                 txtEmailPlayerSign.Text = "";
                 MessageBox.Show("An account with that email already exists!");
+            }
+        }
+
+        private void TxtAgePlayerSign_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
             }
         }
     }

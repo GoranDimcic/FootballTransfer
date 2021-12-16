@@ -36,7 +36,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPlayerName = new System.Windows.Forms.TextBox();
-            this.txtPlayerSurname = new System.Windows.Forms.TextBox();
+            this.txtPlayerAge = new System.Windows.Forms.TextBox();
             this.txtPlayerCountry = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -96,9 +96,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(25, 60);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
+            this.label4.Size = new System.Drawing.Size(38, 20);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Surname";
+            this.label4.Text = "Age";
             // 
             // label5
             // 
@@ -130,15 +130,15 @@
             this.txtPlayerName.Size = new System.Drawing.Size(123, 19);
             this.txtPlayerName.TabIndex = 13;
             // 
-            // txtPlayerSurname
+            // txtPlayerAge
             // 
-            this.txtPlayerSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPlayerSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlayerSurname.Location = new System.Drawing.Point(125, 61);
-            this.txtPlayerSurname.Name = "txtPlayerSurname";
-            this.txtPlayerSurname.ReadOnly = true;
-            this.txtPlayerSurname.Size = new System.Drawing.Size(123, 19);
-            this.txtPlayerSurname.TabIndex = 14;
+            this.txtPlayerAge.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPlayerAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlayerAge.Location = new System.Drawing.Point(125, 61);
+            this.txtPlayerAge.Name = "txtPlayerAge";
+            this.txtPlayerAge.ReadOnly = true;
+            this.txtPlayerAge.Size = new System.Drawing.Size(123, 19);
+            this.txtPlayerAge.TabIndex = 14;
             // 
             // txtPlayerCountry
             // 
@@ -261,7 +261,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtPlayerPosition);
             this.Controls.Add(this.txtPlayerCountry);
-            this.Controls.Add(this.txtPlayerSurname);
+            this.Controls.Add(this.txtPlayerAge);
             this.Controls.Add(this.txtPlayerName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -286,7 +286,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPlayerName;
-        private System.Windows.Forms.TextBox txtPlayerSurname;
+        private System.Windows.Forms.TextBox txtPlayerAge;
         private System.Windows.Forms.TextBox txtPlayerCountry;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
