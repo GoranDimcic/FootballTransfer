@@ -14,13 +14,13 @@ namespace FootballTransfer.ViewPage
 {
     public partial class ClubView : Form
     {
-        public Club newClub;
+        public Club loggedClub;
 
         public ClubView(Club club)
         {
             InitializeComponent();
             fillDescription(club);
-            newClub = club;
+            loggedClub = club;
         }
 
         public void fillDescription(Club club)
@@ -35,15 +35,14 @@ namespace FootballTransfer.ViewPage
 
         private void btnUpdatePlayer_Click(object sender, EventArgs e)
         {
-            UpdateClub form = new UpdateClub(newClub);
+            UpdateClub form = new UpdateClub(loggedClub);
             form.ShowDialog();
         }
 
         private void btnDeleteClub_Click(object sender, EventArgs e)
         {
-            DataProvider.DeleteClub(newClub);
+            DataProvider.DeleteClub(loggedClub);
             this.DialogResult = DialogResult.OK;
-
         }
     }
 }
