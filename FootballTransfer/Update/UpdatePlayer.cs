@@ -16,10 +16,10 @@ namespace FootballTransfer.Update
     {
         public Player updatePlayer;
 
-        public UpdatePlayer(Player newPlayer)
+        public UpdatePlayer(Player player)
         {
             InitializeComponent();
-            updatePlayer = newPlayer;
+            updatePlayer = player;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

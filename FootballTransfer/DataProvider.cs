@@ -279,7 +279,15 @@ namespace FootballTransfer
             RowSet playerData = session.Execute("insert into \"Club\" (\"email\", capacity, foundationdate, leaguename, name, pasword, stadionname, town)  values ('" + club.email + "', '" + club.stadionCapacity + "', '" + club.foundationDate + "', '" + club.leagueName + "', '" + club.name + "', '" + club.password + "', '" + club.stadionName + "', '" + club.town + "')");
         }
 
-        public static void UpdateClub() { }
+        public static void UpdateClub(Club club)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            RowSet clubUpdateData = session.Execute("update \"Club\" set name='" + club.name + "' , stadionname='" + club.stadionName + "' , leaguename='" + club.leagueName + "' , capacity='" + club.stadionCapacity + "'where \"email\"='" + club.email + "'");
+        }
 
         public static void DeleteClub(Club club)
         {

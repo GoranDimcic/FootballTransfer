@@ -35,7 +35,7 @@ namespace FootballTransfer.ViewPage
 
         private void btnUpdatePlayer_Click(object sender, EventArgs e)
         {
-            UpdateClub form = new UpdateClub();
+            UpdateClub form = new UpdateClub(newClub);
             form.ShowDialog();
         }
 
