@@ -107,7 +107,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet playerUpdateData = session.Execute("update \"Player\" set name='" + player.name + "' , surname='" + player.surname + "' , country='" + player.country + "' , position='" + player.position + "'where \"email\"='" + player.email + "'");
+            var playerUpdateData = session.Execute("update \"Player\" set name='" + player.name + "' , surname='" + player.surname + "' , country='" + player.country + "' , position='" + player.position + "'where \"email\"='" + player.email + "'");
         }
 
         public static void DeletePlayer(Player player)

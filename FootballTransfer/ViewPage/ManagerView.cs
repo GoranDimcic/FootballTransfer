@@ -14,13 +14,13 @@ namespace FootballTransfer.ViewPage
 {
     public partial class ManagerView : Form
     {
-        public Manager newManager;
+        public Manager loggedManager;
 
         public ManagerView(Manager manager)
         {
             InitializeComponent();
             fillDescription(manager);
-            newManager = manager;
+            loggedManager = manager;
         }
 
         public void fillDescription(Manager manager)
@@ -32,13 +32,13 @@ namespace FootballTransfer.ViewPage
 
         private void btnUpdatePlayer_Click(object sender, EventArgs e)
         {
-            UpdateManager form = new UpdateManager(newManager);
+            UpdateManager form = new UpdateManager(loggedManager);
             form.ShowDialog();
         }
 
         private void btnDeleteManager_Click(object sender, EventArgs e)
         {
-            DataProvider.DeleteManager(newManager);
+            DataProvider.DeleteManager(loggedManager);
             this.DialogResult = DialogResult.OK;
         }
     }

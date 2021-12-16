@@ -14,15 +14,15 @@ namespace FootballTransfer.ViewPage
 {
     public partial class PlayerView : Form
     {
-        public Player newPlayer;
+        public Player loggedPlayer;
 
         public PlayerView(Player player)
         {
             InitializeComponent();
+            this.fillDescription(player);
             this.fillManagerOffer();
             this.fillClubOffer();
-            this.fillDescription(player);
-            newPlayer = player;
+            loggedPlayer = player;
         }
 
         public void fillDescription(Player player)
@@ -53,13 +53,13 @@ namespace FootballTransfer.ViewPage
 
         private void btnUpdatePlayer_Click(object sender, EventArgs e)
         {
-            UpdatePlayer form = new UpdatePlayer(newPlayer);
+            UpdatePlayer form = new UpdatePlayer(loggedPlayer);
             form.ShowDialog();
         }
 
         private void btnDeletePlayer_Click(object sender, EventArgs e)
         {
-            DataProvider.DeletePlayer(newPlayer);
+            DataProvider.DeletePlayer(loggedPlayer);
             this.DialogResult = DialogResult.OK;
         }
     }
