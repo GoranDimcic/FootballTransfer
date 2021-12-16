@@ -196,7 +196,7 @@ namespace FootballTransfer
                     Email = managerData["email"].ToString(),
                     Password = managerData["pasword"].ToString(),
                     Name = managerData["name"].ToString(),
-                    Surname = managerData["surname"].ToString(),
+                    Age = managerData["age"].ToString(),
                     Country = managerData["country"].ToString()
                 };
 
@@ -219,7 +219,7 @@ namespace FootballTransfer
 
             if (session == null)
                 return;
-            RowSet playerData = session.Execute("insert into \"Manager\" (\"email\", country, name, pasword, surname)  values ('" + manager.Email + "', '" + manager.Country + "', '" + manager.Name + "', '" + manager.Password + "', '" + manager.Surname + "')");
+            RowSet playerData = session.Execute("insert into \"Manager\" (\"email\", age, country, name, pasword)  values ('" + manager.Email + "', '" + manager.Age + "','" + manager.Country + "', '" + manager.Name + "', '" + manager.Password + "')");
         }
 
         public static void UpdateManager(Manager manager)
@@ -229,7 +229,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet managerUpdateData = session.Execute("update \"Manager\" set name='" + manager.Name + "' , surname='" + manager.Surname + "' , country='" + manager.Country + "'where \"email\"='" + manager.Email + "'");
+            RowSet managerUpdateData = session.Execute("update \"Manager\" set name='" + manager.Name + "' , country='" + manager.Country + "'where \"email\"='" + manager.Email + "'");
         }
 
         public static void DeleteManager(Manager manager)

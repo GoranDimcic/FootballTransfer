@@ -29,60 +29,43 @@ namespace FootballTransfer.ViewPage
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
             this.listViewFreePlayers = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnCreateOffer = new System.Windows.Forms.Button();
             this.txtManagerCountry = new System.Windows.Forms.TextBox();
             this.txtManagerSurname = new System.Windows.Forms.TextBox();
             this.txtManagerName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnUpdateManager = new System.Windows.Forms.Button();
             this.BtnDeleteManager = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtManagerRepresent = new System.Windows.Forms.TextBox();
+            this.BtnSeeFreePlayers = new System.Windows.Forms.Button();
+            this.BtnSeeMyPlayers = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtManagerAge = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 173);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(401, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Lista igraca koje zastupam / lista slobodnih igraca kojima mogu da posaljem ponud" +
-    "u";
             // 
             // listViewFreePlayers
             // 
             this.listViewFreePlayers.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.listViewFreePlayers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewFreePlayers.HideSelection = false;
-            this.listViewFreePlayers.Location = new System.Drawing.Point(12, 193);
+            this.listViewFreePlayers.Location = new System.Drawing.Point(29, 200);
             this.listViewFreePlayers.Margin = new System.Windows.Forms.Padding(2);
             this.listViewFreePlayers.Name = "listViewFreePlayers";
-            this.listViewFreePlayers.Size = new System.Drawing.Size(500, 250);
+            this.listViewFreePlayers.Size = new System.Drawing.Size(550, 250);
             this.listViewFreePlayers.TabIndex = 5;
             this.listViewFreePlayers.UseCompatibleStateImageBehavior = false;
             // 
-            // button1
+            // BtnCreateOffer
             // 
-            this.button1.Location = new System.Drawing.Point(567, 173);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 47);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Izmeni podatke";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(681, 173);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 47);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Prikazi menadjera";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnCreateOffer.Location = new System.Drawing.Point(600, 200);
+            this.BtnCreateOffer.Name = "BtnCreateOffer";
+            this.BtnCreateOffer.Size = new System.Drawing.Size(85, 41);
+            this.BtnCreateOffer.TabIndex = 7;
+            this.BtnCreateOffer.Text = "Create offer";
+            this.BtnCreateOffer.UseVisualStyleBackColor = true;
             // 
             // txtManagerCountry
             // 
@@ -123,16 +106,6 @@ namespace FootballTransfer.ViewPage
             this.label5.Size = new System.Drawing.Size(64, 20);
             this.label5.TabIndex = 20;
             this.label5.Text = "Country";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 60);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Surname";
             // 
             // label1
             // 
@@ -178,17 +151,59 @@ namespace FootballTransfer.ViewPage
             // 
             this.txtManagerRepresent.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtManagerRepresent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtManagerRepresent.Location = new System.Drawing.Point(125, 130);
+            this.txtManagerRepresent.Location = new System.Drawing.Point(125, 131);
             this.txtManagerRepresent.Name = "txtManagerRepresent";
             this.txtManagerRepresent.ReadOnly = true;
             this.txtManagerRepresent.Size = new System.Drawing.Size(123, 19);
             this.txtManagerRepresent.TabIndex = 27;
             // 
+            // BtnSeeFreePlayers
+            // 
+            this.BtnSeeFreePlayers.Location = new System.Drawing.Point(370, 144);
+            this.BtnSeeFreePlayers.Name = "BtnSeeFreePlayers";
+            this.BtnSeeFreePlayers.Size = new System.Drawing.Size(91, 41);
+            this.BtnSeeFreePlayers.TabIndex = 29;
+            this.BtnSeeFreePlayers.Text = "See free players";
+            this.BtnSeeFreePlayers.UseVisualStyleBackColor = true;
+            // 
+            // BtnSeeMyPlayers
+            // 
+            this.BtnSeeMyPlayers.Location = new System.Drawing.Point(488, 144);
+            this.BtnSeeMyPlayers.Name = "BtnSeeMyPlayers";
+            this.BtnSeeMyPlayers.Size = new System.Drawing.Size(91, 41);
+            this.BtnSeeMyPlayers.TabIndex = 30;
+            this.BtnSeeMyPlayers.Text = "See my players";
+            this.BtnSeeMyPlayers.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(25, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 20);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Age";
+            // 
+            // txtManagerAge
+            // 
+            this.txtManagerAge.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtManagerAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtManagerAge.Location = new System.Drawing.Point(125, 61);
+            this.txtManagerAge.Name = "txtManagerAge";
+            this.txtManagerAge.ReadOnly = true;
+            this.txtManagerAge.Size = new System.Drawing.Size(123, 19);
+            this.txtManagerAge.TabIndex = 32;
+            // 
             // ManagerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(734, 461);
+            this.Controls.Add(this.txtManagerAge);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.BtnSeeMyPlayers);
+            this.Controls.Add(this.BtnSeeFreePlayers);
             this.Controls.Add(this.txtManagerRepresent);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BtnDeleteManager);
@@ -196,12 +211,9 @@ namespace FootballTransfer.ViewPage
             this.Controls.Add(this.txtManagerSurname);
             this.Controls.Add(this.txtManagerName);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnUpdateManager);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.BtnCreateOffer);
             this.Controls.Add(this.listViewFreePlayers);
             this.Name = "ManagerView";
             this.Text = "ManagerView";
@@ -211,20 +223,20 @@ namespace FootballTransfer.ViewPage
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView listViewFreePlayers;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtnCreateOffer;
         private System.Windows.Forms.TextBox txtManagerCountry;
         private System.Windows.Forms.TextBox txtManagerSurname;
         private System.Windows.Forms.TextBox txtManagerName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnUpdateManager;
         private System.Windows.Forms.Button BtnDeleteManager;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtManagerRepresent;
+        private System.Windows.Forms.Button BtnSeeFreePlayers;
+        private System.Windows.Forms.Button BtnSeeMyPlayers;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtManagerAge;
     }
 }

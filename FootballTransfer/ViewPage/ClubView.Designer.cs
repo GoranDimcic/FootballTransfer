@@ -29,13 +29,6 @@ namespace FootballTransfer.ViewPage
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.txtClubStadionName = new System.Windows.Forms.TextBox();
             this.txtClubName = new System.Windows.Forms.TextBox();
             this.txtClubTown = new System.Windows.Forms.TextBox();
@@ -50,74 +43,11 @@ namespace FootballTransfer.ViewPage
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.BtnDeleteClub = new System.Windows.Forms.Button();
+            this.listViewFreePlayers = new System.Windows.Forms.ListView();
+            this.BtnSeeMyTeam = new System.Windows.Forms.Button();
+            this.BtnSeeFreePlayers = new System.Windows.Forms.Button();
+            this.BtnCreateOffer = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 267);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(346, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Lista od 19 igraca, dugmici da mogu da raskinem ugovor ili da ih prodam";
-            // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 249);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(367, 235);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView2
-            // 
-            this.listView2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(398, 249);
-            this.listView2.Margin = new System.Windows.Forms.Padding(2);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(367, 235);
-            this.listView2.TabIndex = 7;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(412, 267);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(353, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Lista igraca koji su stavljeni na prodaju i kojima mogu da posaljem ponudu\r\n";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(388, 188);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 40);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Izmeni podatke";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(515, 188);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 40);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Ugasi klub";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(630, 188);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 40);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Prikazi klub";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // txtClubStadionName
             // 
@@ -259,11 +189,54 @@ namespace FootballTransfer.ViewPage
             this.BtnDeleteClub.UseVisualStyleBackColor = true;
             this.BtnDeleteClub.Click += new System.EventHandler(this.BtnDeleteClub_Click);
             // 
+            // listViewFreePlayers
+            // 
+            this.listViewFreePlayers.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.listViewFreePlayers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewFreePlayers.HideSelection = false;
+            this.listViewFreePlayers.Location = new System.Drawing.Point(29, 250);
+            this.listViewFreePlayers.Margin = new System.Windows.Forms.Padding(2);
+            this.listViewFreePlayers.Name = "listViewFreePlayers";
+            this.listViewFreePlayers.Size = new System.Drawing.Size(550, 250);
+            this.listViewFreePlayers.TabIndex = 35;
+            this.listViewFreePlayers.UseCompatibleStateImageBehavior = false;
+            // 
+            // BtnSeeMyTeam
+            // 
+            this.BtnSeeMyTeam.Location = new System.Drawing.Point(488, 194);
+            this.BtnSeeMyTeam.Name = "BtnSeeMyTeam";
+            this.BtnSeeMyTeam.Size = new System.Drawing.Size(91, 41);
+            this.BtnSeeMyTeam.TabIndex = 37;
+            this.BtnSeeMyTeam.Text = "See my team";
+            this.BtnSeeMyTeam.UseVisualStyleBackColor = true;
+            // 
+            // BtnSeeFreePlayers
+            // 
+            this.BtnSeeFreePlayers.Location = new System.Drawing.Point(370, 194);
+            this.BtnSeeFreePlayers.Name = "BtnSeeFreePlayers";
+            this.BtnSeeFreePlayers.Size = new System.Drawing.Size(91, 41);
+            this.BtnSeeFreePlayers.TabIndex = 36;
+            this.BtnSeeFreePlayers.Text = "See free players";
+            this.BtnSeeFreePlayers.UseVisualStyleBackColor = true;
+            // 
+            // BtnCreateOffer
+            // 
+            this.BtnCreateOffer.Location = new System.Drawing.Point(600, 250);
+            this.BtnCreateOffer.Name = "BtnCreateOffer";
+            this.BtnCreateOffer.Size = new System.Drawing.Size(85, 41);
+            this.BtnCreateOffer.TabIndex = 38;
+            this.BtnCreateOffer.Text = "Create offer";
+            this.BtnCreateOffer.UseVisualStyleBackColor = true;
+            // 
             // ClubView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 511);
+            this.ClientSize = new System.Drawing.Size(734, 511);
+            this.Controls.Add(this.BtnCreateOffer);
+            this.Controls.Add(this.BtnSeeMyTeam);
+            this.Controls.Add(this.BtnSeeFreePlayers);
+            this.Controls.Add(this.listViewFreePlayers);
             this.Controls.Add(this.BtnDeleteClub);
             this.Controls.Add(this.txtClubFoundationDate);
             this.Controls.Add(this.txtClubLeagueName);
@@ -278,13 +251,6 @@ namespace FootballTransfer.ViewPage
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnUpdateClub);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.listView2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.listView1);
             this.Name = "ClubView";
             this.Text = "ClubView";
             this.ResumeLayout(false);
@@ -293,14 +259,6 @@ namespace FootballTransfer.ViewPage
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtClubStadionName;
         private System.Windows.Forms.TextBox txtClubName;
         private System.Windows.Forms.TextBox txtClubTown;
@@ -315,5 +273,9 @@ namespace FootballTransfer.ViewPage
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button BtnDeleteClub;
+        private System.Windows.Forms.ListView listViewFreePlayers;
+        private System.Windows.Forms.Button BtnSeeMyTeam;
+        private System.Windows.Forms.Button BtnSeeFreePlayers;
+        private System.Windows.Forms.Button BtnCreateOffer;
     }
 }

@@ -36,7 +36,7 @@ namespace FootballTransfer.Login
             this.label4 = new System.Windows.Forms.Label();
             this.txtNameManagerSign = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtSurnameManagerSign = new System.Windows.Forms.TextBox();
+            this.txtAgeManagerSign = new System.Windows.Forms.TextBox();
             this.txtPasswordManagerSign = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -108,13 +108,13 @@ namespace FootballTransfer.Login
             this.label3.TabIndex = 26;
             this.label3.Text = "Name";
             // 
-            // txtSurnameManagerSign
+            // txtAgeManagerSign
             // 
-            this.txtSurnameManagerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSurnameManagerSign.Location = new System.Drawing.Point(220, 250);
-            this.txtSurnameManagerSign.Name = "txtSurnameManagerSign";
-            this.txtSurnameManagerSign.Size = new System.Drawing.Size(150, 29);
-            this.txtSurnameManagerSign.TabIndex = 24;
+            this.txtAgeManagerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgeManagerSign.Location = new System.Drawing.Point(220, 250);
+            this.txtAgeManagerSign.Name = "txtAgeManagerSign";
+            this.txtAgeManagerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtAgeManagerSign.TabIndex = 24;
             // 
             // txtPasswordManagerSign
             // 
@@ -131,9 +131,9 @@ namespace FootballTransfer.Login
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(50, 252);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 25);
+            this.label1.Size = new System.Drawing.Size(50, 25);
             this.label1.TabIndex = 21;
-            this.label1.Text = "Surname";
+            this.label1.Text = "Age";
             // 
             // lblEmail
             // 
@@ -167,7 +167,7 @@ namespace FootballTransfer.Login
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNameManagerSign);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtSurnameManagerSign);
+            this.Controls.Add(this.txtAgeManagerSign);
             this.Controls.Add(this.txtPasswordManagerSign);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblEmail);
@@ -188,7 +188,7 @@ namespace FootballTransfer.Login
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNameManagerSign;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtSurnameManagerSign;
+        private System.Windows.Forms.TextBox txtAgeManagerSign;
         private System.Windows.Forms.TextBox txtPasswordManagerSign;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEmail;

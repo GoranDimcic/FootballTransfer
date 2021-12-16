@@ -16,6 +16,8 @@ namespace FootballTransfer.Entities
 
         public string Position { get; set; }
 
-        public Boolean Taken = false;
+        public Boolean HaveManager = false;
+
+        public Boolean HaveClub = false;
     }
 }

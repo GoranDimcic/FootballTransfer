@@ -22,44 +22,7 @@ namespace FootballTransfer.ViewPage
         {
             InitializeComponent();
             FillDescription(manager);
-            FillManagerOffer();
-            FillFreePlayers();
             loggedManager = manager;
-        }
-
-        public void FillDescription(Manager manager)
-        {
-            txtManagerName.Text = manager.Name;
-            txtManagerSurname.Text = manager.Surname;
-            txtManagerCountry.Text = manager.Country;
-        }
-
-        public void FillManagerOffer()
-        {
-            listViewFreePlayers.View = View.Details;
-            listViewFreePlayers.FullRowSelect = true;
-            listViewFreePlayers.Columns.Add("Email", 120);
-            listViewFreePlayers.Columns.Add("Name", 80);
-            listViewFreePlayers.Columns.Add("Age", 80);
-            listViewFreePlayers.Columns.Add("Country", 80);
-            listViewFreePlayers.Columns.Add("Pos", 120);
-        }
-
-        public void FillFreePlayers()
-        {
-            players = DataProvider.GetPlayers();
-
-            foreach(Player player in players)
-            {
-                this.Fill(player);
-            }
-        }
-
-        public void Fill(Player player)
-        {
-            String[] row = { player.Email, player.Name, player.Age, player.Country, player.Position };
-            ListViewItem item = new ListViewItem(row);
-            listViewFreePlayers.Items.Add(item);
         }
 
         private void BtnUpdatePlayer_Click(object sender, EventArgs e)
@@ -72,6 +35,44 @@ namespace FootballTransfer.ViewPage
         {
             DataProvider.DeleteManager(loggedManager);
             this.DialogResult = DialogResult.OK;
+        }
+
+        public void FillDescription(Manager manager)
+        {
+            txtManagerName.Text = manager.Name;
+            txtManagerAge.Text = manager.Age;
+            txtManagerCountry.Text = manager.Country;
+
+            this.FillListView();
+            this.FillFreePlayers();
+        }
+
+        public void FillListView()
+        {
+            listViewFreePlayers.View = View.Details;
+            listViewFreePlayers.FullRowSelect = true;
+            listViewFreePlayers.Columns.Add("Email", 120);
+            listViewFreePlayers.Columns.Add("Name", 120);
+            listViewFreePlayers.Columns.Add("Age", 80);
+            listViewFreePlayers.Columns.Add("Country", 80);
+            listViewFreePlayers.Columns.Add("Pos", 120);
+        }
+
+        public void FillFreePlayers()
+        {
+            players = DataProvider.GetPlayers();
+
+            foreach (Player player in players)
+            {
+                this.FillListViewPlayers(player);
+            }
+        }
+
+        public void FillListViewPlayers(Player player)
+        {
+            String[] row = { player.Email, player.Name, player.Age, player.Country, player.Position };
+            ListViewItem item = new ListViewItem(row);
+            listViewFreePlayers.Items.Add(item);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace FootballTransfer.Login
                     Email = txtEmailManagerSign.Text,
                     Password = txtPasswordManagerSign.Text,
                     Name = txtNameManagerSign.Text,
-                    Surname = txtSurnameManagerSign.Text,
+                    Age = txtAgeManagerSign.Text,
                     Country = txtCountryManagerSign.Text
                 };
 

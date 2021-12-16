@@ -31,16 +31,14 @@ namespace FootballTransfer.Update
         {
             this.BtnUpdate = new System.Windows.Forms.Button();
             this.txtUpdateManagerCountry = new System.Windows.Forms.TextBox();
-            this.txtUpdateManagerSurname = new System.Windows.Forms.TextBox();
             this.txtUpdateManagerName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtnUpdate
             // 
-            this.BtnUpdate.Location = new System.Drawing.Point(150, 200);
+            this.BtnUpdate.Location = new System.Drawing.Point(150, 150);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(109, 44);
             this.BtnUpdate.TabIndex = 35;
@@ -51,18 +49,10 @@ namespace FootballTransfer.Update
             // txtUpdateManagerCountry
             // 
             this.txtUpdateManagerCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUpdateManagerCountry.Location = new System.Drawing.Point(150, 147);
+            this.txtUpdateManagerCountry.Location = new System.Drawing.Point(150, 97);
             this.txtUpdateManagerCountry.Name = "txtUpdateManagerCountry";
             this.txtUpdateManagerCountry.Size = new System.Drawing.Size(125, 26);
             this.txtUpdateManagerCountry.TabIndex = 34;
-            // 
-            // txtUpdateManagerSurname
-            // 
-            this.txtUpdateManagerSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUpdateManagerSurname.Location = new System.Drawing.Point(150, 97);
-            this.txtUpdateManagerSurname.Name = "txtUpdateManagerSurname";
-            this.txtUpdateManagerSurname.Size = new System.Drawing.Size(125, 26);
-            this.txtUpdateManagerSurname.TabIndex = 33;
             // 
             // txtUpdateManagerName
             // 
@@ -76,21 +66,11 @@ namespace FootballTransfer.Update
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(50, 150);
+            this.label5.Location = new System.Drawing.Point(50, 100);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 20);
             this.label5.TabIndex = 30;
             this.label5.Text = "Country";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(50, 100);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Surname";
             // 
             // label1
             // 
@@ -106,13 +86,11 @@ namespace FootballTransfer.Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 311);
+            this.ClientSize = new System.Drawing.Size(384, 261);
             this.Controls.Add(this.BtnUpdate);
             this.Controls.Add(this.txtUpdateManagerCountry);
-            this.Controls.Add(this.txtUpdateManagerSurname);
             this.Controls.Add(this.txtUpdateManagerName);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Name = "UpdateManager";
             this.Text = "UpdateManager";
@@ -124,10 +102,8 @@ namespace FootballTransfer.Update
         #endregion
         private System.Windows.Forms.Button BtnUpdate;
         private System.Windows.Forms.TextBox txtUpdateManagerCountry;
-        private System.Windows.Forms.TextBox txtUpdateManagerSurname;
         private System.Windows.Forms.TextBox txtUpdateManagerName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
     }
 }
