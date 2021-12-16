@@ -44,7 +44,7 @@ namespace FootballTransfer
             if (session == null)
                 return false;
 
-            var playersData = session.Execute("select * from \"Player\"");
+            RowSet playersData = session.Execute("select * from \"Player\"");
 
             foreach (var playerData in playersData)
             {
@@ -66,7 +66,7 @@ namespace FootballTransfer
             if (session == null)
                 return null;
 
-            var playersData = session.Execute("select * from \"Player\" where \"email\"='" + emailCheck + "'");
+            RowSet playersData = session.Execute("select * from \"Player\" where \"email\"='" + emailCheck + "'");
 
             foreach (var playerData in playersData)
             {
@@ -133,7 +133,7 @@ namespace FootballTransfer
             if (session == null)
                 return false;
 
-            var managersData = session.Execute("select * from \"Manager\"");
+            RowSet managersData = session.Execute("select * from \"Manager\"");
 
             foreach (var managerData in managersData)
             {
@@ -155,7 +155,7 @@ namespace FootballTransfer
             if (session == null)
                 return null;
 
-            var managersData = session.Execute("select * from \"Manager\" where \"email\"='" + emailCheck + "'");
+            RowSet managersData = session.Execute("select * from \"Manager\" where \"email\"='" + emailCheck + "'");
 
             foreach (var managerData in managersData)
             {
@@ -243,7 +243,7 @@ namespace FootballTransfer
             if (session == null)
                 return null;
 
-            var clubsData = session.Execute("select * from \"Club\" where \"email\"='" + emailCheck + "'");
+            RowSet clubsData = session.Execute("select * from \"Club\" where \"email\"='" + emailCheck + "'");
 
             foreach (var clubData in clubsData)
             {
