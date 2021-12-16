@@ -25,12 +25,12 @@ namespace FootballTransfer.ViewPage
 
         public void FillDescription(Club club)
         {
-            txtClubTown.Text = club.town;
-            txtClubName.Text = club.name;
-            txtClubStadionName.Text = club.stadionName;
-            txtClubCapacity.Text = club.stadionCapacity.ToString();
-            txtClubLeagueName.Text = club.leagueName;
-            txtClubFoundationDate.Text = club.foundationDate.ToString();
+            txtClubTown.Text = club.Town;
+            txtClubName.Text = club.Name;
+            txtClubStadionName.Text = club.StadionName;
+            txtClubCapacity.Text = club.StadionCapacity.ToString();
+            txtClubLeagueName.Text = club.LeagueName;
+            txtClubFoundationDate.Text = club.FoundationDate.ToString();
         }
 
         private void BtnUpdatePlayer_Click(object sender, EventArgs e)

@@ -25,9 +25,9 @@ namespace FootballTransfer.ViewPage
 
         public void FillDescription(Manager manager)
         {
-            txtManagerName.Text = manager.name;
-            txtManagerSurname.Text = manager.surname;
-            txtManagerCountry.Text = manager.country;
+            txtManagerName.Text = manager.Name;
+            txtManagerSurname.Text = manager.Surname;
+            txtManagerCountry.Text = manager.Country;
         }
 
         private void BtnUpdatePlayer_Click(object sender, EventArgs e)

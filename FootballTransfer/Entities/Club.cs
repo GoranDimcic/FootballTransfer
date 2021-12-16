@@ -8,20 +8,20 @@ namespace FootballTransfer.Entities
 {
     public class Club
     {
-        public string name { get; set; }
+        public string Name { get; set; }
 
-        public string email { get; set; }
+        public string Email { get; set; }
 
-        public string password { get; set; }
+        public string Password { get; set; }
 
-        public string town { get; set; }
+        public string Town { get; set; }
 
-        public string leagueName { get; set; }
+        public string LeagueName { get; set; }
 
-        public string stadionName { get; set; }
+        public string StadionName { get; set; }
 
-        public string stadionCapacity { get; set; }
+        public string StadionCapacity { get; set; }
 
-        public DateTime foundationDate { get; set; }
+        public DateTime FoundationDate { get; set; }
     }
 }

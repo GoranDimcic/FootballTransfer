@@ -26,21 +26,21 @@ namespace FootballTransfer.Login
             {
                 Club club = new Club
                 {
-                    email = txtEmailClubSign.Text,
-                    password = txtPasswordClubSign.Text,
-                    name = txtNameClubSign.Text,
-                    leagueName = comboBoxClubCountry.Text,
-                    stadionName = txtStadionNameClubSign.Text,
-                    foundationDate = dateFoundationDate.Value.Date,
-                    town = txtTownClubSign.Text,
-                    stadionCapacity = txtCapacityClubSign.Text
+                    Email = txtEmailClubSign.Text,
+                    Password = txtPasswordClubSign.Text,
+                    Name = txtNameClubSign.Text,
+                    LeagueName = comboBoxClubCountry.Text,
+                    StadionName = txtStadionNameClubSign.Text,
+                    FoundationDate = dateFoundationDate.Value.Date,
+                    Town = txtTownClubSign.Text,
+                    StadionCapacity = txtCapacityClubSign.Text
                 };
 
-                if (club.email == "")
+                if (club.Email == "")
                 {
                     MessageBox.Show("You didn't enter an email, try again!");
                 }
-                else if (club.password == "")
+                else if (club.Password == "")
                 {
                     MessageBox.Show("You didn't enter a password, try again!");
                 }

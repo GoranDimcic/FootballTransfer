@@ -25,18 +25,18 @@ namespace FootballTransfer.Login
             {
                 Manager manager = new Manager
                 {
-                    email = txtEmailManagerSign.Text,
-                    password = txtPasswordManagerSign.Text,
-                    name = txtNameManagerSign.Text,
-                    surname = txtSurnameManagerSign.Text,
-                    country = txtCountryManagerSign.Text
+                    Email = txtEmailManagerSign.Text,
+                    Password = txtPasswordManagerSign.Text,
+                    Name = txtNameManagerSign.Text,
+                    Surname = txtSurnameManagerSign.Text,
+                    Country = txtCountryManagerSign.Text
                 };
 
-                if (manager.email == "")
+                if (manager.Email == "")
                 {
                     MessageBox.Show("You didn't enter an email, try again!");
                 }
-                else if (manager.password == "")
+                else if (manager.Password == "")
                 {
                     MessageBox.Show("You didn't enter a password, try again!");
                 }

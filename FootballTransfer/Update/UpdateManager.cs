@@ -23,9 +23,9 @@ namespace FootballTransfer.Update
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            updateManager.name = GetCorrectField(txtUpdateManagerName.Text, updateManager.name);
-            updateManager.surname = GetCorrectField(txtUpdateManagerSurname.Text, updateManager.surname);
-            updateManager.country = GetCorrectField(txtUpdateManagerCountry.Text, updateManager.country);
+            updateManager.Name = GetCorrectField(txtUpdateManagerName.Text, updateManager.Name);
+            updateManager.Surname = GetCorrectField(txtUpdateManagerSurname.Text, updateManager.Surname);
+            updateManager.Country = GetCorrectField(txtUpdateManagerCountry.Text, updateManager.Country);
 
             DataProvider.UpdateManager(updateManager);
             this.DialogResult = DialogResult.OK;

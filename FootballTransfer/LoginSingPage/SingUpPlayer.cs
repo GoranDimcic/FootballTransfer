@@ -27,19 +27,19 @@ namespace FootballTransfer
             {
                 Player player = new Player
                 {
-                    email = txtEmailPlayerSign.Text,
-                    password = txtPasswordPlayerSign.Text,
-                    name = txtNamePlayerSign.Text,
-                    surname = txtSurnamePlayerSign.Text,
-                    country = txtCountryPlayerSign.Text,
-                    position = comboBoxPosition.Text
+                    Email = txtEmailPlayerSign.Text,
+                    Password = txtPasswordPlayerSign.Text,
+                    Name = txtNamePlayerSign.Text,
+                    Surname = txtSurnamePlayerSign.Text,
+                    Country = txtCountryPlayerSign.Text,
+                    Position = comboBoxPosition.Text
                 };
 
-                if (player.email == "")
+                if (player.Email == "")
                 {
                     MessageBox.Show("You didn't enter an email, try again!");
                 }
-                else if (player.password == "")
+                else if (player.Password == "")
                 {
                     MessageBox.Show("You didn't enter a password, try again!");
                 }

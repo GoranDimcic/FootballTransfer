@@ -8,18 +8,18 @@ namespace FootballTransfer.Entities
 {
     public class Player
     {
-        public string name { get; set; }
+        public string Name { get; set; }
 
-        public string surname { get; set; }
+        public string Surname { get; set; }
 
-        public string country { get; set; }
+        public string Country { get; set; }
 
-        public string email { get; set; }
+        public string Email { get; set; }
 
-        public string password { get; set; }
+        public string Password { get; set; }
 
-        public string position { get; set; }
+        public string Position { get; set; }
 
-        public Boolean taken { get; set; }
+        public Boolean Taken { get; set; }
     }
 }
