@@ -20,6 +20,6 @@ namespace FootballTransfer.Entities
 
         public string Position { get; set; }
 
-        public Boolean Taken { get; set; }
+        public Boolean Taken = false;
     }
 }

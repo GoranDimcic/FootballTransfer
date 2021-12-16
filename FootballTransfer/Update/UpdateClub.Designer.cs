@@ -129,6 +129,7 @@ namespace FootballTransfer.Update
             this.txtUpdateClubCapacity.Name = "txtUpdateClubCapacity";
             this.txtUpdateClubCapacity.Size = new System.Drawing.Size(125, 26);
             this.txtUpdateClubCapacity.TabIndex = 39;
+            this.txtUpdateClubCapacity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUpdateClubCapacity_KeyPress);
             // 
             // UpdateClub
             // 

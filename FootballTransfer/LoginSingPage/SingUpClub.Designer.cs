@@ -1,5 +1,4 @@
-﻿
-namespace FootballTransfer.Login
+﻿namespace FootballTransfer.Login
 {
     partial class SingUpClub
     {
@@ -212,6 +211,7 @@ namespace FootballTransfer.Login
             this.txtCapacityClubSign.Name = "txtCapacityClubSign";
             this.txtCapacityClubSign.Size = new System.Drawing.Size(150, 29);
             this.txtCapacityClubSign.TabIndex = 42;
+            this.txtCapacityClubSign.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCapacityClubSign_KeyPress);
             // 
             // label7
             // 
