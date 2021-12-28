@@ -64,7 +64,10 @@ namespace FootballTransfer.ViewPage
 
             foreach (Player player in players)
             {
-                this.FillListViewPlayers(player);
+                if (player.HaveManager == false)
+                {
+                    this.FillListViewPlayers(player);
+                }
             }
         }
 
@@ -73,6 +76,11 @@ namespace FootballTransfer.ViewPage
             String[] row = { player.Email, player.Name, player.Age, player.Country, player.Position };
             ListViewItem item = new ListViewItem(row);
             listViewFreePlayers.Items.Add(item);
+        }
+
+        private void BtnCreateOffer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

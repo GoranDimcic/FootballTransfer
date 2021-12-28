@@ -66,6 +66,7 @@ namespace FootballTransfer.ViewPage
             this.BtnCreateOffer.TabIndex = 7;
             this.BtnCreateOffer.Text = "Create offer";
             this.BtnCreateOffer.UseVisualStyleBackColor = true;
+            this.BtnCreateOffer.Click += new System.EventHandler(this.BtnCreateOffer_Click);
             // 
             // txtManagerCountry
             // 

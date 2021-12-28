@@ -48,6 +48,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.listViewClubOffer = new System.Windows.Forms.ListView();
+            this.BtnSaveUpdatedPlayer = new System.Windows.Forms.Button();
+            this.comboBoxUpdatePlayerPosition = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // BtnUpdatePlayer
@@ -196,7 +198,6 @@
             this.BtnShowManagerOffer.TabIndex = 21;
             this.BtnShowManagerOffer.Text = "Manager offer";
             this.BtnShowManagerOffer.UseVisualStyleBackColor = true;
-            this.BtnShowManagerOffer.Click += new System.EventHandler(this.BtnShowManagerOffer_Click);
             // 
             // BtnShowClubOffer
             // 
@@ -245,11 +246,40 @@
             this.listViewClubOffer.TabIndex = 23;
             this.listViewClubOffer.UseCompatibleStateImageBehavior = false;
             // 
+            // BtnSaveUpdatedPlayer
+            // 
+            this.BtnSaveUpdatedPlayer.Location = new System.Drawing.Point(270, 61);
+            this.BtnSaveUpdatedPlayer.Name = "BtnSaveUpdatedPlayer";
+            this.BtnSaveUpdatedPlayer.Size = new System.Drawing.Size(91, 26);
+            this.BtnSaveUpdatedPlayer.TabIndex = 27;
+            this.BtnSaveUpdatedPlayer.Text = "Save";
+            this.BtnSaveUpdatedPlayer.UseVisualStyleBackColor = true;
+            this.BtnSaveUpdatedPlayer.Visible = false;
+            this.BtnSaveUpdatedPlayer.Click += new System.EventHandler(this.BtnSaveUpdatedPlayer_Click);
+            // 
+            // comboBoxUpdatePlayerPosition
+            // 
+            this.comboBoxUpdatePlayerPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUpdatePlayerPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxUpdatePlayerPosition.FormattingEnabled = true;
+            this.comboBoxUpdatePlayerPosition.Items.AddRange(new object[] {
+            "Attack",
+            "Middlefield",
+            "Defence",
+            "Goalkeeper"});
+            this.comboBoxUpdatePlayerPosition.Location = new System.Drawing.Point(125, 127);
+            this.comboBoxUpdatePlayerPosition.Name = "comboBoxUpdatePlayerPosition";
+            this.comboBoxUpdatePlayerPosition.Size = new System.Drawing.Size(123, 28);
+            this.comboBoxUpdatePlayerPosition.TabIndex = 28;
+            this.comboBoxUpdatePlayerPosition.Visible = false;
+            // 
             // PlayerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 511);
+            this.Controls.Add(this.comboBoxUpdatePlayerPosition);
+            this.Controls.Add(this.BtnSaveUpdatedPlayer);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
@@ -298,5 +328,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView listViewClubOffer;
+        private System.Windows.Forms.Button BtnSaveUpdatedPlayer;
+        private System.Windows.Forms.ComboBox comboBoxUpdatePlayerPosition;
     }
 }

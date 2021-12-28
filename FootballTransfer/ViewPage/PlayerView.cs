@@ -55,8 +55,13 @@ namespace FootballTransfer.ViewPage
 
         private void BtnUpdatePlayer_Click(object sender, EventArgs e)
         {
-            UpdatePlayer form = new UpdatePlayer(loggedPlayer);
-            form.ShowDialog();
+            this.OnUpdateClick();
+        }
+
+        private void BtnSaveUpdatedPlayer_Click(object sender, EventArgs e)
+        {
+            this.OnSaveClick();
+            DataProvider.UpdatePlayer(loggedPlayer);
         }
 
         private void BtnDeletePlayer_Click(object sender, EventArgs e)
@@ -65,13 +70,39 @@ namespace FootballTransfer.ViewPage
             this.DialogResult = DialogResult.OK;
         }
 
-        private void BtnShowManagerOffer_Click(object sender, EventArgs e)
+        public void OnUpdateClick()
         {
-            players = DataProvider.GetPlayers();
-            foreach(Player player in players)
-            {
-                MessageBox.Show("Ime " + player.Name + " " + player.Position);
-            }
+            txtPlayerName.ReadOnly = false;
+            txtPlayerName.BorderStyle = BorderStyle.Fixed3D;
+
+            txtPlayerCountry.ReadOnly = false;
+            txtPlayerCountry.BorderStyle = BorderStyle.Fixed3D;
+
+            txtPlayerPosition.Visible = false;
+
+            comboBoxUpdatePlayerPosition.Visible = true;
+            comboBoxUpdatePlayerPosition.Text = loggedPlayer.Position;
+
+            BtnSaveUpdatedPlayer.Visible = true;
+        }
+
+        public void OnSaveClick()
+        {
+            loggedPlayer.Name = txtPlayerName.Text;
+            loggedPlayer.Country = txtPlayerCountry.Text;
+            loggedPlayer.Position = comboBoxUpdatePlayerPosition.Text;
+            txtPlayerPosition.Text = comboBoxUpdatePlayerPosition.Text;
+
+            txtPlayerName.ReadOnly = true;
+            txtPlayerName.BorderStyle = BorderStyle.None;
+
+            txtPlayerCountry.ReadOnly = true;
+            txtPlayerCountry.BorderStyle = BorderStyle.None;
+
+            comboBoxUpdatePlayerPosition.Visible = false;
+            txtPlayerPosition.Visible = true;
+            BtnSaveUpdatedPlayer.Visible = false;
+
         }
     }
 }

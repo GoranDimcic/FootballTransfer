@@ -35,7 +35,7 @@ namespace FootballTransfer
             // 
             // BtnAdmin
             // 
-            this.BtnAdmin.Location = new System.Drawing.Point(50, 100);
+            this.BtnAdmin.Location = new System.Drawing.Point(100, 150);
             this.BtnAdmin.Name = "BtnAdmin";
             this.BtnAdmin.Size = new System.Drawing.Size(100, 50);
             this.BtnAdmin.TabIndex = 0;
@@ -45,7 +45,7 @@ namespace FootballTransfer
             // 
             // BtnUser
             // 
-            this.BtnUser.Location = new System.Drawing.Point(200, 100);
+            this.BtnUser.Location = new System.Drawing.Point(250, 150);
             this.BtnUser.Name = "BtnUser";
             this.BtnUser.Size = new System.Drawing.Size(100, 50);
             this.BtnUser.TabIndex = 1;
@@ -57,7 +57,7 @@ namespace FootballTransfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 261);
+            this.ClientSize = new System.Drawing.Size(484, 361);
             this.Controls.Add(this.BtnUser);
             this.Controls.Add(this.BtnAdmin);
             this.Name = "UserPage";
