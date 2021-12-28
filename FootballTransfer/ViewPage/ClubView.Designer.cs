@@ -47,6 +47,9 @@ namespace FootballTransfer.ViewPage
             this.BtnSeeMyTeam = new System.Windows.Forms.Button();
             this.BtnSeeFreePlayers = new System.Windows.Forms.Button();
             this.BtnCreateOffer = new System.Windows.Forms.Button();
+            this.comboBoxUpdateClubLeagueName = new System.Windows.Forms.ComboBox();
+            this.BtnSaveUpdatedClub = new System.Windows.Forms.Button();
+            this.BtnCloseUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtClubStadionName
@@ -228,11 +231,53 @@ namespace FootballTransfer.ViewPage
             this.BtnCreateOffer.Text = "Create offer";
             this.BtnCreateOffer.UseVisualStyleBackColor = true;
             // 
+            // comboBoxUpdateClubLeagueName
+            // 
+            this.comboBoxUpdateClubLeagueName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUpdateClubLeagueName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxUpdateClubLeagueName.FormattingEnabled = true;
+            this.comboBoxUpdateClubLeagueName.Items.AddRange(new object[] {
+            "La Liga",
+            "Premier League",
+            "Serie A",
+            "Ligue 1",
+            "Bundesliga"});
+            this.comboBoxUpdateClubLeagueName.Location = new System.Drawing.Point(160, 162);
+            this.comboBoxUpdateClubLeagueName.Name = "comboBoxUpdateClubLeagueName";
+            this.comboBoxUpdateClubLeagueName.Size = new System.Drawing.Size(126, 28);
+            this.comboBoxUpdateClubLeagueName.TabIndex = 39;
+            this.comboBoxUpdateClubLeagueName.Visible = false;
+            // 
+            // BtnSaveUpdatedClub
+            // 
+            this.BtnSaveUpdatedClub.Location = new System.Drawing.Point(300, 23);
+            this.BtnSaveUpdatedClub.Name = "BtnSaveUpdatedClub";
+            this.BtnSaveUpdatedClub.Size = new System.Drawing.Size(91, 26);
+            this.BtnSaveUpdatedClub.TabIndex = 40;
+            this.BtnSaveUpdatedClub.Text = "Save";
+            this.BtnSaveUpdatedClub.UseVisualStyleBackColor = true;
+            this.BtnSaveUpdatedClub.Visible = false;
+            this.BtnSaveUpdatedClub.Click += new System.EventHandler(this.BtnSaveUpdatedClub_Click);
+            // 
+            // BtnCloseUpdate
+            // 
+            this.BtnCloseUpdate.Location = new System.Drawing.Point(300, 59);
+            this.BtnCloseUpdate.Name = "BtnCloseUpdate";
+            this.BtnCloseUpdate.Size = new System.Drawing.Size(91, 26);
+            this.BtnCloseUpdate.TabIndex = 41;
+            this.BtnCloseUpdate.Text = "Close";
+            this.BtnCloseUpdate.UseVisualStyleBackColor = true;
+            this.BtnCloseUpdate.Visible = false;
+            this.BtnCloseUpdate.Click += new System.EventHandler(this.BtnCloseUpdate_Click);
+            // 
             // ClubView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 511);
+            this.Controls.Add(this.BtnCloseUpdate);
+            this.Controls.Add(this.BtnSaveUpdatedClub);
+            this.Controls.Add(this.comboBoxUpdateClubLeagueName);
             this.Controls.Add(this.BtnCreateOffer);
             this.Controls.Add(this.BtnSeeMyTeam);
             this.Controls.Add(this.BtnSeeFreePlayers);
@@ -277,5 +322,8 @@ namespace FootballTransfer.ViewPage
         private System.Windows.Forms.Button BtnSeeMyTeam;
         private System.Windows.Forms.Button BtnSeeFreePlayers;
         private System.Windows.Forms.Button BtnCreateOffer;
+        private System.Windows.Forms.ComboBox comboBoxUpdateClubLeagueName;
+        private System.Windows.Forms.Button BtnSaveUpdatedClub;
+        private System.Windows.Forms.Button BtnCloseUpdate;
     }
 }

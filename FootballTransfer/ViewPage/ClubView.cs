@@ -1,5 +1,4 @@
 ﻿using FootballTransfer.Entities;
-using FootballTransfer.Update;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,23 +20,17 @@ namespace FootballTransfer.ViewPage
         public ClubView(Club club)
         {
             InitializeComponent();
-            FillDescription(club);
+            ClubPage(club);
             loggedClub = club;
         }
 
-        private void BtnUpdatePlayer_Click(object sender, EventArgs e)
+        public void ClubPage(Club club)
         {
-            UpdateClub form = new UpdateClub(loggedClub);
-            form.ShowDialog();
+            this.FillClubDescription(club);
+            this.FillListWithFreePlayers();
         }
 
-        private void BtnDeleteClub_Click(object sender, EventArgs e)
-        {
-            DataProvider.DeleteClub(loggedClub);
-            this.DialogResult = DialogResult.OK;
-        }
-
-        public void FillDescription(Club club)
+        public void FillClubDescription(Club club)
         {
             txtClubTown.Text = club.Town;
             txtClubName.Text = club.Name;
@@ -45,12 +38,9 @@ namespace FootballTransfer.ViewPage
             txtClubCapacity.Text = club.StadionCapacity.ToString();
             txtClubLeagueName.Text = club.LeagueName;
             txtClubFoundationDate.Text = club.FoundationDate.ToString();
-
-            this.FillListView();
-            this.FillFreePlayers();
         }
 
-        public void FillListView()
+        public void FillListWithFreePlayers()
         {
             listViewFreePlayers.View = View.Details;
             listViewFreePlayers.FullRowSelect = true;
@@ -59,6 +49,8 @@ namespace FootballTransfer.ViewPage
             listViewFreePlayers.Columns.Add("Age", 80);
             listViewFreePlayers.Columns.Add("Country", 80);
             listViewFreePlayers.Columns.Add("Pos", 120);
+
+            this.FillFreePlayers();
         }
 
         public void FillFreePlayers()
@@ -67,15 +59,113 @@ namespace FootballTransfer.ViewPage
 
             foreach (Player player in players)
             {
-                this.FillListViewPlayers(player);
+                String[] row = { player.Email, player.Name, player.Age, player.Country, player.Position };
+                ListViewItem item = new ListViewItem(row);
+                listViewFreePlayers.Items.Add(item);
             }
         }
 
-        public void FillListViewPlayers(Player player)
+        private void BtnUpdatePlayer_Click(object sender, EventArgs e)
         {
-            String[] row = { player.Email, player.Name, player.Age, player.Country, player.Position };
-            ListViewItem item = new ListViewItem(row);
-            listViewFreePlayers.Items.Add(item);
+            this.OnUpdateClick();
+        }
+
+        private void BtnSaveUpdatedClub_Click(object sender, EventArgs e)
+        {
+            this.OnSaveClick();
+            DataProvider.UpdateClub(loggedClub);
+        }
+
+        private void BtnCloseUpdate_Click(object sender, EventArgs e)
+        {
+            this.OnCloseClick();
+        }
+
+        private void BtnDeleteClub_Click(object sender, EventArgs e)
+        {
+            DataProvider.DeleteClub(loggedClub);
+            this.DialogResult = DialogResult.OK;
+        }
+
+        public void OnUpdateClick()
+        {
+            txtClubTown.ReadOnly = false;
+            txtClubTown.BorderStyle = BorderStyle.Fixed3D;
+
+            txtClubName.ReadOnly = false;
+            txtClubName.BorderStyle = BorderStyle.Fixed3D;
+
+            txtClubStadionName.ReadOnly = false;
+            txtClubStadionName.BorderStyle = BorderStyle.Fixed3D;
+
+            txtClubCapacity.ReadOnly = false;
+            txtClubCapacity.BorderStyle = BorderStyle.Fixed3D;
+
+            txtClubLeagueName.Visible = false;
+
+            comboBoxUpdateClubLeagueName.Visible = true;
+            comboBoxUpdateClubLeagueName.Text = loggedClub.LeagueName;
+
+            BtnSaveUpdatedClub.Visible = true;
+            BtnDeleteClub.Visible = false;
+            BtnCloseUpdate.Visible = true;
+        }
+
+        public void OnSaveClick()
+        {
+            loggedClub.Town = txtClubTown.Text;
+            loggedClub.Name = txtClubName.Text;
+            loggedClub.StadionName = txtClubStadionName.Text;
+            loggedClub.StadionCapacity = txtClubCapacity.Text;
+            loggedClub.LeagueName = comboBoxUpdateClubLeagueName.Text;
+            txtClubLeagueName.Text = comboBoxUpdateClubLeagueName.Text;
+
+            txtClubTown.ReadOnly = true;
+            txtClubTown.BorderStyle = BorderStyle.None;
+
+            txtClubName.ReadOnly = true;
+            txtClubName.BorderStyle = BorderStyle.None;
+
+            txtClubStadionName.ReadOnly = true;
+            txtClubStadionName.BorderStyle = BorderStyle.None;
+
+            txtClubCapacity.ReadOnly = true;
+            txtClubCapacity.BorderStyle = BorderStyle.None;
+
+            comboBoxUpdateClubLeagueName.Visible = false;
+            txtClubLeagueName.Visible = true;
+
+            BtnSaveUpdatedClub.Visible = false;
+            BtnDeleteClub.Visible = true;
+            BtnCloseUpdate.Visible = false;
+        }
+
+        public void OnCloseClick()
+        {
+            txtClubTown.Text = loggedClub.Town;
+            txtClubName.Text = loggedClub.Name;
+            txtClubStadionName.Text = loggedClub.StadionName;
+            txtClubCapacity.Text = loggedClub.StadionCapacity;
+            txtClubLeagueName.Text = loggedClub.LeagueName;
+
+            txtClubTown.ReadOnly = true;
+            txtClubTown.BorderStyle = BorderStyle.None;
+
+            txtClubName.ReadOnly = true;
+            txtClubName.BorderStyle = BorderStyle.None;
+
+            txtClubStadionName.ReadOnly = true;
+            txtClubStadionName.BorderStyle = BorderStyle.None;
+
+            txtClubCapacity.ReadOnly = true;
+            txtClubCapacity.BorderStyle = BorderStyle.None;
+
+            comboBoxUpdateClubLeagueName.Visible = false;
+            txtClubLeagueName.Visible = true;
+
+            BtnSaveUpdatedClub.Visible = false;
+            BtnDeleteClub.Visible = true;
+            BtnCloseUpdate.Visible = false;
         }
     }
 }

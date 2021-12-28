@@ -324,7 +324,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet clubUpdateData = session.Execute("update \"Club\" set name='" + club.Name + "' , stadionname='" + club.StadionName + "' , leaguename='" + club.LeagueName + "' , capacity='" + club.StadionCapacity + "'where \"email\"='" + club.Email + "'");
+            RowSet clubUpdateData = session.Execute("update \"Club\" set name='" + club.Name + "' , stadionname='" + club.StadionName + "' , leaguename='" + club.LeagueName + "' , capacity='" + club.StadionCapacity + "' , town='" + club.Town + "'where \"email\"='" + club.Email + "'");
         }
 
         public static void DeleteClub(Club club)

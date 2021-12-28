@@ -164,12 +164,6 @@
       <DependentUpon>SingUpManager.cs</DependentUpon>
     </Compile>
     <Compile Include="SessionManager.cs" />
-    <Compile Include="Update\UpdateClub.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Update\UpdateClub.Designer.cs">
-      <DependentUpon>UpdateClub.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,9 +219,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginSingPage\SingUpManager.resx">
       <DependentUpon>SingUpManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Update\UpdateClub.resx">
-      <DependentUpon>UpdateClub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPage.resx">
       <DependentUpon>UserPage.cs</DependentUpon>

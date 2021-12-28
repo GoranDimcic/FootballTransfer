@@ -1,5 +1,4 @@
 ﻿using FootballTransfer.Entities;
-using FootballTransfer.Update;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,27 +20,24 @@ namespace FootballTransfer.ViewPage
         public ManagerView(Manager manager)
         {
             InitializeComponent();
-            FillDescription(manager);
+            ManagerPage(manager);
             loggedManager = manager;
         }
 
-        private void BtnDeleteManager_Click(object sender, EventArgs e)
+        public void ManagerPage(Manager manager)
         {
-            DataProvider.DeleteManager(loggedManager);
-            this.DialogResult = DialogResult.OK;
+            this.FillManagerDescription(manager);
+            this.FillListWithFreePlayers();
         }
 
-        public void FillDescription(Manager manager)
+        public void FillManagerDescription(Manager manager)
         {
             txtManagerName.Text = manager.Name;
             txtManagerAge.Text = manager.Age;
             txtManagerCountry.Text = manager.Country;
-
-            this.FillListView();
-            this.FillFreePlayers();
         }
 
-        public void FillListView()
+        public void FillListWithFreePlayers()
         {
             listViewFreePlayers.View = View.Details;
             listViewFreePlayers.FullRowSelect = true;
@@ -50,6 +46,8 @@ namespace FootballTransfer.ViewPage
             listViewFreePlayers.Columns.Add("Age", 80);
             listViewFreePlayers.Columns.Add("Country", 80);
             listViewFreePlayers.Columns.Add("Pos", 120);
+
+            this.FillFreePlayers();
         }
 
         public void FillFreePlayers()
@@ -60,7 +58,9 @@ namespace FootballTransfer.ViewPage
             {
                 if (player.HaveManager == false)
                 {
-                    this.FillListViewPlayers(player);
+                    String[] row = { player.Email, player.Name, player.Age, player.Country, player.Position };
+                    ListViewItem item = new ListViewItem(row);
+                    listViewFreePlayers.Items.Add(item);
                 }
             }
         }
@@ -76,11 +76,15 @@ namespace FootballTransfer.ViewPage
             DataProvider.UpdateManager(loggedManager);
         }
 
-        public void FillListViewPlayers(Player player)
+        private void BtnCloseUpdate_Click(object sender, EventArgs e)
         {
-            String[] row = { player.Email, player.Name, player.Age, player.Country, player.Position };
-            ListViewItem item = new ListViewItem(row);
-            listViewFreePlayers.Items.Add(item);
+            this.OnCloseClick();
+        }
+
+        private void BtnDeleteManager_Click(object sender, EventArgs e)
+        {
+            DataProvider.DeleteManager(loggedManager);
+            this.DialogResult = DialogResult.OK;
         }
 
         public void OnUpdateClick()
@@ -92,6 +96,8 @@ namespace FootballTransfer.ViewPage
             txtManagerCountry.BorderStyle = BorderStyle.Fixed3D;
 
             BtnSaveUpdatedManager.Visible = true;
+            BtnDeleteManager.Visible = false;
+            BtnCloseUpdate.Visible = true;
         }
 
         public void OnSaveClick()
@@ -106,6 +112,24 @@ namespace FootballTransfer.ViewPage
             txtManagerCountry.BorderStyle = BorderStyle.None;
 
             BtnSaveUpdatedManager.Visible = false;
+            BtnDeleteManager.Visible = true;
+            BtnCloseUpdate.Visible = false;
+        }
+
+        public void OnCloseClick()
+        {
+            txtManagerName.Text = loggedManager.Name;
+            txtManagerCountry.Text = loggedManager.Country;
+
+            txtManagerName.ReadOnly = true;
+            txtManagerName.BorderStyle = BorderStyle.None;
+
+            txtManagerCountry.ReadOnly = true;
+            txtManagerCountry.BorderStyle = BorderStyle.None;
+
+            BtnSaveUpdatedManager.Visible = false;
+            BtnCloseUpdate.Visible = false;
+            BtnDeleteManager.Visible = true;
         }
     }
 }

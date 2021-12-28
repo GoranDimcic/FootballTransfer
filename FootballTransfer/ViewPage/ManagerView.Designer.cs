@@ -45,6 +45,7 @@ namespace FootballTransfer.ViewPage
             this.label2 = new System.Windows.Forms.Label();
             this.txtManagerAge = new System.Windows.Forms.TextBox();
             this.BtnSaveUpdatedManager = new System.Windows.Forms.Button();
+            this.BtnCloseUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewFreePlayers
@@ -198,7 +199,7 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnSaveUpdatedManager
             // 
-            this.BtnSaveUpdatedManager.Location = new System.Drawing.Point(270, 59);
+            this.BtnSaveUpdatedManager.Location = new System.Drawing.Point(270, 22);
             this.BtnSaveUpdatedManager.Name = "BtnSaveUpdatedManager";
             this.BtnSaveUpdatedManager.Size = new System.Drawing.Size(91, 26);
             this.BtnSaveUpdatedManager.TabIndex = 33;
@@ -207,11 +208,23 @@ namespace FootballTransfer.ViewPage
             this.BtnSaveUpdatedManager.Visible = false;
             this.BtnSaveUpdatedManager.Click += new System.EventHandler(this.BtnSaveUpdatedManager_Click);
             // 
+            // BtnCloseUpdate
+            // 
+            this.BtnCloseUpdate.Location = new System.Drawing.Point(270, 59);
+            this.BtnCloseUpdate.Name = "BtnCloseUpdate";
+            this.BtnCloseUpdate.Size = new System.Drawing.Size(91, 26);
+            this.BtnCloseUpdate.TabIndex = 34;
+            this.BtnCloseUpdate.Text = "Close";
+            this.BtnCloseUpdate.UseVisualStyleBackColor = true;
+            this.BtnCloseUpdate.Visible = false;
+            this.BtnCloseUpdate.Click += new System.EventHandler(this.BtnCloseUpdate_Click);
+            // 
             // ManagerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 461);
+            this.Controls.Add(this.BtnCloseUpdate);
             this.Controls.Add(this.BtnSaveUpdatedManager);
             this.Controls.Add(this.txtManagerAge);
             this.Controls.Add(this.label2);
@@ -252,5 +265,6 @@ namespace FootballTransfer.ViewPage
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtManagerAge;
         private System.Windows.Forms.Button BtnSaveUpdatedManager;
+        private System.Windows.Forms.Button BtnCloseUpdate;
     }
 }

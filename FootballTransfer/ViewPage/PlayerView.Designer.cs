@@ -50,6 +50,7 @@
             this.listViewClubOffer = new System.Windows.Forms.ListView();
             this.BtnSaveUpdatedPlayer = new System.Windows.Forms.Button();
             this.comboBoxUpdatePlayerPosition = new System.Windows.Forms.ComboBox();
+            this.BtnCloseUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnUpdatePlayer
@@ -248,7 +249,7 @@
             // 
             // BtnSaveUpdatedPlayer
             // 
-            this.BtnSaveUpdatedPlayer.Location = new System.Drawing.Point(270, 59);
+            this.BtnSaveUpdatedPlayer.Location = new System.Drawing.Point(270, 22);
             this.BtnSaveUpdatedPlayer.Name = "BtnSaveUpdatedPlayer";
             this.BtnSaveUpdatedPlayer.Size = new System.Drawing.Size(91, 26);
             this.BtnSaveUpdatedPlayer.TabIndex = 27;
@@ -273,11 +274,23 @@
             this.comboBoxUpdatePlayerPosition.TabIndex = 28;
             this.comboBoxUpdatePlayerPosition.Visible = false;
             // 
+            // BtnCloseUpdate
+            // 
+            this.BtnCloseUpdate.Location = new System.Drawing.Point(270, 59);
+            this.BtnCloseUpdate.Name = "BtnCloseUpdate";
+            this.BtnCloseUpdate.Size = new System.Drawing.Size(91, 26);
+            this.BtnCloseUpdate.TabIndex = 29;
+            this.BtnCloseUpdate.Text = "Close";
+            this.BtnCloseUpdate.UseVisualStyleBackColor = true;
+            this.BtnCloseUpdate.Visible = false;
+            this.BtnCloseUpdate.Click += new System.EventHandler(this.BtnCloseUpdate_Click);
+            // 
             // PlayerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 511);
+            this.Controls.Add(this.BtnCloseUpdate);
             this.Controls.Add(this.comboBoxUpdatePlayerPosition);
             this.Controls.Add(this.BtnSaveUpdatedPlayer);
             this.Controls.Add(this.button6);
@@ -330,5 +343,6 @@
         private System.Windows.Forms.ListView listViewClubOffer;
         private System.Windows.Forms.Button BtnSaveUpdatedPlayer;
         private System.Windows.Forms.ComboBox comboBoxUpdatePlayerPosition;
+        private System.Windows.Forms.Button BtnCloseUpdate;
     }
 }

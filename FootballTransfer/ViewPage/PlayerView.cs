@@ -1,5 +1,4 @@
 ﻿using FootballTransfer.Entities;
-using FootballTransfer.Update;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,13 +19,18 @@ namespace FootballTransfer.ViewPage
         public PlayerView(Player player)
         {
             InitializeComponent();
-            this.FillDescription(player);
-            this.FillManagerOffer();
-            this.FillClubOffer();
+            this.PlayerPage(player);
             loggedPlayer = player;
         }
 
-        public void FillDescription(Player player)
+        public void PlayerPage(Player player)
+        {
+            this.FillPlayerDescription(player);
+            this.FillManagerOfferList();
+            this.FillClubOfferList();
+        }
+
+        public void FillPlayerDescription(Player player)
         {
             txtPlayerName.Text = player.Name;
             txtPlayerAge.Text = player.Age;
@@ -34,16 +38,7 @@ namespace FootballTransfer.ViewPage
             txtPlayerPosition.Text = player.Position;
         }
 
-        public void FillClubOffer()
-        {
-            listViewClubOffer.View = View.Details;
-            listViewClubOffer.FullRowSelect = true;
-            listViewClubOffer.Columns.Add("Club", 120);
-            listViewClubOffer.Columns.Add("Offer", 120);
-            listViewClubOffer.Columns.Add("Contract date", 120);
-        }
-
-        public void FillManagerOffer()
+        public void FillManagerOfferList()
         {
             listViewManagerOffer.View = View.Details;
             listViewManagerOffer.FullRowSelect = true;
@@ -51,6 +46,15 @@ namespace FootballTransfer.ViewPage
             listViewManagerOffer.Columns.Add("Name", 80);
             listViewManagerOffer.Columns.Add("Price", 80);
             listViewManagerOffer.Columns.Add("Contract date", 120);
+        }
+
+        public void FillClubOfferList()
+        {
+            listViewClubOffer.View = View.Details;
+            listViewClubOffer.FullRowSelect = true;
+            listViewClubOffer.Columns.Add("Club", 120);
+            listViewClubOffer.Columns.Add("Offer", 120);
+            listViewClubOffer.Columns.Add("Contract date", 120);
         }
 
         private void BtnUpdatePlayer_Click(object sender, EventArgs e)
@@ -62,6 +66,11 @@ namespace FootballTransfer.ViewPage
         {
             this.OnSaveClick();
             DataProvider.UpdatePlayer(loggedPlayer);
+        }
+
+        private void BtnCloseUpdate_Click(object sender, EventArgs e)
+        {
+            this.OnCloseClick();
         }
 
         private void BtnDeletePlayer_Click(object sender, EventArgs e)
@@ -84,6 +93,8 @@ namespace FootballTransfer.ViewPage
             comboBoxUpdatePlayerPosition.Text = loggedPlayer.Position;
 
             BtnSaveUpdatedPlayer.Visible = true;
+            BtnDeletePlayer.Visible = false;
+            BtnCloseUpdate.Visible = true;
         }
 
         public void OnSaveClick()
@@ -101,8 +112,30 @@ namespace FootballTransfer.ViewPage
 
             comboBoxUpdatePlayerPosition.Visible = false;
             txtPlayerPosition.Visible = true;
-            BtnSaveUpdatedPlayer.Visible = false;
 
+            BtnSaveUpdatedPlayer.Visible = false;
+            BtnDeletePlayer.Visible = true;
+            BtnCloseUpdate.Visible = false;
+        }
+
+        public void OnCloseClick()
+        {
+            txtPlayerName.Text = loggedPlayer.Name;
+            txtPlayerCountry.Text = loggedPlayer.Country;
+            txtPlayerPosition.Text = loggedPlayer.Position;
+
+            txtPlayerName.ReadOnly = true;
+            txtPlayerName.BorderStyle = BorderStyle.None;
+
+            txtPlayerCountry.ReadOnly = true;
+            txtPlayerCountry.BorderStyle = BorderStyle.None;
+
+            comboBoxUpdatePlayerPosition.Visible = false;
+            txtPlayerPosition.Visible = true;
+
+            BtnSaveUpdatedPlayer.Visible = false;
+            BtnCloseUpdate.Visible = false;
+            BtnDeletePlayer.Visible = true;
         }
     }
 }
