@@ -44,6 +44,7 @@ namespace FootballTransfer.ViewPage
             this.BtnSeeMyPlayers = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtManagerAge = new System.Windows.Forms.TextBox();
+            this.BtnSaveUpdatedManager = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewFreePlayers
@@ -66,7 +67,6 @@ namespace FootballTransfer.ViewPage
             this.BtnCreateOffer.TabIndex = 7;
             this.BtnCreateOffer.Text = "Create offer";
             this.BtnCreateOffer.UseVisualStyleBackColor = true;
-            this.BtnCreateOffer.Click += new System.EventHandler(this.BtnCreateOffer_Click);
             // 
             // txtManagerCountry
             // 
@@ -126,7 +126,7 @@ namespace FootballTransfer.ViewPage
             this.BtnUpdateManager.TabIndex = 17;
             this.BtnUpdateManager.Text = "Update";
             this.BtnUpdateManager.UseVisualStyleBackColor = true;
-            this.BtnUpdateManager.Click += new System.EventHandler(this.BtnUpdatePlayer_Click);
+            this.BtnUpdateManager.Click += new System.EventHandler(this.BtnUpdateManager_Click);
             // 
             // BtnDeleteManager
             // 
@@ -196,11 +196,23 @@ namespace FootballTransfer.ViewPage
             this.txtManagerAge.Size = new System.Drawing.Size(123, 19);
             this.txtManagerAge.TabIndex = 32;
             // 
+            // BtnSaveUpdatedManager
+            // 
+            this.BtnSaveUpdatedManager.Location = new System.Drawing.Point(270, 59);
+            this.BtnSaveUpdatedManager.Name = "BtnSaveUpdatedManager";
+            this.BtnSaveUpdatedManager.Size = new System.Drawing.Size(91, 26);
+            this.BtnSaveUpdatedManager.TabIndex = 33;
+            this.BtnSaveUpdatedManager.Text = "Save";
+            this.BtnSaveUpdatedManager.UseVisualStyleBackColor = true;
+            this.BtnSaveUpdatedManager.Visible = false;
+            this.BtnSaveUpdatedManager.Click += new System.EventHandler(this.BtnSaveUpdatedManager_Click);
+            // 
             // ManagerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 461);
+            this.Controls.Add(this.BtnSaveUpdatedManager);
             this.Controls.Add(this.txtManagerAge);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnSeeMyPlayers);
@@ -239,5 +251,6 @@ namespace FootballTransfer.ViewPage
         private System.Windows.Forms.Button BtnSeeMyPlayers;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtManagerAge;
+        private System.Windows.Forms.Button BtnSaveUpdatedManager;
     }
 }

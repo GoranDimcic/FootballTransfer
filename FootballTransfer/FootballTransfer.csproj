@@ -170,12 +170,6 @@
     <Compile Include="Update\UpdateClub.Designer.cs">
       <DependentUpon>UpdateClub.cs</DependentUpon>
     </Compile>
-    <Compile Include="Update\UpdateManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Update\UpdateManager.Designer.cs">
-      <DependentUpon>UpdateManager.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,9 +228,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Update\UpdateClub.resx">
       <DependentUpon>UpdateClub.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Update\UpdateManager.resx">
-      <DependentUpon>UpdateManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPage.resx">
       <DependentUpon>UserPage.cs</DependentUpon>

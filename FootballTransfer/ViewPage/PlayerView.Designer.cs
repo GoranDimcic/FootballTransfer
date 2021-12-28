@@ -248,7 +248,7 @@
             // 
             // BtnSaveUpdatedPlayer
             // 
-            this.BtnSaveUpdatedPlayer.Location = new System.Drawing.Point(270, 61);
+            this.BtnSaveUpdatedPlayer.Location = new System.Drawing.Point(270, 59);
             this.BtnSaveUpdatedPlayer.Name = "BtnSaveUpdatedPlayer";
             this.BtnSaveUpdatedPlayer.Size = new System.Drawing.Size(91, 26);
             this.BtnSaveUpdatedPlayer.TabIndex = 27;

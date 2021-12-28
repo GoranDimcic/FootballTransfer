@@ -25,12 +25,6 @@ namespace FootballTransfer.ViewPage
             loggedManager = manager;
         }
 
-        private void BtnUpdatePlayer_Click(object sender, EventArgs e)
-        {
-            UpdateManager form = new UpdateManager(loggedManager);
-            form.ShowDialog();
-        }
-
         private void BtnDeleteManager_Click(object sender, EventArgs e)
         {
             DataProvider.DeleteManager(loggedManager);
@@ -71,6 +65,17 @@ namespace FootballTransfer.ViewPage
             }
         }
 
+        private void BtnUpdateManager_Click(object sender, EventArgs e)
+        {
+            this.OnUpdateClick();
+        }
+
+        private void BtnSaveUpdatedManager_Click(object sender, EventArgs e)
+        {
+            this.OnSaveClick();
+            DataProvider.UpdateManager(loggedManager);
+        }
+
         public void FillListViewPlayers(Player player)
         {
             String[] row = { player.Email, player.Name, player.Age, player.Country, player.Position };
@@ -78,9 +83,29 @@ namespace FootballTransfer.ViewPage
             listViewFreePlayers.Items.Add(item);
         }
 
-        private void BtnCreateOffer_Click(object sender, EventArgs e)
+        public void OnUpdateClick()
         {
+            txtManagerName.ReadOnly = false;
+            txtManagerName.BorderStyle = BorderStyle.Fixed3D;
 
+            txtManagerCountry.ReadOnly = false;
+            txtManagerCountry.BorderStyle = BorderStyle.Fixed3D;
+
+            BtnSaveUpdatedManager.Visible = true;
+        }
+
+        public void OnSaveClick()
+        {
+            loggedManager.Name = txtManagerName.Text;
+            loggedManager.Country = txtManagerCountry.Text;
+
+            txtManagerName.ReadOnly = true;
+            txtManagerName.BorderStyle = BorderStyle.None;
+
+            txtManagerCountry.ReadOnly = true;
+            txtManagerCountry.BorderStyle = BorderStyle.None;
+
+            BtnSaveUpdatedManager.Visible = false;
         }
     }
 }
