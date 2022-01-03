@@ -68,6 +68,7 @@ namespace FootballTransfer.Login
             this.txtAgeManagerSign.Name = "txtAgeManagerSign";
             this.txtAgeManagerSign.Size = new System.Drawing.Size(150, 29);
             this.txtAgeManagerSign.TabIndex = 29;
+            this.txtAgeManagerSign.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAgeManagerSign_KeyPress);
             // 
             // label4
             // 
@@ -104,7 +105,6 @@ namespace FootballTransfer.Login
             this.txtPasswordManagerSign.Name = "txtPasswordManagerSign";
             this.txtPasswordManagerSign.Size = new System.Drawing.Size(150, 29);
             this.txtPasswordManagerSign.TabIndex = 24;
-            this.txtPasswordManagerSign.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAgeManagerSign_KeyPress);
             // 
             // txtEmailManagerSign
             // 
@@ -154,7 +154,7 @@ namespace FootballTransfer.Login
             this.BtnRegistryManager.TabIndex = 33;
             this.BtnRegistryManager.Text = "Sign up";
             this.BtnRegistryManager.UseVisualStyleBackColor = true;
-            this.BtnRegistryManager.Click += new System.EventHandler(this.BtnRegistryManager_Click_1);
+            this.BtnRegistryManager.Click += new System.EventHandler(this.BtnRegistryManager_Click);
             // 
             // SingUpManager
             // 
