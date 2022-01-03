@@ -45,7 +45,7 @@
             this.txtStadionNameClubSign = new System.Windows.Forms.TextBox();
             this.txtCapacityClubSign = new System.Windows.Forms.TextBox();
             this.dateFoundationDate = new System.Windows.Forms.DateTimePicker();
-            this.BtnRegistryAsPlayer = new System.Windows.Forms.Button();
+            this.BtnRegistryPlayer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label5
@@ -210,22 +210,23 @@
             this.dateFoundationDate.Size = new System.Drawing.Size(150, 29);
             this.dateFoundationDate.TabIndex = 52;
             // 
-            // BtnRegistryAsPlayer
+            // BtnRegistryPlayer
             // 
-            this.BtnRegistryAsPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegistryAsPlayer.Location = new System.Drawing.Point(300, 325);
-            this.BtnRegistryAsPlayer.Name = "BtnRegistryAsPlayer";
-            this.BtnRegistryAsPlayer.Size = new System.Drawing.Size(150, 50);
-            this.BtnRegistryAsPlayer.TabIndex = 54;
-            this.BtnRegistryAsPlayer.Text = "Sign up";
-            this.BtnRegistryAsPlayer.UseVisualStyleBackColor = true;
+            this.BtnRegistryPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistryPlayer.Location = new System.Drawing.Point(300, 325);
+            this.BtnRegistryPlayer.Name = "BtnRegistryPlayer";
+            this.BtnRegistryPlayer.Size = new System.Drawing.Size(150, 50);
+            this.BtnRegistryPlayer.TabIndex = 54;
+            this.BtnRegistryPlayer.Text = "Sign up";
+            this.BtnRegistryPlayer.UseVisualStyleBackColor = true;
+            this.BtnRegistryPlayer.Click += new System.EventHandler(this.BtnRegistryPlayer_Click);
             // 
             // SingUpClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.BtnRegistryAsPlayer);
+            this.Controls.Add(this.BtnRegistryPlayer);
             this.Controls.Add(this.dateFoundationDate);
             this.Controls.Add(this.txtCapacityClubSign);
             this.Controls.Add(this.txtStadionNameClubSign);
@@ -269,6 +270,6 @@
         private System.Windows.Forms.TextBox txtStadionNameClubSign;
         private System.Windows.Forms.TextBox txtCapacityClubSign;
         private System.Windows.Forms.DateTimePicker dateFoundationDate;
-        private System.Windows.Forms.Button BtnRegistryAsPlayer;
+        private System.Windows.Forms.Button BtnRegistryPlayer;
     }
 }

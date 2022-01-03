@@ -40,7 +40,7 @@ namespace FootballTransfer.Login
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblLoginPlayer = new System.Windows.Forms.Label();
-            this.BtnRegistryAsManager = new System.Windows.Forms.Button();
+            this.BtnRegistryManager = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label5
@@ -145,22 +145,23 @@ namespace FootballTransfer.Login
             this.lblLoginPlayer.TabIndex = 19;
             this.lblLoginPlayer.Text = "Registry your account";
             // 
-            // BtnRegistryAsManager
+            // BtnRegistryManager
             // 
-            this.BtnRegistryAsManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegistryAsManager.Location = new System.Drawing.Point(220, 350);
-            this.BtnRegistryAsManager.Name = "BtnRegistryAsManager";
-            this.BtnRegistryAsManager.Size = new System.Drawing.Size(150, 50);
-            this.BtnRegistryAsManager.TabIndex = 33;
-            this.BtnRegistryAsManager.Text = "Sign up";
-            this.BtnRegistryAsManager.UseVisualStyleBackColor = true;
+            this.BtnRegistryManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistryManager.Location = new System.Drawing.Point(220, 350);
+            this.BtnRegistryManager.Name = "BtnRegistryManager";
+            this.BtnRegistryManager.Size = new System.Drawing.Size(150, 50);
+            this.BtnRegistryManager.TabIndex = 33;
+            this.BtnRegistryManager.Text = "Sign up";
+            this.BtnRegistryManager.UseVisualStyleBackColor = true;
+            this.BtnRegistryManager.Click += new System.EventHandler(this.BtnRegistryManager_Click_1);
             // 
             // SingUpManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
-            this.Controls.Add(this.BtnRegistryAsManager);
+            this.Controls.Add(this.BtnRegistryManager);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCountryManagerSign);
             this.Controls.Add(this.txtAgeManagerSign);
@@ -192,6 +193,6 @@ namespace FootballTransfer.Login
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblLoginPlayer;
-        private System.Windows.Forms.Button BtnRegistryAsManager;
+        private System.Windows.Forms.Button BtnRegistryManager;
     }
 }

@@ -18,7 +18,7 @@ namespace FootballTransfer.Login
             InitializeComponent();
         }
 
-        private void BtnRegistryAsManager_Click(object sender, EventArgs e)
+        private void BtnRegistryManager_Click_1(object sender, EventArgs e)
         {
             Boolean correct = DataProvider.CheckManagerRegistration(txtAgeManagerSign.Text);
             if (correct == true)

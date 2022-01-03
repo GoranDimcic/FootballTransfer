@@ -20,7 +20,7 @@ namespace FootballTransfer
             InitializeComponent();
         }
 
-        private void BtnRegistryAsPlayer_Click(object sender, EventArgs e)
+        private void BtnRegistryPlayer_Click(object sender, EventArgs e)
         {
             Boolean correct = DataProvider.CheckPlayerRegistration(txtAgePlayerSign.Text);
             if (correct == true)

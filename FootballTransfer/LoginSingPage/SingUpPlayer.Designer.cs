@@ -181,6 +181,7 @@ namespace FootballTransfer
             this.BtnRegistryPlayer.TabIndex = 21;
             this.BtnRegistryPlayer.Text = "Sign up";
             this.BtnRegistryPlayer.UseVisualStyleBackColor = true;
+            this.BtnRegistryPlayer.Click += new System.EventHandler(this.BtnRegistryPlayer_Click);
             // 
             // SingUpPlayer
             // 
