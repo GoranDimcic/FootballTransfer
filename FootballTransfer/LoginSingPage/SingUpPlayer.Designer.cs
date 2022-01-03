@@ -92,7 +92,6 @@ namespace FootballTransfer
             this.txtPasswordPlayerSign.Name = "txtPasswordPlayerSign";
             this.txtPasswordPlayerSign.Size = new System.Drawing.Size(150, 29);
             this.txtPasswordPlayerSign.TabIndex = 8;
-            this.txtPasswordPlayerSign.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAgePlayerSign_KeyPress);
             // 
             // txtEmailPlayerSign
             // 
@@ -128,6 +127,7 @@ namespace FootballTransfer
             this.txtAgePlayerSign.Name = "txtAgePlayerSign";
             this.txtAgePlayerSign.Size = new System.Drawing.Size(150, 29);
             this.txtAgePlayerSign.TabIndex = 15;
+            this.txtAgePlayerSign.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgePlayerSign_KeyPress);
             // 
             // label4
             // 
