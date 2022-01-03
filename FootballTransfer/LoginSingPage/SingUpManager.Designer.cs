@@ -31,16 +31,16 @@ namespace FootballTransfer.Login
         {
             this.label5 = new System.Windows.Forms.Label();
             this.txtCountryManagerSign = new System.Windows.Forms.TextBox();
-            this.BtnRegistryAsManager = new System.Windows.Forms.Button();
-            this.txtEmailManagerSign = new System.Windows.Forms.TextBox();
+            this.txtAgeManagerSign = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNameManagerSign = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtAgeManagerSign = new System.Windows.Forms.TextBox();
             this.txtPasswordManagerSign = new System.Windows.Forms.TextBox();
+            this.txtEmailManagerSign = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblLoginPlayer = new System.Windows.Forms.Label();
+            this.BtnRegistryAsManager = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label5
@@ -61,24 +61,13 @@ namespace FootballTransfer.Login
             this.txtCountryManagerSign.Size = new System.Drawing.Size(150, 29);
             this.txtCountryManagerSign.TabIndex = 31;
             // 
-            // BtnRegistryAsManager
+            // txtAgeManagerSign
             // 
-            this.BtnRegistryAsManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegistryAsManager.Location = new System.Drawing.Point(220, 350);
-            this.BtnRegistryAsManager.Name = "BtnRegistryAsManager";
-            this.BtnRegistryAsManager.Size = new System.Drawing.Size(150, 50);
-            this.BtnRegistryAsManager.TabIndex = 30;
-            this.BtnRegistryAsManager.Text = "Sign up";
-            this.BtnRegistryAsManager.UseVisualStyleBackColor = true;
-            this.BtnRegistryAsManager.Click += new System.EventHandler(this.BtnRegistryAsManager_Click);
-            // 
-            // txtEmailManagerSign
-            // 
-            this.txtEmailManagerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailManagerSign.Location = new System.Drawing.Point(220, 100);
-            this.txtEmailManagerSign.Name = "txtEmailManagerSign";
-            this.txtEmailManagerSign.Size = new System.Drawing.Size(150, 29);
-            this.txtEmailManagerSign.TabIndex = 29;
+            this.txtAgeManagerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgeManagerSign.Location = new System.Drawing.Point(220, 250);
+            this.txtAgeManagerSign.Name = "txtAgeManagerSign";
+            this.txtAgeManagerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtAgeManagerSign.TabIndex = 29;
             // 
             // label4
             // 
@@ -108,23 +97,23 @@ namespace FootballTransfer.Login
             this.label3.TabIndex = 26;
             this.label3.Text = "Name";
             // 
-            // txtAgeManagerSign
-            // 
-            this.txtAgeManagerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAgeManagerSign.Location = new System.Drawing.Point(220, 250);
-            this.txtAgeManagerSign.Name = "txtAgeManagerSign";
-            this.txtAgeManagerSign.Size = new System.Drawing.Size(150, 29);
-            this.txtAgeManagerSign.TabIndex = 24;
-            this.txtAgeManagerSign.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAgeManagerSign_KeyPress);
-            // 
             // txtPasswordManagerSign
             // 
             this.txtPasswordManagerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPasswordManagerSign.Location = new System.Drawing.Point(220, 150);
             this.txtPasswordManagerSign.Name = "txtPasswordManagerSign";
             this.txtPasswordManagerSign.Size = new System.Drawing.Size(150, 29);
-            this.txtPasswordManagerSign.TabIndex = 23;
-            this.txtPasswordManagerSign.UseSystemPasswordChar = true;
+            this.txtPasswordManagerSign.TabIndex = 24;
+            this.txtPasswordManagerSign.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAgeManagerSign_KeyPress);
+            // 
+            // txtEmailManagerSign
+            // 
+            this.txtEmailManagerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailManagerSign.Location = new System.Drawing.Point(220, 100);
+            this.txtEmailManagerSign.Name = "txtEmailManagerSign";
+            this.txtEmailManagerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtEmailManagerSign.TabIndex = 23;
+            this.txtEmailManagerSign.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -156,20 +145,30 @@ namespace FootballTransfer.Login
             this.lblLoginPlayer.TabIndex = 19;
             this.lblLoginPlayer.Text = "Registry your account";
             // 
+            // BtnRegistryAsManager
+            // 
+            this.BtnRegistryAsManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistryAsManager.Location = new System.Drawing.Point(220, 350);
+            this.BtnRegistryAsManager.Name = "BtnRegistryAsManager";
+            this.BtnRegistryAsManager.Size = new System.Drawing.Size(150, 50);
+            this.BtnRegistryAsManager.TabIndex = 33;
+            this.BtnRegistryAsManager.Text = "Sign up";
+            this.BtnRegistryAsManager.UseVisualStyleBackColor = true;
+            // 
             // SingUpManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.BtnRegistryAsManager);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCountryManagerSign);
-            this.Controls.Add(this.BtnRegistryAsManager);
-            this.Controls.Add(this.txtEmailManagerSign);
+            this.Controls.Add(this.txtAgeManagerSign);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNameManagerSign);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtAgeManagerSign);
             this.Controls.Add(this.txtPasswordManagerSign);
+            this.Controls.Add(this.txtEmailManagerSign);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblLoginPlayer);
@@ -184,15 +183,15 @@ namespace FootballTransfer.Login
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCountryManagerSign;
-        private System.Windows.Forms.Button BtnRegistryAsManager;
-        private System.Windows.Forms.TextBox txtEmailManagerSign;
+        private System.Windows.Forms.TextBox txtAgeManagerSign;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNameManagerSign;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtAgeManagerSign;
         private System.Windows.Forms.TextBox txtPasswordManagerSign;
+        private System.Windows.Forms.TextBox txtEmailManagerSign;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblLoginPlayer;
+        private System.Windows.Forms.Button BtnRegistryAsManager;
     }
 }

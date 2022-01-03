@@ -33,16 +33,16 @@ namespace FootballTransfer
             this.lblEmail = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtAgePlayerSign = new System.Windows.Forms.TextBox();
             this.txtPasswordPlayerSign = new System.Windows.Forms.TextBox();
+            this.txtEmailPlayerSign = new System.Windows.Forms.TextBox();
             this.txtNamePlayerSign = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtEmailPlayerSign = new System.Windows.Forms.TextBox();
+            this.txtAgePlayerSign = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.BtnRegistryPlayer = new System.Windows.Forms.Button();
             this.txtCountryPlayerSign = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBoxPosition = new System.Windows.Forms.ComboBox();
+            this.comboBoxPositionPlayer = new System.Windows.Forms.ComboBox();
+            this.BtnRegistryPlayer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblLoginPlayer
@@ -85,23 +85,23 @@ namespace FootballTransfer
             this.label2.TabIndex = 6;
             this.label2.Text = "Position";
             // 
-            // txtAgePlayerSign
-            // 
-            this.txtAgePlayerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAgePlayerSign.Location = new System.Drawing.Point(220, 250);
-            this.txtAgePlayerSign.Name = "txtAgePlayerSign";
-            this.txtAgePlayerSign.Size = new System.Drawing.Size(150, 29);
-            this.txtAgePlayerSign.TabIndex = 8;
-            this.txtAgePlayerSign.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAgePlayerSign_KeyPress);
-            // 
             // txtPasswordPlayerSign
             // 
             this.txtPasswordPlayerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPasswordPlayerSign.Location = new System.Drawing.Point(220, 150);
             this.txtPasswordPlayerSign.Name = "txtPasswordPlayerSign";
             this.txtPasswordPlayerSign.Size = new System.Drawing.Size(150, 29);
-            this.txtPasswordPlayerSign.TabIndex = 7;
-            this.txtPasswordPlayerSign.UseSystemPasswordChar = true;
+            this.txtPasswordPlayerSign.TabIndex = 8;
+            this.txtPasswordPlayerSign.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAgePlayerSign_KeyPress);
+            // 
+            // txtEmailPlayerSign
+            // 
+            this.txtEmailPlayerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailPlayerSign.Location = new System.Drawing.Point(220, 100);
+            this.txtEmailPlayerSign.Name = "txtEmailPlayerSign";
+            this.txtEmailPlayerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtEmailPlayerSign.TabIndex = 7;
+            this.txtEmailPlayerSign.UseSystemPasswordChar = true;
             // 
             // txtNamePlayerSign
             // 
@@ -121,13 +121,13 @@ namespace FootballTransfer
             this.label3.TabIndex = 12;
             this.label3.Text = "Name";
             // 
-            // txtEmailPlayerSign
+            // txtAgePlayerSign
             // 
-            this.txtEmailPlayerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailPlayerSign.Location = new System.Drawing.Point(220, 100);
-            this.txtEmailPlayerSign.Name = "txtEmailPlayerSign";
-            this.txtEmailPlayerSign.Size = new System.Drawing.Size(150, 29);
-            this.txtEmailPlayerSign.TabIndex = 15;
+            this.txtAgePlayerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgePlayerSign.Location = new System.Drawing.Point(220, 250);
+            this.txtAgePlayerSign.Name = "txtAgePlayerSign";
+            this.txtAgePlayerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtAgePlayerSign.TabIndex = 15;
             // 
             // label4
             // 
@@ -138,17 +138,6 @@ namespace FootballTransfer
             this.label4.Size = new System.Drawing.Size(72, 25);
             this.label4.TabIndex = 14;
             this.label4.Text = "E-mail";
-            // 
-            // BtnRegistryPlayer
-            // 
-            this.BtnRegistryPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegistryPlayer.Location = new System.Drawing.Point(220, 400);
-            this.BtnRegistryPlayer.Name = "BtnRegistryPlayer";
-            this.BtnRegistryPlayer.Size = new System.Drawing.Size(150, 50);
-            this.BtnRegistryPlayer.TabIndex = 16;
-            this.BtnRegistryPlayer.Text = "Sign up";
-            this.BtnRegistryPlayer.UseVisualStyleBackColor = true;
-            this.BtnRegistryPlayer.Click += new System.EventHandler(this.BtnRegistryAsPlayer_Click);
             // 
             // txtCountryPlayerSign
             // 
@@ -168,36 +157,46 @@ namespace FootballTransfer
             this.label5.TabIndex = 18;
             this.label5.Text = "Country";
             // 
-            // comboBoxPosition
+            // comboBoxPositionPlayer
             // 
-            this.comboBoxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxPosition.FormattingEnabled = true;
-            this.comboBoxPosition.Items.AddRange(new object[] {
+            this.comboBoxPositionPlayer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPositionPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPositionPlayer.FormattingEnabled = true;
+            this.comboBoxPositionPlayer.Items.AddRange(new object[] {
             "Attack",
             "Middlefield",
             "Defence",
             "Goalkeeper"});
-            this.comboBoxPosition.Location = new System.Drawing.Point(220, 350);
-            this.comboBoxPosition.Name = "comboBoxPosition";
-            this.comboBoxPosition.Size = new System.Drawing.Size(150, 32);
-            this.comboBoxPosition.TabIndex = 20;
+            this.comboBoxPositionPlayer.Location = new System.Drawing.Point(220, 350);
+            this.comboBoxPositionPlayer.Name = "comboBoxPositionPlayer";
+            this.comboBoxPositionPlayer.Size = new System.Drawing.Size(150, 32);
+            this.comboBoxPositionPlayer.TabIndex = 20;
+            // 
+            // BtnRegistryPlayer
+            // 
+            this.BtnRegistryPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistryPlayer.Location = new System.Drawing.Point(220, 400);
+            this.BtnRegistryPlayer.Name = "BtnRegistryPlayer";
+            this.BtnRegistryPlayer.Size = new System.Drawing.Size(150, 50);
+            this.BtnRegistryPlayer.TabIndex = 21;
+            this.BtnRegistryPlayer.Text = "Sign up";
+            this.BtnRegistryPlayer.UseVisualStyleBackColor = true;
             // 
             // SingUpPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 511);
-            this.Controls.Add(this.comboBoxPosition);
+            this.Controls.Add(this.BtnRegistryPlayer);
+            this.Controls.Add(this.comboBoxPositionPlayer);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCountryPlayerSign);
-            this.Controls.Add(this.BtnRegistryPlayer);
-            this.Controls.Add(this.txtEmailPlayerSign);
+            this.Controls.Add(this.txtAgePlayerSign);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNamePlayerSign);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtAgePlayerSign);
             this.Controls.Add(this.txtPasswordPlayerSign);
+            this.Controls.Add(this.txtEmailPlayerSign);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblEmail);
@@ -215,15 +214,15 @@ namespace FootballTransfer
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtAgePlayerSign;
         private System.Windows.Forms.TextBox txtPasswordPlayerSign;
+        private System.Windows.Forms.TextBox txtEmailPlayerSign;
         private System.Windows.Forms.TextBox txtNamePlayerSign;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtEmailPlayerSign;
+        private System.Windows.Forms.TextBox txtAgePlayerSign;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button BtnRegistryPlayer;
         private System.Windows.Forms.TextBox txtCountryPlayerSign;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBoxPosition;
+        private System.Windows.Forms.ComboBox comboBoxPositionPlayer;
+        private System.Windows.Forms.Button BtnRegistryPlayer;
     }
 }

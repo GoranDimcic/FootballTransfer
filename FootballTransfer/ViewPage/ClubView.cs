@@ -37,7 +37,7 @@ namespace FootballTransfer.ViewPage
             txtClubStadionName.Text = club.StadionName;
             txtClubCapacity.Text = club.StadionCapacity.ToString();
             txtClubLeagueName.Text = club.LeagueName;
-            txtClubFoundationDate.Text = club.FoundationDate.ToString();
+            txtClubFoundationDate.Text = club.FoundationDate.ToShortDateString();
         }
 
         public void FillListWithFreePlayers()

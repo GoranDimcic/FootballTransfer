@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.label5 = new System.Windows.Forms.Label();
-            this.BtnRegistryAsPlayer = new System.Windows.Forms.Button();
-            this.txtEmailClubSign = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNameClubSign = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPasswordClubSign = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblLoginPlayer = new System.Windows.Forms.Label();
             this.comboBoxClubCountry = new System.Windows.Forms.ComboBox();
-            this.dateFoundationDate = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtStadionNameClubSign = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtTownClubSign = new System.Windows.Forms.TextBox();
-            this.txtCapacityClubSign = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtEmailClubSign = new System.Windows.Forms.TextBox();
+            this.txtPasswordClubSign = new System.Windows.Forms.TextBox();
+            this.txtNameClubSign = new System.Windows.Forms.TextBox();
+            this.txtTownClubSign = new System.Windows.Forms.TextBox();
+            this.txtStadionNameClubSign = new System.Windows.Forms.TextBox();
+            this.txtCapacityClubSign = new System.Windows.Forms.TextBox();
+            this.dateFoundationDate = new System.Windows.Forms.DateTimePicker();
+            this.BtnRegistryAsPlayer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label5
@@ -58,25 +58,6 @@
             this.label5.TabIndex = 32;
             this.label5.Text = "League name";
             // 
-            // BtnRegistryAsPlayer
-            // 
-            this.BtnRegistryAsPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegistryAsPlayer.Location = new System.Drawing.Point(300, 325);
-            this.BtnRegistryAsPlayer.Name = "BtnRegistryAsPlayer";
-            this.BtnRegistryAsPlayer.Size = new System.Drawing.Size(150, 50);
-            this.BtnRegistryAsPlayer.TabIndex = 30;
-            this.BtnRegistryAsPlayer.Text = "Sign up";
-            this.BtnRegistryAsPlayer.UseVisualStyleBackColor = true;
-            this.BtnRegistryAsPlayer.Click += new System.EventHandler(this.BtnRegistryAsPlayer_Click);
-            // 
-            // txtEmailClubSign
-            // 
-            this.txtEmailClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailClubSign.Location = new System.Drawing.Point(220, 100);
-            this.txtEmailClubSign.Name = "txtEmailClubSign";
-            this.txtEmailClubSign.Size = new System.Drawing.Size(150, 29);
-            this.txtEmailClubSign.TabIndex = 29;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -87,14 +68,6 @@
             this.label4.TabIndex = 28;
             this.label4.Text = "E-mail";
             // 
-            // txtNameClubSign
-            // 
-            this.txtNameClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameClubSign.Location = new System.Drawing.Point(220, 200);
-            this.txtNameClubSign.Name = "txtNameClubSign";
-            this.txtNameClubSign.Size = new System.Drawing.Size(150, 29);
-            this.txtNameClubSign.TabIndex = 27;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -104,15 +77,6 @@
             this.label3.Size = new System.Drawing.Size(68, 25);
             this.label3.TabIndex = 26;
             this.label3.Text = "Name";
-            // 
-            // txtPasswordClubSign
-            // 
-            this.txtPasswordClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasswordClubSign.Location = new System.Drawing.Point(220, 150);
-            this.txtPasswordClubSign.Name = "txtPasswordClubSign";
-            this.txtPasswordClubSign.Size = new System.Drawing.Size(150, 29);
-            this.txtPasswordClubSign.TabIndex = 23;
-            this.txtPasswordClubSign.UseSystemPasswordChar = true;
             // 
             // lblEmail
             // 
@@ -150,14 +114,6 @@
             this.comboBoxClubCountry.Size = new System.Drawing.Size(150, 32);
             this.comboBoxClubCountry.TabIndex = 35;
             // 
-            // dateFoundationDate
-            // 
-            this.dateFoundationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateFoundationDate.Location = new System.Drawing.Point(575, 249);
-            this.dateFoundationDate.Name = "dateFoundationDate";
-            this.dateFoundationDate.Size = new System.Drawing.Size(150, 29);
-            this.dateFoundationDate.TabIndex = 36;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -178,14 +134,6 @@
             this.label2.TabIndex = 38;
             this.label2.Text = "Stadion name";
             // 
-            // txtStadionNameClubSign
-            // 
-            this.txtStadionNameClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStadionNameClubSign.Location = new System.Drawing.Point(575, 100);
-            this.txtStadionNameClubSign.Name = "txtStadionNameClubSign";
-            this.txtStadionNameClubSign.Size = new System.Drawing.Size(150, 29);
-            this.txtStadionNameClubSign.TabIndex = 39;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -195,23 +143,6 @@
             this.label6.Size = new System.Drawing.Size(64, 25);
             this.label6.TabIndex = 40;
             this.label6.Text = "Town";
-            // 
-            // txtTownClubSign
-            // 
-            this.txtTownClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTownClubSign.Location = new System.Drawing.Point(220, 250);
-            this.txtTownClubSign.Name = "txtTownClubSign";
-            this.txtTownClubSign.Size = new System.Drawing.Size(150, 29);
-            this.txtTownClubSign.TabIndex = 41;
-            // 
-            // txtCapacityClubSign
-            // 
-            this.txtCapacityClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCapacityClubSign.Location = new System.Drawing.Point(575, 150);
-            this.txtCapacityClubSign.Name = "txtCapacityClubSign";
-            this.txtCapacityClubSign.Size = new System.Drawing.Size(150, 29);
-            this.txtCapacityClubSign.TabIndex = 42;
-            this.txtCapacityClubSign.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCapacityClubSign_KeyPress);
             // 
             // label7
             // 
@@ -223,27 +154,93 @@
             this.label7.TabIndex = 43;
             this.label7.Text = "Capacity";
             // 
+            // txtEmailClubSign
+            // 
+            this.txtEmailClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailClubSign.Location = new System.Drawing.Point(220, 100);
+            this.txtEmailClubSign.Name = "txtEmailClubSign";
+            this.txtEmailClubSign.Size = new System.Drawing.Size(150, 29);
+            this.txtEmailClubSign.TabIndex = 44;
+            // 
+            // txtPasswordClubSign
+            // 
+            this.txtPasswordClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasswordClubSign.Location = new System.Drawing.Point(220, 150);
+            this.txtPasswordClubSign.Name = "txtPasswordClubSign";
+            this.txtPasswordClubSign.Size = new System.Drawing.Size(150, 29);
+            this.txtPasswordClubSign.TabIndex = 45;
+            // 
+            // txtNameClubSign
+            // 
+            this.txtNameClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameClubSign.Location = new System.Drawing.Point(220, 200);
+            this.txtNameClubSign.Name = "txtNameClubSign";
+            this.txtNameClubSign.Size = new System.Drawing.Size(150, 29);
+            this.txtNameClubSign.TabIndex = 46;
+            // 
+            // txtTownClubSign
+            // 
+            this.txtTownClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTownClubSign.Location = new System.Drawing.Point(220, 250);
+            this.txtTownClubSign.Name = "txtTownClubSign";
+            this.txtTownClubSign.Size = new System.Drawing.Size(150, 29);
+            this.txtTownClubSign.TabIndex = 47;
+            // 
+            // txtStadionNameClubSign
+            // 
+            this.txtStadionNameClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStadionNameClubSign.Location = new System.Drawing.Point(575, 100);
+            this.txtStadionNameClubSign.Name = "txtStadionNameClubSign";
+            this.txtStadionNameClubSign.Size = new System.Drawing.Size(150, 29);
+            this.txtStadionNameClubSign.TabIndex = 48;
+            // 
+            // txtCapacityClubSign
+            // 
+            this.txtCapacityClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCapacityClubSign.Location = new System.Drawing.Point(575, 150);
+            this.txtCapacityClubSign.Name = "txtCapacityClubSign";
+            this.txtCapacityClubSign.Size = new System.Drawing.Size(150, 29);
+            this.txtCapacityClubSign.TabIndex = 49;
+            // 
+            // dateFoundationDate
+            // 
+            this.dateFoundationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateFoundationDate.Location = new System.Drawing.Point(575, 249);
+            this.dateFoundationDate.Name = "dateFoundationDate";
+            this.dateFoundationDate.Size = new System.Drawing.Size(150, 29);
+            this.dateFoundationDate.TabIndex = 52;
+            // 
+            // BtnRegistryAsPlayer
+            // 
+            this.BtnRegistryAsPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistryAsPlayer.Location = new System.Drawing.Point(300, 325);
+            this.BtnRegistryAsPlayer.Name = "BtnRegistryAsPlayer";
+            this.BtnRegistryAsPlayer.Size = new System.Drawing.Size(150, 50);
+            this.BtnRegistryAsPlayer.TabIndex = 54;
+            this.BtnRegistryAsPlayer.Text = "Sign up";
+            this.BtnRegistryAsPlayer.UseVisualStyleBackColor = true;
+            // 
             // SingUpClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 411);
-            this.Controls.Add(this.label7);
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.BtnRegistryAsPlayer);
+            this.Controls.Add(this.dateFoundationDate);
             this.Controls.Add(this.txtCapacityClubSign);
-            this.Controls.Add(this.txtTownClubSign);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtStadionNameClubSign);
+            this.Controls.Add(this.txtTownClubSign);
+            this.Controls.Add(this.txtNameClubSign);
+            this.Controls.Add(this.txtPasswordClubSign);
+            this.Controls.Add(this.txtEmailClubSign);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateFoundationDate);
             this.Controls.Add(this.comboBoxClubCountry);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.BtnRegistryAsPlayer);
-            this.Controls.Add(this.txtEmailClubSign);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtNameClubSign);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtPasswordClubSign);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblLoginPlayer);
             this.Name = "SingUpClub";
@@ -256,22 +253,22 @@
         #endregion
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button BtnRegistryAsPlayer;
-        private System.Windows.Forms.TextBox txtEmailClubSign;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNameClubSign;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPasswordClubSign;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblLoginPlayer;
         private System.Windows.Forms.ComboBox comboBoxClubCountry;
-        private System.Windows.Forms.DateTimePicker dateFoundationDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtStadionNameClubSign;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtTownClubSign;
-        private System.Windows.Forms.TextBox txtCapacityClubSign;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtEmailClubSign;
+        private System.Windows.Forms.TextBox txtPasswordClubSign;
+        private System.Windows.Forms.TextBox txtNameClubSign;
+        private System.Windows.Forms.TextBox txtTownClubSign;
+        private System.Windows.Forms.TextBox txtStadionNameClubSign;
+        private System.Windows.Forms.TextBox txtCapacityClubSign;
+        private System.Windows.Forms.DateTimePicker dateFoundationDate;
+        private System.Windows.Forms.Button BtnRegistryAsPlayer;
     }
 }
