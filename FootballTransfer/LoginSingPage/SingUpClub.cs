@@ -19,7 +19,7 @@ namespace FootballTransfer.Login
             InitializeComponent();
         }
 
-        private void BtnRegistryPlayer_Click(object sender, EventArgs e)
+        private void BtnRegistryClub_Click(object sender, EventArgs e)
         {
             Boolean correct = DataProvider.CheckClubRegistration(txtEmailClubSign.Text);
             if (correct == true)

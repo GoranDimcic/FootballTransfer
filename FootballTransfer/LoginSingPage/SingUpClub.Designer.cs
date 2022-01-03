@@ -45,7 +45,7 @@
             this.txtStadionNameClubSign = new System.Windows.Forms.TextBox();
             this.txtCapacityClubSign = new System.Windows.Forms.TextBox();
             this.dateFoundationDate = new System.Windows.Forms.DateTimePicker();
-            this.BtnRegistryPlayer = new System.Windows.Forms.Button();
+            this.BtnRegistryClub = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label5
@@ -189,7 +189,7 @@
             // txtStadionNameClubSign
             // 
             this.txtStadionNameClubSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStadionNameClubSign.Location = new System.Drawing.Point(575, 100);
+            this.txtStadionNameClubSign.Location = new System.Drawing.Point(575, 98);
             this.txtStadionNameClubSign.Name = "txtStadionNameClubSign";
             this.txtStadionNameClubSign.Size = new System.Drawing.Size(150, 29);
             this.txtStadionNameClubSign.TabIndex = 48;
@@ -201,6 +201,7 @@
             this.txtCapacityClubSign.Name = "txtCapacityClubSign";
             this.txtCapacityClubSign.Size = new System.Drawing.Size(150, 29);
             this.txtCapacityClubSign.TabIndex = 49;
+            this.txtCapacityClubSign.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCapacityClubSign_KeyPress);
             // 
             // dateFoundationDate
             // 
@@ -210,23 +211,23 @@
             this.dateFoundationDate.Size = new System.Drawing.Size(150, 29);
             this.dateFoundationDate.TabIndex = 52;
             // 
-            // BtnRegistryPlayer
+            // BtnRegistryClub
             // 
-            this.BtnRegistryPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegistryPlayer.Location = new System.Drawing.Point(300, 325);
-            this.BtnRegistryPlayer.Name = "BtnRegistryPlayer";
-            this.BtnRegistryPlayer.Size = new System.Drawing.Size(150, 50);
-            this.BtnRegistryPlayer.TabIndex = 54;
-            this.BtnRegistryPlayer.Text = "Sign up";
-            this.BtnRegistryPlayer.UseVisualStyleBackColor = true;
-            this.BtnRegistryPlayer.Click += new System.EventHandler(this.BtnRegistryPlayer_Click);
+            this.BtnRegistryClub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistryClub.Location = new System.Drawing.Point(300, 325);
+            this.BtnRegistryClub.Name = "BtnRegistryClub";
+            this.BtnRegistryClub.Size = new System.Drawing.Size(150, 50);
+            this.BtnRegistryClub.TabIndex = 54;
+            this.BtnRegistryClub.Text = "Sign up";
+            this.BtnRegistryClub.UseVisualStyleBackColor = true;
+            this.BtnRegistryClub.Click += new System.EventHandler(this.BtnRegistryClub_Click);
             // 
             // SingUpClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.BtnRegistryPlayer);
+            this.Controls.Add(this.BtnRegistryClub);
             this.Controls.Add(this.dateFoundationDate);
             this.Controls.Add(this.txtCapacityClubSign);
             this.Controls.Add(this.txtStadionNameClubSign);
@@ -270,6 +271,6 @@
         private System.Windows.Forms.TextBox txtStadionNameClubSign;
         private System.Windows.Forms.TextBox txtCapacityClubSign;
         private System.Windows.Forms.DateTimePicker dateFoundationDate;
-        private System.Windows.Forms.Button BtnRegistryPlayer;
+        private System.Windows.Forms.Button BtnRegistryClub;
     }
 }
