@@ -48,5 +48,17 @@ namespace FootballTransfer.Login
                 }
             }
         }
+
+        private void TxtEmailLoginClub_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                BtnLoginAsPlayer.PerformClick();
+        }
+
+        private void TxtPasswordLoginClub_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                BtnLoginAsPlayer.PerformClick();
+        }
     }
 }

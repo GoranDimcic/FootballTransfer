@@ -169,6 +169,7 @@
             this.txtPasswordClubSign.Name = "txtPasswordClubSign";
             this.txtPasswordClubSign.Size = new System.Drawing.Size(150, 29);
             this.txtPasswordClubSign.TabIndex = 45;
+            this.txtPasswordClubSign.UseSystemPasswordChar = true;
             // 
             // txtNameClubSign
             // 
@@ -226,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(784, 411);
             this.Controls.Add(this.BtnRegistryClub);
             this.Controls.Add(this.dateFoundationDate);
             this.Controls.Add(this.txtCapacityClubSign);

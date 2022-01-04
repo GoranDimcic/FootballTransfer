@@ -76,6 +76,7 @@ namespace FootballTransfer.Login
             this.txtPasswordLoginClub.Size = new System.Drawing.Size(150, 29);
             this.txtPasswordLoginClub.TabIndex = 8;
             this.txtPasswordLoginClub.UseSystemPasswordChar = true;
+            this.txtPasswordLoginClub.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPasswordLoginClub_KeyDown);
             // 
             // txtEmailLoginClub
             // 
@@ -84,6 +85,7 @@ namespace FootballTransfer.Login
             this.txtEmailLoginClub.Name = "txtEmailLoginClub";
             this.txtEmailLoginClub.Size = new System.Drawing.Size(150, 29);
             this.txtEmailLoginClub.TabIndex = 7;
+            this.txtEmailLoginClub.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmailLoginClub_KeyDown);
             // 
             // lblLoginPlayer
             // 

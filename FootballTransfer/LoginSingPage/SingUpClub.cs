@@ -28,7 +28,7 @@ namespace FootballTransfer.Login
                 {
                     Email = txtEmailClubSign.Text,
                     Password = txtPasswordClubSign.Text,
-                    Name = txtPasswordClubSign.Text,
+                    Name = txtNameClubSign.Text,
                     LeagueName = comboBoxClubCountry.Text,
                     StadionName = txtStadionNameClubSign.Text,
                     FoundationDate = dateFoundationDate.Value.Date,

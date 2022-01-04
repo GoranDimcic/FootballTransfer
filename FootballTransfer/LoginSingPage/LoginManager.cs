@@ -48,5 +48,17 @@ namespace FootballTransfer.Login
                 }
             }
         }
+
+        private void TxtEmailLoginManager_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                BtnLoginAsManager.PerformClick();
+        }
+
+        private void TxtPasswordLoginManager_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                BtnLoginAsManager.PerformClick();
+        }
     }
 }
