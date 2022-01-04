@@ -58,7 +58,7 @@ namespace FootballTransfer.ViewPage
             {
                 if (player.HaveManager == false)
                 {
-                    String[] row = { player.Email, player.Name, player.Age, player.Country, player.Position };
+                    String[] row = { player.Email, player.Name, player.Address, player.Country, player.Position };
                     ListViewItem item = new ListViewItem(row);
                     listViewFreePlayers.Items.Add(item);
                 }

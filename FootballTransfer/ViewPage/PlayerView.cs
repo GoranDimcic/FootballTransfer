@@ -33,7 +33,7 @@ namespace FootballTransfer.ViewPage
         public void FillPlayerDescription(Player player)
         {
             txtPlayerName.Text = player.Name;
-            txtPlayerAge.Text = player.Age;
+            txtPlayerAddress.Text = player.Address;
             txtPlayerCountry.Text = player.Country;
             txtPlayerPosition.Text = player.Position;
         }
@@ -87,6 +87,9 @@ namespace FootballTransfer.ViewPage
             txtPlayerCountry.ReadOnly = false;
             txtPlayerCountry.BorderStyle = BorderStyle.Fixed3D;
 
+            txtPlayerAddress.ReadOnly = false;
+            txtPlayerAddress.BorderStyle = BorderStyle.Fixed3D;
+
             txtPlayerPosition.Visible = false;
 
             comboBoxUpdatePlayerPosition.Visible = true;
@@ -100,6 +103,7 @@ namespace FootballTransfer.ViewPage
         public void OnSaveClick()
         {
             loggedPlayer.Name = txtPlayerName.Text;
+            loggedPlayer.Address = txtPlayerAddress.Text;
             loggedPlayer.Country = txtPlayerCountry.Text;
             loggedPlayer.Position = comboBoxUpdatePlayerPosition.Text;
             txtPlayerPosition.Text = comboBoxUpdatePlayerPosition.Text;
@@ -109,6 +113,9 @@ namespace FootballTransfer.ViewPage
 
             txtPlayerCountry.ReadOnly = true;
             txtPlayerCountry.BorderStyle = BorderStyle.None;
+
+            txtPlayerAddress.ReadOnly = true;
+            txtPlayerAddress.BorderStyle = BorderStyle.None;
 
             comboBoxUpdatePlayerPosition.Visible = false;
             txtPlayerPosition.Visible = true;
@@ -121,6 +128,7 @@ namespace FootballTransfer.ViewPage
         public void OnCloseClick()
         {
             txtPlayerName.Text = loggedPlayer.Name;
+            txtPlayerAddress.Text = loggedPlayer.Address;
             txtPlayerCountry.Text = loggedPlayer.Country;
             txtPlayerPosition.Text = loggedPlayer.Position;
 
@@ -129,6 +137,9 @@ namespace FootballTransfer.ViewPage
 
             txtPlayerCountry.ReadOnly = true;
             txtPlayerCountry.BorderStyle = BorderStyle.None;
+
+            txtPlayerAddress.ReadOnly = true;
+            txtPlayerAddress.BorderStyle = BorderStyle.None;
 
             comboBoxUpdatePlayerPosition.Visible = false;
             txtPlayerPosition.Visible = true;

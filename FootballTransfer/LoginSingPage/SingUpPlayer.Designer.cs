@@ -37,7 +37,7 @@ namespace FootballTransfer
             this.txtEmailPlayerSign = new System.Windows.Forms.TextBox();
             this.txtNamePlayerSign = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtAgePlayerSign = new System.Windows.Forms.TextBox();
+            this.txtAddressPlayerSign = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCountryPlayerSign = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -71,9 +71,9 @@ namespace FootballTransfer
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(50, 252);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 25);
+            this.label1.Size = new System.Drawing.Size(91, 25);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Age";
+            this.label1.Text = "Address";
             // 
             // label2
             // 
@@ -92,6 +92,7 @@ namespace FootballTransfer
             this.txtPasswordPlayerSign.Name = "txtPasswordPlayerSign";
             this.txtPasswordPlayerSign.Size = new System.Drawing.Size(150, 29);
             this.txtPasswordPlayerSign.TabIndex = 8;
+            this.txtPasswordPlayerSign.UseSystemPasswordChar = true;
             // 
             // txtEmailPlayerSign
             // 
@@ -100,7 +101,6 @@ namespace FootballTransfer
             this.txtEmailPlayerSign.Name = "txtEmailPlayerSign";
             this.txtEmailPlayerSign.Size = new System.Drawing.Size(150, 29);
             this.txtEmailPlayerSign.TabIndex = 7;
-            this.txtEmailPlayerSign.UseSystemPasswordChar = true;
             // 
             // txtNamePlayerSign
             // 
@@ -120,14 +120,13 @@ namespace FootballTransfer
             this.label3.TabIndex = 12;
             this.label3.Text = "Name";
             // 
-            // txtAgePlayerSign
+            // txtAddressPlayerSign
             // 
-            this.txtAgePlayerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAgePlayerSign.Location = new System.Drawing.Point(220, 250);
-            this.txtAgePlayerSign.Name = "txtAgePlayerSign";
-            this.txtAgePlayerSign.Size = new System.Drawing.Size(150, 29);
-            this.txtAgePlayerSign.TabIndex = 15;
-            this.txtAgePlayerSign.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAgePlayerSign_KeyPress);
+            this.txtAddressPlayerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddressPlayerSign.Location = new System.Drawing.Point(220, 250);
+            this.txtAddressPlayerSign.Name = "txtAddressPlayerSign";
+            this.txtAddressPlayerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtAddressPlayerSign.TabIndex = 15;
             // 
             // label4
             // 
@@ -192,7 +191,7 @@ namespace FootballTransfer
             this.Controls.Add(this.comboBoxPositionPlayer);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCountryPlayerSign);
-            this.Controls.Add(this.txtAgePlayerSign);
+            this.Controls.Add(this.txtAddressPlayerSign);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNamePlayerSign);
             this.Controls.Add(this.label3);
@@ -219,7 +218,7 @@ namespace FootballTransfer
         private System.Windows.Forms.TextBox txtEmailPlayerSign;
         private System.Windows.Forms.TextBox txtNamePlayerSign;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtAgePlayerSign;
+        private System.Windows.Forms.TextBox txtAddressPlayerSign;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCountryPlayerSign;
         private System.Windows.Forms.Label label5;

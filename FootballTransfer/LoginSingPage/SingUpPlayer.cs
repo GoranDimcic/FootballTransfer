@@ -22,15 +22,15 @@ namespace FootballTransfer
 
         private void BtnRegistryPlayer_Click(object sender, EventArgs e)
         {
-            Boolean correct = DataProvider.CheckPlayerRegistration(txtAgePlayerSign.Text);
+            Boolean correct = DataProvider.CheckPlayerRegistration(txtEmailPlayerSign.Text);
             if (correct == true)
             {
                 Player player = new Player
                 {
-                    Email = txtAgePlayerSign.Text,
-                    Password = txtEmailPlayerSign.Text,
+                    Email = txtEmailPlayerSign.Text,
+                    Password = txtPasswordPlayerSign.Text,
                     Name = txtNamePlayerSign.Text,
-                    Age = txtPasswordPlayerSign.Text,
+                    Address = txtAddressPlayerSign.Text,
                     Country = txtCountryPlayerSign.Text,
                     Position = comboBoxPositionPlayer.Text,
                     HaveManager = false
@@ -52,21 +52,8 @@ namespace FootballTransfer
             }
             else
             {
-                txtAgePlayerSign.Text = "";
+                txtAddressPlayerSign.Text = "";
                 MessageBox.Show("An account with that email already exists!");
-            }
-        }
-
-        private void TxtAgePlayerSign_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
             }
         }
     }
