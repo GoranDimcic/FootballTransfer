@@ -20,15 +20,15 @@ namespace FootballTransfer.Login
 
         private void BtnRegistryManager_Click(object sender, EventArgs e)
         {
-            Boolean correct = DataProvider.CheckManagerRegistration(txtAgeManagerSign.Text);
+            Boolean correct = DataProvider.CheckManagerRegistration(txtEmailManagerSign.Text);
             if (correct == true)
             {
                 Manager manager = new Manager
                 {
-                    Email = txtAgeManagerSign.Text,
-                    Password = txtEmailManagerSign.Text,
+                    Email = txtEmailManagerSign.Text,
+                    Password = txtPasswordManagerSign.Text,
                     Name = txtNameManagerSign.Text,
-                    Age = txtPasswordManagerSign.Text,
+                    Address = txtAddressManagerSign.Text,
                     Country = txtCountryManagerSign.Text
                 };
 
@@ -48,21 +48,8 @@ namespace FootballTransfer.Login
             }
             else
             {
-                txtAgeManagerSign.Text = "";
+                txtEmailManagerSign.Text = "";
                 MessageBox.Show("An account with that email already exists!");
-            }
-        }
-
-        private void TxtAgeManagerSign_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
             }
         }
     }

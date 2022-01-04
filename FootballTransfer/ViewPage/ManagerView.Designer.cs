@@ -43,7 +43,7 @@ namespace FootballTransfer.ViewPage
             this.BtnSeeFreePlayers = new System.Windows.Forms.Button();
             this.BtnSeeMyPlayers = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtManagerAge = new System.Windows.Forms.TextBox();
+            this.txtManagerAddress = new System.Windows.Forms.TextBox();
             this.BtnSaveUpdatedManager = new System.Windows.Forms.Button();
             this.BtnCloseUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -183,19 +183,19 @@ namespace FootballTransfer.ViewPage
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(25, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 20);
+            this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 31;
-            this.label2.Text = "Age";
+            this.label2.Text = "Address";
             // 
-            // txtManagerAge
+            // txtManagerAddress
             // 
-            this.txtManagerAge.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtManagerAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtManagerAge.Location = new System.Drawing.Point(125, 61);
-            this.txtManagerAge.Name = "txtManagerAge";
-            this.txtManagerAge.ReadOnly = true;
-            this.txtManagerAge.Size = new System.Drawing.Size(123, 19);
-            this.txtManagerAge.TabIndex = 32;
+            this.txtManagerAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtManagerAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtManagerAddress.Location = new System.Drawing.Point(125, 61);
+            this.txtManagerAddress.Name = "txtManagerAddress";
+            this.txtManagerAddress.ReadOnly = true;
+            this.txtManagerAddress.Size = new System.Drawing.Size(123, 19);
+            this.txtManagerAddress.TabIndex = 32;
             // 
             // BtnSaveUpdatedManager
             // 
@@ -226,7 +226,7 @@ namespace FootballTransfer.ViewPage
             this.ClientSize = new System.Drawing.Size(734, 461);
             this.Controls.Add(this.BtnCloseUpdate);
             this.Controls.Add(this.BtnSaveUpdatedManager);
-            this.Controls.Add(this.txtManagerAge);
+            this.Controls.Add(this.txtManagerAddress);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnSeeMyPlayers);
             this.Controls.Add(this.BtnSeeFreePlayers);
@@ -263,7 +263,7 @@ namespace FootballTransfer.ViewPage
         private System.Windows.Forms.Button BtnSeeFreePlayers;
         private System.Windows.Forms.Button BtnSeeMyPlayers;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtManagerAge;
+        private System.Windows.Forms.TextBox txtManagerAddress;
         private System.Windows.Forms.Button BtnSaveUpdatedManager;
         private System.Windows.Forms.Button BtnCloseUpdate;
     }

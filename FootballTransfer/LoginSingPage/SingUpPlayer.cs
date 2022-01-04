@@ -52,7 +52,7 @@ namespace FootballTransfer
             }
             else
             {
-                txtAddressPlayerSign.Text = "";
+                txtEmailPlayerSign.Text = "";
                 MessageBox.Show("An account with that email already exists!");
             }
         }

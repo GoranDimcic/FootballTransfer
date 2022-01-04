@@ -19,9 +19,9 @@ namespace FootballTransfer.ViewPage
 
         public ManagerView(Manager manager)
         {
+            loggedManager = manager;
             InitializeComponent();
             ManagerPage(manager);
-            loggedManager = manager;
         }
 
         public void ManagerPage(Manager manager)
@@ -33,7 +33,7 @@ namespace FootballTransfer.ViewPage
         public void FillManagerDescription(Manager manager)
         {
             txtManagerName.Text = manager.Name;
-            txtManagerAge.Text = manager.Age;
+            txtManagerAddress.Text = manager.Address;
             txtManagerCountry.Text = manager.Country;
         }
 
@@ -92,6 +92,9 @@ namespace FootballTransfer.ViewPage
             txtManagerName.ReadOnly = false;
             txtManagerName.BorderStyle = BorderStyle.Fixed3D;
 
+            txtManagerAddress.ReadOnly = false;
+            txtManagerAddress.BorderStyle = BorderStyle.Fixed3D;
+
             txtManagerCountry.ReadOnly = false;
             txtManagerCountry.BorderStyle = BorderStyle.Fixed3D;
 
@@ -103,10 +106,14 @@ namespace FootballTransfer.ViewPage
         public void OnSaveClick()
         {
             loggedManager.Name = txtManagerName.Text;
+            loggedManager.Address = txtManagerAddress.Text;
             loggedManager.Country = txtManagerCountry.Text;
 
             txtManagerName.ReadOnly = true;
             txtManagerName.BorderStyle = BorderStyle.None;
+
+            txtManagerAddress.ReadOnly = true;
+            txtManagerAddress.BorderStyle = BorderStyle.None;
 
             txtManagerCountry.ReadOnly = true;
             txtManagerCountry.BorderStyle = BorderStyle.None;
@@ -119,10 +126,14 @@ namespace FootballTransfer.ViewPage
         public void OnCloseClick()
         {
             txtManagerName.Text = loggedManager.Name;
+            txtManagerAddress.Text = loggedManager.Address;
             txtManagerCountry.Text = loggedManager.Country;
 
             txtManagerName.ReadOnly = true;
             txtManagerName.BorderStyle = BorderStyle.None;
+
+            txtManagerAddress.ReadOnly = true;
+            txtManagerAddress.BorderStyle = BorderStyle.None;
 
             txtManagerCountry.ReadOnly = true;
             txtManagerCountry.BorderStyle = BorderStyle.None;

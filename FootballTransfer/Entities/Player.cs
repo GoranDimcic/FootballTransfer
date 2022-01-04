@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace FootballTransfer.Entities
 {
@@ -19,5 +20,9 @@ namespace FootballTransfer.Entities
         public Boolean HaveManager;
 
         public Boolean HaveClub;
+
+        public List<ManagerOffer> ManagerOffers { get; set; }
+
+        public List<ClubOffer> ClubOffers { get; set; }
     }
 }

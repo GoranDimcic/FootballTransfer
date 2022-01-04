@@ -31,7 +31,7 @@ namespace FootballTransfer.Login
         {
             this.label5 = new System.Windows.Forms.Label();
             this.txtCountryManagerSign = new System.Windows.Forms.TextBox();
-            this.txtAgeManagerSign = new System.Windows.Forms.TextBox();
+            this.txtAddressManagerSign = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNameManagerSign = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,14 +61,13 @@ namespace FootballTransfer.Login
             this.txtCountryManagerSign.Size = new System.Drawing.Size(150, 29);
             this.txtCountryManagerSign.TabIndex = 31;
             // 
-            // txtAgeManagerSign
+            // txtAddressManagerSign
             // 
-            this.txtAgeManagerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAgeManagerSign.Location = new System.Drawing.Point(220, 250);
-            this.txtAgeManagerSign.Name = "txtAgeManagerSign";
-            this.txtAgeManagerSign.Size = new System.Drawing.Size(150, 29);
-            this.txtAgeManagerSign.TabIndex = 29;
-            this.txtAgeManagerSign.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAgeManagerSign_KeyPress);
+            this.txtAddressManagerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddressManagerSign.Location = new System.Drawing.Point(220, 250);
+            this.txtAddressManagerSign.Name = "txtAddressManagerSign";
+            this.txtAddressManagerSign.Size = new System.Drawing.Size(150, 29);
+            this.txtAddressManagerSign.TabIndex = 29;
             // 
             // label4
             // 
@@ -105,6 +104,7 @@ namespace FootballTransfer.Login
             this.txtPasswordManagerSign.Name = "txtPasswordManagerSign";
             this.txtPasswordManagerSign.Size = new System.Drawing.Size(150, 29);
             this.txtPasswordManagerSign.TabIndex = 24;
+            this.txtPasswordManagerSign.UseSystemPasswordChar = true;
             // 
             // txtEmailManagerSign
             // 
@@ -113,7 +113,6 @@ namespace FootballTransfer.Login
             this.txtEmailManagerSign.Name = "txtEmailManagerSign";
             this.txtEmailManagerSign.Size = new System.Drawing.Size(150, 29);
             this.txtEmailManagerSign.TabIndex = 23;
-            this.txtEmailManagerSign.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -121,9 +120,9 @@ namespace FootballTransfer.Login
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(50, 252);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 25);
+            this.label1.Size = new System.Drawing.Size(91, 25);
             this.label1.TabIndex = 21;
-            this.label1.Text = "Age";
+            this.label1.Text = "Address";
             // 
             // lblEmail
             // 
@@ -164,7 +163,7 @@ namespace FootballTransfer.Login
             this.Controls.Add(this.BtnRegistryManager);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCountryManagerSign);
-            this.Controls.Add(this.txtAgeManagerSign);
+            this.Controls.Add(this.txtAddressManagerSign);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNameManagerSign);
             this.Controls.Add(this.label3);
@@ -184,7 +183,7 @@ namespace FootballTransfer.Login
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCountryManagerSign;
-        private System.Windows.Forms.TextBox txtAgeManagerSign;
+        private System.Windows.Forms.TextBox txtAddressManagerSign;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNameManagerSign;
         private System.Windows.Forms.Label label3;

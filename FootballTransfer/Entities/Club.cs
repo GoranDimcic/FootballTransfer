@@ -25,5 +25,7 @@ namespace FootballTransfer.Entities
         public DateTime FoundationDate { get; set; }
 
         public List<Player> Players { get; set; }
+
+        public List<Player> FreePlayers { get; set; }
     }
 }
