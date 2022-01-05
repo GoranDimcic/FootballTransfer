@@ -141,6 +141,7 @@ namespace FootballTransfer.ViewPage
             this.txtClubCapacity.ReadOnly = true;
             this.txtClubCapacity.Size = new System.Drawing.Size(123, 19);
             this.txtClubCapacity.TabIndex = 25;
+            this.txtClubCapacity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtClubCapacity_KeyPress);
             // 
             // txtClubFoundationDate
             // 
