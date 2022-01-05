@@ -69,5 +69,11 @@ namespace FootballTransfer.Login
                 e.Handled = true;
             }
         }
+
+        private void TxtEnterClick_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                BtnRegistryClub.PerformClick();
+        }
     }
 }

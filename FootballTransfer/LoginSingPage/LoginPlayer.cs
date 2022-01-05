@@ -49,13 +49,7 @@ namespace FootballTransfer
             }
         }
 
-        private void TxtPasswordLoginPlayer_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                BtnLoginAsPlayer.PerformClick();
-        }
-
-        private void TxtEmailLoginPlayer_KeyDown(object sender, KeyEventArgs e)
+        private void TxtEnterClick_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 BtnLoginAsPlayer.PerformClick();

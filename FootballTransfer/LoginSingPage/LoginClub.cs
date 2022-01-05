@@ -21,7 +21,7 @@ namespace FootballTransfer.Login
             InitializeComponent();
         }
 
-        private void BtnLoginAsPlayer_Click(object sender, EventArgs e)
+        private void BtnLoginAsClub_Click(object sender, EventArgs e)
         {
             if (txtEmailLoginClub.Text == "")
             {
@@ -49,16 +49,10 @@ namespace FootballTransfer.Login
             }
         }
 
-        private void TxtEmailLoginClub_KeyDown(object sender, KeyEventArgs e)
+        private void TxtEnterClick_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                BtnLoginAsPlayer.PerformClick();
-        }
-
-        private void TxtPasswordLoginClub_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                BtnLoginAsPlayer.PerformClick();
+                BtnLoginAsClub.PerformClick();
         }
     }
 }

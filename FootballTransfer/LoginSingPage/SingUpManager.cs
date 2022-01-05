@@ -52,5 +52,11 @@ namespace FootballTransfer.Login
                 MessageBox.Show("An account with that email already exists!");
             }
         }
+
+        private void TxtEnterClick_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                BtnRegistryManager.PerformClick();
+        }
     }
 }

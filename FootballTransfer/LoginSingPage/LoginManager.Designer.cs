@@ -76,7 +76,7 @@ namespace FootballTransfer.Login
             this.txtPasswordLoginManager.Size = new System.Drawing.Size(150, 29);
             this.txtPasswordLoginManager.TabIndex = 8;
             this.txtPasswordLoginManager.UseSystemPasswordChar = true;
-            this.txtPasswordLoginManager.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPasswordLoginManager_KeyDown);
+            this.txtPasswordLoginManager.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // txtEmailLoginManager
             // 
@@ -85,7 +85,7 @@ namespace FootballTransfer.Login
             this.txtEmailLoginManager.Name = "txtEmailLoginManager";
             this.txtEmailLoginManager.Size = new System.Drawing.Size(150, 29);
             this.txtEmailLoginManager.TabIndex = 7;
-            this.txtEmailLoginManager.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmailLoginManager_KeyDown);
+            this.txtEmailLoginManager.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // lblLoginPlayer
             // 

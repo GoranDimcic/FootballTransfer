@@ -29,7 +29,7 @@ namespace FootballTransfer.Login
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnLoginAsPlayer = new System.Windows.Forms.Button();
+            this.BtnLoginAsClub = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtPasswordLoginClub = new System.Windows.Forms.TextBox();
@@ -37,16 +37,16 @@ namespace FootballTransfer.Login
             this.lblLoginPlayer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // BtnLoginAsPlayer
+            // BtnLoginAsClub
             // 
-            this.BtnLoginAsPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLoginAsPlayer.Location = new System.Drawing.Point(150, 225);
-            this.BtnLoginAsPlayer.Name = "BtnLoginAsPlayer";
-            this.BtnLoginAsPlayer.Size = new System.Drawing.Size(150, 50);
-            this.BtnLoginAsPlayer.TabIndex = 11;
-            this.BtnLoginAsPlayer.Text = "Login";
-            this.BtnLoginAsPlayer.UseVisualStyleBackColor = true;
-            this.BtnLoginAsPlayer.Click += new System.EventHandler(this.BtnLoginAsPlayer_Click);
+            this.BtnLoginAsClub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLoginAsClub.Location = new System.Drawing.Point(150, 225);
+            this.BtnLoginAsClub.Name = "BtnLoginAsClub";
+            this.BtnLoginAsClub.Size = new System.Drawing.Size(150, 50);
+            this.BtnLoginAsClub.TabIndex = 11;
+            this.BtnLoginAsClub.Text = "Login";
+            this.BtnLoginAsClub.UseVisualStyleBackColor = true;
+            this.BtnLoginAsClub.Click += new System.EventHandler(this.BtnLoginAsClub_Click);
             // 
             // lblPassword
             // 
@@ -76,7 +76,7 @@ namespace FootballTransfer.Login
             this.txtPasswordLoginClub.Size = new System.Drawing.Size(150, 29);
             this.txtPasswordLoginClub.TabIndex = 8;
             this.txtPasswordLoginClub.UseSystemPasswordChar = true;
-            this.txtPasswordLoginClub.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPasswordLoginClub_KeyDown);
+            this.txtPasswordLoginClub.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // txtEmailLoginClub
             // 
@@ -85,7 +85,7 @@ namespace FootballTransfer.Login
             this.txtEmailLoginClub.Name = "txtEmailLoginClub";
             this.txtEmailLoginClub.Size = new System.Drawing.Size(150, 29);
             this.txtEmailLoginClub.TabIndex = 7;
-            this.txtEmailLoginClub.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmailLoginClub_KeyDown);
+            this.txtEmailLoginClub.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // lblLoginPlayer
             // 
@@ -102,7 +102,7 @@ namespace FootballTransfer.Login
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 361);
-            this.Controls.Add(this.BtnLoginAsPlayer);
+            this.Controls.Add(this.BtnLoginAsClub);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtPasswordLoginClub);
@@ -117,7 +117,7 @@ namespace FootballTransfer.Login
 
         #endregion
 
-        private System.Windows.Forms.Button BtnLoginAsPlayer;
+        private System.Windows.Forms.Button BtnLoginAsClub;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtPasswordLoginClub;

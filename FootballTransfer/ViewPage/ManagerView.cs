@@ -8,13 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FootballTransfer.Offers;
 
 namespace FootballTransfer.ViewPage
 {
     public partial class ManagerView : Form
     {
         public Manager loggedManager;
-        public Player player;
+        public Player player, selectedPlayer;
         public List<Player> players;
 
         public ManagerView(Manager manager)
@@ -141,6 +142,21 @@ namespace FootballTransfer.ViewPage
             BtnSaveUpdatedManager.Visible = false;
             BtnCloseUpdate.Visible = false;
             BtnDeleteManager.Visible = true;
+        }
+
+        private void BtnCreateOffer_Click(object sender, EventArgs e)
+        {
+            if (listViewFreePlayers.SelectedItems.Count > 0)
+            {
+                String EmailPlayer = this.listViewFreePlayers.SelectedItems[0].SubItems[0].Text;
+                String NamePlayer = this.listViewFreePlayers.SelectedItems[0].SubItems[1].Text;
+                Offers.ManagerOffer form = new Offers.ManagerOffer(EmailPlayer, NamePlayer);
+                form.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("You must select player!");
+            }
         }
     }
 }

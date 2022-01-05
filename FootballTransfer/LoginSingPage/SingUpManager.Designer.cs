@@ -60,6 +60,7 @@ namespace FootballTransfer.Login
             this.txtCountryManagerSign.Name = "txtCountryManagerSign";
             this.txtCountryManagerSign.Size = new System.Drawing.Size(150, 29);
             this.txtCountryManagerSign.TabIndex = 31;
+            this.txtCountryManagerSign.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // txtAddressManagerSign
             // 
@@ -68,6 +69,7 @@ namespace FootballTransfer.Login
             this.txtAddressManagerSign.Name = "txtAddressManagerSign";
             this.txtAddressManagerSign.Size = new System.Drawing.Size(150, 29);
             this.txtAddressManagerSign.TabIndex = 29;
+            this.txtAddressManagerSign.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // label4
             // 
@@ -86,6 +88,7 @@ namespace FootballTransfer.Login
             this.txtNameManagerSign.Name = "txtNameManagerSign";
             this.txtNameManagerSign.Size = new System.Drawing.Size(150, 29);
             this.txtNameManagerSign.TabIndex = 27;
+            this.txtNameManagerSign.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // label3
             // 
@@ -105,6 +108,7 @@ namespace FootballTransfer.Login
             this.txtPasswordManagerSign.Size = new System.Drawing.Size(150, 29);
             this.txtPasswordManagerSign.TabIndex = 24;
             this.txtPasswordManagerSign.UseSystemPasswordChar = true;
+            this.txtPasswordManagerSign.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // txtEmailManagerSign
             // 
@@ -113,6 +117,7 @@ namespace FootballTransfer.Login
             this.txtEmailManagerSign.Name = "txtEmailManagerSign";
             this.txtEmailManagerSign.Size = new System.Drawing.Size(150, 29);
             this.txtEmailManagerSign.TabIndex = 23;
+            this.txtEmailManagerSign.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // label1
             // 

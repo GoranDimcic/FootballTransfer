@@ -161,6 +161,7 @@
             this.txtEmailClubSign.Name = "txtEmailClubSign";
             this.txtEmailClubSign.Size = new System.Drawing.Size(150, 29);
             this.txtEmailClubSign.TabIndex = 44;
+            this.txtEmailClubSign.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // txtPasswordClubSign
             // 
@@ -170,6 +171,7 @@
             this.txtPasswordClubSign.Size = new System.Drawing.Size(150, 29);
             this.txtPasswordClubSign.TabIndex = 45;
             this.txtPasswordClubSign.UseSystemPasswordChar = true;
+            this.txtPasswordClubSign.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // txtNameClubSign
             // 
@@ -178,6 +180,7 @@
             this.txtNameClubSign.Name = "txtNameClubSign";
             this.txtNameClubSign.Size = new System.Drawing.Size(150, 29);
             this.txtNameClubSign.TabIndex = 46;
+            this.txtNameClubSign.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // txtTownClubSign
             // 
@@ -186,6 +189,7 @@
             this.txtTownClubSign.Name = "txtTownClubSign";
             this.txtTownClubSign.Size = new System.Drawing.Size(150, 29);
             this.txtTownClubSign.TabIndex = 47;
+            this.txtTownClubSign.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // txtStadionNameClubSign
             // 
@@ -194,6 +198,7 @@
             this.txtStadionNameClubSign.Name = "txtStadionNameClubSign";
             this.txtStadionNameClubSign.Size = new System.Drawing.Size(150, 29);
             this.txtStadionNameClubSign.TabIndex = 48;
+            this.txtStadionNameClubSign.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // txtCapacityClubSign
             // 
@@ -202,6 +207,7 @@
             this.txtCapacityClubSign.Name = "txtCapacityClubSign";
             this.txtCapacityClubSign.Size = new System.Drawing.Size(150, 29);
             this.txtCapacityClubSign.TabIndex = 49;
+            this.txtCapacityClubSign.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             this.txtCapacityClubSign.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCapacityClubSign_KeyPress);
             // 
             // dateFoundationDate

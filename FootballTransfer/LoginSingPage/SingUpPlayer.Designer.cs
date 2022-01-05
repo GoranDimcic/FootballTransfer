@@ -93,6 +93,7 @@ namespace FootballTransfer
             this.txtPasswordPlayerSign.Size = new System.Drawing.Size(150, 29);
             this.txtPasswordPlayerSign.TabIndex = 8;
             this.txtPasswordPlayerSign.UseSystemPasswordChar = true;
+            this.txtPasswordPlayerSign.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // txtEmailPlayerSign
             // 
@@ -101,6 +102,7 @@ namespace FootballTransfer
             this.txtEmailPlayerSign.Name = "txtEmailPlayerSign";
             this.txtEmailPlayerSign.Size = new System.Drawing.Size(150, 29);
             this.txtEmailPlayerSign.TabIndex = 7;
+            this.txtEmailPlayerSign.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // txtNamePlayerSign
             // 
@@ -109,6 +111,7 @@ namespace FootballTransfer
             this.txtNamePlayerSign.Name = "txtNamePlayerSign";
             this.txtNamePlayerSign.Size = new System.Drawing.Size(150, 29);
             this.txtNamePlayerSign.TabIndex = 13;
+            this.txtNamePlayerSign.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // label3
             // 
@@ -127,6 +130,7 @@ namespace FootballTransfer
             this.txtAddressPlayerSign.Name = "txtAddressPlayerSign";
             this.txtAddressPlayerSign.Size = new System.Drawing.Size(150, 29);
             this.txtAddressPlayerSign.TabIndex = 15;
+            this.txtAddressPlayerSign.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // label4
             // 
@@ -145,6 +149,7 @@ namespace FootballTransfer
             this.txtCountryPlayerSign.Name = "txtCountryPlayerSign";
             this.txtCountryPlayerSign.Size = new System.Drawing.Size(150, 29);
             this.txtCountryPlayerSign.TabIndex = 17;
+            this.txtCountryPlayerSign.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // label5
             // 

@@ -54,7 +54,7 @@ namespace FootballTransfer
             this.txtEmailLoginPlayer.Name = "txtEmailLoginPlayer";
             this.txtEmailLoginPlayer.Size = new System.Drawing.Size(150, 29);
             this.txtEmailLoginPlayer.TabIndex = 1;
-            this.txtEmailLoginPlayer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmailLoginPlayer_KeyDown);
+            this.txtEmailLoginPlayer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // txtPasswordLoginPlayer
             // 
@@ -64,7 +64,7 @@ namespace FootballTransfer
             this.txtPasswordLoginPlayer.Size = new System.Drawing.Size(150, 29);
             this.txtPasswordLoginPlayer.TabIndex = 2;
             this.txtPasswordLoginPlayer.UseSystemPasswordChar = true;
-            this.txtPasswordLoginPlayer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPasswordLoginPlayer_KeyDown);
+            this.txtPasswordLoginPlayer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // lblEmail
             // 
