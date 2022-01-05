@@ -11,20 +11,21 @@ using System.Windows.Forms;
 
 namespace FootballTransfer.Offers
 {
-    public partial class ManagerOffer : Form
+    public partial class ClubOffer : Form
     {
-        public ManagerOffer(string name, string email, Manager manager)
+        public ClubOffer(string name, string email, Club club)
         {
             InitializeComponent();
-            ManagerOfferPage(name, email, manager);
+            ClubOfferPage(name, email, club);
         }
 
-        public void ManagerOfferPage(string name, string email, Manager manager)
+        public void ClubOfferPage(string name, string email, Club club)
         {
             TxtSelectedPlayerEmail.Text = email;
             TxtSelectedPlayerName.Text = name;
-            TxtManagerEmail.Text = manager.Email;
-            TxtManagerName.Text = manager.Name;
+            TxtClubName.Text = club.Name;
+            TxtClubEmail.Text = club.Email;
+            TxtClubLeague.Text = club.LeagueName;
         }
 
         private void BtnCreateContract_Click(object sender, EventArgs e)

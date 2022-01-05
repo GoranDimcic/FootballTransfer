@@ -66,6 +66,23 @@ namespace FootballTransfer.ViewPage
             }
         }
 
+        private void BtnCreateOffer_Click(object sender, EventArgs e)
+        {
+            if (listViewFreePlayers.SelectedItems.Count > 0)
+            {
+                string EmailPlayer = this.listViewFreePlayers.SelectedItems[0].SubItems[0].Text;
+                string NamePlayer = this.listViewFreePlayers.SelectedItems[0].SubItems[1].Text;
+                Offers.ManagerOffer form = new Offers.ManagerOffer(EmailPlayer, NamePlayer, loggedManager);
+                form.ShowDialog();
+
+                this.listViewFreePlayers.SelectedItems[0].BackColor = Color.Yellow;
+            }
+            else
+            {
+                MessageBox.Show("You must select player!");
+            }
+        }
+
         private void BtnUpdateManager_Click(object sender, EventArgs e)
         {
             this.OnUpdateClick();
@@ -142,21 +159,6 @@ namespace FootballTransfer.ViewPage
             BtnSaveUpdatedManager.Visible = false;
             BtnCloseUpdate.Visible = false;
             BtnDeleteManager.Visible = true;
-        }
-
-        private void BtnCreateOffer_Click(object sender, EventArgs e)
-        {
-            if (listViewFreePlayers.SelectedItems.Count > 0)
-            {
-                String EmailPlayer = this.listViewFreePlayers.SelectedItems[0].SubItems[0].Text;
-                String NamePlayer = this.listViewFreePlayers.SelectedItems[0].SubItems[1].Text;
-                Offers.ManagerOffer form = new Offers.ManagerOffer(EmailPlayer, NamePlayer);
-                form.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("You must select player!");
-            }
         }
     }
 }

@@ -163,6 +163,12 @@
     <Compile Include="LoginSingPage\SingUpManager.Designer.cs">
       <DependentUpon>SingUpManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Offers\ClubOffer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offers\ClubOffer.Designer.cs">
+      <DependentUpon>ClubOffer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Offers\ManagerOffer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginSingPage\SingUpManager.resx">
       <DependentUpon>SingUpManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offers\ClubOffer.resx">
+      <DependentUpon>ClubOffer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Offers\ManagerOffer.resx">
       <DependentUpon>ManagerOffer.cs</DependentUpon>

@@ -65,6 +65,23 @@ namespace FootballTransfer.ViewPage
             }
         }
 
+        private void BtnCreateOffer_Click(object sender, EventArgs e)
+        {
+            if (listViewFreePlayers.SelectedItems.Count > 0)
+            {
+                string EmailPlayer = this.listViewFreePlayers.SelectedItems[0].SubItems[0].Text;
+                string NamePlayer = this.listViewFreePlayers.SelectedItems[0].SubItems[1].Text;
+                Offers.ClubOffer form = new Offers.ClubOffer(EmailPlayer, NamePlayer, loggedClub);
+                form.ShowDialog();
+
+                this.listViewFreePlayers.SelectedItems[0].BackColor = Color.Yellow;
+            }
+            else
+            {
+                MessageBox.Show("You must select player!");
+            }
+        }
+
         private void BtnUpdatePlayer_Click(object sender, EventArgs e)
         {
             this.OnUpdateClick();
