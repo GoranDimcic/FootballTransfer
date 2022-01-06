@@ -15,20 +15,23 @@ namespace FootballTransfer.ViewPage
     {
         public Player loggedPlayer;
         public List<Player> players;
+        public List<ManagerOffer> offers;
 
         public PlayerView(Player player)
         {
-            InitializeComponent();
-            this.PlayerPage(player);
             loggedPlayer = player;
+            InitializeComponent();
+            PlayerPage(player);
         }
 
         public void PlayerPage(Player player)
         {
-            this.FillPlayerDescription(player);
-            this.FillManagerOfferList();
-            this.FillClubOfferList();
+            FillPlayerDescription(player);
+            FillManagerOfferList();
+            FillClubOfferList();
         }
+
+        #region PlayerPage(Listviews, description)
 
         public void FillPlayerDescription(Player player)
         {
@@ -42,42 +45,85 @@ namespace FootballTransfer.ViewPage
         {
             listViewManagerOffer.View = View.Details;
             listViewManagerOffer.FullRowSelect = true;
-            listViewManagerOffer.Columns.Add("email", 80);
-            listViewManagerOffer.Columns.Add("Name", 80);
-            listViewManagerOffer.Columns.Add("Price", 80);
-            listViewManagerOffer.Columns.Add("Contract date", 120);
+            listViewManagerOffer.Columns.Add("Email", 120);
+            listViewManagerOffer.Columns.Add("Name", 120);
+            listViewManagerOffer.Columns.Add("Offer price", 120);
+            listViewManagerOffer.Columns.Add("Contract duraction", 120);
+
+            FillManagerOffers();
+        }
+
+        public void FillManagerOffers()
+        {
+            offers = DataProvider.GetManagerOffers();
+
+            Player player = new Player();
+            player = DataProvider.GetPlayer(loggedPlayer);
+
+            foreach (ManagerOffer offer in offers)
+            {
+                if (offer.PlayerEmail == player.Email)
+                {
+                    String[] row = { offer.ManagerEmail, offer.ManagerName, offer.Offer, offer.Duraction };
+                    ListViewItem item = new ListViewItem(row);
+                    listViewManagerOffer.Items.Add(item);
+                }
+            }
         }
 
         public void FillClubOfferList()
         {
             listViewClubOffer.View = View.Details;
             listViewClubOffer.FullRowSelect = true;
-            listViewClubOffer.Columns.Add("Club", 120);
-            listViewClubOffer.Columns.Add("Offer", 120);
+            listViewClubOffer.Columns.Add("Email", 120);
+            listViewClubOffer.Columns.Add("Name", 120);
+            listViewClubOffer.Columns.Add("League", 120);
+            listViewClubOffer.Columns.Add("Salary", 120);
             listViewClubOffer.Columns.Add("Contract date", 120);
+
+            FillClubOffers();
         }
+
+        public void FillClubOffers()
+        {
+
+        }
+
+        #endregion
 
         private void BtnUpdatePlayer_Click(object sender, EventArgs e)
         {
-            this.OnUpdateClick();
+            OnUpdateClick();
         }
 
         private void BtnSaveUpdatedPlayer_Click(object sender, EventArgs e)
         {
-            this.OnSaveClick();
+            OnSaveClick();
             DataProvider.UpdatePlayer(loggedPlayer);
+            for (int i = 0; i < listViewManagerOffer.Items.Count; i++)
+            {
+                string ManagerEmail = listViewManagerOffer.Items[i].SubItems[0].Text;
+                DataProvider.UpdatePlayerNameInManagerOffer(loggedPlayer, ManagerEmail);
+            }
         }
 
         private void BtnCloseUpdate_Click(object sender, EventArgs e)
         {
-            this.OnCloseClick();
+            OnCloseClick();
         }
 
         private void BtnDeletePlayer_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < listViewManagerOffer.Items.Count; i++)
+            {
+                string ManagerEmail = listViewManagerOffer.Items[i].SubItems[0].Text;
+                DataProvider.DeletePlayerInManagerOffer(loggedPlayer, ManagerEmail);
+            }
             DataProvider.DeletePlayer(loggedPlayer);
             this.DialogResult = DialogResult.OK;
         }
+
+        #region Button(Update, Save, Close)
 
         public void OnUpdateClick()
         {
@@ -148,5 +194,7 @@ namespace FootballTransfer.ViewPage
             BtnCloseUpdate.Visible = false;
             BtnDeletePlayer.Visible = true;
         }
+
+        #endregion
     }
 }

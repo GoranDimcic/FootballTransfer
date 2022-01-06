@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.BtnUpdatePlayer = new System.Windows.Forms.Button();
-            this.listViewManagerOffer = new System.Windows.Forms.ListView();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -38,19 +36,19 @@
             this.txtPlayerName = new System.Windows.Forms.TextBox();
             this.txtPlayerAddress = new System.Windows.Forms.TextBox();
             this.txtPlayerCountry = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.txtPlayerPosition = new System.Windows.Forms.TextBox();
             this.BtnDeletePlayer = new System.Windows.Forms.Button();
             this.BtnShowManagerOffer = new System.Windows.Forms.Button();
             this.BtnShowClubOffer = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.listViewClubOffer = new System.Windows.Forms.ListView();
             this.BtnSaveUpdatedPlayer = new System.Windows.Forms.Button();
             this.comboBoxUpdatePlayerPosition = new System.Windows.Forms.ComboBox();
             this.BtnCloseUpdate = new System.Windows.Forms.Button();
+            this.listViewManagerOffer = new System.Windows.Forms.ListView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtnUpdatePlayer
@@ -62,26 +60,6 @@
             this.BtnUpdatePlayer.Text = "Update";
             this.BtnUpdatePlayer.UseVisualStyleBackColor = true;
             this.BtnUpdatePlayer.Click += new System.EventHandler(this.BtnUpdatePlayer_Click);
-            // 
-            // listViewManagerOffer
-            // 
-            this.listViewManagerOffer.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.listViewManagerOffer.HideSelection = false;
-            this.listViewManagerOffer.Location = new System.Drawing.Point(29, 200);
-            this.listViewManagerOffer.Margin = new System.Windows.Forms.Padding(2);
-            this.listViewManagerOffer.Name = "listViewManagerOffer";
-            this.listViewManagerOffer.Size = new System.Drawing.Size(350, 300);
-            this.listViewManagerOffer.TabIndex = 7;
-            this.listViewManagerOffer.UseCompatibleStateImageBehavior = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 185);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Lista ponuda menadzera";
             // 
             // label1
             // 
@@ -153,24 +131,6 @@
             this.txtPlayerCountry.Size = new System.Drawing.Size(123, 19);
             this.txtPlayerCountry.TabIndex = 15;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(257, 307);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(99, 40);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Odbi ponudu";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(257, 261);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(99, 40);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "prihvati ponudu";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
             // txtPlayerPosition
             // 
             this.txtPlayerPosition.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -227,23 +187,14 @@
             this.button3.Text = "prihvati ponudu";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(406, 185);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 13);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Lista ponuda klubova";
-            // 
             // listViewClubOffer
             // 
             this.listViewClubOffer.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.listViewClubOffer.HideSelection = false;
-            this.listViewClubOffer.Location = new System.Drawing.Point(409, 200);
+            this.listViewClubOffer.Location = new System.Drawing.Point(29, 364);
             this.listViewClubOffer.Margin = new System.Windows.Forms.Padding(2);
             this.listViewClubOffer.Name = "listViewClubOffer";
-            this.listViewClubOffer.Size = new System.Drawing.Size(350, 300);
+            this.listViewClubOffer.Size = new System.Drawing.Size(601, 226);
             this.listViewClubOffer.TabIndex = 23;
             this.listViewClubOffer.UseCompatibleStateImageBehavior = false;
             // 
@@ -285,23 +236,51 @@
             this.BtnCloseUpdate.Visible = false;
             this.BtnCloseUpdate.Click += new System.EventHandler(this.BtnCloseUpdate_Click);
             // 
+            // listViewManagerOffer
+            // 
+            this.listViewManagerOffer.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.listViewManagerOffer.HideSelection = false;
+            this.listViewManagerOffer.Location = new System.Drawing.Point(29, 200);
+            this.listViewManagerOffer.Margin = new System.Windows.Forms.Padding(2);
+            this.listViewManagerOffer.Name = "listViewManagerOffer";
+            this.listViewManagerOffer.Size = new System.Drawing.Size(601, 300);
+            this.listViewManagerOffer.TabIndex = 7;
+            this.listViewManagerOffer.UseCompatibleStateImageBehavior = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(646, 234);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Manager offer";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(646, 388);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Club offer";
+            // 
             // PlayerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 511);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnCloseUpdate);
             this.Controls.Add(this.comboBoxUpdatePlayerPosition);
             this.Controls.Add(this.BtnSaveUpdatedPlayer);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.listViewClubOffer);
             this.Controls.Add(this.BtnShowClubOffer);
             this.Controls.Add(this.BtnShowManagerOffer);
             this.Controls.Add(this.BtnDeletePlayer);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.txtPlayerPosition);
             this.Controls.Add(this.txtPlayerCountry);
             this.Controls.Add(this.txtPlayerAddress);
@@ -310,7 +289,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.listViewManagerOffer);
             this.Controls.Add(this.BtnUpdatePlayer);
             this.Name = "PlayerView";
@@ -322,8 +300,6 @@
 
         #endregion
         private System.Windows.Forms.Button BtnUpdatePlayer;
-        private System.Windows.Forms.ListView listViewManagerOffer;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -331,18 +307,18 @@
         private System.Windows.Forms.TextBox txtPlayerName;
         private System.Windows.Forms.TextBox txtPlayerAddress;
         private System.Windows.Forms.TextBox txtPlayerCountry;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtPlayerPosition;
         private System.Windows.Forms.Button BtnDeletePlayer;
         private System.Windows.Forms.Button BtnShowManagerOffer;
         private System.Windows.Forms.Button BtnShowClubOffer;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView listViewClubOffer;
         private System.Windows.Forms.Button BtnSaveUpdatedPlayer;
         private System.Windows.Forms.ComboBox comboBoxUpdatePlayerPosition;
         private System.Windows.Forms.Button BtnCloseUpdate;
+        private System.Windows.Forms.ListView listViewManagerOffer;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

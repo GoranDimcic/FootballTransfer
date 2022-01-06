@@ -163,17 +163,17 @@
     <Compile Include="LoginSingPage\SingUpManager.Designer.cs">
       <DependentUpon>SingUpManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Offers\ClubOffer.cs">
+    <Compile Include="Offers\OfferClub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Offers\ClubOffer.Designer.cs">
-      <DependentUpon>ClubOffer.cs</DependentUpon>
+    <Compile Include="Offers\OfferClub.Designer.cs">
+      <DependentUpon>OfferClub.cs</DependentUpon>
     </Compile>
-    <Compile Include="Offers\ManagerOffer.cs">
+    <Compile Include="Offers\OfferManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Offers\ManagerOffer.Designer.cs">
-      <DependentUpon>ManagerOffer.cs</DependentUpon>
+    <Compile Include="Offers\OfferManager.Designer.cs">
+      <DependentUpon>OfferManager.cs</DependentUpon>
     </Compile>
     <Compile Include="SessionManager.cs" />
     <Compile Include="UserPage.cs">
@@ -232,11 +232,11 @@
     <EmbeddedResource Include="LoginSingPage\SingUpManager.resx">
       <DependentUpon>SingUpManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Offers\ClubOffer.resx">
-      <DependentUpon>ClubOffer.cs</DependentUpon>
+    <EmbeddedResource Include="Offers\OfferClub.resx">
+      <DependentUpon>OfferClub.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Offers\ManagerOffer.resx">
-      <DependentUpon>ManagerOffer.cs</DependentUpon>
+    <EmbeddedResource Include="Offers\OfferManager.resx">
+      <DependentUpon>OfferManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPage.resx">
       <DependentUpon>UserPage.cs</DependentUpon>

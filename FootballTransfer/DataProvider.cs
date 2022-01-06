@@ -338,5 +338,64 @@ namespace FootballTransfer
         }
 
         #endregion
+
+        #region ManagerOffer
+
+        public static List<ManagerOffer> GetManagerOffers()
+        {
+            ISession session = SessionManager.GetSession();
+            List<ManagerOffer> offers = new List<ManagerOffer>();
+
+            if (session == null)
+                return null;
+
+            var playersData = session.Execute("select * from \"ManagerOffer\"");
+
+            foreach (var playerData in playersData)
+            {
+                ManagerOffer offer = new ManagerOffer
+                {
+                    ManagerEmail = playerData["manageremail"].ToString(),
+                    PlayerEmail = playerData["playeremail"].ToString(),
+                    ManagerName = playerData["managername"].ToString(),
+                    PlayerName = playerData["playername"].ToString(),
+                    Duraction = playerData["duraction"].ToString(),
+                    Offer = playerData["offer"].ToString()
+                };
+                offers.Add(offer);
+            }
+            return offers;
+        }
+
+        public static void AddManagerOffer(ManagerOffer offer)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+            RowSet playerData = session.Execute("insert into \"ManagerOffer\" (\"manageremail\", \"playeremail\", duraction, managername, offer, playername)  values ('" + offer.ManagerEmail + "', '" + offer.PlayerEmail + "', '" + offer.Duraction + "', '" + offer.ManagerName + "', '" + offer.Offer + "', '" + offer.PlayerName + "')");
+        }
+
+        public static void UpdatePlayerNameInManagerOffer(Player player, string ManagerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            var playerUpdateData = session.Execute("update \"ManagerOffer\" set playername='" + player.Name + "'where \"playeremail\"='" + player.Email + "' and \"manageremail\"='" + ManagerEmail + "' ");
+        }
+
+        public static void DeletePlayerInManagerOffer(Player player, string ManagerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            RowSet playerData = session.Execute("delete from \"ManagerOffer\" where \"playeremail\" = '" + player.Email + "' and \"manageremail\"='" + ManagerEmail + "' ");
+        }
+
+        #endregion
     }
 }

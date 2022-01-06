@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace FootballTransfer.Offers
 {
-    public partial class ClubOffer : Form
+    public partial class OfferClub : Form
     {
-        public ClubOffer(string name, string email, Club club)
+        public OfferClub(string name, string email, Club club)
         {
             InitializeComponent();
             ClubOfferPage(name, email, club);

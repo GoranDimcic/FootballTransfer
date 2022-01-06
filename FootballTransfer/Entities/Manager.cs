@@ -18,6 +18,8 @@ namespace FootballTransfer.Entities
 
         public string Password { get; set; }
 
+        public int Offer { get; set; }
+
         public List<Player> Players { get; set; }
 
         public List<Player> FreePlayers { get; set; }

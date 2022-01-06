@@ -1,7 +1,7 @@
 ﻿
 namespace FootballTransfer.Offers
 {
-    partial class ManagerOffer
+    partial class OfferManager
     {
         /// <summary>
         /// Required designer variable.

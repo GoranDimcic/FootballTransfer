@@ -11,15 +11,15 @@ using System.Windows.Forms;
 
 namespace FootballTransfer.Offers
 {
-    public partial class ManagerOffer : Form
+    public partial class OfferManager : Form
     {
-        public ManagerOffer(string name, string email, Manager manager)
+        public OfferManager(string email, string name, Manager manager)
         {
             InitializeComponent();
-            ManagerOfferPage(name, email, manager);
+            ManagerOfferPage(email, name, manager);
         }
 
-        public void ManagerOfferPage(string name, string email, Manager manager)
+        public void ManagerOfferPage(string email, string name, Manager manager)
         {
             TxtSelectedPlayerEmail.Text = email;
             TxtSelectedPlayerName.Text = name;
@@ -29,12 +29,25 @@ namespace FootballTransfer.Offers
 
         private void BtnCreateContract_Click(object sender, EventArgs e)
         {
-            if (TxtContractDuraction.Text == "")
-                MessageBox.Show("You must enter contract duraction!");
-            else if (TxtOfferPrice.Text == "")
-                MessageBox.Show("You must enter offer price!");
+            ManagerOffer offer = new ManagerOffer
+            {
+                ManagerEmail = TxtManagerEmail.Text,
+                ManagerName = TxtManagerName.Text,
+                PlayerEmail = TxtSelectedPlayerEmail.Text,
+                PlayerName = TxtSelectedPlayerName.Text,
+                Duraction = TxtContractDuraction.Text,
+                Offer = TxtOfferPrice.Text
+            };
 
-            DialogResult = DialogResult.Cancel;
+            //if (TxtContractDuraction.Text == "")
+            //    MessageBox.Show("You must enter contract duraction!");
+            //else if (TxtOfferPrice.Text == "")
+            //    MessageBox.Show("You must enter offer price!");
+
+            //DialogResult = DialogResult.Cancel;
+
+            DataProvider.AddManagerOffer(offer);
+            this.DialogResult = DialogResult.OK;
         }
 
         private void TxtNumberOnly_KeyPress(object sender, KeyPressEventArgs e)

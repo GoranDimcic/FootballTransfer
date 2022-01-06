@@ -19,9 +19,9 @@ namespace FootballTransfer.ViewPage
 
         public ClubView(Club club)
         {
+            loggedClub = club;
             InitializeComponent();
             ClubPage(club);
-            loggedClub = club;
         }
 
         public void ClubPage(Club club)
@@ -71,7 +71,7 @@ namespace FootballTransfer.ViewPage
             {
                 string EmailPlayer = this.listViewFreePlayers.SelectedItems[0].SubItems[0].Text;
                 string NamePlayer = this.listViewFreePlayers.SelectedItems[0].SubItems[1].Text;
-                Offers.ClubOffer form = new Offers.ClubOffer(EmailPlayer, NamePlayer, loggedClub);
+                Offers.OfferClub form = new Offers.OfferClub(EmailPlayer, NamePlayer, loggedClub);
                 form.ShowDialog();
 
                 this.listViewFreePlayers.SelectedItems[0].BackColor = Color.Yellow;

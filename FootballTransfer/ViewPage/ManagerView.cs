@@ -27,8 +27,9 @@ namespace FootballTransfer.ViewPage
 
         public void ManagerPage(Manager manager)
         {
-            this.FillManagerDescription(manager);
-            this.FillListWithFreePlayers();
+            FillManagerDescription(manager);
+            FillListWithFreePlayers();
+            FillListWithMyPlayers();
         }
 
         public void FillManagerDescription(Manager manager)
@@ -36,6 +37,18 @@ namespace FootballTransfer.ViewPage
             txtManagerName.Text = manager.Name;
             txtManagerAddress.Text = manager.Address;
             txtManagerCountry.Text = manager.Country;
+        }
+
+        public void FillListWithMyPlayers()
+        {
+
+
+            FillMyPlayers();
+        }
+
+        public void FillMyPlayers()
+        {
+
         }
 
         public void FillListWithFreePlayers()
@@ -48,7 +61,7 @@ namespace FootballTransfer.ViewPage
             listViewFreePlayers.Columns.Add("Country", 80);
             listViewFreePlayers.Columns.Add("Pos", 120);
 
-            this.FillFreePlayers();
+            FillFreePlayers();
         }
 
         public void FillFreePlayers()
@@ -66,13 +79,36 @@ namespace FootballTransfer.ViewPage
             }
         }
 
+        private void BtnUpdateManager_Click(object sender, EventArgs e)
+        {
+            OnUpdateClick();
+        }
+
+        private void BtnSaveUpdatedManager_Click(object sender, EventArgs e)
+        {
+            OnSaveClick();
+            DataProvider.UpdateManager(loggedManager);
+        }
+
+        private void BtnCloseUpdate_Click(object sender, EventArgs e)
+        {
+            OnCloseClick();
+        }
+
+        private void BtnDeleteManager_Click(object sender, EventArgs e)
+        {
+            DataProvider.DeleteManager(loggedManager);
+            this.DialogResult = DialogResult.OK;
+        }
+
         private void BtnCreateOffer_Click(object sender, EventArgs e)
         {
             if (listViewFreePlayers.SelectedItems.Count > 0)
             {
                 string EmailPlayer = this.listViewFreePlayers.SelectedItems[0].SubItems[0].Text;
                 string NamePlayer = this.listViewFreePlayers.SelectedItems[0].SubItems[1].Text;
-                Offers.ManagerOffer form = new Offers.ManagerOffer(EmailPlayer, NamePlayer, loggedManager);
+
+                OfferManager form = new OfferManager(EmailPlayer, NamePlayer, loggedManager);
                 form.ShowDialog();
 
                 this.listViewFreePlayers.SelectedItems[0].BackColor = Color.Yellow;
@@ -83,27 +119,7 @@ namespace FootballTransfer.ViewPage
             }
         }
 
-        private void BtnUpdateManager_Click(object sender, EventArgs e)
-        {
-            this.OnUpdateClick();
-        }
-
-        private void BtnSaveUpdatedManager_Click(object sender, EventArgs e)
-        {
-            this.OnSaveClick();
-            DataProvider.UpdateManager(loggedManager);
-        }
-
-        private void BtnCloseUpdate_Click(object sender, EventArgs e)
-        {
-            this.OnCloseClick();
-        }
-
-        private void BtnDeleteManager_Click(object sender, EventArgs e)
-        {
-            DataProvider.DeleteManager(loggedManager);
-            this.DialogResult = DialogResult.OK;
-        }
+        #region Button(Update, Save, Close)
 
         public void OnUpdateClick()
         {
@@ -160,5 +176,7 @@ namespace FootballTransfer.ViewPage
             BtnCloseUpdate.Visible = false;
             BtnDeleteManager.Visible = true;
         }
+
+        #endregion
     }
 }
