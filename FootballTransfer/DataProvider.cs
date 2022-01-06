@@ -441,6 +441,26 @@ namespace FootballTransfer
             RowSet playerData = session.Execute("insert into \"ClubOffer\" (\"playeremail\", \"clubemail\", clubname, duraction, league, playername, salary)  values ('" + offer.PlayerEmail + "', '" + offer.ClubEmail + "', '" + offer.ClubName + "', '" + offer.Duraction + "', '" + offer.League + "', '" + offer.PlayerName + "', '" + offer.Salary + "')");
         }
 
+        public static void UpdatePlayerNameInClubOffer(string PlayerEmail, string PlayerName, string ClubEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            var playerUpdateData = session.Execute("update \"ClubOffer\" set playername='" + PlayerName + "'where \"playeremail\"='" + PlayerEmail + "' and \"clubemail\"='" + ClubEmail + "' ");
+        }
+
+        public static void DeletePlayerInClubOffer(string PlayerEmail, string ClubEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            RowSet playerData = session.Execute("delete from \"ClubOffer\" where \"playeremail\" = '" + PlayerEmail + "' and \"clubemail\"='" + ClubEmail + "' ");
+        }
+
         #endregion
     }
 }
