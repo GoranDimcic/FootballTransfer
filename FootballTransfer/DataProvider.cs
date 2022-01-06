@@ -401,5 +401,46 @@ namespace FootballTransfer
         }
 
         #endregion
+
+        #region ClubOffer
+
+        public static List<ClubOffer> GetClubOffers()
+        {
+            ISession session = SessionManager.GetSession();
+            List<ClubOffer> offers = new List<ClubOffer>();
+
+            if (session == null)
+                return null;
+
+            var playersData = session.Execute("select * from \"ClubOffer\"");
+
+            foreach (var playerData in playersData)
+            {
+                ClubOffer offer = new ClubOffer
+                {
+                    ClubEmail = playerData["clubemail"].ToString(),
+                    PlayerEmail = playerData["playeremail"].ToString(),
+                    ClubName = playerData["clubname"].ToString(),
+                    League = playerData["league"].ToString(),
+                    PlayerName = playerData["playername"].ToString(),
+                    Duraction = playerData["duraction"].ToString(),
+                    Salary = playerData["salary"].ToString()
+                };
+                offers.Add(offer);
+            }
+            return offers;
+        }
+
+        public static void AddClubOffer(ClubOffer offer)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            RowSet playerData = session.Execute("insert into \"ClubOffer\" (\"playeremail\", \"clubemail\", clubname, duraction, league, playername, salary)  values ('" + offer.PlayerEmail + "', '" + offer.ClubEmail + "', '" + offer.ClubName + "', '" + offer.Duraction + "', '" + offer.League + "', '" + offer.PlayerName + "', '" + offer.Salary + "')");
+        }
+
+        #endregion
     }
 }

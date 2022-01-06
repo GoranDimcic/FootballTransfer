@@ -44,7 +44,7 @@ namespace FootballTransfer.Offers
             this.TxtClubEmail = new System.Windows.Forms.TextBox();
             this.TxtClubLeague = new System.Windows.Forms.TextBox();
             this.TxtContractDuraction = new System.Windows.Forms.TextBox();
-            this.TxtOfferPrice = new System.Windows.Forms.TextBox();
+            this.TxtContractSalary = new System.Windows.Forms.TextBox();
             this.BtnCreateContract = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -192,14 +192,14 @@ namespace FootballTransfer.Offers
             this.TxtContractDuraction.TabIndex = 36;
             this.TxtContractDuraction.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumberOnly_KeyPress);
             // 
-            // TxtOfferPrice
+            // TxtContractSalary
             // 
-            this.TxtOfferPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtOfferPrice.Location = new System.Drawing.Point(201, 395);
-            this.TxtOfferPrice.Name = "TxtOfferPrice";
-            this.TxtOfferPrice.Size = new System.Drawing.Size(157, 26);
-            this.TxtOfferPrice.TabIndex = 37;
-            this.TxtOfferPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumberOnly_KeyPress);
+            this.TxtContractSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtContractSalary.Location = new System.Drawing.Point(201, 395);
+            this.TxtContractSalary.Name = "TxtContractSalary";
+            this.TxtContractSalary.Size = new System.Drawing.Size(157, 26);
+            this.TxtContractSalary.TabIndex = 37;
+            this.TxtContractSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumberOnly_KeyPress);
             // 
             // BtnCreateContract
             // 
@@ -211,13 +211,13 @@ namespace FootballTransfer.Offers
             this.BtnCreateContract.UseVisualStyleBackColor = true;
             this.BtnCreateContract.Click += new System.EventHandler(this.BtnCreateContract_Click);
             // 
-            // ClubOffer
+            // OfferClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 511);
             this.Controls.Add(this.BtnCreateContract);
-            this.Controls.Add(this.TxtOfferPrice);
+            this.Controls.Add(this.TxtContractSalary);
             this.Controls.Add(this.TxtContractDuraction);
             this.Controls.Add(this.TxtClubLeague);
             this.Controls.Add(this.TxtClubEmail);
@@ -233,7 +233,7 @@ namespace FootballTransfer.Offers
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "ClubOffer";
+            this.Name = "OfferClub";
             this.Text = "ClubOffer";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -256,7 +256,7 @@ namespace FootballTransfer.Offers
         private System.Windows.Forms.TextBox TxtClubEmail;
         private System.Windows.Forms.TextBox TxtClubLeague;
         private System.Windows.Forms.TextBox TxtContractDuraction;
-        private System.Windows.Forms.TextBox TxtOfferPrice;
+        private System.Windows.Forms.TextBox TxtContractSalary;
         private System.Windows.Forms.Button BtnCreateContract;
     }
 }

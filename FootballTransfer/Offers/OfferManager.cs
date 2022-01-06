@@ -31,12 +31,13 @@ namespace FootballTransfer.Offers
         {
             ManagerOffer offer = new ManagerOffer
             {
-                ManagerEmail = TxtManagerEmail.Text,
-                ManagerName = TxtManagerName.Text,
-                PlayerEmail = TxtSelectedPlayerEmail.Text,
                 PlayerName = TxtSelectedPlayerName.Text,
+                PlayerEmail = TxtSelectedPlayerEmail.Text,
+
+                ManagerName = TxtManagerName.Text,
+                ManagerEmail = TxtManagerEmail.Text,
                 Duraction = TxtContractDuraction.Text,
-                Offer = TxtOfferPrice.Text
+                Offer = TxtContractOffer.Text
             };
 
             //if (TxtContractDuraction.Text == "")

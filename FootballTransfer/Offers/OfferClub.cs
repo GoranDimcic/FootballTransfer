@@ -13,13 +13,13 @@ namespace FootballTransfer.Offers
 {
     public partial class OfferClub : Form
     {
-        public OfferClub(string name, string email, Club club)
+        public OfferClub(string email, string name, Club club)
         {
             InitializeComponent();
-            ClubOfferPage(name, email, club);
+            ClubOfferPage(email, name, club);
         }
 
-        public void ClubOfferPage(string name, string email, Club club)
+        public void ClubOfferPage(string email, string name, Club club)
         {
             TxtSelectedPlayerEmail.Text = email;
             TxtSelectedPlayerName.Text = name;
@@ -30,12 +30,27 @@ namespace FootballTransfer.Offers
 
         private void BtnCreateContract_Click(object sender, EventArgs e)
         {
-            if (TxtContractDuraction.Text == "")
-                MessageBox.Show("You must enter contract duraction!");
-            else if (TxtOfferPrice.Text == "")
-                MessageBox.Show("You must enter offer price!");
+            ClubOffer offer = new ClubOffer()
+            {
+                PlayerName = TxtSelectedPlayerName.Text,
+                PlayerEmail = TxtSelectedPlayerEmail.Text,
 
-            DialogResult = DialogResult.Cancel;
+                ClubName = TxtClubName.Text,
+                ClubEmail = TxtClubEmail.Text,
+                League = TxtClubLeague.Text,
+                Duraction = TxtContractDuraction.Text,
+                Salary = TxtContractSalary.Text
+            };
+
+            //if (TxtContractDuraction.Text == "")
+            //    MessageBox.Show("You must enter contract duraction!");
+            //else if (TxtContractSalary.Text == "")
+            //    MessageBox.Show("You must enter offer price!");
+
+            //DialogResult = DialogResult.Cancel;
+
+            DataProvider.AddClubOffer(offer);
+            this.DialogResult = DialogResult.OK;
         }
 
         private void TxtNumberOnly_KeyPress(object sender, KeyPressEventArgs e)

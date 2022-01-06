@@ -1,4 +1,5 @@
 ﻿using FootballTransfer.Entities;
+using FootballTransfer.Offers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,7 +72,7 @@ namespace FootballTransfer.ViewPage
             {
                 string EmailPlayer = this.listViewFreePlayers.SelectedItems[0].SubItems[0].Text;
                 string NamePlayer = this.listViewFreePlayers.SelectedItems[0].SubItems[1].Text;
-                Offers.OfferClub form = new Offers.OfferClub(EmailPlayer, NamePlayer, loggedClub);
+                OfferClub form = new OfferClub(EmailPlayer, NamePlayer, loggedClub);
                 form.ShowDialog();
 
                 this.listViewFreePlayers.SelectedItems[0].BackColor = Color.Yellow;

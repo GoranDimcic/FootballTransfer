@@ -15,7 +15,8 @@ namespace FootballTransfer.ViewPage
     {
         public Player loggedPlayer;
         public List<Player> players;
-        public List<ManagerOffer> offers;
+        public List<ManagerOffer> managerOffers;
+        public List<ClubOffer> clubOffers;
 
         public PlayerView(Player player)
         {
@@ -30,8 +31,6 @@ namespace FootballTransfer.ViewPage
             FillManagerOfferList();
             FillClubOfferList();
         }
-
-        #region PlayerPage(Listviews, description)
 
         public void FillPlayerDescription(Player player)
         {
@@ -55,12 +54,12 @@ namespace FootballTransfer.ViewPage
 
         public void FillManagerOffers()
         {
-            offers = DataProvider.GetManagerOffers();
+            managerOffers = DataProvider.GetManagerOffers();
 
             Player player = new Player();
             player = DataProvider.GetPlayer(loggedPlayer);
 
-            foreach (ManagerOffer offer in offers)
+            foreach (ManagerOffer offer in managerOffers)
             {
                 if (offer.PlayerEmail == player.Email)
                 {
@@ -86,10 +85,21 @@ namespace FootballTransfer.ViewPage
 
         public void FillClubOffers()
         {
+            clubOffers = DataProvider.GetClubOffers();
 
+            Player player = new Player();
+            player = DataProvider.GetPlayer(loggedPlayer);
+
+            foreach (ClubOffer offer in clubOffers)
+            {
+                if (offer.PlayerEmail == player.Email)
+                {
+                    String[] row = { offer.ClubEmail, offer.ClubName, offer.League, offer.Salary, offer.Duraction };
+                    ListViewItem item = new ListViewItem(row);
+                    listViewClubOffer.Items.Add(item);
+                }
+            }
         }
-
-        #endregion
 
         private void BtnUpdatePlayer_Click(object sender, EventArgs e)
         {
@@ -107,6 +117,7 @@ namespace FootballTransfer.ViewPage
             {
                 string ManagerEmail = listViewManagerOffer.Items[i].SubItems[0].Text;
                 DataProvider.UpdatePlayerNameInManagerOffer(PlayerEmail, PlayerName, ManagerEmail);
+                //DataProvider.UpdatePlayerNameInClubOffer(PlayerEmail, PlayerName, ClubEmail);
             }
         }
 
@@ -123,6 +134,7 @@ namespace FootballTransfer.ViewPage
             {
                 string ManagerEmail = listViewManagerOffer.Items[i].SubItems[0].Text;
                 DataProvider.DeletePlayerInManagerOffer(PlayerEmail, ManagerEmail);
+                //DataProvider.DeletePlayerInClubOffer(PlayerEmail, ClubEmail);
             }
 
             DataProvider.DeletePlayer(loggedPlayer);
@@ -202,5 +214,17 @@ namespace FootballTransfer.ViewPage
         }
 
         #endregion
+
+        private void BtnShowManagerOffer_Click(object sender, EventArgs e)
+        {
+            listViewManagerOffer.Visible = true;
+            listViewClubOffer.Visible = false;
+        }
+
+        private void BtnShowClubOffer_Click(object sender, EventArgs e)
+        {
+            listViewManagerOffer.Visible = false;
+            listViewClubOffer.Visible = true;
+        }
     }
 }

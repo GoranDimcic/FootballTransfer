@@ -38,24 +38,23 @@
             this.txtPlayerCountry = new System.Windows.Forms.TextBox();
             this.txtPlayerPosition = new System.Windows.Forms.TextBox();
             this.BtnDeletePlayer = new System.Windows.Forms.Button();
-            this.BtnShowManagerOffer = new System.Windows.Forms.Button();
             this.BtnShowClubOffer = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.listViewClubOffer = new System.Windows.Forms.ListView();
             this.BtnSaveUpdatedPlayer = new System.Windows.Forms.Button();
             this.comboBoxUpdatePlayerPosition = new System.Windows.Forms.ComboBox();
             this.BtnCloseUpdate = new System.Windows.Forms.Button();
             this.listViewManagerOffer = new System.Windows.Forms.ListView();
+            this.listViewClubOffer = new System.Windows.Forms.ListView();
+            this.BtnShowManagerOffer = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtnUpdatePlayer
             // 
-            this.BtnUpdatePlayer.Location = new System.Drawing.Point(270, 22);
+            this.BtnUpdatePlayer.Location = new System.Drawing.Point(270, 31);
             this.BtnUpdatePlayer.Name = "BtnUpdatePlayer";
-            this.BtnUpdatePlayer.Size = new System.Drawing.Size(91, 26);
+            this.BtnUpdatePlayer.Size = new System.Drawing.Size(100, 30);
             this.BtnUpdatePlayer.TabIndex = 4;
             this.BtnUpdatePlayer.Text = "Update";
             this.BtnUpdatePlayer.UseVisualStyleBackColor = true;
@@ -65,7 +64,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 25);
+            this.label1.Location = new System.Drawing.Point(25, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 9;
@@ -75,7 +74,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 60);
+            this.label4.Location = new System.Drawing.Point(25, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 20);
             this.label4.TabIndex = 10;
@@ -85,7 +84,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 95);
+            this.label5.Location = new System.Drawing.Point(25, 105);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 20);
             this.label5.TabIndex = 11;
@@ -95,7 +94,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 130);
+            this.label6.Location = new System.Drawing.Point(25, 140);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 20);
             this.label6.TabIndex = 12;
@@ -105,7 +104,7 @@
             // 
             this.txtPlayerName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPlayerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlayerName.Location = new System.Drawing.Point(125, 26);
+            this.txtPlayerName.Location = new System.Drawing.Point(125, 35);
             this.txtPlayerName.Name = "txtPlayerName";
             this.txtPlayerName.ReadOnly = true;
             this.txtPlayerName.Size = new System.Drawing.Size(123, 19);
@@ -115,7 +114,7 @@
             // 
             this.txtPlayerAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPlayerAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlayerAddress.Location = new System.Drawing.Point(125, 61);
+            this.txtPlayerAddress.Location = new System.Drawing.Point(125, 70);
             this.txtPlayerAddress.Name = "txtPlayerAddress";
             this.txtPlayerAddress.ReadOnly = true;
             this.txtPlayerAddress.Size = new System.Drawing.Size(123, 19);
@@ -125,7 +124,7 @@
             // 
             this.txtPlayerCountry.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPlayerCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlayerCountry.Location = new System.Drawing.Point(125, 96);
+            this.txtPlayerCountry.Location = new System.Drawing.Point(125, 105);
             this.txtPlayerCountry.Name = "txtPlayerCountry";
             this.txtPlayerCountry.ReadOnly = true;
             this.txtPlayerCountry.Size = new System.Drawing.Size(123, 19);
@@ -135,7 +134,7 @@
             // 
             this.txtPlayerPosition.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPlayerPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlayerPosition.Location = new System.Drawing.Point(125, 131);
+            this.txtPlayerPosition.Location = new System.Drawing.Point(125, 140);
             this.txtPlayerPosition.Name = "txtPlayerPosition";
             this.txtPlayerPosition.ReadOnly = true;
             this.txtPlayerPosition.Size = new System.Drawing.Size(123, 19);
@@ -143,66 +142,48 @@
             // 
             // BtnDeletePlayer
             // 
-            this.BtnDeletePlayer.Location = new System.Drawing.Point(370, 22);
+            this.BtnDeletePlayer.Location = new System.Drawing.Point(270, 66);
             this.BtnDeletePlayer.Name = "BtnDeletePlayer";
-            this.BtnDeletePlayer.Size = new System.Drawing.Size(91, 26);
+            this.BtnDeletePlayer.Size = new System.Drawing.Size(100, 30);
             this.BtnDeletePlayer.TabIndex = 20;
             this.BtnDeletePlayer.Text = "Delete";
             this.BtnDeletePlayer.UseVisualStyleBackColor = true;
             this.BtnDeletePlayer.Click += new System.EventHandler(this.BtnDeletePlayer_Click);
             // 
-            // BtnShowManagerOffer
-            // 
-            this.BtnShowManagerOffer.Location = new System.Drawing.Point(525, 150);
-            this.BtnShowManagerOffer.Name = "BtnShowManagerOffer";
-            this.BtnShowManagerOffer.Size = new System.Drawing.Size(91, 26);
-            this.BtnShowManagerOffer.TabIndex = 21;
-            this.BtnShowManagerOffer.Text = "Manager offer";
-            this.BtnShowManagerOffer.UseVisualStyleBackColor = true;
-            // 
             // BtnShowClubOffer
             // 
-            this.BtnShowClubOffer.Location = new System.Drawing.Point(625, 150);
+            this.BtnShowClubOffer.Location = new System.Drawing.Point(525, 200);
             this.BtnShowClubOffer.Name = "BtnShowClubOffer";
-            this.BtnShowClubOffer.Size = new System.Drawing.Size(91, 26);
+            this.BtnShowClubOffer.Size = new System.Drawing.Size(100, 40);
             this.BtnShowClubOffer.TabIndex = 22;
             this.BtnShowClubOffer.Text = "Club offer";
             this.BtnShowClubOffer.UseVisualStyleBackColor = true;
+            this.BtnShowClubOffer.Click += new System.EventHandler(this.BtnShowClubOffer_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(635, 307);
+            this.button6.Location = new System.Drawing.Point(645, 300);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(99, 40);
+            this.button6.Size = new System.Drawing.Size(100, 40);
             this.button6.TabIndex = 26;
             this.button6.Text = "Odbi ponudu";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(635, 261);
+            this.button3.Location = new System.Drawing.Point(645, 250);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 40);
+            this.button3.Size = new System.Drawing.Size(100, 40);
             this.button3.TabIndex = 25;
-            this.button3.Text = "prihvati ponudu";
+            this.button3.Text = "Prihvati ponudu";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // listViewClubOffer
-            // 
-            this.listViewClubOffer.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.listViewClubOffer.HideSelection = false;
-            this.listViewClubOffer.Location = new System.Drawing.Point(29, 364);
-            this.listViewClubOffer.Margin = new System.Windows.Forms.Padding(2);
-            this.listViewClubOffer.Name = "listViewClubOffer";
-            this.listViewClubOffer.Size = new System.Drawing.Size(600, 226);
-            this.listViewClubOffer.TabIndex = 23;
-            this.listViewClubOffer.UseCompatibleStateImageBehavior = false;
             // 
             // BtnSaveUpdatedPlayer
             // 
-            this.BtnSaveUpdatedPlayer.Location = new System.Drawing.Point(270, 22);
+            this.BtnSaveUpdatedPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSaveUpdatedPlayer.Location = new System.Drawing.Point(270, 30);
             this.BtnSaveUpdatedPlayer.Name = "BtnSaveUpdatedPlayer";
-            this.BtnSaveUpdatedPlayer.Size = new System.Drawing.Size(91, 26);
+            this.BtnSaveUpdatedPlayer.Size = new System.Drawing.Size(100, 30);
             this.BtnSaveUpdatedPlayer.TabIndex = 27;
             this.BtnSaveUpdatedPlayer.Text = "Save";
             this.BtnSaveUpdatedPlayer.UseVisualStyleBackColor = true;
@@ -219,7 +200,7 @@
             "Middlefield",
             "Defence",
             "Goalkeeper"});
-            this.comboBoxUpdatePlayerPosition.Location = new System.Drawing.Point(125, 127);
+            this.comboBoxUpdatePlayerPosition.Location = new System.Drawing.Point(125, 137);
             this.comboBoxUpdatePlayerPosition.Name = "comboBoxUpdatePlayerPosition";
             this.comboBoxUpdatePlayerPosition.Size = new System.Drawing.Size(123, 28);
             this.comboBoxUpdatePlayerPosition.TabIndex = 28;
@@ -227,9 +208,9 @@
             // 
             // BtnCloseUpdate
             // 
-            this.BtnCloseUpdate.Location = new System.Drawing.Point(270, 59);
+            this.BtnCloseUpdate.Location = new System.Drawing.Point(270, 66);
             this.BtnCloseUpdate.Name = "BtnCloseUpdate";
-            this.BtnCloseUpdate.Size = new System.Drawing.Size(91, 26);
+            this.BtnCloseUpdate.Size = new System.Drawing.Size(100, 30);
             this.BtnCloseUpdate.TabIndex = 29;
             this.BtnCloseUpdate.Text = "Close";
             this.BtnCloseUpdate.UseVisualStyleBackColor = true;
@@ -241,37 +222,51 @@
             this.listViewManagerOffer.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.listViewManagerOffer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewManagerOffer.HideSelection = false;
-            this.listViewManagerOffer.Location = new System.Drawing.Point(29, 200);
+            this.listViewManagerOffer.Location = new System.Drawing.Point(25, 250);
             this.listViewManagerOffer.Margin = new System.Windows.Forms.Padding(2);
             this.listViewManagerOffer.Name = "listViewManagerOffer";
-            this.listViewManagerOffer.Size = new System.Drawing.Size(600, 300);
+            this.listViewManagerOffer.Size = new System.Drawing.Size(600, 242);
             this.listViewManagerOffer.TabIndex = 7;
             this.listViewManagerOffer.UseCompatibleStateImageBehavior = false;
+            // 
+            // listViewClubOffer
+            // 
+            this.listViewClubOffer.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.listViewClubOffer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewClubOffer.HideSelection = false;
+            this.listViewClubOffer.Location = new System.Drawing.Point(25, 250);
+            this.listViewClubOffer.Margin = new System.Windows.Forms.Padding(2);
+            this.listViewClubOffer.Name = "listViewClubOffer";
+            this.listViewClubOffer.Size = new System.Drawing.Size(601, 242);
+            this.listViewClubOffer.TabIndex = 23;
+            this.listViewClubOffer.UseCompatibleStateImageBehavior = false;
+            this.listViewClubOffer.Visible = false;
+            // 
+            // BtnShowManagerOffer
+            // 
+            this.BtnShowManagerOffer.Location = new System.Drawing.Point(400, 200);
+            this.BtnShowManagerOffer.Name = "BtnShowManagerOffer";
+            this.BtnShowManagerOffer.Size = new System.Drawing.Size(100, 40);
+            this.BtnShowManagerOffer.TabIndex = 21;
+            this.BtnShowManagerOffer.Text = "Manager offer";
+            this.BtnShowManagerOffer.UseVisualStyleBackColor = true;
+            this.BtnShowManagerOffer.Click += new System.EventHandler(this.BtnShowManagerOffer_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(646, 234);
+            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(25, 200);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.Size = new System.Drawing.Size(179, 36);
             this.label2.TabIndex = 30;
-            this.label2.Text = "Manager offer";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(646, 388);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Club offer";
+            this.label2.Text = "Choose an offer:";
             // 
             // PlayerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 511);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnCloseUpdate);
             this.Controls.Add(this.comboBoxUpdatePlayerPosition);
@@ -310,16 +305,15 @@
         private System.Windows.Forms.TextBox txtPlayerCountry;
         private System.Windows.Forms.TextBox txtPlayerPosition;
         private System.Windows.Forms.Button BtnDeletePlayer;
-        private System.Windows.Forms.Button BtnShowManagerOffer;
         private System.Windows.Forms.Button BtnShowClubOffer;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ListView listViewClubOffer;
         private System.Windows.Forms.Button BtnSaveUpdatedPlayer;
         private System.Windows.Forms.ComboBox comboBoxUpdatePlayerPosition;
         private System.Windows.Forms.Button BtnCloseUpdate;
         private System.Windows.Forms.ListView listViewManagerOffer;
+        private System.Windows.Forms.ListView listViewClubOffer;
+        private System.Windows.Forms.Button BtnShowManagerOffer;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
     }
 }
