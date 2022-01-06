@@ -194,7 +194,7 @@
             this.listViewClubOffer.Location = new System.Drawing.Point(29, 364);
             this.listViewClubOffer.Margin = new System.Windows.Forms.Padding(2);
             this.listViewClubOffer.Name = "listViewClubOffer";
-            this.listViewClubOffer.Size = new System.Drawing.Size(601, 226);
+            this.listViewClubOffer.Size = new System.Drawing.Size(600, 226);
             this.listViewClubOffer.TabIndex = 23;
             this.listViewClubOffer.UseCompatibleStateImageBehavior = false;
             // 
@@ -239,11 +239,12 @@
             // listViewManagerOffer
             // 
             this.listViewManagerOffer.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.listViewManagerOffer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewManagerOffer.HideSelection = false;
             this.listViewManagerOffer.Location = new System.Drawing.Point(29, 200);
             this.listViewManagerOffer.Margin = new System.Windows.Forms.Padding(2);
             this.listViewManagerOffer.Name = "listViewManagerOffer";
-            this.listViewManagerOffer.Size = new System.Drawing.Size(601, 300);
+            this.listViewManagerOffer.Size = new System.Drawing.Size(600, 300);
             this.listViewManagerOffer.TabIndex = 7;
             this.listViewManagerOffer.UseCompatibleStateImageBehavior = false;
             // 

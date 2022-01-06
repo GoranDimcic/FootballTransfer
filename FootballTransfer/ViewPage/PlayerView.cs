@@ -45,10 +45,10 @@ namespace FootballTransfer.ViewPage
         {
             listViewManagerOffer.View = View.Details;
             listViewManagerOffer.FullRowSelect = true;
-            listViewManagerOffer.Columns.Add("Email", 120);
-            listViewManagerOffer.Columns.Add("Name", 120);
-            listViewManagerOffer.Columns.Add("Offer price", 120);
-            listViewManagerOffer.Columns.Add("Contract duraction", 120);
+            listViewManagerOffer.Columns.Add("Email", 150);
+            listViewManagerOffer.Columns.Add("Name", 150);
+            listViewManagerOffer.Columns.Add("Offer price", 150);
+            listViewManagerOffer.Columns.Add("Contract duraction", 150);
 
             FillManagerOffers();
         }
@@ -100,10 +100,13 @@ namespace FootballTransfer.ViewPage
         {
             OnSaveClick();
             DataProvider.UpdatePlayer(loggedPlayer);
+            string PlayerEmail = loggedPlayer.Email;
+            string PlayerName = loggedPlayer.Name;
+
             for (int i = 0; i < listViewManagerOffer.Items.Count; i++)
             {
                 string ManagerEmail = listViewManagerOffer.Items[i].SubItems[0].Text;
-                DataProvider.UpdatePlayerNameInManagerOffer(loggedPlayer, ManagerEmail);
+                DataProvider.UpdatePlayerNameInManagerOffer(PlayerEmail, PlayerName, ManagerEmail);
             }
         }
 
@@ -114,11 +117,14 @@ namespace FootballTransfer.ViewPage
 
         private void BtnDeletePlayer_Click(object sender, EventArgs e)
         {
+            string PlayerEmail = loggedPlayer.Email;
+
             for (int i = 0; i < listViewManagerOffer.Items.Count; i++)
             {
                 string ManagerEmail = listViewManagerOffer.Items[i].SubItems[0].Text;
-                DataProvider.DeletePlayerInManagerOffer(loggedPlayer, ManagerEmail);
+                DataProvider.DeletePlayerInManagerOffer(PlayerEmail, ManagerEmail);
             }
+
             DataProvider.DeletePlayer(loggedPlayer);
             this.DialogResult = DialogResult.OK;
         }
