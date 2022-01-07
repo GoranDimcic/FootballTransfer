@@ -30,27 +30,27 @@ namespace FootballTransfer.ViewPage
         private void InitializeComponent()
         {
             this.listViewFreePlayers = new System.Windows.Forms.ListView();
-            this.BtnCreateOffer = new System.Windows.Forms.Button();
             this.txtManagerCountry = new System.Windows.Forms.TextBox();
             this.txtManagerSurname = new System.Windows.Forms.TextBox();
             this.txtManagerName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnUpdateManager = new System.Windows.Forms.Button();
-            this.BtnDeleteManager = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtManagerRepresent = new System.Windows.Forms.TextBox();
-            this.BtnSeeFreePlayers = new System.Windows.Forms.Button();
-            this.BtnSeeMyPlayers = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtManagerAddress = new System.Windows.Forms.TextBox();
-            this.BtnSaveUpdatedManager = new System.Windows.Forms.Button();
-            this.BtnCloseUpdate = new System.Windows.Forms.Button();
             this.LblChoose = new System.Windows.Forms.Label();
-            this.BtnTerminateTheContract = new System.Windows.Forms.Button();
             this.listViewMyPlayers = new System.Windows.Forms.ListView();
             this.listViewMyOffers = new System.Windows.Forms.ListView();
+            this.BtnDeleteManager = new System.Windows.Forms.Button();
+            this.BtnUpdateManager = new System.Windows.Forms.Button();
+            this.BtnCreateOffer = new System.Windows.Forms.Button();
+            this.BtnTerminateTheContract = new System.Windows.Forms.Button();
+            this.BtnSeeMyPlayers = new System.Windows.Forms.Button();
+            this.BtnSeeFreePlayers = new System.Windows.Forms.Button();
             this.BtnSeeMyOffers = new System.Windows.Forms.Button();
+            this.BtnCloseUpdate = new System.Windows.Forms.Button();
+            this.BtnSaveUpdatedManager = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewFreePlayers
@@ -64,16 +64,6 @@ namespace FootballTransfer.ViewPage
             this.listViewFreePlayers.Size = new System.Drawing.Size(600, 250);
             this.listViewFreePlayers.TabIndex = 5;
             this.listViewFreePlayers.UseCompatibleStateImageBehavior = false;
-            // 
-            // BtnCreateOffer
-            // 
-            this.BtnCreateOffer.Location = new System.Drawing.Point(645, 250);
-            this.BtnCreateOffer.Name = "BtnCreateOffer";
-            this.BtnCreateOffer.Size = new System.Drawing.Size(100, 40);
-            this.BtnCreateOffer.TabIndex = 7;
-            this.BtnCreateOffer.Text = "Create offer";
-            this.BtnCreateOffer.UseVisualStyleBackColor = true;
-            this.BtnCreateOffer.Click += new System.EventHandler(this.BtnCreateOffer_Click);
             // 
             // txtManagerCountry
             // 
@@ -125,26 +115,6 @@ namespace FootballTransfer.ViewPage
             this.label1.TabIndex = 18;
             this.label1.Text = "Name";
             // 
-            // BtnUpdateManager
-            // 
-            this.BtnUpdateManager.Location = new System.Drawing.Point(270, 30);
-            this.BtnUpdateManager.Name = "BtnUpdateManager";
-            this.BtnUpdateManager.Size = new System.Drawing.Size(100, 30);
-            this.BtnUpdateManager.TabIndex = 17;
-            this.BtnUpdateManager.Text = "Update";
-            this.BtnUpdateManager.UseVisualStyleBackColor = true;
-            this.BtnUpdateManager.Click += new System.EventHandler(this.BtnUpdateManager_Click);
-            // 
-            // BtnDeleteManager
-            // 
-            this.BtnDeleteManager.Location = new System.Drawing.Point(270, 66);
-            this.BtnDeleteManager.Name = "BtnDeleteManager";
-            this.BtnDeleteManager.Size = new System.Drawing.Size(100, 30);
-            this.BtnDeleteManager.TabIndex = 25;
-            this.BtnDeleteManager.Text = "Delete";
-            this.BtnDeleteManager.UseVisualStyleBackColor = true;
-            this.BtnDeleteManager.Click += new System.EventHandler(this.BtnDeleteManager_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -164,26 +134,6 @@ namespace FootballTransfer.ViewPage
             this.txtManagerRepresent.ReadOnly = true;
             this.txtManagerRepresent.Size = new System.Drawing.Size(123, 19);
             this.txtManagerRepresent.TabIndex = 27;
-            // 
-            // BtnSeeFreePlayers
-            // 
-            this.BtnSeeFreePlayers.Location = new System.Drawing.Point(400, 200);
-            this.BtnSeeFreePlayers.Name = "BtnSeeFreePlayers";
-            this.BtnSeeFreePlayers.Size = new System.Drawing.Size(100, 40);
-            this.BtnSeeFreePlayers.TabIndex = 29;
-            this.BtnSeeFreePlayers.Text = "See free players";
-            this.BtnSeeFreePlayers.UseVisualStyleBackColor = true;
-            this.BtnSeeFreePlayers.Click += new System.EventHandler(this.BtnSeeFreePlayers_Click);
-            // 
-            // BtnSeeMyPlayers
-            // 
-            this.BtnSeeMyPlayers.Location = new System.Drawing.Point(525, 200);
-            this.BtnSeeMyPlayers.Name = "BtnSeeMyPlayers";
-            this.BtnSeeMyPlayers.Size = new System.Drawing.Size(100, 40);
-            this.BtnSeeMyPlayers.TabIndex = 30;
-            this.BtnSeeMyPlayers.Text = "See my players";
-            this.BtnSeeMyPlayers.UseVisualStyleBackColor = true;
-            this.BtnSeeMyPlayers.Click += new System.EventHandler(this.BtnSeeMyPlayers_Click);
             // 
             // label2
             // 
@@ -205,28 +155,6 @@ namespace FootballTransfer.ViewPage
             this.txtManagerAddress.Size = new System.Drawing.Size(123, 19);
             this.txtManagerAddress.TabIndex = 32;
             // 
-            // BtnSaveUpdatedManager
-            // 
-            this.BtnSaveUpdatedManager.Location = new System.Drawing.Point(270, 30);
-            this.BtnSaveUpdatedManager.Name = "BtnSaveUpdatedManager";
-            this.BtnSaveUpdatedManager.Size = new System.Drawing.Size(100, 30);
-            this.BtnSaveUpdatedManager.TabIndex = 33;
-            this.BtnSaveUpdatedManager.Text = "Save";
-            this.BtnSaveUpdatedManager.UseVisualStyleBackColor = true;
-            this.BtnSaveUpdatedManager.Visible = false;
-            this.BtnSaveUpdatedManager.Click += new System.EventHandler(this.BtnSaveUpdatedManager_Click);
-            // 
-            // BtnCloseUpdate
-            // 
-            this.BtnCloseUpdate.Location = new System.Drawing.Point(270, 66);
-            this.BtnCloseUpdate.Name = "BtnCloseUpdate";
-            this.BtnCloseUpdate.Size = new System.Drawing.Size(100, 30);
-            this.BtnCloseUpdate.TabIndex = 34;
-            this.BtnCloseUpdate.Text = "Close";
-            this.BtnCloseUpdate.UseVisualStyleBackColor = true;
-            this.BtnCloseUpdate.Visible = false;
-            this.BtnCloseUpdate.Click += new System.EventHandler(this.BtnCloseUpdate_Click);
-            // 
             // LblChoose
             // 
             this.LblChoose.AutoSize = true;
@@ -236,16 +164,6 @@ namespace FootballTransfer.ViewPage
             this.LblChoose.Size = new System.Drawing.Size(181, 36);
             this.LblChoose.TabIndex = 35;
             this.LblChoose.Text = "Choose a player:";
-            // 
-            // BtnTerminateTheContract
-            // 
-            this.BtnTerminateTheContract.Location = new System.Drawing.Point(645, 250);
-            this.BtnTerminateTheContract.Name = "BtnTerminateTheContract";
-            this.BtnTerminateTheContract.Size = new System.Drawing.Size(100, 40);
-            this.BtnTerminateTheContract.TabIndex = 36;
-            this.BtnTerminateTheContract.Text = "Terminate the contract";
-            this.BtnTerminateTheContract.UseVisualStyleBackColor = true;
-            this.BtnTerminateTheContract.Visible = false;
             // 
             // listViewMyPlayers
             // 
@@ -273,6 +191,66 @@ namespace FootballTransfer.ViewPage
             this.listViewMyOffers.UseCompatibleStateImageBehavior = false;
             this.listViewMyOffers.Visible = false;
             // 
+            // BtnDeleteManager
+            // 
+            this.BtnDeleteManager.Location = new System.Drawing.Point(275, 66);
+            this.BtnDeleteManager.Name = "BtnDeleteManager";
+            this.BtnDeleteManager.Size = new System.Drawing.Size(100, 30);
+            this.BtnDeleteManager.TabIndex = 25;
+            this.BtnDeleteManager.Text = "Delete";
+            this.BtnDeleteManager.UseVisualStyleBackColor = true;
+            this.BtnDeleteManager.Click += new System.EventHandler(this.BtnDeleteManager_Click);
+            // 
+            // BtnUpdateManager
+            // 
+            this.BtnUpdateManager.Location = new System.Drawing.Point(275, 30);
+            this.BtnUpdateManager.Name = "BtnUpdateManager";
+            this.BtnUpdateManager.Size = new System.Drawing.Size(100, 30);
+            this.BtnUpdateManager.TabIndex = 17;
+            this.BtnUpdateManager.Text = "Update";
+            this.BtnUpdateManager.UseVisualStyleBackColor = true;
+            this.BtnUpdateManager.Click += new System.EventHandler(this.BtnUpdateManager_Click);
+            // 
+            // BtnCreateOffer
+            // 
+            this.BtnCreateOffer.Location = new System.Drawing.Point(645, 250);
+            this.BtnCreateOffer.Name = "BtnCreateOffer";
+            this.BtnCreateOffer.Size = new System.Drawing.Size(100, 40);
+            this.BtnCreateOffer.TabIndex = 7;
+            this.BtnCreateOffer.Text = "Create offer";
+            this.BtnCreateOffer.UseVisualStyleBackColor = true;
+            this.BtnCreateOffer.Click += new System.EventHandler(this.BtnCreateOffer_Click);
+            // 
+            // BtnTerminateTheContract
+            // 
+            this.BtnTerminateTheContract.Location = new System.Drawing.Point(645, 250);
+            this.BtnTerminateTheContract.Name = "BtnTerminateTheContract";
+            this.BtnTerminateTheContract.Size = new System.Drawing.Size(100, 40);
+            this.BtnTerminateTheContract.TabIndex = 36;
+            this.BtnTerminateTheContract.Text = "Terminate the contract";
+            this.BtnTerminateTheContract.UseVisualStyleBackColor = true;
+            this.BtnTerminateTheContract.Visible = false;
+            // 
+            // BtnSeeMyPlayers
+            // 
+            this.BtnSeeMyPlayers.Location = new System.Drawing.Point(525, 200);
+            this.BtnSeeMyPlayers.Name = "BtnSeeMyPlayers";
+            this.BtnSeeMyPlayers.Size = new System.Drawing.Size(100, 40);
+            this.BtnSeeMyPlayers.TabIndex = 30;
+            this.BtnSeeMyPlayers.Text = "See my players";
+            this.BtnSeeMyPlayers.UseVisualStyleBackColor = true;
+            this.BtnSeeMyPlayers.Click += new System.EventHandler(this.BtnSeeMyPlayers_Click);
+            // 
+            // BtnSeeFreePlayers
+            // 
+            this.BtnSeeFreePlayers.Location = new System.Drawing.Point(400, 200);
+            this.BtnSeeFreePlayers.Name = "BtnSeeFreePlayers";
+            this.BtnSeeFreePlayers.Size = new System.Drawing.Size(100, 40);
+            this.BtnSeeFreePlayers.TabIndex = 29;
+            this.BtnSeeFreePlayers.Text = "See free players";
+            this.BtnSeeFreePlayers.UseVisualStyleBackColor = true;
+            this.BtnSeeFreePlayers.Click += new System.EventHandler(this.BtnSeeFreePlayers_Click);
+            // 
             // BtnSeeMyOffers
             // 
             this.BtnSeeMyOffers.Location = new System.Drawing.Point(275, 200);
@@ -282,6 +260,28 @@ namespace FootballTransfer.ViewPage
             this.BtnSeeMyOffers.Text = "See my offers";
             this.BtnSeeMyOffers.UseVisualStyleBackColor = true;
             this.BtnSeeMyOffers.Click += new System.EventHandler(this.BtnSeeMyOffers_Click);
+            // 
+            // BtnCloseUpdate
+            // 
+            this.BtnCloseUpdate.Location = new System.Drawing.Point(275, 66);
+            this.BtnCloseUpdate.Name = "BtnCloseUpdate";
+            this.BtnCloseUpdate.Size = new System.Drawing.Size(100, 30);
+            this.BtnCloseUpdate.TabIndex = 34;
+            this.BtnCloseUpdate.Text = "Close";
+            this.BtnCloseUpdate.UseVisualStyleBackColor = true;
+            this.BtnCloseUpdate.Visible = false;
+            this.BtnCloseUpdate.Click += new System.EventHandler(this.BtnCloseUpdate_Click);
+            // 
+            // BtnSaveUpdatedManager
+            // 
+            this.BtnSaveUpdatedManager.Location = new System.Drawing.Point(275, 30);
+            this.BtnSaveUpdatedManager.Name = "BtnSaveUpdatedManager";
+            this.BtnSaveUpdatedManager.Size = new System.Drawing.Size(100, 30);
+            this.BtnSaveUpdatedManager.TabIndex = 33;
+            this.BtnSaveUpdatedManager.Text = "Save";
+            this.BtnSaveUpdatedManager.UseVisualStyleBackColor = true;
+            this.BtnSaveUpdatedManager.Visible = false;
+            this.BtnSaveUpdatedManager.Click += new System.EventHandler(this.BtnSaveUpdatedManager_Click);
             // 
             // ManagerView
             // 
@@ -319,26 +319,26 @@ namespace FootballTransfer.ViewPage
 
         #endregion
         private System.Windows.Forms.ListView listViewFreePlayers;
-        private System.Windows.Forms.Button BtnCreateOffer;
         private System.Windows.Forms.TextBox txtManagerCountry;
         private System.Windows.Forms.TextBox txtManagerSurname;
         private System.Windows.Forms.TextBox txtManagerName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button BtnUpdateManager;
-        private System.Windows.Forms.Button BtnDeleteManager;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtManagerRepresent;
-        private System.Windows.Forms.Button BtnSeeFreePlayers;
-        private System.Windows.Forms.Button BtnSeeMyPlayers;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtManagerAddress;
-        private System.Windows.Forms.Button BtnSaveUpdatedManager;
-        private System.Windows.Forms.Button BtnCloseUpdate;
         private System.Windows.Forms.Label LblChoose;
-        private System.Windows.Forms.Button BtnTerminateTheContract;
         private System.Windows.Forms.ListView listViewMyPlayers;
         private System.Windows.Forms.ListView listViewMyOffers;
+        private System.Windows.Forms.Button BtnDeleteManager;
+        private System.Windows.Forms.Button BtnUpdateManager;
+        private System.Windows.Forms.Button BtnCreateOffer;
+        private System.Windows.Forms.Button BtnTerminateTheContract;
+        private System.Windows.Forms.Button BtnSeeMyPlayers;
+        private System.Windows.Forms.Button BtnSeeFreePlayers;
         private System.Windows.Forms.Button BtnSeeMyOffers;
+        private System.Windows.Forms.Button BtnCloseUpdate;
+        private System.Windows.Forms.Button BtnSaveUpdatedManager;
     }
 }

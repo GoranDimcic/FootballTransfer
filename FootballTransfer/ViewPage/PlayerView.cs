@@ -21,22 +21,22 @@ namespace FootballTransfer.ViewPage
         {
             loggedPlayer = player;
             InitializeComponent();
-            PlayerPage(player);
+            PlayerPage();
         }
 
-        public void PlayerPage(Player player)
+        public void PlayerPage()
         {
-            FillPlayerDescription(player);
+            FillPlayerDescription();
             FillManagerOfferList();
             FillClubOfferList();
         }
 
-        public void FillPlayerDescription(Player player)
+        public void FillPlayerDescription()
         {
-            txtPlayerName.Text = player.Name;
-            txtPlayerAddress.Text = player.Address;
-            txtPlayerCountry.Text = player.Country;
-            txtPlayerPosition.Text = player.Position;
+            txtPlayerName.Text = loggedPlayer.Name;
+            txtPlayerAddress.Text = loggedPlayer.Address;
+            txtPlayerCountry.Text = loggedPlayer.Country;
+            txtPlayerPosition.Text = loggedPlayer.Position;
         }
 
         #region Fill ListView
@@ -85,12 +85,9 @@ namespace FootballTransfer.ViewPage
         {
             clubOffers = DataProvider.GetClubOffers();
 
-            Player player = new Player();
-            player = DataProvider.GetPlayer(loggedPlayer);
-
             foreach (ClubOffer offer in clubOffers)
             {
-                if (offer.PlayerEmail == player.Email)
+                if (offer.PlayerEmail == loggedPlayer.Email)
                 {
                     String[] row = { offer.ClubEmail, offer.ClubName, offer.League, offer.Salary, offer.Duraction };
                     ListViewItem item = new ListViewItem(row);
@@ -110,18 +107,21 @@ namespace FootballTransfer.ViewPage
         {
             OnSaveClick();
             DataProvider.UpdatePlayer(loggedPlayer);
+
             string PlayerEmail = loggedPlayer.Email;
             string PlayerName = loggedPlayer.Name;
 
             for (int i = 0; i < listViewManagerOffer.Items.Count; i++)
             {
-                string ManagerEmail = listViewManagerOffer.Items[i].SubItems[0].Text;
+                string ManagerEmail = listViewManagerOffer.Items[i]
+                                                          .SubItems[0].Text;
                 DataProvider.UpdatePlayerNameInManagerOffer(PlayerEmail, PlayerName, ManagerEmail);
             }
 
             for (int i = 0; i < listViewClubOffer.Items.Count; i++)
             {
-                string ClubEmail = listViewClubOffer.Items[i].SubItems[0].Text;
+                string ClubEmail = listViewClubOffer.Items[i]
+                                                    .SubItems[0].Text;
                 DataProvider.UpdatePlayerNameInClubOffer(PlayerEmail, PlayerName, ClubEmail);
             }
         }
@@ -137,13 +137,15 @@ namespace FootballTransfer.ViewPage
 
             for (int i = 0; i < listViewManagerOffer.Items.Count; i++)
             {
-                string ManagerEmail = listViewManagerOffer.Items[i].SubItems[0].Text;
+                string ManagerEmail = listViewManagerOffer.Items[i]
+                                                          .SubItems[0].Text;
                 DataProvider.DeletePlayerInManagerOffer(PlayerEmail, ManagerEmail);
             }
 
             for (int i = 0; i < listViewClubOffer.Items.Count; i++)
             {
-                string ClubEmail = listViewClubOffer.Items[i].SubItems[0].Text;
+                string ClubEmail = listViewClubOffer.Items[i]
+                                                    .SubItems[0].Text;
                 DataProvider.DeletePlayerInClubOffer(PlayerEmail, ClubEmail);
             }
 

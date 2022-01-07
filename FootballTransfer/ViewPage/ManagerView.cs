@@ -22,22 +22,22 @@ namespace FootballTransfer.ViewPage
         {
             loggedManager = manager;
             InitializeComponent();
-            ManagerPage(manager);
+            ManagerPage();
         }
 
-        public void ManagerPage(Manager manager)
+        public void ManagerPage()
         {
-            FillManagerDescription(manager);
+            FillManagerDescription();
             FillListWithFreePlayers();
             FillListWithMyPlayers();
             FillListWithMyOffers();
         }
 
-        public void FillManagerDescription(Manager manager)
+        public void FillManagerDescription()
         {
-            txtManagerName.Text = manager.Name;
-            txtManagerAddress.Text = manager.Address;
-            txtManagerCountry.Text = manager.Country;
+            txtManagerName.Text = loggedManager.Name;
+            txtManagerAddress.Text = loggedManager.Address;
+            txtManagerCountry.Text = loggedManager.Country;
         }
 
         #region Fill ListView
@@ -132,7 +132,8 @@ namespace FootballTransfer.ViewPage
 
             for (int i = 0; i < listViewMyOffers.Items.Count; i++)
             {
-                string PlayerEmail = listViewMyOffers.Items[i].SubItems[0].Text;
+                string PlayerEmail = listViewMyOffers.Items[i]
+                                                     .SubItems[0].Text;
                 DataProvider.UpdateManagerNameInManagerOffer(ManagerEmail, ManagerName, PlayerEmail);
             }
         }
@@ -148,7 +149,8 @@ namespace FootballTransfer.ViewPage
 
             for (int i = 0; i < listViewFreePlayers.Items.Count; i++)
             {
-                string PlayerEmail = listViewFreePlayers.Items[i].SubItems[0].Text;
+                string PlayerEmail = listViewFreePlayers.Items[i]
+                                                        .SubItems[0].Text;
                 DataProvider.DeleteManagerInManagerOffer(ManagerEmail, PlayerEmail);
             }
 
@@ -160,13 +162,15 @@ namespace FootballTransfer.ViewPage
         {
             if (listViewFreePlayers.SelectedItems.Count > 0)
             {
-                string EmailPlayer = this.listViewFreePlayers.SelectedItems[0].SubItems[0].Text;
-                string NamePlayer = this.listViewFreePlayers.SelectedItems[0].SubItems[1].Text;
+                string EmailPlayer = listViewFreePlayers.SelectedItems[0]
+                                                             .SubItems[0].Text;
+                string NamePlayer = listViewFreePlayers.SelectedItems[0]
+                                                            .SubItems[1].Text;
 
                 OfferManager form = new OfferManager(EmailPlayer, NamePlayer, loggedManager);
                 form.ShowDialog();
 
-                this.listViewFreePlayers.SelectedItems[0].BackColor = Color.Yellow;
+                listViewFreePlayers.SelectedItems[0].BackColor = Color.Yellow;
             }
             else
             {

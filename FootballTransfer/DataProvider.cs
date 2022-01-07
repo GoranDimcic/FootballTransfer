@@ -128,7 +128,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet playerData = session.Execute("insert into \"Player\" (\"email\", address, country, name, pasword, position)  values ('" + player.Email + "', '" + player.Address + "', '" + player.Country + "', '" + player.Name + "', '" + player.Password + "', '" + player.Position + "')");
+            _ = session.Execute("insert into \"Player\" (\"email\", address, country, name, pasword, position)  values ('" + player.Email + "', '" + player.Address + "', '" + player.Country + "', '" + player.Name + "', '" + player.Password + "', '" + player.Position + "')");
         }
 
         public static void UpdatePlayer(Player player)
@@ -138,7 +138,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            var playerUpdateData = session.Execute("update \"Player\" set name='" + player.Name + "' , country='" + player.Country + "' , position='" + player.Position + "' , address='" + player.Address + "'where \"email\"='" + player.Email + "'");
+            _ = session.Execute("update \"Player\" set name='" + player.Name + "' , country='" + player.Country + "' , position='" + player.Position + "' , address='" + player.Address + "'where \"email\"='" + player.Email + "'");
         }
 
         public static void DeletePlayer(Player player)
@@ -148,7 +148,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet playerData = session.Execute("delete from \"Player\" where \"email\" = '" + player.Email + "'");
+            _ = session.Execute("delete from \"Player\" where \"email\" = '" + player.Email + "'");
         }
 
         #endregion
@@ -221,7 +221,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet playerData = session.Execute("insert into \"Manager\" (\"email\", address, country, name, pasword)  values ('" + manager.Email + "', '" + manager.Address + "','" + manager.Country + "', '" + manager.Name + "', '" + manager.Password + "')");
+            _ = session.Execute("insert into \"Manager\" (\"email\", address, country, name, pasword)  values ('" + manager.Email + "', '" + manager.Address + "','" + manager.Country + "', '" + manager.Name + "', '" + manager.Password + "')");
         }
 
         public static void UpdateManager(Manager manager)
@@ -231,7 +231,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet managerUpdateData = session.Execute("update \"Manager\" set name='" + manager.Name + "' , country='" + manager.Country + "' , address='" + manager.Address + "'where \"email\"='" + manager.Email + "'");
+            _ = session.Execute("update \"Manager\" set name='" + manager.Name + "' , country='" + manager.Country + "' , address='" + manager.Address + "'where \"email\"='" + manager.Email + "'");
         }
 
         public static void DeleteManager(Manager manager)
@@ -241,7 +241,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet managerData = session.Execute("delete from \"Manager\" where \"email\" = '" + manager.Email + "'");
+            _ = session.Execute("delete from \"Manager\" where \"email\" = '" + manager.Email + "'");
         }
 
         #endregion
@@ -317,7 +317,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet playerData = session.Execute("insert into \"Club\" (\"email\", capacity, foundationdate, leaguename, name, pasword, stadionname, town)  values ('" + club.Email + "', '" + club.StadionCapacity + "', '" + club.FoundationDate + "', '" + club.LeagueName + "', '" + club.Name + "', '" + club.Password + "', '" + club.StadionName + "', '" + club.Town + "')");
+            _ = session.Execute("insert into \"Club\" (\"email\", capacity, foundationdate, leaguename, name, pasword, stadionname, town)  values ('" + club.Email + "', '" + club.StadionCapacity + "', '" + club.FoundationDate + "', '" + club.LeagueName + "', '" + club.Name + "', '" + club.Password + "', '" + club.StadionName + "', '" + club.Town + "')");
         }
 
         public static void UpdateClub(Club club)
@@ -327,7 +327,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet clubUpdateData = session.Execute("update \"Club\" set name='" + club.Name + "' , stadionname='" + club.StadionName + "' , leaguename='" + club.LeagueName + "' , capacity='" + club.StadionCapacity + "' , town='" + club.Town + "'where \"email\"='" + club.Email + "'");
+            _ = session.Execute("update \"Club\" set name='" + club.Name + "' , stadionname='" + club.StadionName + "' , leaguename='" + club.LeagueName + "' , capacity='" + club.StadionCapacity + "' , town='" + club.Town + "'where \"email\"='" + club.Email + "'");
         }
 
         public static void DeleteClub(Club club)
@@ -337,7 +337,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet clubData = session.Execute("delete from \"Club\" where \"email\" = '" + club.Email + "'");
+            _ = session.Execute("delete from \"Club\" where \"email\" = '" + club.Email + "'");
         }
 
         #endregion
@@ -377,7 +377,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet playerData = session.Execute("insert into \"ManagerOffer\" (\"manageremail\", \"playeremail\", duraction, managername, offer, playername)  values ('" + offer.ManagerEmail + "', '" + offer.PlayerEmail + "', '" + offer.Duraction + "', '" + offer.ManagerName + "', '" + offer.Offer + "', '" + offer.PlayerName + "')");
+            _ = session.Execute("insert into \"ManagerOffer\" (\"manageremail\", \"playeremail\", duraction, managername, offer, playername)  values ('" + offer.ManagerEmail + "', '" + offer.PlayerEmail + "', '" + offer.Duraction + "', '" + offer.ManagerName + "', '" + offer.Offer + "', '" + offer.PlayerName + "')");
         }
 
         public static void UpdatePlayerNameInManagerOffer(string PlayerEmail, string PlayerName, string ManagerEmail)
@@ -387,7 +387,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            var playerUpdateData = session.Execute("update \"ManagerOffer\" set playername='" + PlayerName + "'where \"playeremail\"='" + PlayerEmail + "' and \"manageremail\"='" + ManagerEmail + "' ");
+            _ = session.Execute("update \"ManagerOffer\" set playername='" + PlayerName + "'where \"playeremail\"='" + PlayerEmail + "' and \"manageremail\"='" + ManagerEmail + "' ");
         }
 
         public static void UpdateManagerNameInManagerOffer(string ManagerEmail, string ManagerName, string PlayerEmail)
@@ -397,7 +397,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            var playerUpdateData = session.Execute("update \"ManagerOffer\" set managername='" + ManagerName + "'where \"playeremail\"='" + PlayerEmail + "' and \"manageremail\"='" + ManagerEmail + "' ");
+            _ = session.Execute("update \"ManagerOffer\" set managername='" + ManagerName + "'where \"playeremail\"='" + PlayerEmail + "' and \"manageremail\"='" + ManagerEmail + "' ");
         }
 
         public static void DeletePlayerInManagerOffer(string PlayerEmail, string ManagerEmail)
@@ -407,7 +407,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet playerData = session.Execute("delete from \"ManagerOffer\" where \"playeremail\" = '" + PlayerEmail + "' and \"manageremail\"='" + ManagerEmail + "' ");
+            _ = session.Execute("delete from \"ManagerOffer\" where \"playeremail\" = '" + PlayerEmail + "' and \"manageremail\"='" + ManagerEmail + "' ");
         }
 
         public static void DeleteManagerInManagerOffer(string ManagerEmail, string PlayerEmail)
@@ -417,7 +417,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet playerData = session.Execute("delete from \"ManagerOffer\" where \"manageremail\" = '" + ManagerEmail + "' and \"playeremail\"='" + PlayerEmail + "' ");
+            _ = session.Execute("delete from \"ManagerOffer\" where \"manageremail\" = '" + ManagerEmail + "' and \"playeremail\"='" + PlayerEmail + "' ");
         }
 
         #endregion
@@ -458,7 +458,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet playerData = session.Execute("insert into \"ClubOffer\" (\"playeremail\", \"clubemail\", clubname, duraction, league, playername, salary)  values ('" + offer.PlayerEmail + "', '" + offer.ClubEmail + "', '" + offer.ClubName + "', '" + offer.Duraction + "', '" + offer.League + "', '" + offer.PlayerName + "', '" + offer.Salary + "')");
+            _ = session.Execute("insert into \"ClubOffer\" (\"playeremail\", \"clubemail\", clubname, duraction, league, playername, salary)  values ('" + offer.PlayerEmail + "', '" + offer.ClubEmail + "', '" + offer.ClubName + "', '" + offer.Duraction + "', '" + offer.League + "', '" + offer.PlayerName + "', '" + offer.Salary + "')");
         }
 
         public static void UpdatePlayerNameInClubOffer(string PlayerEmail, string PlayerName, string ClubEmail)
@@ -468,7 +468,17 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            var playerUpdateData = session.Execute("update \"ClubOffer\" set playername='" + PlayerName + "'where \"playeremail\"='" + PlayerEmail + "' and \"clubemail\"='" + ClubEmail + "' ");
+            _ = session.Execute("update \"ClubOffer\" set playername='" + PlayerName + "'where \"playeremail\"='" + PlayerEmail + "' and \"clubemail\"='" + ClubEmail + "' ");
+        }
+
+        public static void UpdateClubNameInClubOffer(string ClubEmail, string ClubName, string ClubLeague, string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            _ = session.Execute("update \"ClubOffer\" set clubname='" + ClubName + "' , league='" + ClubLeague + "'where \"clubemail\"='" + ClubEmail + "' and \"playeremail\"='" + PlayerEmail + "' ");
         }
 
         public static void DeletePlayerInClubOffer(string PlayerEmail, string ClubEmail)
@@ -478,7 +488,17 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            RowSet playerData = session.Execute("delete from \"ClubOffer\" where \"playeremail\" = '" + PlayerEmail + "' and \"clubemail\"='" + ClubEmail + "' ");
+            _ = session.Execute("delete from \"ClubOffer\" where \"playeremail\" = '" + PlayerEmail + "' and \"clubemail\"='" + ClubEmail + "' ");
+        }
+
+        public static void DeleteClubInClubOffer(string ClubEmail, string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            _ = session.Execute("delete from \"ClubOffer\" where \"clubemail\" = '" + ClubEmail + "' and \"playeremail\"='" + PlayerEmail + "' ");
         }
 
         #endregion

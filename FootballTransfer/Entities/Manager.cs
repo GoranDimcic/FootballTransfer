@@ -23,5 +23,7 @@ namespace FootballTransfer.Entities
         public List<Player> Players { get; set; }
 
         public List<Player> FreePlayers { get; set; }
+
+        public List<ManagerOffer> ManagerOffers { get; set; }
     }
 }
