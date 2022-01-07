@@ -39,6 +39,8 @@ namespace FootballTransfer.ViewPage
             txtPlayerPosition.Text = player.Position;
         }
 
+        #region Fill ListView
+
         public void FillManagerOfferList()
         {
             listViewManagerOffer.View = View.Details;
@@ -55,12 +57,9 @@ namespace FootballTransfer.ViewPage
         {
             managerOffers = DataProvider.GetManagerOffers();
 
-            Player player = new Player();
-            player = DataProvider.GetPlayer(loggedPlayer);
-
             foreach (ManagerOffer offer in managerOffers)
             {
-                if (offer.PlayerEmail == player.Email)
+                if (offer.PlayerEmail == loggedPlayer.Email)
                 {
                     String[] row = { offer.ManagerEmail, offer.ManagerName, offer.Offer, offer.Duraction };
                     ListViewItem item = new ListViewItem(row);
@@ -100,6 +99,8 @@ namespace FootballTransfer.ViewPage
             }
         }
 
+        #endregion
+
         private void BtnUpdatePlayer_Click(object sender, EventArgs e)
         {
             OnUpdateClick();
@@ -109,7 +110,6 @@ namespace FootballTransfer.ViewPage
         {
             OnSaveClick();
             DataProvider.UpdatePlayer(loggedPlayer);
-
             string PlayerEmail = loggedPlayer.Email;
             string PlayerName = loggedPlayer.Name;
 

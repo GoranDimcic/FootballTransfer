@@ -16,6 +16,7 @@ namespace FootballTransfer.ViewPage
     {
         public Manager loggedManager;
         public List<Player> players;
+        public List<ManagerOffer> managerOffers;
 
         public ManagerView(Manager manager)
         {
@@ -29,6 +30,7 @@ namespace FootballTransfer.ViewPage
             FillManagerDescription(manager);
             FillListWithFreePlayers();
             FillListWithMyPlayers();
+            FillListWithMyOffers();
         }
 
         public void FillManagerDescription(Manager manager)
@@ -37,6 +39,8 @@ namespace FootballTransfer.ViewPage
             txtManagerAddress.Text = manager.Address;
             txtManagerCountry.Text = manager.Country;
         }
+
+        #region Fill ListView
 
         public void FillListWithMyPlayers()
         {
@@ -56,9 +60,9 @@ namespace FootballTransfer.ViewPage
             listViewFreePlayers.FullRowSelect = true;
             listViewFreePlayers.Columns.Add("Email", 120);
             listViewFreePlayers.Columns.Add("Name", 120);
-            listViewFreePlayers.Columns.Add("Age", 120);
+            listViewFreePlayers.Columns.Add("Address", 120);
             listViewFreePlayers.Columns.Add("Country", 120);
-            listViewFreePlayers.Columns.Add("Pos", 120);
+            listViewFreePlayers.Columns.Add("Position", 120);
 
             FillFreePlayers();
         }
@@ -78,6 +82,41 @@ namespace FootballTransfer.ViewPage
             }
         }
 
+        public void FillListWithMyOffers()
+        {
+            listViewMyOffers.View = View.Details;
+            listViewMyOffers.FullRowSelect = true;
+            listViewMyOffers.Columns.Add("Email", 150);
+            listViewMyOffers.Columns.Add("Name", 150);
+            listViewMyOffers.Columns.Add("Offer", 150);
+            listViewMyOffers.Columns.Add("Duraction", 150);
+
+            FillMyOffers();
+        }
+
+        public void FillMyOffers()
+        {
+            managerOffers = DataProvider.GetManagerOffers();
+
+            foreach (ManagerOffer offer in managerOffers)
+            {
+                if (offer.ManagerEmail == loggedManager.Email)
+                {
+                    String[] row = { offer.PlayerEmail, offer.PlayerName, offer.Offer, offer.Duraction };
+                    ListViewItem item = new ListViewItem(row);
+                    listViewMyOffers.Items.Add(item);
+                }
+            }
+        }
+
+        public void RefreshListOffers()
+        {
+            listViewMyOffers.Clear();
+            FillListWithMyOffers();
+        }
+
+        #endregion
+
         private void BtnUpdateManager_Click(object sender, EventArgs e)
         {
             OnUpdateClick();
@@ -87,12 +126,13 @@ namespace FootballTransfer.ViewPage
         {
             OnSaveClick();
             DataProvider.UpdateManager(loggedManager);
+
             string ManagerEmail = loggedManager.Email;
             string ManagerName = loggedManager.Name;
 
-            for (int i = 0; i < listViewFreePlayers.Items.Count; i++)
+            for (int i = 0; i < listViewMyOffers.Items.Count; i++)
             {
-                string PlayerEmail = listViewFreePlayers.Items[i].SubItems[0].Text;
+                string PlayerEmail = listViewMyOffers.Items[i].SubItems[0].Text;
                 DataProvider.UpdateManagerNameInManagerOffer(ManagerEmail, ManagerName, PlayerEmail);
             }
         }
@@ -132,6 +172,8 @@ namespace FootballTransfer.ViewPage
             {
                 MessageBox.Show("You must select player!");
             }
+
+            RefreshListOffers();
         }
 
         #region Button(Update, Save, Close)
@@ -196,18 +238,32 @@ namespace FootballTransfer.ViewPage
 
         private void BtnSeeFreePlayers_Click(object sender, EventArgs e)
         {
-            LblChoose.Visible = false;
+            LblChoose.Visible = true;
             BtnTerminateTheContract.Visible = false;
+            BtnCreateOffer.Visible = true;
             listViewFreePlayers.Visible = true;
             listViewMyPlayers.Visible = false;
+            listViewMyOffers.Visible = false;
         }
 
         private void BtnSeeMyPlayers_Click(object sender, EventArgs e)
         {
             LblChoose.Visible = true;
             BtnTerminateTheContract.Visible = true;
+            BtnCreateOffer.Visible = false;
             listViewFreePlayers.Visible = false;
             listViewMyPlayers.Visible = true;
+            listViewMyOffers.Visible = false;
+        }
+
+        private void BtnSeeMyOffers_Click(object sender, EventArgs e)
+        {
+            LblChoose.Visible = false;
+            BtnTerminateTheContract.Visible = false;
+            BtnCreateOffer.Visible = false;
+            listViewFreePlayers.Visible = false;
+            listViewMyPlayers.Visible = false;
+            listViewMyOffers.Visible = true;
         }
     }
 }

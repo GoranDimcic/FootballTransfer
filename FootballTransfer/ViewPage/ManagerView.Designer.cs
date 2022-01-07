@@ -49,6 +49,8 @@ namespace FootballTransfer.ViewPage
             this.LblChoose = new System.Windows.Forms.Label();
             this.BtnTerminateTheContract = new System.Windows.Forms.Button();
             this.listViewMyPlayers = new System.Windows.Forms.ListView();
+            this.listViewMyOffers = new System.Windows.Forms.ListView();
+            this.BtnSeeMyOffers = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewFreePlayers
@@ -234,7 +236,6 @@ namespace FootballTransfer.ViewPage
             this.LblChoose.Size = new System.Drawing.Size(181, 36);
             this.LblChoose.TabIndex = 35;
             this.LblChoose.Text = "Choose a player:";
-            this.LblChoose.Visible = false;
             // 
             // BtnTerminateTheContract
             // 
@@ -259,11 +260,36 @@ namespace FootballTransfer.ViewPage
             this.listViewMyPlayers.UseCompatibleStateImageBehavior = false;
             this.listViewMyPlayers.Visible = false;
             // 
+            // listViewMyOffers
+            // 
+            this.listViewMyOffers.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.listViewMyOffers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewMyOffers.HideSelection = false;
+            this.listViewMyOffers.Location = new System.Drawing.Point(25, 250);
+            this.listViewMyOffers.Margin = new System.Windows.Forms.Padding(2);
+            this.listViewMyOffers.Name = "listViewMyOffers";
+            this.listViewMyOffers.Size = new System.Drawing.Size(600, 250);
+            this.listViewMyOffers.TabIndex = 38;
+            this.listViewMyOffers.UseCompatibleStateImageBehavior = false;
+            this.listViewMyOffers.Visible = false;
+            // 
+            // BtnSeeMyOffers
+            // 
+            this.BtnSeeMyOffers.Location = new System.Drawing.Point(275, 200);
+            this.BtnSeeMyOffers.Name = "BtnSeeMyOffers";
+            this.BtnSeeMyOffers.Size = new System.Drawing.Size(100, 40);
+            this.BtnSeeMyOffers.TabIndex = 39;
+            this.BtnSeeMyOffers.Text = "See my offers";
+            this.BtnSeeMyOffers.UseVisualStyleBackColor = true;
+            this.BtnSeeMyOffers.Click += new System.EventHandler(this.BtnSeeMyOffers_Click);
+            // 
             // ManagerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 511);
+            this.Controls.Add(this.BtnSeeMyOffers);
+            this.Controls.Add(this.listViewMyOffers);
             this.Controls.Add(this.listViewMyPlayers);
             this.Controls.Add(this.BtnTerminateTheContract);
             this.Controls.Add(this.LblChoose);
@@ -312,5 +338,7 @@ namespace FootballTransfer.ViewPage
         private System.Windows.Forms.Label LblChoose;
         private System.Windows.Forms.Button BtnTerminateTheContract;
         private System.Windows.Forms.ListView listViewMyPlayers;
+        private System.Windows.Forms.ListView listViewMyOffers;
+        private System.Windows.Forms.Button BtnSeeMyOffers;
     }
 }
