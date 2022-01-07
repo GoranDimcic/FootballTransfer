@@ -14,15 +14,11 @@ namespace FootballTransfer.Entities
 
         public string Password { get; set; }
 
-        public string Town { get; set; }
-
         public string LeagueName { get; set; }
 
         public string StadionName { get; set; }
 
         public string StadionCapacity { get; set; }
-
-        public DateTime FoundationDate { get; set; }
 
         public List<Player> Players { get; set; }
 

@@ -292,9 +292,7 @@ namespace FootballTransfer
                     Name = clubData["name"].ToString(),
                     StadionName = clubData["stadionname"].ToString(),
                     LeagueName = clubData["leaguename"].ToString(),
-                    StadionCapacity = clubData["capacity"].ToString(),
-                    Town = clubData["town"].ToString(),
-                    FoundationDate = DateTime.Parse(clubData["foundationdate"].ToString())
+                    StadionCapacity = clubData["capacity"].ToString()
                 };
 
                 clubReturn = club;
@@ -317,7 +315,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            _ = session.Execute("insert into \"Club\" (\"email\", capacity, foundationdate, leaguename, name, pasword, stadionname, town)  values ('" + club.Email + "', '" + club.StadionCapacity + "', '" + club.FoundationDate + "', '" + club.LeagueName + "', '" + club.Name + "', '" + club.Password + "', '" + club.StadionName + "', '" + club.Town + "')");
+            _ = session.Execute("insert into \"Club\" (\"email\", capacity, leaguename, name, pasword, stadionname)  values ('" + club.Email + "', '" + club.StadionCapacity + "', '" + club.LeagueName + "', '" + club.Name + "', '" + club.Password + "', '" + club.StadionName + "')");
         }
 
         public static void UpdateClub(Club club)
@@ -327,7 +325,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            _ = session.Execute("update \"Club\" set name='" + club.Name + "' , stadionname='" + club.StadionName + "' , leaguename='" + club.LeagueName + "' , capacity='" + club.StadionCapacity + "' , town='" + club.Town + "'where \"email\"='" + club.Email + "'");
+            _ = session.Execute("update \"Club\" set name='" + club.Name + "' , stadionname='" + club.StadionName + "' , leaguename='" + club.LeagueName + "' , capacity='" + club.StadionCapacity + "'where \"email\"='" + club.Email + "'");
         }
 
         public static void DeleteClub(Club club)

@@ -34,12 +34,10 @@ namespace FootballTransfer.ViewPage
 
         public void FillClubDescription()
         {
-            txtClubTown.Text = loggedClub.Town;
             txtClubName.Text = loggedClub.Name;
             txtClubStadionName.Text = loggedClub.StadionName;
             txtClubCapacity.Text = loggedClub.StadionCapacity.ToString();
             txtClubLeagueName.Text = loggedClub.LeagueName;
-            txtClubFoundationDate.Text = loggedClub.FoundationDate.ToShortDateString();
         }
 
         #region Fill ListView
@@ -186,9 +184,6 @@ namespace FootballTransfer.ViewPage
 
         public void OnUpdateClick()
         {
-            txtClubTown.ReadOnly = false;
-            txtClubTown.BorderStyle = BorderStyle.Fixed3D;
-
             txtClubName.ReadOnly = false;
             txtClubName.BorderStyle = BorderStyle.Fixed3D;
 
@@ -210,15 +205,11 @@ namespace FootballTransfer.ViewPage
 
         public void OnSaveClick()
         {
-            loggedClub.Town = txtClubTown.Text;
             loggedClub.Name = txtClubName.Text;
             loggedClub.StadionName = txtClubStadionName.Text;
             loggedClub.StadionCapacity = txtClubCapacity.Text;
             loggedClub.LeagueName = comboBoxUpdateClubLeagueName.Text;
             txtClubLeagueName.Text = comboBoxUpdateClubLeagueName.Text;
-
-            txtClubTown.ReadOnly = true;
-            txtClubTown.BorderStyle = BorderStyle.None;
 
             txtClubName.ReadOnly = true;
             txtClubName.BorderStyle = BorderStyle.None;
@@ -239,14 +230,10 @@ namespace FootballTransfer.ViewPage
 
         public void OnCloseClick()
         {
-            txtClubTown.Text = loggedClub.Town;
             txtClubName.Text = loggedClub.Name;
             txtClubStadionName.Text = loggedClub.StadionName;
             txtClubCapacity.Text = loggedClub.StadionCapacity;
             txtClubLeagueName.Text = loggedClub.LeagueName;
-
-            txtClubTown.ReadOnly = true;
-            txtClubTown.BorderStyle = BorderStyle.None;
 
             txtClubName.ReadOnly = true;
             txtClubName.BorderStyle = BorderStyle.None;

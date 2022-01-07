@@ -31,16 +31,12 @@ namespace FootballTransfer.ViewPage
         {
             this.txtClubStadionName = new System.Windows.Forms.TextBox();
             this.txtClubName = new System.Windows.Forms.TextBox();
-            this.txtClubTown = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.BtnUpdateClub = new System.Windows.Forms.Button();
             this.txtClubCapacity = new System.Windows.Forms.TextBox();
-            this.txtClubFoundationDate = new System.Windows.Forms.TextBox();
             this.txtClubLeagueName = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.BtnDeleteClub = new System.Windows.Forms.Button();
             this.listViewFreePlayers = new System.Windows.Forms.ListView();
@@ -61,7 +57,7 @@ namespace FootballTransfer.ViewPage
             // 
             this.txtClubStadionName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClubStadionName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClubStadionName.Location = new System.Drawing.Point(160, 105);
+            this.txtClubStadionName.Location = new System.Drawing.Point(160, 70);
             this.txtClubStadionName.Name = "txtClubStadionName";
             this.txtClubStadionName.ReadOnly = true;
             this.txtClubStadionName.Size = new System.Drawing.Size(123, 19);
@@ -71,27 +67,17 @@ namespace FootballTransfer.ViewPage
             // 
             this.txtClubName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClubName.Location = new System.Drawing.Point(160, 70);
+            this.txtClubName.Location = new System.Drawing.Point(160, 35);
             this.txtClubName.Name = "txtClubName";
             this.txtClubName.ReadOnly = true;
             this.txtClubName.Size = new System.Drawing.Size(123, 19);
             this.txtClubName.TabIndex = 23;
             // 
-            // txtClubTown
-            // 
-            this.txtClubTown.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtClubTown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClubTown.Location = new System.Drawing.Point(160, 35);
-            this.txtClubTown.Name = "txtClubTown";
-            this.txtClubTown.ReadOnly = true;
-            this.txtClubTown.Size = new System.Drawing.Size(123, 19);
-            this.txtClubTown.TabIndex = 22;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 140);
+            this.label6.Location = new System.Drawing.Point(25, 105);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 20);
             this.label6.TabIndex = 21;
@@ -101,7 +87,7 @@ namespace FootballTransfer.ViewPage
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 105);
+            this.label5.Location = new System.Drawing.Point(25, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 20);
             this.label5.TabIndex = 20;
@@ -111,21 +97,11 @@ namespace FootballTransfer.ViewPage
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 70);
+            this.label4.Location = new System.Drawing.Point(25, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 20);
             this.label4.TabIndex = 19;
             this.label4.Text = "Name";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 20);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Town";
             // 
             // BtnUpdateClub
             // 
@@ -141,48 +117,28 @@ namespace FootballTransfer.ViewPage
             // 
             this.txtClubCapacity.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClubCapacity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClubCapacity.Location = new System.Drawing.Point(160, 140);
+            this.txtClubCapacity.Location = new System.Drawing.Point(160, 105);
             this.txtClubCapacity.Name = "txtClubCapacity";
             this.txtClubCapacity.ReadOnly = true;
             this.txtClubCapacity.Size = new System.Drawing.Size(123, 19);
             this.txtClubCapacity.TabIndex = 25;
             this.txtClubCapacity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtClubCapacity_KeyPress);
             // 
-            // txtClubFoundationDate
-            // 
-            this.txtClubFoundationDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtClubFoundationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClubFoundationDate.Location = new System.Drawing.Point(160, 210);
-            this.txtClubFoundationDate.Name = "txtClubFoundationDate";
-            this.txtClubFoundationDate.ReadOnly = true;
-            this.txtClubFoundationDate.Size = new System.Drawing.Size(123, 19);
-            this.txtClubFoundationDate.TabIndex = 33;
-            // 
             // txtClubLeagueName
             // 
             this.txtClubLeagueName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClubLeagueName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClubLeagueName.Location = new System.Drawing.Point(160, 166);
+            this.txtClubLeagueName.Location = new System.Drawing.Point(160, 140);
             this.txtClubLeagueName.Name = "txtClubLeagueName";
             this.txtClubLeagueName.ReadOnly = true;
             this.txtClubLeagueName.Size = new System.Drawing.Size(123, 19);
             this.txtClubLeagueName.TabIndex = 30;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(25, 210);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 20);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Foundation date";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(25, 175);
+            this.label10.Location = new System.Drawing.Point(25, 140);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(107, 20);
             this.label10.TabIndex = 26;
@@ -203,7 +159,7 @@ namespace FootballTransfer.ViewPage
             this.listViewFreePlayers.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.listViewFreePlayers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewFreePlayers.HideSelection = false;
-            this.listViewFreePlayers.Location = new System.Drawing.Point(25, 300);
+            this.listViewFreePlayers.Location = new System.Drawing.Point(25, 250);
             this.listViewFreePlayers.Margin = new System.Windows.Forms.Padding(2);
             this.listViewFreePlayers.Name = "listViewFreePlayers";
             this.listViewFreePlayers.Size = new System.Drawing.Size(600, 250);
@@ -212,7 +168,7 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnSeeMyTeam
             // 
-            this.BtnSeeMyTeam.Location = new System.Drawing.Point(525, 250);
+            this.BtnSeeMyTeam.Location = new System.Drawing.Point(525, 200);
             this.BtnSeeMyTeam.Name = "BtnSeeMyTeam";
             this.BtnSeeMyTeam.Size = new System.Drawing.Size(100, 40);
             this.BtnSeeMyTeam.TabIndex = 37;
@@ -222,7 +178,7 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnSeeFreePlayers
             // 
-            this.BtnSeeFreePlayers.Location = new System.Drawing.Point(400, 250);
+            this.BtnSeeFreePlayers.Location = new System.Drawing.Point(400, 200);
             this.BtnSeeFreePlayers.Name = "BtnSeeFreePlayers";
             this.BtnSeeFreePlayers.Size = new System.Drawing.Size(100, 40);
             this.BtnSeeFreePlayers.TabIndex = 36;
@@ -232,7 +188,7 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnCreateOffer
             // 
-            this.BtnCreateOffer.Location = new System.Drawing.Point(645, 300);
+            this.BtnCreateOffer.Location = new System.Drawing.Point(645, 250);
             this.BtnCreateOffer.Name = "BtnCreateOffer";
             this.BtnCreateOffer.Size = new System.Drawing.Size(100, 40);
             this.BtnCreateOffer.TabIndex = 38;
@@ -251,7 +207,7 @@ namespace FootballTransfer.ViewPage
             "Serie A",
             "Ligue 1",
             "Bundesliga"});
-            this.comboBoxUpdateClubLeagueName.Location = new System.Drawing.Point(160, 172);
+            this.comboBoxUpdateClubLeagueName.Location = new System.Drawing.Point(160, 137);
             this.comboBoxUpdateClubLeagueName.Name = "comboBoxUpdateClubLeagueName";
             this.comboBoxUpdateClubLeagueName.Size = new System.Drawing.Size(126, 28);
             this.comboBoxUpdateClubLeagueName.TabIndex = 39;
@@ -281,7 +237,7 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnSeeMyOffers
             // 
-            this.BtnSeeMyOffers.Location = new System.Drawing.Point(275, 250);
+            this.BtnSeeMyOffers.Location = new System.Drawing.Point(275, 200);
             this.BtnSeeMyOffers.Name = "BtnSeeMyOffers";
             this.BtnSeeMyOffers.Size = new System.Drawing.Size(100, 40);
             this.BtnSeeMyOffers.TabIndex = 42;
@@ -293,7 +249,7 @@ namespace FootballTransfer.ViewPage
             // 
             this.LblChoose.AutoSize = true;
             this.LblChoose.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblChoose.Location = new System.Drawing.Point(25, 250);
+            this.LblChoose.Location = new System.Drawing.Point(25, 200);
             this.LblChoose.Name = "LblChoose";
             this.LblChoose.Size = new System.Drawing.Size(181, 36);
             this.LblChoose.TabIndex = 43;
@@ -304,7 +260,7 @@ namespace FootballTransfer.ViewPage
             this.listViewMyOffers.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.listViewMyOffers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewMyOffers.HideSelection = false;
-            this.listViewMyOffers.Location = new System.Drawing.Point(25, 300);
+            this.listViewMyOffers.Location = new System.Drawing.Point(25, 250);
             this.listViewMyOffers.Margin = new System.Windows.Forms.Padding(2);
             this.listViewMyOffers.Name = "listViewMyOffers";
             this.listViewMyOffers.Size = new System.Drawing.Size(600, 250);
@@ -317,7 +273,7 @@ namespace FootballTransfer.ViewPage
             this.listViewMyPlayers.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.listViewMyPlayers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewMyPlayers.HideSelection = false;
-            this.listViewMyPlayers.Location = new System.Drawing.Point(25, 300);
+            this.listViewMyPlayers.Location = new System.Drawing.Point(25, 250);
             this.listViewMyPlayers.Margin = new System.Windows.Forms.Padding(2);
             this.listViewMyPlayers.Name = "listViewMyPlayers";
             this.listViewMyPlayers.Size = new System.Drawing.Size(600, 250);
@@ -327,7 +283,7 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnTerminateTheContract
             // 
-            this.BtnTerminateTheContract.Location = new System.Drawing.Point(645, 300);
+            this.BtnTerminateTheContract.Location = new System.Drawing.Point(645, 250);
             this.BtnTerminateTheContract.Name = "BtnTerminateTheContract";
             this.BtnTerminateTheContract.Size = new System.Drawing.Size(100, 40);
             this.BtnTerminateTheContract.TabIndex = 46;
@@ -339,7 +295,7 @@ namespace FootballTransfer.ViewPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(784, 511);
             this.Controls.Add(this.BtnTerminateTheContract);
             this.Controls.Add(this.listViewMyPlayers);
             this.Controls.Add(this.listViewMyOffers);
@@ -353,18 +309,14 @@ namespace FootballTransfer.ViewPage
             this.Controls.Add(this.BtnSeeFreePlayers);
             this.Controls.Add(this.listViewFreePlayers);
             this.Controls.Add(this.BtnDeleteClub);
-            this.Controls.Add(this.txtClubFoundationDate);
             this.Controls.Add(this.txtClubLeagueName);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtClubCapacity);
             this.Controls.Add(this.txtClubStadionName);
             this.Controls.Add(this.txtClubName);
-            this.Controls.Add(this.txtClubTown);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnUpdateClub);
             this.Name = "ClubView";
             this.Text = "ClubView";
@@ -376,16 +328,12 @@ namespace FootballTransfer.ViewPage
         #endregion
         private System.Windows.Forms.TextBox txtClubStadionName;
         private System.Windows.Forms.TextBox txtClubName;
-        private System.Windows.Forms.TextBox txtClubTown;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnUpdateClub;
         private System.Windows.Forms.TextBox txtClubCapacity;
-        private System.Windows.Forms.TextBox txtClubFoundationDate;
         private System.Windows.Forms.TextBox txtClubLeagueName;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button BtnDeleteClub;
         private System.Windows.Forms.ListView listViewFreePlayers;

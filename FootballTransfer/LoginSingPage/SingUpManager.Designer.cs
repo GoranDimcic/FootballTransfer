@@ -29,6 +29,7 @@ namespace FootballTransfer.Login
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SingUpManager));
             this.label5 = new System.Windows.Forms.Label();
             this.txtCountryManagerSign = new System.Windows.Forms.TextBox();
             this.txtAddressManagerSign = new System.Windows.Forms.TextBox();
@@ -46,6 +47,7 @@ namespace FootballTransfer.Login
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(50, 302);
             this.label5.Name = "label5";
@@ -74,6 +76,7 @@ namespace FootballTransfer.Login
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(50, 102);
             this.label4.Name = "label4";
@@ -93,6 +96,7 @@ namespace FootballTransfer.Login
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(50, 202);
             this.label3.Name = "label3";
@@ -122,6 +126,7 @@ namespace FootballTransfer.Login
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(50, 252);
             this.label1.Name = "label1";
@@ -132,6 +137,7 @@ namespace FootballTransfer.Login
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(50, 152);
             this.lblEmail.Name = "lblEmail";
@@ -142,6 +148,7 @@ namespace FootballTransfer.Login
             // lblLoginPlayer
             // 
             this.lblLoginPlayer.AutoSize = true;
+            this.lblLoginPlayer.BackColor = System.Drawing.Color.Transparent;
             this.lblLoginPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginPlayer.Location = new System.Drawing.Point(175, 50);
             this.lblLoginPlayer.Name = "lblLoginPlayer";
@@ -164,6 +171,8 @@ namespace FootballTransfer.Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.BtnRegistryManager);
             this.Controls.Add(this.label5);

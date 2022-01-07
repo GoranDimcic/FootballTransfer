@@ -31,8 +31,6 @@ namespace FootballTransfer.Login
                     Name = txtNameClubSign.Text,
                     LeagueName = comboBoxClubCountry.Text,
                     StadionName = txtStadionNameClubSign.Text,
-                    FoundationDate = dateFoundationDate.Value.Date,
-                    Town = txtTownClubSign.Text,
                     StadionCapacity = txtCapacityClubSign.Text
                 };
 
