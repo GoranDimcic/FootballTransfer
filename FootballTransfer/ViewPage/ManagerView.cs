@@ -15,7 +15,6 @@ namespace FootballTransfer.ViewPage
     public partial class ManagerView : Form
     {
         public Manager loggedManager;
-        public Player player, selectedPlayer;
         public List<Player> players;
 
         public ManagerView(Manager manager)
@@ -57,8 +56,8 @@ namespace FootballTransfer.ViewPage
             listViewFreePlayers.FullRowSelect = true;
             listViewFreePlayers.Columns.Add("Email", 120);
             listViewFreePlayers.Columns.Add("Name", 120);
-            listViewFreePlayers.Columns.Add("Age", 80);
-            listViewFreePlayers.Columns.Add("Country", 80);
+            listViewFreePlayers.Columns.Add("Age", 120);
+            listViewFreePlayers.Columns.Add("Country", 120);
             listViewFreePlayers.Columns.Add("Pos", 120);
 
             FillFreePlayers();
@@ -88,6 +87,14 @@ namespace FootballTransfer.ViewPage
         {
             OnSaveClick();
             DataProvider.UpdateManager(loggedManager);
+            string ManagerEmail = loggedManager.Email;
+            string ManagerName = loggedManager.Name;
+
+            for (int i = 0; i < listViewFreePlayers.Items.Count; i++)
+            {
+                string PlayerEmail = listViewFreePlayers.Items[i].SubItems[0].Text;
+                DataProvider.UpdateManagerNameInManagerOffer(ManagerEmail, ManagerName, PlayerEmail);
+            }
         }
 
         private void BtnCloseUpdate_Click(object sender, EventArgs e)
@@ -97,6 +104,14 @@ namespace FootballTransfer.ViewPage
 
         private void BtnDeleteManager_Click(object sender, EventArgs e)
         {
+            string ManagerEmail = loggedManager.Email;
+
+            for (int i = 0; i < listViewFreePlayers.Items.Count; i++)
+            {
+                string PlayerEmail = listViewFreePlayers.Items[i].SubItems[0].Text;
+                DataProvider.DeleteManagerInManagerOffer(ManagerEmail, PlayerEmail);
+            }
+
             DataProvider.DeleteManager(loggedManager);
             this.DialogResult = DialogResult.OK;
         }
@@ -178,5 +193,21 @@ namespace FootballTransfer.ViewPage
         }
 
         #endregion
+
+        private void BtnSeeFreePlayers_Click(object sender, EventArgs e)
+        {
+            LblChoose.Visible = false;
+            BtnTerminateTheContract.Visible = false;
+            listViewFreePlayers.Visible = true;
+            listViewMyPlayers.Visible = false;
+        }
+
+        private void BtnSeeMyPlayers_Click(object sender, EventArgs e)
+        {
+            LblChoose.Visible = true;
+            BtnTerminateTheContract.Visible = true;
+            listViewFreePlayers.Visible = false;
+            listViewMyPlayers.Visible = true;
+        }
     }
 }

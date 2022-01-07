@@ -390,6 +390,16 @@ namespace FootballTransfer
             var playerUpdateData = session.Execute("update \"ManagerOffer\" set playername='" + PlayerName + "'where \"playeremail\"='" + PlayerEmail + "' and \"manageremail\"='" + ManagerEmail + "' ");
         }
 
+        public static void UpdateManagerNameInManagerOffer(string ManagerEmail, string ManagerName, string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            var playerUpdateData = session.Execute("update \"ManagerOffer\" set managername='" + ManagerName + "'where \"playeremail\"='" + PlayerEmail + "' and \"manageremail\"='" + ManagerEmail + "' ");
+        }
+
         public static void DeletePlayerInManagerOffer(string PlayerEmail, string ManagerEmail)
         {
             ISession session = SessionManager.GetSession();
@@ -398,6 +408,16 @@ namespace FootballTransfer
                 return;
 
             RowSet playerData = session.Execute("delete from \"ManagerOffer\" where \"playeremail\" = '" + PlayerEmail + "' and \"manageremail\"='" + ManagerEmail + "' ");
+        }
+
+        public static void DeleteManagerInManagerOffer(string ManagerEmail, string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            RowSet playerData = session.Execute("delete from \"ManagerOffer\" where \"manageremail\" = '" + ManagerEmail + "' and \"playeremail\"='" + PlayerEmail + "' ");
         }
 
         #endregion

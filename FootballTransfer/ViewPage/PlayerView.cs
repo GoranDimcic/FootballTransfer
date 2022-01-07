@@ -14,7 +14,6 @@ namespace FootballTransfer.ViewPage
     public partial class PlayerView : Form
     {
         public Player loggedPlayer;
-        public List<Player> players;
         public List<ManagerOffer> managerOffers;
         public List<ClubOffer> clubOffers;
 
@@ -110,6 +109,7 @@ namespace FootballTransfer.ViewPage
         {
             OnSaveClick();
             DataProvider.UpdatePlayer(loggedPlayer);
+
             string PlayerEmail = loggedPlayer.Email;
             string PlayerName = loggedPlayer.Name;
 

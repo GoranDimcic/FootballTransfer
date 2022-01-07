@@ -46,6 +46,9 @@ namespace FootballTransfer.ViewPage
             this.txtManagerAddress = new System.Windows.Forms.TextBox();
             this.BtnSaveUpdatedManager = new System.Windows.Forms.Button();
             this.BtnCloseUpdate = new System.Windows.Forms.Button();
+            this.LblChoose = new System.Windows.Forms.Label();
+            this.BtnTerminateTheContract = new System.Windows.Forms.Button();
+            this.listViewMyPlayers = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // listViewFreePlayers
@@ -53,18 +56,18 @@ namespace FootballTransfer.ViewPage
             this.listViewFreePlayers.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.listViewFreePlayers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewFreePlayers.HideSelection = false;
-            this.listViewFreePlayers.Location = new System.Drawing.Point(29, 200);
+            this.listViewFreePlayers.Location = new System.Drawing.Point(25, 250);
             this.listViewFreePlayers.Margin = new System.Windows.Forms.Padding(2);
             this.listViewFreePlayers.Name = "listViewFreePlayers";
-            this.listViewFreePlayers.Size = new System.Drawing.Size(550, 250);
+            this.listViewFreePlayers.Size = new System.Drawing.Size(600, 250);
             this.listViewFreePlayers.TabIndex = 5;
             this.listViewFreePlayers.UseCompatibleStateImageBehavior = false;
             // 
             // BtnCreateOffer
             // 
-            this.BtnCreateOffer.Location = new System.Drawing.Point(600, 200);
+            this.BtnCreateOffer.Location = new System.Drawing.Point(645, 250);
             this.BtnCreateOffer.Name = "BtnCreateOffer";
-            this.BtnCreateOffer.Size = new System.Drawing.Size(85, 41);
+            this.BtnCreateOffer.Size = new System.Drawing.Size(100, 40);
             this.BtnCreateOffer.TabIndex = 7;
             this.BtnCreateOffer.Text = "Create offer";
             this.BtnCreateOffer.UseVisualStyleBackColor = true;
@@ -74,7 +77,7 @@ namespace FootballTransfer.ViewPage
             // 
             this.txtManagerCountry.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtManagerCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtManagerCountry.Location = new System.Drawing.Point(125, 96);
+            this.txtManagerCountry.Location = new System.Drawing.Point(125, 105);
             this.txtManagerCountry.Name = "txtManagerCountry";
             this.txtManagerCountry.ReadOnly = true;
             this.txtManagerCountry.Size = new System.Drawing.Size(123, 19);
@@ -94,7 +97,7 @@ namespace FootballTransfer.ViewPage
             // 
             this.txtManagerName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtManagerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtManagerName.Location = new System.Drawing.Point(125, 26);
+            this.txtManagerName.Location = new System.Drawing.Point(125, 35);
             this.txtManagerName.Name = "txtManagerName";
             this.txtManagerName.ReadOnly = true;
             this.txtManagerName.Size = new System.Drawing.Size(123, 19);
@@ -104,7 +107,7 @@ namespace FootballTransfer.ViewPage
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 95);
+            this.label5.Location = new System.Drawing.Point(25, 105);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 20);
             this.label5.TabIndex = 20;
@@ -114,7 +117,7 @@ namespace FootballTransfer.ViewPage
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 25);
+            this.label1.Location = new System.Drawing.Point(25, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 18;
@@ -122,9 +125,9 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnUpdateManager
             // 
-            this.BtnUpdateManager.Location = new System.Drawing.Point(270, 22);
+            this.BtnUpdateManager.Location = new System.Drawing.Point(270, 30);
             this.BtnUpdateManager.Name = "BtnUpdateManager";
-            this.BtnUpdateManager.Size = new System.Drawing.Size(91, 26);
+            this.BtnUpdateManager.Size = new System.Drawing.Size(100, 30);
             this.BtnUpdateManager.TabIndex = 17;
             this.BtnUpdateManager.Text = "Update";
             this.BtnUpdateManager.UseVisualStyleBackColor = true;
@@ -132,9 +135,9 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnDeleteManager
             // 
-            this.BtnDeleteManager.Location = new System.Drawing.Point(370, 22);
+            this.BtnDeleteManager.Location = new System.Drawing.Point(270, 66);
             this.BtnDeleteManager.Name = "BtnDeleteManager";
-            this.BtnDeleteManager.Size = new System.Drawing.Size(91, 26);
+            this.BtnDeleteManager.Size = new System.Drawing.Size(100, 30);
             this.BtnDeleteManager.TabIndex = 25;
             this.BtnDeleteManager.Text = "Delete";
             this.BtnDeleteManager.UseVisualStyleBackColor = true;
@@ -144,7 +147,7 @@ namespace FootballTransfer.ViewPage
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 130);
+            this.label3.Location = new System.Drawing.Point(25, 140);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 20);
             this.label3.TabIndex = 26;
@@ -154,7 +157,7 @@ namespace FootballTransfer.ViewPage
             // 
             this.txtManagerRepresent.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtManagerRepresent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtManagerRepresent.Location = new System.Drawing.Point(125, 131);
+            this.txtManagerRepresent.Location = new System.Drawing.Point(125, 140);
             this.txtManagerRepresent.Name = "txtManagerRepresent";
             this.txtManagerRepresent.ReadOnly = true;
             this.txtManagerRepresent.Size = new System.Drawing.Size(123, 19);
@@ -162,27 +165,29 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnSeeFreePlayers
             // 
-            this.BtnSeeFreePlayers.Location = new System.Drawing.Point(370, 144);
+            this.BtnSeeFreePlayers.Location = new System.Drawing.Point(400, 200);
             this.BtnSeeFreePlayers.Name = "BtnSeeFreePlayers";
-            this.BtnSeeFreePlayers.Size = new System.Drawing.Size(91, 41);
+            this.BtnSeeFreePlayers.Size = new System.Drawing.Size(100, 40);
             this.BtnSeeFreePlayers.TabIndex = 29;
             this.BtnSeeFreePlayers.Text = "See free players";
             this.BtnSeeFreePlayers.UseVisualStyleBackColor = true;
+            this.BtnSeeFreePlayers.Click += new System.EventHandler(this.BtnSeeFreePlayers_Click);
             // 
             // BtnSeeMyPlayers
             // 
-            this.BtnSeeMyPlayers.Location = new System.Drawing.Point(488, 144);
+            this.BtnSeeMyPlayers.Location = new System.Drawing.Point(525, 200);
             this.BtnSeeMyPlayers.Name = "BtnSeeMyPlayers";
-            this.BtnSeeMyPlayers.Size = new System.Drawing.Size(91, 41);
+            this.BtnSeeMyPlayers.Size = new System.Drawing.Size(100, 40);
             this.BtnSeeMyPlayers.TabIndex = 30;
             this.BtnSeeMyPlayers.Text = "See my players";
             this.BtnSeeMyPlayers.UseVisualStyleBackColor = true;
+            this.BtnSeeMyPlayers.Click += new System.EventHandler(this.BtnSeeMyPlayers_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 60);
+            this.label2.Location = new System.Drawing.Point(25, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 31;
@@ -192,7 +197,7 @@ namespace FootballTransfer.ViewPage
             // 
             this.txtManagerAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtManagerAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtManagerAddress.Location = new System.Drawing.Point(125, 61);
+            this.txtManagerAddress.Location = new System.Drawing.Point(125, 70);
             this.txtManagerAddress.Name = "txtManagerAddress";
             this.txtManagerAddress.ReadOnly = true;
             this.txtManagerAddress.Size = new System.Drawing.Size(123, 19);
@@ -200,9 +205,9 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnSaveUpdatedManager
             // 
-            this.BtnSaveUpdatedManager.Location = new System.Drawing.Point(270, 22);
+            this.BtnSaveUpdatedManager.Location = new System.Drawing.Point(270, 30);
             this.BtnSaveUpdatedManager.Name = "BtnSaveUpdatedManager";
-            this.BtnSaveUpdatedManager.Size = new System.Drawing.Size(91, 26);
+            this.BtnSaveUpdatedManager.Size = new System.Drawing.Size(100, 30);
             this.BtnSaveUpdatedManager.TabIndex = 33;
             this.BtnSaveUpdatedManager.Text = "Save";
             this.BtnSaveUpdatedManager.UseVisualStyleBackColor = true;
@@ -211,20 +216,57 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnCloseUpdate
             // 
-            this.BtnCloseUpdate.Location = new System.Drawing.Point(270, 59);
+            this.BtnCloseUpdate.Location = new System.Drawing.Point(270, 66);
             this.BtnCloseUpdate.Name = "BtnCloseUpdate";
-            this.BtnCloseUpdate.Size = new System.Drawing.Size(91, 26);
+            this.BtnCloseUpdate.Size = new System.Drawing.Size(100, 30);
             this.BtnCloseUpdate.TabIndex = 34;
             this.BtnCloseUpdate.Text = "Close";
             this.BtnCloseUpdate.UseVisualStyleBackColor = true;
             this.BtnCloseUpdate.Visible = false;
             this.BtnCloseUpdate.Click += new System.EventHandler(this.BtnCloseUpdate_Click);
             // 
+            // LblChoose
+            // 
+            this.LblChoose.AutoSize = true;
+            this.LblChoose.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblChoose.Location = new System.Drawing.Point(25, 200);
+            this.LblChoose.Name = "LblChoose";
+            this.LblChoose.Size = new System.Drawing.Size(181, 36);
+            this.LblChoose.TabIndex = 35;
+            this.LblChoose.Text = "Choose a player:";
+            this.LblChoose.Visible = false;
+            // 
+            // BtnTerminateTheContract
+            // 
+            this.BtnTerminateTheContract.Location = new System.Drawing.Point(645, 250);
+            this.BtnTerminateTheContract.Name = "BtnTerminateTheContract";
+            this.BtnTerminateTheContract.Size = new System.Drawing.Size(100, 40);
+            this.BtnTerminateTheContract.TabIndex = 36;
+            this.BtnTerminateTheContract.Text = "Terminate the contract";
+            this.BtnTerminateTheContract.UseVisualStyleBackColor = true;
+            this.BtnTerminateTheContract.Visible = false;
+            // 
+            // listViewMyPlayers
+            // 
+            this.listViewMyPlayers.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.listViewMyPlayers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewMyPlayers.HideSelection = false;
+            this.listViewMyPlayers.Location = new System.Drawing.Point(25, 250);
+            this.listViewMyPlayers.Margin = new System.Windows.Forms.Padding(2);
+            this.listViewMyPlayers.Name = "listViewMyPlayers";
+            this.listViewMyPlayers.Size = new System.Drawing.Size(600, 250);
+            this.listViewMyPlayers.TabIndex = 37;
+            this.listViewMyPlayers.UseCompatibleStateImageBehavior = false;
+            this.listViewMyPlayers.Visible = false;
+            // 
             // ManagerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 461);
+            this.ClientSize = new System.Drawing.Size(784, 511);
+            this.Controls.Add(this.listViewMyPlayers);
+            this.Controls.Add(this.BtnTerminateTheContract);
+            this.Controls.Add(this.LblChoose);
             this.Controls.Add(this.BtnCloseUpdate);
             this.Controls.Add(this.BtnSaveUpdatedManager);
             this.Controls.Add(this.txtManagerAddress);
@@ -267,5 +309,8 @@ namespace FootballTransfer.ViewPage
         private System.Windows.Forms.TextBox txtManagerAddress;
         private System.Windows.Forms.Button BtnSaveUpdatedManager;
         private System.Windows.Forms.Button BtnCloseUpdate;
+        private System.Windows.Forms.Label LblChoose;
+        private System.Windows.Forms.Button BtnTerminateTheContract;
+        private System.Windows.Forms.ListView listViewMyPlayers;
     }
 }

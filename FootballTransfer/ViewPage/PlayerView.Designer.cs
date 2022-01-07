@@ -166,7 +166,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 40);
             this.button6.TabIndex = 26;
-            this.button6.Text = "Odbi ponudu";
+            this.button6.Text = "Reject";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -175,7 +175,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 40);
             this.button3.TabIndex = 25;
-            this.button3.Text = "Prihvati ponudu";
+            this.button3.Text = "Accept";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // BtnSaveUpdatedPlayer
@@ -225,7 +225,7 @@
             this.listViewManagerOffer.Location = new System.Drawing.Point(25, 250);
             this.listViewManagerOffer.Margin = new System.Windows.Forms.Padding(2);
             this.listViewManagerOffer.Name = "listViewManagerOffer";
-            this.listViewManagerOffer.Size = new System.Drawing.Size(600, 242);
+            this.listViewManagerOffer.Size = new System.Drawing.Size(600, 250);
             this.listViewManagerOffer.TabIndex = 7;
             this.listViewManagerOffer.UseCompatibleStateImageBehavior = false;
             // 
@@ -237,13 +237,14 @@
             this.listViewClubOffer.Location = new System.Drawing.Point(25, 250);
             this.listViewClubOffer.Margin = new System.Windows.Forms.Padding(2);
             this.listViewClubOffer.Name = "listViewClubOffer";
-            this.listViewClubOffer.Size = new System.Drawing.Size(601, 242);
+            this.listViewClubOffer.Size = new System.Drawing.Size(600, 250);
             this.listViewClubOffer.TabIndex = 23;
             this.listViewClubOffer.UseCompatibleStateImageBehavior = false;
             this.listViewClubOffer.Visible = false;
             // 
             // BtnShowManagerOffer
             // 
+            this.BtnShowManagerOffer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnShowManagerOffer.Location = new System.Drawing.Point(400, 200);
             this.BtnShowManagerOffer.Name = "BtnShowManagerOffer";
             this.BtnShowManagerOffer.Size = new System.Drawing.Size(100, 40);
