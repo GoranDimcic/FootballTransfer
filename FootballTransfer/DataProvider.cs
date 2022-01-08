@@ -280,6 +280,26 @@ namespace FootballTransfer
             _ = session.Execute("update \"Manager\" set name='" + manager.Name + "' , country='" + manager.Country + "' , address='" + manager.Address + "'where \"email\"='" + manager.Email + "'");
         }
 
+        public static void ManagerDeleteContact(string ManagerEmail, string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            _ = session.Execute("delete from \"ManagerOffer\" where \"manageremail\" = '" + ManagerEmail + "' and \"playeremail\"='" + PlayerEmail + "' ");
+        }
+
+        public static void ManagerTerminatedContactWithPlayer(string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            _ = session.Execute("update \"Player\" set manageroffer='" + "false" + "'where \"email\"='" + PlayerEmail + "' ");
+        }
+
         public static void DeleteManager(Manager manager)
         {
             ISession session = SessionManager.GetSession();

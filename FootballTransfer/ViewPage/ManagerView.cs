@@ -28,9 +28,9 @@ namespace FootballTransfer.ViewPage
         public void ManagerPage()
         {
             FillManagerDescription();
+            FillListWithMyOffers();
             FillListWithFreePlayers();
             FillListWithMyPlayers();
-            FillListWithMyOffers();
         }
 
         public void FillManagerDescription()
@@ -42,16 +42,38 @@ namespace FootballTransfer.ViewPage
 
         #region Fill ListView
 
-        public void FillListWithMyPlayers()
+        public void FillListWithMyOffers()
         {
+            listViewMyOffers.View = View.Details;
+            listViewMyOffers.FullRowSelect = true;
+            listViewMyOffers.Columns.Add("Email", 150);
+            listViewMyOffers.Columns.Add("Name", 150);
+            listViewMyOffers.Columns.Add("Offer", 150);
+            listViewMyOffers.Columns.Add("Duraction", 150);
 
-
-            FillMyPlayers();
+            FillMyOffers();
         }
 
-        public void FillMyPlayers()
+        public void FillMyOffers()
         {
+            managerOffers = DataProvider.GetManagerOffers();
 
+            foreach (ManagerOffer offer in managerOffers)
+            {
+                if (offer.ManagerEmail == loggedManager.Email)
+                {
+                    String[] row = { offer.PlayerEmail, offer.PlayerName, offer.Offer, offer.Duraction };
+                    ListViewItem item = new ListViewItem(row);
+                    listViewMyOffers.Items.Add(item);
+
+                    if (offer.Pending == "pending")
+                        item.BackColor = Color.Yellow;
+                    else if (offer.Pending == "accepted")
+                        item.BackColor = Color.LimeGreen;
+                    else if (offer.Pending == "rejected")
+                        item.BackColor = Color.Firebrick;
+                }
+            }
         }
 
         public void FillListWithFreePlayers()
@@ -78,23 +100,25 @@ namespace FootballTransfer.ViewPage
                     String[] row = { player.Email, player.Name, player.Address, player.Country, player.Position };
                     ListViewItem item = new ListViewItem(row);
                     listViewFreePlayers.Items.Add(item);
+
+                    item.BackColor = Color.RoyalBlue;
                 }
             }
         }
 
-        public void FillListWithMyOffers()
+        public void FillListWithMyPlayers()
         {
-            listViewMyOffers.View = View.Details;
-            listViewMyOffers.FullRowSelect = true;
-            listViewMyOffers.Columns.Add("Email", 150);
-            listViewMyOffers.Columns.Add("Name", 150);
-            listViewMyOffers.Columns.Add("Offer", 150);
-            listViewMyOffers.Columns.Add("Duraction", 150);
+            listViewMyPlayers.View = View.Details;
+            listViewMyPlayers.FullRowSelect = true;
+            listViewMyPlayers.Columns.Add("Email", 150);
+            listViewMyPlayers.Columns.Add("Name", 150);
+            listViewMyPlayers.Columns.Add("Offer", 150);
+            listViewMyPlayers.Columns.Add("Duraction", 150);
 
-            FillMyOffers();
+            FillMyPlayers();
         }
 
-        public void FillMyOffers()
+        public void FillMyPlayers()
         {
             managerOffers = DataProvider.GetManagerOffers();
 
@@ -102,9 +126,14 @@ namespace FootballTransfer.ViewPage
             {
                 if (offer.ManagerEmail == loggedManager.Email)
                 {
-                    String[] row = { offer.PlayerEmail, offer.PlayerName, offer.Offer, offer.Duraction };
-                    ListViewItem item = new ListViewItem(row);
-                    listViewMyOffers.Items.Add(item);
+                    if (offer.Pending == "accepted")
+                    {
+                        String[] row = { offer.PlayerEmail, offer.PlayerName, offer.Offer, offer.Duraction };
+                        ListViewItem item = new ListViewItem(row);
+                        listViewMyPlayers.Items.Add(item);
+
+                        item.BackColor = Color.LimeGreen;
+                    }
                 }
             }
         }
@@ -113,6 +142,16 @@ namespace FootballTransfer.ViewPage
         {
             listViewMyOffers.Clear();
             FillListWithMyOffers();
+        }
+
+        public void RefreshListAfterContractTerminate()
+        {
+            listViewMyOffers.Clear();
+            listViewFreePlayers.Clear();
+            listViewMyPlayers.Clear();
+            FillListWithMyOffers();
+            FillListWithFreePlayers();
+            FillListWithMyPlayers();
         }
 
         #endregion
@@ -178,6 +217,26 @@ namespace FootballTransfer.ViewPage
             }
 
             RefreshListOffers();
+        }
+
+        private void BtnTerminateTheContract_Click(object sender, EventArgs e)
+        {
+            if (listViewMyPlayers.SelectedItems.Count > 0)
+            {
+                string ManagerEmail = loggedManager.Email;
+                string PlayerEmail = listViewMyPlayers.SelectedItems[0]
+                                                      .SubItems[0].Text;
+
+                DataProvider.ManagerDeleteContact(ManagerEmail, PlayerEmail);
+                DataProvider.ManagerTerminatedContactWithPlayer(PlayerEmail);
+
+            }
+            else
+            {
+                MessageBox.Show("You must select player!");
+            }
+
+            RefreshListAfterContractTerminate();
         }
 
         #region Button(Update, Save, Close)
@@ -246,8 +305,8 @@ namespace FootballTransfer.ViewPage
             BtnTerminateTheContract.Visible = false;
             BtnCreateOffer.Visible = true;
             listViewFreePlayers.Visible = true;
-            listViewMyPlayers.Visible = false;
             listViewMyOffers.Visible = false;
+            listViewMyPlayers.Visible = false;
         }
 
         private void BtnSeeMyPlayers_Click(object sender, EventArgs e)
@@ -256,8 +315,8 @@ namespace FootballTransfer.ViewPage
             BtnTerminateTheContract.Visible = true;
             BtnCreateOffer.Visible = false;
             listViewFreePlayers.Visible = false;
-            listViewMyPlayers.Visible = true;
             listViewMyOffers.Visible = false;
+            listViewMyPlayers.Visible = true;
         }
 
         private void BtnSeeMyOffers_Click(object sender, EventArgs e)
@@ -266,8 +325,8 @@ namespace FootballTransfer.ViewPage
             BtnTerminateTheContract.Visible = false;
             BtnCreateOffer.Visible = false;
             listViewFreePlayers.Visible = false;
-            listViewMyPlayers.Visible = false;
             listViewMyOffers.Visible = true;
+            listViewMyPlayers.Visible = false;
         }
     }
 }

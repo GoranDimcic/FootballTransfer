@@ -209,7 +209,7 @@ namespace FootballTransfer.ViewPage
             "Bundesliga"});
             this.comboBoxUpdateClubLeagueName.Location = new System.Drawing.Point(160, 137);
             this.comboBoxUpdateClubLeagueName.Name = "comboBoxUpdateClubLeagueName";
-            this.comboBoxUpdateClubLeagueName.Size = new System.Drawing.Size(126, 28);
+            this.comboBoxUpdateClubLeagueName.Size = new System.Drawing.Size(123, 28);
             this.comboBoxUpdateClubLeagueName.TabIndex = 39;
             this.comboBoxUpdateClubLeagueName.Visible = false;
             // 
