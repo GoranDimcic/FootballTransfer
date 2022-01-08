@@ -30,6 +30,7 @@ namespace FootballTransfer.ViewPage
             FillClubDescription();
             FillListWithFreePlayers();
             FillListWithMyOffers();
+            FillListWithMyPlayers();
         }
 
         public void FillClubDescription()
@@ -44,14 +45,34 @@ namespace FootballTransfer.ViewPage
 
         public void FillListWithMyPlayers()
         {
-
+            listViewMyPlayers.View = View.Details;
+            listViewMyPlayers.FullRowSelect = true;
+            listViewMyPlayers.Columns.Add("Email", 150);
+            listViewMyPlayers.Columns.Add("Name", 150);
+            listViewMyPlayers.Columns.Add("Offer", 150);
+            listViewMyPlayers.Columns.Add("Duraction", 150);
 
             FillMyPlayers();
         }
 
         public void FillMyPlayers()
         {
+            clubOffers = DataProvider.GetClubOffers();
 
+            foreach (ClubOffer offer in clubOffers)
+            {
+                if (offer.ClubEmail == loggedClub.Email)
+                {
+                    if (offer.Pending == "accepted")
+                    {
+                        String[] row = { offer.PlayerEmail, offer.PlayerName, offer.Salary, offer.Duraction };
+                        ListViewItem item = new ListViewItem(row);
+                        listViewMyPlayers.Items.Add(item);
+
+                        item.BackColor = Color.LimeGreen;
+                    }
+                }
+            }
         }
 
         public void FillListWithFreePlayers()
@@ -78,6 +99,8 @@ namespace FootballTransfer.ViewPage
                     String[] row = { player.Email, player.Name, player.Address, player.Country, player.Position };
                     ListViewItem item = new ListViewItem(row);
                     listViewFreePlayers.Items.Add(item);
+
+                    item.BackColor = Color.RoyalBlue;
                 }
             }
         }
@@ -105,6 +128,13 @@ namespace FootballTransfer.ViewPage
                     String[] row = { offer.PlayerEmail, offer.PlayerName, offer.Salary, offer.Duraction };
                     ListViewItem item = new ListViewItem(row);
                     listViewMyOffers.Items.Add(item);
+
+                    if (offer.Pending == "pending")
+                        item.BackColor = Color.Yellow;
+                    else if (offer.Pending == "accepted")
+                        item.BackColor = Color.LimeGreen;
+                    else if (offer.Pending == "rejected")
+                        item.BackColor = Color.Firebrick;
                 }
             }
         }
@@ -113,6 +143,16 @@ namespace FootballTransfer.ViewPage
         {
             listViewMyOffers.Clear();
             FillListWithMyOffers();
+        }
+
+        public void RefreshListAfterContractTerminated()
+        {
+            listViewMyOffers.Clear();
+            listViewFreePlayers.Clear();
+            listViewMyPlayers.Clear();
+            FillListWithMyOffers();
+            FillListWithFreePlayers();
+            FillListWithMyPlayers();
         }
 
         #endregion
@@ -178,6 +218,25 @@ namespace FootballTransfer.ViewPage
             }
 
             RefreshListOffers();
+        }
+
+        private void BtnTerminateTheContract_Click(object sender, EventArgs e)
+        {
+            if (listViewMyPlayers.SelectedItems.Count > 0)
+            {
+                string ClubEmail = loggedClub.Email;
+                string PlayerEmail = listViewMyPlayers.SelectedItems[0]
+                                                      .SubItems[0].Text;
+
+                DataProvider.ClubDeleteContact(ClubEmail, PlayerEmail);
+                DataProvider.ClubTerminatedContactWithPlayer(PlayerEmail);
+            }
+            else
+            {
+                MessageBox.Show("You must select player!");
+            }
+
+            RefreshListAfterContractTerminated();
         }
 
         #region Button (Update, Save, Delete)
@@ -254,19 +313,6 @@ namespace FootballTransfer.ViewPage
 
         #endregion
 
-        private void TxtClubCapacity_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
         private void BtnSeeFreePlayers_Click(object sender, EventArgs e)
         {
             LblChoose.Visible = true;
@@ -296,5 +342,19 @@ namespace FootballTransfer.ViewPage
             listViewMyPlayers.Visible = false;
             listViewMyOffers.Visible = true;
         }
+
+        private void TxtClubCapacity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
     }
 }

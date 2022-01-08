@@ -19,11 +19,5 @@ namespace FootballTransfer.Entities
         public string StadionName { get; set; }
 
         public string StadionCapacity { get; set; }
-
-        public List<Player> Players { get; set; }
-
-        public List<Player> FreePlayers { get; set; }
-
-        public List<ClubOffer> ClubOffers { get; set; }
     }
 }

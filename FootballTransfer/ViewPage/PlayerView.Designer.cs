@@ -144,7 +144,7 @@
             // 
             // BtnDeletePlayer
             // 
-            this.BtnDeletePlayer.Location = new System.Drawing.Point(270, 66);
+            this.BtnDeletePlayer.Location = new System.Drawing.Point(270, 70);
             this.BtnDeletePlayer.Name = "BtnDeletePlayer";
             this.BtnDeletePlayer.Size = new System.Drawing.Size(100, 30);
             this.BtnDeletePlayer.TabIndex = 20;
@@ -214,7 +214,7 @@
             // 
             // BtnCloseUpdate
             // 
-            this.BtnCloseUpdate.Location = new System.Drawing.Point(270, 66);
+            this.BtnCloseUpdate.Location = new System.Drawing.Point(270, 70);
             this.BtnCloseUpdate.Name = "BtnCloseUpdate";
             this.BtnCloseUpdate.Size = new System.Drawing.Size(100, 30);
             this.BtnCloseUpdate.TabIndex = 29;

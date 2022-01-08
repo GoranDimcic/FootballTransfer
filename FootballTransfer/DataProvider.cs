@@ -394,6 +394,26 @@ namespace FootballTransfer
             _ = session.Execute("update \"Club\" set name='" + club.Name + "' , stadionname='" + club.StadionName + "' , leaguename='" + club.LeagueName + "' , capacity='" + club.StadionCapacity + "'where \"email\"='" + club.Email + "'");
         }
 
+        public static void ClubDeleteContact(string ClubEmail, string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            _ = session.Execute("delete from \"ClubOffer\" where \"clubemail\" = '" + ClubEmail + "' and \"playeremail\"='" + PlayerEmail + "' ");
+        }
+
+        public static void ClubTerminatedContactWithPlayer(string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            _ = session.Execute("update \"Player\" set cluboffer='" + "false" + "'where \"email\"='" + PlayerEmail + "' ");
+        }
+
         public static void DeleteClub(Club club)
         {
             ISession session = SessionManager.GetSession();

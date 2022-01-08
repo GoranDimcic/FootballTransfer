@@ -114,7 +114,7 @@
             this.comboBoxClubCountry.Location = new System.Drawing.Point(575, 200);
             this.comboBoxClubCountry.Name = "comboBoxClubCountry";
             this.comboBoxClubCountry.Size = new System.Drawing.Size(150, 32);
-            this.comboBoxClubCountry.TabIndex = 35;
+            this.comboBoxClubCountry.TabIndex = 50;
             // 
             // label2
             // 

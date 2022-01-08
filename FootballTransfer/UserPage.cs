@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FootballTransfer.ViewPage;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +26,8 @@ namespace FootballTransfer
 
         private void BtnUser_Click(object sender, EventArgs e)
         {
-
+            User form = new User();
+            form.ShowDialog();
         }
     }
 }

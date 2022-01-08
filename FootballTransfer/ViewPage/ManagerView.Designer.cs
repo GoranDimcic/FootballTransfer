@@ -169,7 +169,7 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnDeleteManager
             // 
-            this.BtnDeleteManager.Location = new System.Drawing.Point(275, 66);
+            this.BtnDeleteManager.Location = new System.Drawing.Point(270, 70);
             this.BtnDeleteManager.Name = "BtnDeleteManager";
             this.BtnDeleteManager.Size = new System.Drawing.Size(100, 30);
             this.BtnDeleteManager.TabIndex = 27;
@@ -179,7 +179,7 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnUpdateManager
             // 
-            this.BtnUpdateManager.Location = new System.Drawing.Point(275, 30);
+            this.BtnUpdateManager.Location = new System.Drawing.Point(270, 31);
             this.BtnUpdateManager.Name = "BtnUpdateManager";
             this.BtnUpdateManager.Size = new System.Drawing.Size(100, 30);
             this.BtnUpdateManager.TabIndex = 26;
@@ -240,7 +240,7 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnCloseUpdate
             // 
-            this.BtnCloseUpdate.Location = new System.Drawing.Point(275, 66);
+            this.BtnCloseUpdate.Location = new System.Drawing.Point(270, 70);
             this.BtnCloseUpdate.Name = "BtnCloseUpdate";
             this.BtnCloseUpdate.Size = new System.Drawing.Size(100, 30);
             this.BtnCloseUpdate.TabIndex = 29;
@@ -251,7 +251,7 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnSaveUpdatedManager
             // 
-            this.BtnSaveUpdatedManager.Location = new System.Drawing.Point(275, 31);
+            this.BtnSaveUpdatedManager.Location = new System.Drawing.Point(270, 30);
             this.BtnSaveUpdatedManager.Name = "BtnSaveUpdatedManager";
             this.BtnSaveUpdatedManager.Size = new System.Drawing.Size(100, 30);
             this.BtnSaveUpdatedManager.TabIndex = 28;

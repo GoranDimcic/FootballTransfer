@@ -144,7 +144,7 @@ namespace FootballTransfer.ViewPage
             FillListWithMyOffers();
         }
 
-        public void RefreshListAfterContractTerminate()
+        public void RefreshListAfterContractTerminated()
         {
             listViewMyOffers.Clear();
             listViewFreePlayers.Clear();
@@ -186,11 +186,12 @@ namespace FootballTransfer.ViewPage
         {
             string ManagerEmail = loggedManager.Email;
 
-            for (int i = 0; i < listViewFreePlayers.Items.Count; i++)
+            for (int i = 0; i < listViewMyOffers.Items.Count; i++)
             {
-                string PlayerEmail = listViewFreePlayers.Items[i]
+                string PlayerEmail = listViewMyOffers.Items[i]
                                                         .SubItems[0].Text;
                 DataProvider.DeleteManagerInManagerOffer(ManagerEmail, PlayerEmail);
+                DataProvider.UpdatePlayerRejectedManagerOffer(PlayerEmail);
             }
 
             DataProvider.DeleteManager(loggedManager);
@@ -229,14 +230,13 @@ namespace FootballTransfer.ViewPage
 
                 DataProvider.ManagerDeleteContact(ManagerEmail, PlayerEmail);
                 DataProvider.ManagerTerminatedContactWithPlayer(PlayerEmail);
-
             }
             else
             {
                 MessageBox.Show("You must select player!");
             }
 
-            RefreshListAfterContractTerminate();
+            RefreshListAfterContractTerminated();
         }
 
         #region Button(Update, Save, Close)

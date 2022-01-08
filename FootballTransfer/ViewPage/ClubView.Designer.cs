@@ -146,7 +146,7 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnDeleteClub
             // 
-            this.BtnDeleteClub.Location = new System.Drawing.Point(300, 66);
+            this.BtnDeleteClub.Location = new System.Drawing.Point(300, 70);
             this.BtnDeleteClub.Name = "BtnDeleteClub";
             this.BtnDeleteClub.Size = new System.Drawing.Size(100, 30);
             this.BtnDeleteClub.TabIndex = 34;
@@ -215,7 +215,7 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnSaveUpdatedClub
             // 
-            this.BtnSaveUpdatedClub.Location = new System.Drawing.Point(300, 31);
+            this.BtnSaveUpdatedClub.Location = new System.Drawing.Point(300, 30);
             this.BtnSaveUpdatedClub.Name = "BtnSaveUpdatedClub";
             this.BtnSaveUpdatedClub.Size = new System.Drawing.Size(100, 30);
             this.BtnSaveUpdatedClub.TabIndex = 40;
@@ -226,7 +226,7 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnCloseUpdate
             // 
-            this.BtnCloseUpdate.Location = new System.Drawing.Point(300, 66);
+            this.BtnCloseUpdate.Location = new System.Drawing.Point(300, 70);
             this.BtnCloseUpdate.Name = "BtnCloseUpdate";
             this.BtnCloseUpdate.Size = new System.Drawing.Size(100, 30);
             this.BtnCloseUpdate.TabIndex = 41;
@@ -290,6 +290,7 @@ namespace FootballTransfer.ViewPage
             this.BtnTerminateTheContract.Text = "Terminate the contract";
             this.BtnTerminateTheContract.UseVisualStyleBackColor = true;
             this.BtnTerminateTheContract.Visible = false;
+            this.BtnTerminateTheContract.Click += new System.EventHandler(this.BtnTerminateTheContract_Click);
             // 
             // ClubView
             // 

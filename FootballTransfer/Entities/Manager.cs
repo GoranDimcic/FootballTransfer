@@ -17,13 +17,5 @@ namespace FootballTransfer.Entities
         public string Email { get; set; }
 
         public string Password { get; set; }
-
-        public int Offer { get; set; }
-
-        public List<Player> Players { get; set; }
-
-        public List<Player> FreePlayers { get; set; }
-
-        public List<ManagerOffer> ManagerOffers { get; set; }
     }
 }
