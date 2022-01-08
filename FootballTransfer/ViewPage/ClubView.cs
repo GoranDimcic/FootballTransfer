@@ -188,11 +188,12 @@ namespace FootballTransfer.ViewPage
         {
             string ClubEmail = loggedClub.Email;
 
-            for (int i = 0; i < listViewFreePlayers.Items.Count; i++)
+            for (int i = 0; i < listViewMyOffers.Items.Count; i++)
             {
-                string PlayerEmail = listViewFreePlayers.Items[i]
+                string PlayerEmail = listViewMyOffers.Items[i]
                                                         .SubItems[0].Text;
                 DataProvider.DeleteClubInClubOffer(ClubEmail, PlayerEmail);
+                DataProvider.UpdatePlayerRejectedClubOffer(PlayerEmail);
             }
 
             DataProvider.DeleteClub(loggedClub);

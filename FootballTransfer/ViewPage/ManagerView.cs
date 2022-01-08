@@ -31,6 +31,7 @@ namespace FootballTransfer.ViewPage
             FillListWithMyOffers();
             FillListWithFreePlayers();
             FillListWithMyPlayers();
+            Represent();
         }
 
         public void FillManagerDescription()
@@ -154,6 +155,11 @@ namespace FootballTransfer.ViewPage
             FillListWithMyPlayers();
         }
 
+        public void Represent()
+        {
+            txtManagerRepresent.Text = listViewMyPlayers.Items.Count.ToString();
+        }
+
         #endregion
 
         private void BtnUpdateManager_Click(object sender, EventArgs e)
@@ -237,6 +243,7 @@ namespace FootballTransfer.ViewPage
             }
 
             RefreshListAfterContractTerminated();
+            Represent();
         }
 
         #region Button(Update, Save, Close)
