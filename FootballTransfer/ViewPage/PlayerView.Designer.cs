@@ -164,7 +164,7 @@
             // 
             // BtnRejectManagerOffer
             // 
-            this.BtnRejectManagerOffer.BackColor = System.Drawing.Color.DarkRed;
+            this.BtnRejectManagerOffer.BackColor = System.Drawing.Color.Firebrick;
             this.BtnRejectManagerOffer.Location = new System.Drawing.Point(645, 300);
             this.BtnRejectManagerOffer.Name = "BtnRejectManagerOffer";
             this.BtnRejectManagerOffer.Size = new System.Drawing.Size(100, 40);
@@ -209,7 +209,7 @@
             this.comboBoxUpdatePlayerPosition.Location = new System.Drawing.Point(125, 137);
             this.comboBoxUpdatePlayerPosition.Name = "comboBoxUpdatePlayerPosition";
             this.comboBoxUpdatePlayerPosition.Size = new System.Drawing.Size(123, 28);
-            this.comboBoxUpdatePlayerPosition.TabIndex = 28;
+            this.comboBoxUpdatePlayerPosition.TabIndex = 16;
             this.comboBoxUpdatePlayerPosition.Visible = false;
             // 
             // BtnCloseUpdate
@@ -272,7 +272,7 @@
             // BtnAcceptClubOffer
             // 
             this.BtnAcceptClubOffer.BackColor = System.Drawing.Color.Lime;
-            this.BtnAcceptClubOffer.Location = new System.Drawing.Point(645, 250);
+            this.BtnAcceptClubOffer.Location = new System.Drawing.Point(645, 200);
             this.BtnAcceptClubOffer.Name = "BtnAcceptClubOffer";
             this.BtnAcceptClubOffer.Size = new System.Drawing.Size(100, 40);
             this.BtnAcceptClubOffer.TabIndex = 31;
@@ -282,7 +282,7 @@
             // 
             // BtnRejectClubOffer
             // 
-            this.BtnRejectClubOffer.BackColor = System.Drawing.Color.DarkRed;
+            this.BtnRejectClubOffer.BackColor = System.Drawing.Color.Firebrick;
             this.BtnRejectClubOffer.Location = new System.Drawing.Point(645, 359);
             this.BtnRejectClubOffer.Name = "BtnRejectClubOffer";
             this.BtnRejectClubOffer.Size = new System.Drawing.Size(100, 40);

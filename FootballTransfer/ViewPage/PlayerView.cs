@@ -68,9 +68,9 @@ namespace FootballTransfer.ViewPage
                     if (offer.Pending == "pending")
                         item.BackColor = Color.Yellow;
                     else if (offer.Pending == "accepted")
-                        item.BackColor = Color.Green;
+                        item.BackColor = Color.Lime;
                     else if (offer.Pending == "rejected")
-                        item.BackColor = Color.Red;
+                        item.BackColor = Color.Firebrick;
                 }
             }
         }
@@ -158,6 +158,53 @@ namespace FootballTransfer.ViewPage
 
             DataProvider.DeletePlayer(loggedPlayer);
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void BtnAcceptManagerOffer_Click(object sender, EventArgs e)
+        {
+            if (listViewManagerOffer.SelectedItems.Count > 0)
+            {
+                loggedPlayer = DataProvider.GetPlayer(loggedPlayer);
+
+                if (loggedPlayer.ManagerOffer == "false")
+                {
+                    string PlayerEmail = loggedPlayer.Email;
+                    string ManagerEmail = listViewManagerOffer.SelectedItems[0]
+                                                            .SubItems[0].Text;
+
+                    DataProvider.UpdateAcceptedManagerOffer(ManagerEmail, PlayerEmail);
+                    DataProvider.UpdatePlayerAcceptManagerOffer(PlayerEmail);
+
+                    listViewManagerOffer.SelectedItems[0].BackColor = Color.Lime;
+                }
+                else
+                {
+                    MessageBox.Show("You have a Manager!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("You must select player!");
+            }
+        }
+
+        private void BtnRejectManagerOffer_Click(object sender, EventArgs e)
+        {
+            if (listViewManagerOffer.SelectedItems.Count > 0)
+            {
+                string PlayerEmail = loggedPlayer.Email;
+                string ManagerEmail = listViewManagerOffer.SelectedItems[0]
+                                                            .SubItems[0].Text;
+
+                DataProvider.UpdateRejectManagerOffer(ManagerEmail, PlayerEmail);
+                DataProvider.UpdatePlayerRejectManagerOffer(PlayerEmail);
+
+                listViewManagerOffer.SelectedItems[0].BackColor = Color.Firebrick;
+            }
+            else
+            {
+                MessageBox.Show("You must select player!");
+            }
         }
 
         #region Button(Update, Save, Close)
@@ -254,42 +301,6 @@ namespace FootballTransfer.ViewPage
             BtnRejectManagerOffer.Visible = false;
             BtnAcceptClubOffer.Visible = true;
             BtnRejectClubOffer.Visible = true;
-        }
-
-        private void BtnAcceptManagerOffer_Click(object sender, EventArgs e)
-        {
-            if (listViewManagerOffer.SelectedItems.Count > 0)
-            {
-                string PlayerEmail = loggedPlayer.Email;
-                string ManagerEmail = listViewManagerOffer.SelectedItems[0]
-                                                        .SubItems[0].Text;
-
-                DataProvider.UpdateAcceptedManagerOffer(ManagerEmail, PlayerEmail);
-
-                listViewManagerOffer.SelectedItems[0].BackColor = Color.Green;
-            }
-            else
-            {
-                MessageBox.Show("You must select player!");
-            }
-        }
-
-        private void BtnRejectManagerOffer_Click(object sender, EventArgs e)
-        {
-            if (listViewManagerOffer.SelectedItems.Count > 0)
-            {
-                string PlayerEmail = loggedPlayer.Email;
-                string ManagerEmail = listViewManagerOffer.SelectedItems[0]
-                                                            .SubItems[0].Text;
-
-                DataProvider.UpdateRejectManagerOffer(ManagerEmail, PlayerEmail);
-
-                listViewManagerOffer.SelectedItems[0].BackColor = Color.Red;
-            }
-            else
-            {
-                MessageBox.Show("You must select player!");
-            }
         }
     }
 }

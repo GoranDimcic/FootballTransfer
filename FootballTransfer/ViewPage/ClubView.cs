@@ -73,7 +73,7 @@ namespace FootballTransfer.ViewPage
 
             foreach (Player player in players)
             {
-                if (player.HaveManager == false)
+                if (player.ManagerOffer == "false")
                 {
                     String[] row = { player.Email, player.Name, player.Address, player.Country, player.Position };
                     ListViewItem item = new ListViewItem(row);

@@ -32,8 +32,7 @@ namespace FootballTransfer
                     Name = txtNamePlayerSign.Text,
                     Address = txtAddressPlayerSign.Text,
                     Country = txtCountryPlayerSign.Text,
-                    Position = comboBoxPositionPlayer.Text,
-                    HaveManager = false
+                    Position = comboBoxPositionPlayer.Text
                 };
 
                 if (player.Email == "")

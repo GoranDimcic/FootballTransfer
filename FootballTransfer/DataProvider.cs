@@ -31,6 +31,8 @@ namespace FootballTransfer
                 getPlayer.Address = playerData["address"].ToString();
                 getPlayer.Country = playerData["country"].ToString();
                 getPlayer.Position = playerData["position"].ToString();
+                getPlayer.ManagerOffer = playerData["manageroffer"].ToString();
+                getPlayer.ClubOffer = playerData["cluboffer"].ToString();
             }
             return getPlayer;
         }
@@ -105,7 +107,9 @@ namespace FootballTransfer
                     Name = playerData["name"].ToString(),
                     Address = playerData["address"].ToString(),
                     Country = playerData["country"].ToString(),
-                    Position = playerData["position"].ToString()
+                    Position = playerData["position"].ToString(),
+                    ManagerOffer = playerData["manageroffer"].ToString(),
+                    ClubOffer = playerData["cluboffer"].ToString()
                 };
 
                 playerReturn = player;
@@ -128,7 +132,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            _ = session.Execute("insert into \"Player\" (\"email\", address, country, name, pasword, position)  values ('" + player.Email + "', '" + player.Address + "', '" + player.Country + "', '" + player.Name + "', '" + player.Password + "', '" + player.Position + "')");
+            _ = session.Execute("insert into \"Player\" (\"email\", address, cluboffer, country, manageroffer, name, pasword, position)  values ('" + player.Email + "', '" + player.Address + "', '" + "false" + "', '" + player.Country + "', '" + "false" + "', '" + player.Name + "', '" + player.Password + "', '" + player.Position + "')");
         }
 
         public static void UpdatePlayer(Player player)
@@ -139,6 +143,26 @@ namespace FootballTransfer
                 return;
 
             _ = session.Execute("update \"Player\" set name='" + player.Name + "' , country='" + player.Country + "' , position='" + player.Position + "' , address='" + player.Address + "'where \"email\"='" + player.Email + "'");
+        }
+
+        public static void UpdatePlayerAcceptManagerOffer(string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            _ = session.Execute("update \"Player\" set manageroffer='" + "true" + "'where \"email\"='" + PlayerEmail + "'");
+        }
+
+        public static void UpdatePlayerRejectManagerOffer(string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            _ = session.Execute("update \"Player\" set manageroffer='" + "false" + "'where \"email\"='" + PlayerEmail + "'");
         }
 
         public static void DeletePlayer(Player player)

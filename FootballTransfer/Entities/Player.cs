@@ -17,9 +17,9 @@ namespace FootballTransfer.Entities
 
         public string Position { get; set; }
 
-        public int ManagerOffer { get; set; }
+        public string ManagerOffer { get; set; }
 
-        public int ClubOffer { get; set; }
+        public string ClubOffer { get; set; }
 
         public Boolean HaveManager;
 
