@@ -39,8 +39,8 @@
             this.txtPlayerPosition = new System.Windows.Forms.TextBox();
             this.BtnDeletePlayer = new System.Windows.Forms.Button();
             this.BtnShowClubOffer = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnRejectManagerOffer = new System.Windows.Forms.Button();
+            this.BtnAcceptManagerOffer = new System.Windows.Forms.Button();
             this.BtnSaveUpdatedPlayer = new System.Windows.Forms.Button();
             this.comboBoxUpdatePlayerPosition = new System.Windows.Forms.ComboBox();
             this.BtnCloseUpdate = new System.Windows.Forms.Button();
@@ -48,6 +48,8 @@
             this.listViewClubOffer = new System.Windows.Forms.ListView();
             this.BtnShowManagerOffer = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.BtnAcceptClubOffer = new System.Windows.Forms.Button();
+            this.BtnRejectClubOffer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnUpdatePlayer
@@ -160,23 +162,27 @@
             this.BtnShowClubOffer.UseVisualStyleBackColor = true;
             this.BtnShowClubOffer.Click += new System.EventHandler(this.BtnShowClubOffer_Click);
             // 
-            // button6
+            // BtnRejectManagerOffer
             // 
-            this.button6.Location = new System.Drawing.Point(645, 300);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 40);
-            this.button6.TabIndex = 26;
-            this.button6.Text = "Reject";
-            this.button6.UseVisualStyleBackColor = true;
+            this.BtnRejectManagerOffer.BackColor = System.Drawing.Color.DarkRed;
+            this.BtnRejectManagerOffer.Location = new System.Drawing.Point(645, 300);
+            this.BtnRejectManagerOffer.Name = "BtnRejectManagerOffer";
+            this.BtnRejectManagerOffer.Size = new System.Drawing.Size(100, 40);
+            this.BtnRejectManagerOffer.TabIndex = 26;
+            this.BtnRejectManagerOffer.Text = "Reject";
+            this.BtnRejectManagerOffer.UseVisualStyleBackColor = false;
+            this.BtnRejectManagerOffer.Click += new System.EventHandler(this.BtnRejectManagerOffer_Click);
             // 
-            // button3
+            // BtnAcceptManagerOffer
             // 
-            this.button3.Location = new System.Drawing.Point(645, 250);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 40);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "Accept";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnAcceptManagerOffer.BackColor = System.Drawing.Color.Lime;
+            this.BtnAcceptManagerOffer.Location = new System.Drawing.Point(645, 250);
+            this.BtnAcceptManagerOffer.Name = "BtnAcceptManagerOffer";
+            this.BtnAcceptManagerOffer.Size = new System.Drawing.Size(100, 40);
+            this.BtnAcceptManagerOffer.TabIndex = 25;
+            this.BtnAcceptManagerOffer.Text = "Accept";
+            this.BtnAcceptManagerOffer.UseVisualStyleBackColor = false;
+            this.BtnAcceptManagerOffer.Click += new System.EventHandler(this.BtnAcceptManagerOffer_Click);
             // 
             // BtnSaveUpdatedPlayer
             // 
@@ -263,17 +269,41 @@
             this.label2.TabIndex = 30;
             this.label2.Text = "Choose an offer:";
             // 
+            // BtnAcceptClubOffer
+            // 
+            this.BtnAcceptClubOffer.BackColor = System.Drawing.Color.Lime;
+            this.BtnAcceptClubOffer.Location = new System.Drawing.Point(645, 250);
+            this.BtnAcceptClubOffer.Name = "BtnAcceptClubOffer";
+            this.BtnAcceptClubOffer.Size = new System.Drawing.Size(100, 40);
+            this.BtnAcceptClubOffer.TabIndex = 31;
+            this.BtnAcceptClubOffer.Text = "Accept";
+            this.BtnAcceptClubOffer.UseVisualStyleBackColor = false;
+            this.BtnAcceptClubOffer.Visible = false;
+            // 
+            // BtnRejectClubOffer
+            // 
+            this.BtnRejectClubOffer.BackColor = System.Drawing.Color.DarkRed;
+            this.BtnRejectClubOffer.Location = new System.Drawing.Point(645, 359);
+            this.BtnRejectClubOffer.Name = "BtnRejectClubOffer";
+            this.BtnRejectClubOffer.Size = new System.Drawing.Size(100, 40);
+            this.BtnRejectClubOffer.TabIndex = 32;
+            this.BtnRejectClubOffer.Text = "Reject";
+            this.BtnRejectClubOffer.UseVisualStyleBackColor = false;
+            this.BtnRejectClubOffer.Visible = false;
+            // 
             // PlayerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 511);
+            this.Controls.Add(this.BtnRejectClubOffer);
+            this.Controls.Add(this.BtnAcceptClubOffer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnCloseUpdate);
             this.Controls.Add(this.comboBoxUpdatePlayerPosition);
             this.Controls.Add(this.BtnSaveUpdatedPlayer);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.BtnRejectManagerOffer);
+            this.Controls.Add(this.BtnAcceptManagerOffer);
             this.Controls.Add(this.listViewClubOffer);
             this.Controls.Add(this.BtnShowClubOffer);
             this.Controls.Add(this.BtnShowManagerOffer);
@@ -307,8 +337,8 @@
         private System.Windows.Forms.TextBox txtPlayerPosition;
         private System.Windows.Forms.Button BtnDeletePlayer;
         private System.Windows.Forms.Button BtnShowClubOffer;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtnRejectManagerOffer;
+        private System.Windows.Forms.Button BtnAcceptManagerOffer;
         private System.Windows.Forms.Button BtnSaveUpdatedPlayer;
         private System.Windows.Forms.ComboBox comboBoxUpdatePlayerPosition;
         private System.Windows.Forms.Button BtnCloseUpdate;
@@ -316,5 +346,7 @@
         private System.Windows.Forms.ListView listViewClubOffer;
         private System.Windows.Forms.Button BtnShowManagerOffer;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button BtnAcceptClubOffer;
+        private System.Windows.Forms.Button BtnRejectClubOffer;
     }
 }

@@ -19,5 +19,7 @@ namespace FootballTransfer.Entities
         public string Duraction { get; set; }
 
         public string Offer { get; set; }
+
+        public string Pending { get; set; }
     }
 }

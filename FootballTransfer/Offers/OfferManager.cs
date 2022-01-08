@@ -40,15 +40,15 @@ namespace FootballTransfer.Offers
                 Offer = TxtContractOffer.Text
             };
 
-            //if (TxtContractDuraction.Text == "")
-            //    MessageBox.Show("You must enter contract duraction!");
-            //else if (TxtOfferPrice.Text == "")
-            //    MessageBox.Show("You must enter offer price!");
-
-            //DialogResult = DialogResult.Cancel;
-
-            DataProvider.AddManagerOffer(offer);
-            this.DialogResult = DialogResult.OK;
+            if (TxtContractDuraction.Text == "")
+                MessageBox.Show("You must enter contract duraction!");
+            else if (TxtContractOffer.Text == "")
+                MessageBox.Show("You must enter offer price!");
+            else
+            {
+                DataProvider.AddManagerOffer(offer);
+                this.DialogResult = DialogResult.OK;
+            }
         }
 
         private void TxtNumberOnly_KeyPress(object sender, KeyPressEventArgs e)

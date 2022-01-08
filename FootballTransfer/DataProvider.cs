@@ -361,7 +361,8 @@ namespace FootballTransfer
                     ManagerName = playerData["managername"].ToString(),
                     PlayerName = playerData["playername"].ToString(),
                     Duraction = playerData["duraction"].ToString(),
-                    Offer = playerData["offer"].ToString()
+                    Offer = playerData["offer"].ToString(),
+                    Pending = playerData["pending"].ToString()
                 };
                 offers.Add(offer);
             }
@@ -375,7 +376,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            _ = session.Execute("insert into \"ManagerOffer\" (\"manageremail\", \"playeremail\", duraction, managername, offer, playername)  values ('" + offer.ManagerEmail + "', '" + offer.PlayerEmail + "', '" + offer.Duraction + "', '" + offer.ManagerName + "', '" + offer.Offer + "', '" + offer.PlayerName + "')");
+            _ = session.Execute("insert into \"ManagerOffer\" (\"manageremail\", \"playeremail\", duraction, managername, offer, pending, playername)  values ('" + offer.ManagerEmail + "', '" + offer.PlayerEmail + "', '" + offer.Duraction + "', '" + offer.ManagerName + "', '" + offer.Offer + "', '" + "pending" + "', '" + offer.PlayerName + "')");
         }
 
         public static void UpdatePlayerNameInManagerOffer(string PlayerEmail, string PlayerName, string ManagerEmail)
@@ -396,6 +397,26 @@ namespace FootballTransfer
                 return;
 
             _ = session.Execute("update \"ManagerOffer\" set managername='" + ManagerName + "'where \"playeremail\"='" + PlayerEmail + "' and \"manageremail\"='" + ManagerEmail + "' ");
+        }
+
+        public static void UpdateAcceptedManagerOffer(string ManagerEmail, string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            _ = session.Execute("update \"ManagerOffer\" set pending='" + "accepted" + "'where \"playeremail\"='" + PlayerEmail + "' and \"manageremail\"='" + ManagerEmail + "' ");
+        }
+
+        public static void UpdateRejectManagerOffer(string ManagerEmail, string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            _ = session.Execute("update \"ManagerOffer\" set pending='" + "rejected" + "'where \"manageremail\"='" + ManagerEmail + "' and \"playeremail\"='" + PlayerEmail + "' ");
         }
 
         public static void DeletePlayerInManagerOffer(string PlayerEmail, string ManagerEmail)

@@ -64,6 +64,13 @@ namespace FootballTransfer.ViewPage
                     String[] row = { offer.ManagerEmail, offer.ManagerName, offer.Offer, offer.Duraction };
                     ListViewItem item = new ListViewItem(row);
                     listViewManagerOffer.Items.Add(item);
+
+                    if (offer.Pending == "pending")
+                        item.BackColor = Color.Yellow;
+                    else if (offer.Pending == "accepted")
+                        item.BackColor = Color.Green;
+                    else if (offer.Pending == "rejected")
+                        item.BackColor = Color.Red;
                 }
             }
         }
@@ -231,12 +238,58 @@ namespace FootballTransfer.ViewPage
         {
             listViewManagerOffer.Visible = true;
             listViewClubOffer.Visible = false;
+
+            BtnAcceptManagerOffer.Visible = true;
+            BtnRejectManagerOffer.Visible = true;
+            BtnAcceptClubOffer.Visible = false;
+            BtnRejectClubOffer.Visible = false;
         }
 
         private void BtnShowClubOffer_Click(object sender, EventArgs e)
         {
             listViewManagerOffer.Visible = false;
             listViewClubOffer.Visible = true;
+
+            BtnAcceptManagerOffer.Visible = false;
+            BtnRejectManagerOffer.Visible = false;
+            BtnAcceptClubOffer.Visible = true;
+            BtnRejectClubOffer.Visible = true;
+        }
+
+        private void BtnAcceptManagerOffer_Click(object sender, EventArgs e)
+        {
+            if (listViewManagerOffer.SelectedItems.Count > 0)
+            {
+                string PlayerEmail = loggedPlayer.Email;
+                string ManagerEmail = listViewManagerOffer.SelectedItems[0]
+                                                        .SubItems[0].Text;
+
+                DataProvider.UpdateAcceptedManagerOffer(ManagerEmail, PlayerEmail);
+
+                listViewManagerOffer.SelectedItems[0].BackColor = Color.Green;
+            }
+            else
+            {
+                MessageBox.Show("You must select player!");
+            }
+        }
+
+        private void BtnRejectManagerOffer_Click(object sender, EventArgs e)
+        {
+            if (listViewManagerOffer.SelectedItems.Count > 0)
+            {
+                string PlayerEmail = loggedPlayer.Email;
+                string ManagerEmail = listViewManagerOffer.SelectedItems[0]
+                                                            .SubItems[0].Text;
+
+                DataProvider.UpdateRejectManagerOffer(ManagerEmail, PlayerEmail);
+
+                listViewManagerOffer.SelectedItems[0].BackColor = Color.Red;
+            }
+            else
+            {
+                MessageBox.Show("You must select player!");
+            }
         }
     }
 }
