@@ -21,5 +21,7 @@ namespace FootballTransfer.Entities
         public string League { get; set; }
 
         public string Salary { get; set; }
+
+        public string Pending { get; set; }
     }
 }

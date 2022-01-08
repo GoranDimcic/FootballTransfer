@@ -56,7 +56,9 @@ namespace FootballTransfer
                     Name = playerData["name"].ToString(),
                     Address = playerData["address"].ToString(),
                     Country = playerData["country"].ToString(),
-                    Position = playerData["position"].ToString()
+                    Position = playerData["position"].ToString(),
+                    ManagerOffer = playerData["manageroffer"].ToString(),
+                    ClubOffer = playerData["cluboffer"].ToString()
                 };
                 players.Add(player);
             }
@@ -145,7 +147,7 @@ namespace FootballTransfer
             _ = session.Execute("update \"Player\" set name='" + player.Name + "' , country='" + player.Country + "' , position='" + player.Position + "' , address='" + player.Address + "'where \"email\"='" + player.Email + "'");
         }
 
-        public static void UpdatePlayerAcceptManagerOffer(string PlayerEmail)
+        public static void UpdatePlayerAcceptedManagerOffer(string PlayerEmail)
         {
             ISession session = SessionManager.GetSession();
 
@@ -155,7 +157,17 @@ namespace FootballTransfer
             _ = session.Execute("update \"Player\" set manageroffer='" + "true" + "'where \"email\"='" + PlayerEmail + "'");
         }
 
-        public static void UpdatePlayerRejectManagerOffer(string PlayerEmail)
+        public static void UpdatePlayerAcceptedClubOffer(string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            _ = session.Execute("update \"Player\" set cluboffer='" + "true" + "'where \"email\"='" + PlayerEmail + "'");
+        }
+
+        public static void UpdatePlayerRejectedManagerOffer(string PlayerEmail)
         {
             ISession session = SessionManager.GetSession();
 
@@ -163,6 +175,16 @@ namespace FootballTransfer
                 return;
 
             _ = session.Execute("update \"Player\" set manageroffer='" + "false" + "'where \"email\"='" + PlayerEmail + "'");
+        }
+
+        public static void UpdatePlayerRejectedClubOffer(string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            _ = session.Execute("update \"Player\" set cluboffer='" + "false" + "'where \"email\"='" + PlayerEmail + "'");
         }
 
         public static void DeletePlayer(Player player)
@@ -433,7 +455,7 @@ namespace FootballTransfer
             _ = session.Execute("update \"ManagerOffer\" set pending='" + "accepted" + "'where \"playeremail\"='" + PlayerEmail + "' and \"manageremail\"='" + ManagerEmail + "' ");
         }
 
-        public static void UpdateRejectManagerOffer(string ManagerEmail, string PlayerEmail)
+        public static void UpdateRejectedManagerOffer(string ManagerEmail, string PlayerEmail)
         {
             ISession session = SessionManager.GetSession();
 
@@ -487,7 +509,8 @@ namespace FootballTransfer
                     League = playerData["league"].ToString(),
                     PlayerName = playerData["playername"].ToString(),
                     Duraction = playerData["duraction"].ToString(),
-                    Salary = playerData["salary"].ToString()
+                    Salary = playerData["salary"].ToString(),
+                    Pending = playerData["pending"].ToString()
                 };
                 offers.Add(offer);
             }
@@ -501,7 +524,7 @@ namespace FootballTransfer
             if (session == null)
                 return;
 
-            _ = session.Execute("insert into \"ClubOffer\" (\"playeremail\", \"clubemail\", clubname, duraction, league, playername, salary)  values ('" + offer.PlayerEmail + "', '" + offer.ClubEmail + "', '" + offer.ClubName + "', '" + offer.Duraction + "', '" + offer.League + "', '" + offer.PlayerName + "', '" + offer.Salary + "')");
+            _ = session.Execute("insert into \"ClubOffer\" (\"playeremail\", \"clubemail\", clubname, duraction, league, pending, playername, salary)  values ('" + offer.PlayerEmail + "', '" + offer.ClubEmail + "', '" + offer.ClubName + "', '" + offer.Duraction + "', '" + offer.League + "', '" + "pending" + "', '" + offer.PlayerName + "', '" + offer.Salary + "')");
         }
 
         public static void UpdatePlayerNameInClubOffer(string PlayerEmail, string PlayerName, string ClubEmail)
@@ -522,6 +545,26 @@ namespace FootballTransfer
                 return;
 
             _ = session.Execute("update \"ClubOffer\" set clubname='" + ClubName + "' , league='" + ClubLeague + "'where \"clubemail\"='" + ClubEmail + "' and \"playeremail\"='" + PlayerEmail + "' ");
+        }
+
+        public static void UpdateAcceptedClubOffer(string ClubEmail, string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            _ = session.Execute("update \"ClubOffer\" set pending='" + "accepted" + "'where \"playeremail\"='" + PlayerEmail + "' and \"clubemail\"='" + ClubEmail + "' ");
+        }
+
+        public static void UpdateRejectedClubOffer(string ClubEmail, string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+
+            if (session == null)
+                return;
+
+            _ = session.Execute("update \"ClubOffer\" set pending='" + "rejected" + "'where \"playeremail\"='" + PlayerEmail + "' and \"clubemail\"='" + ClubEmail + "' ");
         }
 
         public static void DeletePlayerInClubOffer(string PlayerEmail, string ClubEmail)

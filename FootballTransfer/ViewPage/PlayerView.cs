@@ -99,6 +99,13 @@ namespace FootballTransfer.ViewPage
                     String[] row = { offer.ClubEmail, offer.ClubName, offer.League, offer.Salary, offer.Duraction };
                     ListViewItem item = new ListViewItem(row);
                     listViewClubOffer.Items.Add(item);
+
+                    if (offer.Pending == "pending")
+                        item.BackColor = Color.Yellow;
+                    else if (offer.Pending == "accepted")
+                        item.BackColor = Color.Lime;
+                    else if (offer.Pending == "rejected")
+                        item.BackColor = Color.Firebrick;
                 }
             }
         }
@@ -173,13 +180,41 @@ namespace FootballTransfer.ViewPage
                                                             .SubItems[0].Text;
 
                     DataProvider.UpdateAcceptedManagerOffer(ManagerEmail, PlayerEmail);
-                    DataProvider.UpdatePlayerAcceptManagerOffer(PlayerEmail);
+                    DataProvider.UpdatePlayerAcceptedManagerOffer(PlayerEmail);
 
                     listViewManagerOffer.SelectedItems[0].BackColor = Color.Lime;
                 }
                 else
                 {
                     MessageBox.Show("You have a Manager!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("You must select player!");
+            }
+        }
+
+        private void BtnAcceptClubOffer_Click(object sender, EventArgs e)
+        {
+            if (listViewClubOffer.SelectedItems.Count > 0)
+            {
+                loggedPlayer = DataProvider.GetPlayer(loggedPlayer);
+
+                if (loggedPlayer.ClubOffer == "false")
+                {
+                    string PlayerEmail = loggedPlayer.Email;
+                    string ClubEmail = listViewClubOffer.SelectedItems[0]
+                                                            .SubItems[0].Text;
+
+                    DataProvider.UpdateAcceptedClubOffer(ClubEmail, PlayerEmail);
+                    DataProvider.UpdatePlayerAcceptedClubOffer(PlayerEmail);
+
+                    listViewClubOffer.SelectedItems[0].BackColor = Color.Lime;
+                }
+                else
+                {
+                    MessageBox.Show("You have a Club!");
                 }
             }
             else
@@ -196,10 +231,29 @@ namespace FootballTransfer.ViewPage
                 string ManagerEmail = listViewManagerOffer.SelectedItems[0]
                                                             .SubItems[0].Text;
 
-                DataProvider.UpdateRejectManagerOffer(ManagerEmail, PlayerEmail);
-                DataProvider.UpdatePlayerRejectManagerOffer(PlayerEmail);
+                DataProvider.UpdateRejectedManagerOffer(ManagerEmail, PlayerEmail);
+                DataProvider.UpdatePlayerRejectedManagerOffer(PlayerEmail);
 
                 listViewManagerOffer.SelectedItems[0].BackColor = Color.Firebrick;
+            }
+            else
+            {
+                MessageBox.Show("You must select player!");
+            }
+        }
+
+        private void BtnRejectClubOffer_Click(object sender, EventArgs e)
+        {
+            if (listViewClubOffer.SelectedItems.Count > 0)
+            {
+                string PlayerEmail = loggedPlayer.Email;
+                string ClubEmail = listViewClubOffer.SelectedItems[0]
+                                                            .SubItems[0].Text;
+
+                DataProvider.UpdateRejectedClubOffer(ClubEmail, PlayerEmail);
+                DataProvider.UpdatePlayerRejectedClubOffer(PlayerEmail);
+
+                listViewClubOffer.SelectedItems[0].BackColor = Color.Firebrick;
             }
             else
             {

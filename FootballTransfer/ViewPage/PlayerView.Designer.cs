@@ -272,24 +272,26 @@
             // BtnAcceptClubOffer
             // 
             this.BtnAcceptClubOffer.BackColor = System.Drawing.Color.Lime;
-            this.BtnAcceptClubOffer.Location = new System.Drawing.Point(645, 200);
+            this.BtnAcceptClubOffer.Location = new System.Drawing.Point(645, 250);
             this.BtnAcceptClubOffer.Name = "BtnAcceptClubOffer";
             this.BtnAcceptClubOffer.Size = new System.Drawing.Size(100, 40);
             this.BtnAcceptClubOffer.TabIndex = 31;
             this.BtnAcceptClubOffer.Text = "Accept";
             this.BtnAcceptClubOffer.UseVisualStyleBackColor = false;
             this.BtnAcceptClubOffer.Visible = false;
+            this.BtnAcceptClubOffer.Click += new System.EventHandler(this.BtnAcceptClubOffer_Click);
             // 
             // BtnRejectClubOffer
             // 
             this.BtnRejectClubOffer.BackColor = System.Drawing.Color.Firebrick;
-            this.BtnRejectClubOffer.Location = new System.Drawing.Point(645, 359);
+            this.BtnRejectClubOffer.Location = new System.Drawing.Point(645, 300);
             this.BtnRejectClubOffer.Name = "BtnRejectClubOffer";
             this.BtnRejectClubOffer.Size = new System.Drawing.Size(100, 40);
             this.BtnRejectClubOffer.TabIndex = 32;
             this.BtnRejectClubOffer.Text = "Reject";
             this.BtnRejectClubOffer.UseVisualStyleBackColor = false;
             this.BtnRejectClubOffer.Visible = false;
+            this.BtnRejectClubOffer.Click += new System.EventHandler(this.BtnRejectClubOffer_Click);
             // 
             // PlayerView
             // 
