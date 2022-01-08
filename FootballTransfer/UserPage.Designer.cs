@@ -29,6 +29,7 @@ namespace FootballTransfer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserPage));
             this.BtnAdmin = new System.Windows.Forms.Button();
             this.BtnUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -38,7 +39,7 @@ namespace FootballTransfer
             this.BtnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAdmin.Location = new System.Drawing.Point(100, 100);
             this.BtnAdmin.Name = "BtnAdmin";
-            this.BtnAdmin.Size = new System.Drawing.Size(150, 100);
+            this.BtnAdmin.Size = new System.Drawing.Size(125, 80);
             this.BtnAdmin.TabIndex = 0;
             this.BtnAdmin.Text = "Admin";
             this.BtnAdmin.UseVisualStyleBackColor = true;
@@ -49,7 +50,7 @@ namespace FootballTransfer
             this.BtnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnUser.Location = new System.Drawing.Point(300, 100);
             this.BtnUser.Name = "BtnUser";
-            this.BtnUser.Size = new System.Drawing.Size(150, 100);
+            this.BtnUser.Size = new System.Drawing.Size(125, 80);
             this.BtnUser.TabIndex = 1;
             this.BtnUser.Text = "User";
             this.BtnUser.UseVisualStyleBackColor = true;
@@ -59,6 +60,8 @@ namespace FootballTransfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(534, 311);
             this.Controls.Add(this.BtnUser);
             this.Controls.Add(this.BtnAdmin);

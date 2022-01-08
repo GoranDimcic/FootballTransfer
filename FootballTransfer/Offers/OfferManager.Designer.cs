@@ -30,12 +30,10 @@ namespace FootballTransfer.Offers
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OfferManager));
-            this.label1 = new System.Windows.Forms.Label();
             this.TxtSelectedPlayerName = new System.Windows.Forms.TextBox();
             this.TxtSelectedPlayerEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.TxtManagerName = new System.Windows.Forms.TextBox();
             this.TxtManagerEmail = new System.Windows.Forms.TextBox();
             this.TxtContractDuraction = new System.Windows.Forms.TextBox();
@@ -45,18 +43,9 @@ namespace FootballTransfer.Offers
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.BtnCreateContract = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(212, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 49);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Contract";
             // 
             // TxtSelectedPlayerName
             // 
@@ -97,17 +86,6 @@ namespace FootballTransfer.Offers
             this.label3.Size = new System.Drawing.Size(57, 24);
             this.label3.TabIndex = 4;
             this.label3.Text = "Email";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(171, 170);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(226, 49);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "From manager";
             // 
             // TxtManagerName
             // 
@@ -199,6 +177,28 @@ namespace FootballTransfer.Offers
             this.BtnCreateContract.UseVisualStyleBackColor = true;
             this.BtnCreateContract.Click += new System.EventHandler(this.BtnCreateContract_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(171, 170);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(226, 49);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "From manager";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(175, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 49);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Contract for";
+            // 
             // OfferManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,13 +229,10 @@ namespace FootballTransfer.Offers
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtSelectedPlayerName;
         private System.Windows.Forms.TextBox TxtSelectedPlayerEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TxtManagerName;
         private System.Windows.Forms.TextBox TxtManagerEmail;
         private System.Windows.Forms.TextBox TxtContractDuraction;
@@ -245,5 +242,7 @@ namespace FootballTransfer.Offers
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button BtnCreateContract;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
     }
 }

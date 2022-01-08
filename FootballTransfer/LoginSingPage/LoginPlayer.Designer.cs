@@ -29,6 +29,7 @@ namespace FootballTransfer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPlayer));
             this.lblLoginPlayer = new System.Windows.Forms.Label();
             this.txtEmailLoginPlayer = new System.Windows.Forms.TextBox();
             this.txtPasswordLoginPlayer = new System.Windows.Forms.TextBox();
@@ -40,7 +41,9 @@ namespace FootballTransfer
             // lblLoginPlayer
             // 
             this.lblLoginPlayer.AutoSize = true;
+            this.lblLoginPlayer.BackColor = System.Drawing.Color.Transparent;
             this.lblLoginPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginPlayer.ForeColor = System.Drawing.Color.White;
             this.lblLoginPlayer.Location = new System.Drawing.Point(165, 80);
             this.lblLoginPlayer.Name = "lblLoginPlayer";
             this.lblLoginPlayer.Size = new System.Drawing.Size(125, 25);
@@ -69,7 +72,9 @@ namespace FootballTransfer
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
             this.lblEmail.Location = new System.Drawing.Point(50, 127);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(72, 25);
@@ -79,7 +84,9 @@ namespace FootballTransfer
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.White;
             this.lblPassword.Location = new System.Drawing.Point(16, 177);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(106, 25);
@@ -88,19 +95,22 @@ namespace FootballTransfer
             // 
             // BtnLoginAsPlayer
             // 
+            this.BtnLoginAsPlayer.BackColor = System.Drawing.Color.Transparent;
             this.BtnLoginAsPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLoginAsPlayer.Location = new System.Drawing.Point(150, 225);
             this.BtnLoginAsPlayer.Name = "BtnLoginAsPlayer";
             this.BtnLoginAsPlayer.Size = new System.Drawing.Size(150, 50);
             this.BtnLoginAsPlayer.TabIndex = 5;
             this.BtnLoginAsPlayer.Text = "Login";
-            this.BtnLoginAsPlayer.UseVisualStyleBackColor = true;
+            this.BtnLoginAsPlayer.UseVisualStyleBackColor = false;
             this.BtnLoginAsPlayer.Click += new System.EventHandler(this.BtnLoginAsPlayer_Click);
             // 
             // LoginPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(434, 361);
             this.Controls.Add(this.BtnLoginAsPlayer);
             this.Controls.Add(this.lblPassword);

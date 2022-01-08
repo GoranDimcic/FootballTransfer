@@ -98,7 +98,7 @@ namespace FootballTransfer.Offers
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(201, 170);
+            this.label4.Location = new System.Drawing.Point(195, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 49);
             this.label4.TabIndex = 20;
@@ -131,11 +131,11 @@ namespace FootballTransfer.Offers
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(212, 15);
+            this.label1.Location = new System.Drawing.Point(175, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 49);
+            this.label1.Size = new System.Drawing.Size(196, 49);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Contract";
+            this.label1.Text = "Contract for";
             // 
             // label9
             // 
