@@ -29,6 +29,7 @@ namespace FootballTransfer.ViewPage
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(User));
             this.listViewManagerTransfer = new System.Windows.Forms.ListView();
             this.listViewClubTransfer = new System.Windows.Forms.ListView();
             this.label2 = new System.Windows.Forms.Label();
@@ -65,6 +66,7 @@ namespace FootballTransfer.ViewPage
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(25, 25);
             this.label2.Name = "label2";
@@ -76,6 +78,7 @@ namespace FootballTransfer.ViewPage
             // 
             this.BtnManagerTransfer.BackColor = System.Drawing.Color.Transparent;
             this.BtnManagerTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnManagerTransfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnManagerTransfer.Location = new System.Drawing.Point(300, 22);
             this.BtnManagerTransfer.Name = "BtnManagerTransfer";
             this.BtnManagerTransfer.Size = new System.Drawing.Size(100, 50);
@@ -88,6 +91,7 @@ namespace FootballTransfer.ViewPage
             // 
             this.BtnClubTransfer.BackColor = System.Drawing.Color.Transparent;
             this.BtnClubTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClubTransfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnClubTransfer.Location = new System.Drawing.Point(425, 22);
             this.BtnClubTransfer.Name = "BtnClubTransfer";
             this.BtnClubTransfer.Size = new System.Drawing.Size(100, 50);
@@ -100,6 +104,8 @@ namespace FootballTransfer.ViewPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(834, 411);
             this.Controls.Add(this.BtnClubTransfer);
             this.Controls.Add(this.BtnManagerTransfer);
