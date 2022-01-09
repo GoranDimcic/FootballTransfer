@@ -61,7 +61,7 @@ namespace FootballTransfer.ViewPage
             {
                 if (offer.PlayerEmail == loggedPlayer.Email)
                 {
-                    String[] row = { offer.ManagerEmail, offer.ManagerName, offer.Offer, offer.Duraction };
+                    String[] row = { offer.ManagerEmail, offer.ManagerName, offer.Offer + "$", offer.Duraction };
                     ListViewItem item = new ListViewItem(row);
                     listViewManagerOffer.Items.Add(item);
 
@@ -96,7 +96,7 @@ namespace FootballTransfer.ViewPage
             {
                 if (offer.PlayerEmail == loggedPlayer.Email)
                 {
-                    String[] row = { offer.ClubEmail, offer.ClubName, offer.League, offer.Salary, offer.Duraction };
+                    String[] row = { offer.ClubEmail, offer.ClubName, offer.League, offer.Salary + "$", offer.Duraction };
                     ListViewItem item = new ListViewItem(row);
                     listViewClubOffer.Items.Add(item);
 
@@ -129,6 +129,7 @@ namespace FootballTransfer.ViewPage
             {
                 string ManagerEmail = listViewManagerOffer.Items[i]
                                                           .SubItems[0].Text;
+
                 DataProvider.UpdatePlayerNameInManagerOffer(PlayerEmail, PlayerName, ManagerEmail);
             }
 
@@ -136,6 +137,7 @@ namespace FootballTransfer.ViewPage
             {
                 string ClubEmail = listViewClubOffer.Items[i]
                                                     .SubItems[0].Text;
+
                 DataProvider.UpdatePlayerNameInClubOffer(PlayerEmail, PlayerName, ClubEmail);
             }
         }
@@ -153,6 +155,7 @@ namespace FootballTransfer.ViewPage
             {
                 string ManagerEmail = listViewManagerOffer.Items[i]
                                                           .SubItems[0].Text;
+
                 DataProvider.DeletePlayerInManagerOffer(PlayerEmail, ManagerEmail);
             }
 
@@ -160,11 +163,12 @@ namespace FootballTransfer.ViewPage
             {
                 string ClubEmail = listViewClubOffer.Items[i]
                                                     .SubItems[0].Text;
+
                 DataProvider.DeletePlayerInClubOffer(PlayerEmail, ClubEmail);
             }
 
             DataProvider.DeletePlayer(loggedPlayer);
-            this.DialogResult = DialogResult.OK;
+            DialogResult = DialogResult.OK;
         }
 
         private void BtnAcceptManagerOffer_Click(object sender, EventArgs e)

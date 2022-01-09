@@ -72,7 +72,7 @@ namespace FootballTransfer.ViewPage
             this.txtManagerCountry.Name = "txtManagerCountry";
             this.txtManagerCountry.ReadOnly = true;
             this.txtManagerCountry.Size = new System.Drawing.Size(123, 19);
-            this.txtManagerCountry.TabIndex = 24;
+            this.txtManagerCountry.TabIndex = 4;
             // 
             // txtManagerName
             // 
@@ -82,7 +82,7 @@ namespace FootballTransfer.ViewPage
             this.txtManagerName.Name = "txtManagerName";
             this.txtManagerName.ReadOnly = true;
             this.txtManagerName.Size = new System.Drawing.Size(123, 19);
-            this.txtManagerName.TabIndex = 22;
+            this.txtManagerName.TabIndex = 2;
             // 
             // label5
             // 
@@ -122,7 +122,7 @@ namespace FootballTransfer.ViewPage
             this.txtManagerRepresent.Name = "txtManagerRepresent";
             this.txtManagerRepresent.ReadOnly = true;
             this.txtManagerRepresent.Size = new System.Drawing.Size(123, 19);
-            this.txtManagerRepresent.TabIndex = 25;
+            this.txtManagerRepresent.TabIndex = 5;
             // 
             // label2
             // 
@@ -142,7 +142,7 @@ namespace FootballTransfer.ViewPage
             this.txtManagerAddress.Name = "txtManagerAddress";
             this.txtManagerAddress.ReadOnly = true;
             this.txtManagerAddress.Size = new System.Drawing.Size(123, 19);
-            this.txtManagerAddress.TabIndex = 23;
+            this.txtManagerAddress.TabIndex = 3;
             // 
             // LblChoose
             // 
@@ -172,7 +172,7 @@ namespace FootballTransfer.ViewPage
             this.BtnDeleteManager.Location = new System.Drawing.Point(270, 70);
             this.BtnDeleteManager.Name = "BtnDeleteManager";
             this.BtnDeleteManager.Size = new System.Drawing.Size(100, 30);
-            this.BtnDeleteManager.TabIndex = 27;
+            this.BtnDeleteManager.TabIndex = 6;
             this.BtnDeleteManager.Text = "Delete";
             this.BtnDeleteManager.UseVisualStyleBackColor = true;
             this.BtnDeleteManager.Click += new System.EventHandler(this.BtnDeleteManager_Click);
@@ -182,7 +182,7 @@ namespace FootballTransfer.ViewPage
             this.BtnUpdateManager.Location = new System.Drawing.Point(270, 31);
             this.BtnUpdateManager.Name = "BtnUpdateManager";
             this.BtnUpdateManager.Size = new System.Drawing.Size(100, 30);
-            this.BtnUpdateManager.TabIndex = 26;
+            this.BtnUpdateManager.TabIndex = 1;
             this.BtnUpdateManager.Text = "Update";
             this.BtnUpdateManager.UseVisualStyleBackColor = true;
             this.BtnUpdateManager.Click += new System.EventHandler(this.BtnUpdateManager_Click);
@@ -192,7 +192,7 @@ namespace FootballTransfer.ViewPage
             this.BtnCreateOffer.Location = new System.Drawing.Point(645, 250);
             this.BtnCreateOffer.Name = "BtnCreateOffer";
             this.BtnCreateOffer.Size = new System.Drawing.Size(100, 40);
-            this.BtnCreateOffer.TabIndex = 33;
+            this.BtnCreateOffer.TabIndex = 13;
             this.BtnCreateOffer.Text = "Create offer";
             this.BtnCreateOffer.UseVisualStyleBackColor = true;
             this.BtnCreateOffer.Click += new System.EventHandler(this.BtnCreateOffer_Click);
@@ -202,7 +202,7 @@ namespace FootballTransfer.ViewPage
             this.BtnTerminateTheContract.Location = new System.Drawing.Point(645, 250);
             this.BtnTerminateTheContract.Name = "BtnTerminateTheContract";
             this.BtnTerminateTheContract.Size = new System.Drawing.Size(100, 40);
-            this.BtnTerminateTheContract.TabIndex = 34;
+            this.BtnTerminateTheContract.TabIndex = 12;
             this.BtnTerminateTheContract.Text = "Terminate the contract";
             this.BtnTerminateTheContract.UseVisualStyleBackColor = true;
             this.BtnTerminateTheContract.Visible = false;
@@ -213,7 +213,7 @@ namespace FootballTransfer.ViewPage
             this.BtnSeeMyPlayers.Location = new System.Drawing.Point(525, 200);
             this.BtnSeeMyPlayers.Name = "BtnSeeMyPlayers";
             this.BtnSeeMyPlayers.Size = new System.Drawing.Size(100, 40);
-            this.BtnSeeMyPlayers.TabIndex = 32;
+            this.BtnSeeMyPlayers.TabIndex = 11;
             this.BtnSeeMyPlayers.Text = "See my players";
             this.BtnSeeMyPlayers.UseVisualStyleBackColor = true;
             this.BtnSeeMyPlayers.Click += new System.EventHandler(this.BtnSeeMyPlayers_Click);
@@ -223,7 +223,7 @@ namespace FootballTransfer.ViewPage
             this.BtnSeeFreePlayers.Location = new System.Drawing.Point(400, 200);
             this.BtnSeeFreePlayers.Name = "BtnSeeFreePlayers";
             this.BtnSeeFreePlayers.Size = new System.Drawing.Size(100, 40);
-            this.BtnSeeFreePlayers.TabIndex = 31;
+            this.BtnSeeFreePlayers.TabIndex = 10;
             this.BtnSeeFreePlayers.Text = "See free players";
             this.BtnSeeFreePlayers.UseVisualStyleBackColor = true;
             this.BtnSeeFreePlayers.Click += new System.EventHandler(this.BtnSeeFreePlayers_Click);
@@ -233,7 +233,7 @@ namespace FootballTransfer.ViewPage
             this.BtnSeeMyOffers.Location = new System.Drawing.Point(275, 200);
             this.BtnSeeMyOffers.Name = "BtnSeeMyOffers";
             this.BtnSeeMyOffers.Size = new System.Drawing.Size(100, 40);
-            this.BtnSeeMyOffers.TabIndex = 30;
+            this.BtnSeeMyOffers.TabIndex = 9;
             this.BtnSeeMyOffers.Text = "See my offers";
             this.BtnSeeMyOffers.UseVisualStyleBackColor = true;
             this.BtnSeeMyOffers.Click += new System.EventHandler(this.BtnSeeMyOffers_Click);
@@ -243,7 +243,7 @@ namespace FootballTransfer.ViewPage
             this.BtnCloseUpdate.Location = new System.Drawing.Point(270, 70);
             this.BtnCloseUpdate.Name = "BtnCloseUpdate";
             this.BtnCloseUpdate.Size = new System.Drawing.Size(100, 30);
-            this.BtnCloseUpdate.TabIndex = 29;
+            this.BtnCloseUpdate.TabIndex = 7;
             this.BtnCloseUpdate.Text = "Close";
             this.BtnCloseUpdate.UseVisualStyleBackColor = true;
             this.BtnCloseUpdate.Visible = false;
@@ -251,10 +251,10 @@ namespace FootballTransfer.ViewPage
             // 
             // BtnSaveUpdatedManager
             // 
-            this.BtnSaveUpdatedManager.Location = new System.Drawing.Point(270, 30);
+            this.BtnSaveUpdatedManager.Location = new System.Drawing.Point(270, 31);
             this.BtnSaveUpdatedManager.Name = "BtnSaveUpdatedManager";
             this.BtnSaveUpdatedManager.Size = new System.Drawing.Size(100, 30);
-            this.BtnSaveUpdatedManager.TabIndex = 28;
+            this.BtnSaveUpdatedManager.TabIndex = 6;
             this.BtnSaveUpdatedManager.Text = "Save";
             this.BtnSaveUpdatedManager.UseVisualStyleBackColor = true;
             this.BtnSaveUpdatedManager.Visible = false;

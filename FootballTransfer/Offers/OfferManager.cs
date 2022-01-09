@@ -47,7 +47,7 @@ namespace FootballTransfer.Offers
             else
             {
                 DataProvider.AddManagerOffer(offer);
-                this.DialogResult = DialogResult.OK;
+                DialogResult = DialogResult.OK;
             }
         }
 
@@ -62,6 +62,12 @@ namespace FootballTransfer.Offers
             {
                 e.Handled = true;
             }
+        }
+
+        private void TxtEnterClick_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                BtnCreateContract.PerformClick();
         }
     }
 }

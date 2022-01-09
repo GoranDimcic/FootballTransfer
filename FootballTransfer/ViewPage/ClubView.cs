@@ -65,7 +65,7 @@ namespace FootballTransfer.ViewPage
                 {
                     if (offer.Pending == "accepted")
                     {
-                        String[] row = { offer.PlayerEmail, offer.PlayerName, offer.Salary, offer.Duraction };
+                        String[] row = { offer.PlayerEmail, offer.PlayerName, offer.Salary + "$", offer.Duraction };
                         ListViewItem item = new ListViewItem(row);
                         listViewMyPlayers.Items.Add(item);
 
@@ -125,7 +125,7 @@ namespace FootballTransfer.ViewPage
             {
                 if (offer.ClubEmail == loggedClub.Email)
                 {
-                    String[] row = { offer.PlayerEmail, offer.PlayerName, offer.Salary, offer.Duraction };
+                    String[] row = { offer.PlayerEmail, offer.PlayerName, offer.Salary + "$", offer.Duraction };
                     ListViewItem item = new ListViewItem(row);
                     listViewMyOffers.Items.Add(item);
 
@@ -175,6 +175,7 @@ namespace FootballTransfer.ViewPage
             {
                 string PlayerEmail = listViewMyOffers.Items[i]
                                                         .SubItems[0].Text;
+
                 DataProvider.UpdateClubNameInClubOffer(ClubEmail, ClubName, ClubLeague, PlayerEmail);
             }
         }
@@ -192,12 +193,13 @@ namespace FootballTransfer.ViewPage
             {
                 string PlayerEmail = listViewMyOffers.Items[i]
                                                         .SubItems[0].Text;
+
                 DataProvider.DeleteClubInClubOffer(ClubEmail, PlayerEmail);
                 DataProvider.UpdatePlayerRejectedClubOffer(PlayerEmail);
             }
 
             DataProvider.DeleteClub(loggedClub);
-            this.DialogResult = DialogResult.OK;
+            DialogResult = DialogResult.OK;
         }
 
         private void BtnCreateOffer_Click(object sender, EventArgs e)
@@ -208,6 +210,7 @@ namespace FootballTransfer.ViewPage
                                                         .SubItems[0].Text;
                 string NamePlayer = listViewFreePlayers.SelectedItems[0]
                                                        .SubItems[1].Text;
+
                 OfferClub form = new OfferClub(EmailPlayer, NamePlayer, loggedClub);
                 form.ShowDialog();
 
@@ -356,6 +359,5 @@ namespace FootballTransfer.ViewPage
                 e.Handled = true;
             }
         }
-
     }
 }

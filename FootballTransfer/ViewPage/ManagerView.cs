@@ -63,7 +63,7 @@ namespace FootballTransfer.ViewPage
             {
                 if (offer.ManagerEmail == loggedManager.Email)
                 {
-                    String[] row = { offer.PlayerEmail, offer.PlayerName, offer.Offer, offer.Duraction };
+                    String[] row = { offer.PlayerEmail, offer.PlayerName, offer.Offer + "$", offer.Duraction };
                     ListViewItem item = new ListViewItem(row);
                     listViewMyOffers.Items.Add(item);
 
@@ -129,7 +129,7 @@ namespace FootballTransfer.ViewPage
                 {
                     if (offer.Pending == "accepted")
                     {
-                        String[] row = { offer.PlayerEmail, offer.PlayerName, offer.Offer, offer.Duraction };
+                        String[] row = { offer.PlayerEmail, offer.PlayerName, offer.Offer + "$", offer.Duraction };
                         ListViewItem item = new ListViewItem(row);
                         listViewMyPlayers.Items.Add(item);
 
@@ -179,6 +179,7 @@ namespace FootballTransfer.ViewPage
             {
                 string PlayerEmail = listViewMyOffers.Items[i]
                                                      .SubItems[0].Text;
+
                 DataProvider.UpdateManagerNameInManagerOffer(ManagerEmail, ManagerName, PlayerEmail);
             }
         }
@@ -196,12 +197,13 @@ namespace FootballTransfer.ViewPage
             {
                 string PlayerEmail = listViewMyOffers.Items[i]
                                                         .SubItems[0].Text;
+
                 DataProvider.DeleteManagerInManagerOffer(ManagerEmail, PlayerEmail);
                 DataProvider.UpdatePlayerRejectedManagerOffer(PlayerEmail);
             }
 
             DataProvider.DeleteManager(loggedManager);
-            this.DialogResult = DialogResult.OK;
+            DialogResult = DialogResult.OK;
         }
 
         private void BtnCreateOffer_Click(object sender, EventArgs e)

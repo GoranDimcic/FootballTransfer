@@ -54,7 +54,7 @@ namespace FootballTransfer.Offers
             this.TxtSelectedPlayerName.Name = "TxtSelectedPlayerName";
             this.TxtSelectedPlayerName.ReadOnly = true;
             this.TxtSelectedPlayerName.Size = new System.Drawing.Size(157, 26);
-            this.TxtSelectedPlayerName.TabIndex = 1;
+            this.TxtSelectedPlayerName.TabIndex = 4;
             // 
             // TxtSelectedPlayerEmail
             // 
@@ -63,7 +63,7 @@ namespace FootballTransfer.Offers
             this.TxtSelectedPlayerEmail.Name = "TxtSelectedPlayerEmail";
             this.TxtSelectedPlayerEmail.ReadOnly = true;
             this.TxtSelectedPlayerEmail.Size = new System.Drawing.Size(157, 26);
-            this.TxtSelectedPlayerEmail.TabIndex = 2;
+            this.TxtSelectedPlayerEmail.TabIndex = 5;
             // 
             // label2
             // 
@@ -111,7 +111,8 @@ namespace FootballTransfer.Offers
             this.TxtContractDuraction.Location = new System.Drawing.Point(201, 315);
             this.TxtContractDuraction.Name = "TxtContractDuraction";
             this.TxtContractDuraction.Size = new System.Drawing.Size(157, 26);
-            this.TxtContractDuraction.TabIndex = 8;
+            this.TxtContractDuraction.TabIndex = 1;
+            this.TxtContractDuraction.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             this.TxtContractDuraction.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumberOnly_KeyPress);
             // 
             // TxtContractOffer
@@ -120,7 +121,8 @@ namespace FootballTransfer.Offers
             this.TxtContractOffer.Location = new System.Drawing.Point(201, 355);
             this.TxtContractOffer.Name = "TxtContractOffer";
             this.TxtContractOffer.Size = new System.Drawing.Size(157, 26);
-            this.TxtContractOffer.TabIndex = 9;
+            this.TxtContractOffer.TabIndex = 2;
+            this.TxtContractOffer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             this.TxtContractOffer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumberOnly_KeyPress);
             // 
             // label5
@@ -172,7 +174,7 @@ namespace FootballTransfer.Offers
             this.BtnCreateContract.Location = new System.Drawing.Point(230, 400);
             this.BtnCreateContract.Name = "BtnCreateContract";
             this.BtnCreateContract.Size = new System.Drawing.Size(100, 40);
-            this.BtnCreateContract.TabIndex = 14;
+            this.BtnCreateContract.TabIndex = 3;
             this.BtnCreateContract.Text = "Create contract";
             this.BtnCreateContract.UseVisualStyleBackColor = true;
             this.BtnCreateContract.Click += new System.EventHandler(this.BtnCreateContract_Click);

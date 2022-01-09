@@ -57,7 +57,7 @@
             this.BtnUpdatePlayer.Location = new System.Drawing.Point(270, 31);
             this.BtnUpdatePlayer.Name = "BtnUpdatePlayer";
             this.BtnUpdatePlayer.Size = new System.Drawing.Size(100, 30);
-            this.BtnUpdatePlayer.TabIndex = 4;
+            this.BtnUpdatePlayer.TabIndex = 1;
             this.BtnUpdatePlayer.Text = "Update";
             this.BtnUpdatePlayer.UseVisualStyleBackColor = true;
             this.BtnUpdatePlayer.Click += new System.EventHandler(this.BtnUpdatePlayer_Click);
@@ -110,7 +110,7 @@
             this.txtPlayerName.Name = "txtPlayerName";
             this.txtPlayerName.ReadOnly = true;
             this.txtPlayerName.Size = new System.Drawing.Size(123, 19);
-            this.txtPlayerName.TabIndex = 13;
+            this.txtPlayerName.TabIndex = 2;
             // 
             // txtPlayerAddress
             // 
@@ -120,7 +120,7 @@
             this.txtPlayerAddress.Name = "txtPlayerAddress";
             this.txtPlayerAddress.ReadOnly = true;
             this.txtPlayerAddress.Size = new System.Drawing.Size(123, 19);
-            this.txtPlayerAddress.TabIndex = 14;
+            this.txtPlayerAddress.TabIndex = 3;
             // 
             // txtPlayerCountry
             // 
@@ -130,7 +130,7 @@
             this.txtPlayerCountry.Name = "txtPlayerCountry";
             this.txtPlayerCountry.ReadOnly = true;
             this.txtPlayerCountry.Size = new System.Drawing.Size(123, 19);
-            this.txtPlayerCountry.TabIndex = 15;
+            this.txtPlayerCountry.TabIndex = 4;
             // 
             // txtPlayerPosition
             // 
@@ -147,7 +147,7 @@
             this.BtnDeletePlayer.Location = new System.Drawing.Point(270, 70);
             this.BtnDeletePlayer.Name = "BtnDeletePlayer";
             this.BtnDeletePlayer.Size = new System.Drawing.Size(100, 30);
-            this.BtnDeletePlayer.TabIndex = 20;
+            this.BtnDeletePlayer.TabIndex = 6;
             this.BtnDeletePlayer.Text = "Delete";
             this.BtnDeletePlayer.UseVisualStyleBackColor = true;
             this.BtnDeletePlayer.Click += new System.EventHandler(this.BtnDeletePlayer_Click);
@@ -157,7 +157,7 @@
             this.BtnShowClubOffer.Location = new System.Drawing.Point(525, 200);
             this.BtnShowClubOffer.Name = "BtnShowClubOffer";
             this.BtnShowClubOffer.Size = new System.Drawing.Size(100, 40);
-            this.BtnShowClubOffer.TabIndex = 22;
+            this.BtnShowClubOffer.TabIndex = 10;
             this.BtnShowClubOffer.Text = "Club offer";
             this.BtnShowClubOffer.UseVisualStyleBackColor = true;
             this.BtnShowClubOffer.Click += new System.EventHandler(this.BtnShowClubOffer_Click);
@@ -168,7 +168,7 @@
             this.BtnRejectManagerOffer.Location = new System.Drawing.Point(645, 300);
             this.BtnRejectManagerOffer.Name = "BtnRejectManagerOffer";
             this.BtnRejectManagerOffer.Size = new System.Drawing.Size(100, 40);
-            this.BtnRejectManagerOffer.TabIndex = 26;
+            this.BtnRejectManagerOffer.TabIndex = 12;
             this.BtnRejectManagerOffer.Text = "Reject";
             this.BtnRejectManagerOffer.UseVisualStyleBackColor = false;
             this.BtnRejectManagerOffer.Click += new System.EventHandler(this.BtnRejectManagerOffer_Click);
@@ -179,7 +179,7 @@
             this.BtnAcceptManagerOffer.Location = new System.Drawing.Point(645, 250);
             this.BtnAcceptManagerOffer.Name = "BtnAcceptManagerOffer";
             this.BtnAcceptManagerOffer.Size = new System.Drawing.Size(100, 40);
-            this.BtnAcceptManagerOffer.TabIndex = 25;
+            this.BtnAcceptManagerOffer.TabIndex = 11;
             this.BtnAcceptManagerOffer.Text = "Accept";
             this.BtnAcceptManagerOffer.UseVisualStyleBackColor = false;
             this.BtnAcceptManagerOffer.Click += new System.EventHandler(this.BtnAcceptManagerOffer_Click);
@@ -187,10 +187,10 @@
             // BtnSaveUpdatedPlayer
             // 
             this.BtnSaveUpdatedPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSaveUpdatedPlayer.Location = new System.Drawing.Point(270, 30);
+            this.BtnSaveUpdatedPlayer.Location = new System.Drawing.Point(270, 31);
             this.BtnSaveUpdatedPlayer.Name = "BtnSaveUpdatedPlayer";
             this.BtnSaveUpdatedPlayer.Size = new System.Drawing.Size(100, 30);
-            this.BtnSaveUpdatedPlayer.TabIndex = 27;
+            this.BtnSaveUpdatedPlayer.TabIndex = 7;
             this.BtnSaveUpdatedPlayer.Text = "Save";
             this.BtnSaveUpdatedPlayer.UseVisualStyleBackColor = true;
             this.BtnSaveUpdatedPlayer.Visible = false;
@@ -209,7 +209,7 @@
             this.comboBoxUpdatePlayerPosition.Location = new System.Drawing.Point(125, 137);
             this.comboBoxUpdatePlayerPosition.Name = "comboBoxUpdatePlayerPosition";
             this.comboBoxUpdatePlayerPosition.Size = new System.Drawing.Size(123, 28);
-            this.comboBoxUpdatePlayerPosition.TabIndex = 16;
+            this.comboBoxUpdatePlayerPosition.TabIndex = 5;
             this.comboBoxUpdatePlayerPosition.Visible = false;
             // 
             // BtnCloseUpdate
@@ -217,7 +217,7 @@
             this.BtnCloseUpdate.Location = new System.Drawing.Point(270, 70);
             this.BtnCloseUpdate.Name = "BtnCloseUpdate";
             this.BtnCloseUpdate.Size = new System.Drawing.Size(100, 30);
-            this.BtnCloseUpdate.TabIndex = 29;
+            this.BtnCloseUpdate.TabIndex = 8;
             this.BtnCloseUpdate.Text = "Close";
             this.BtnCloseUpdate.UseVisualStyleBackColor = true;
             this.BtnCloseUpdate.Visible = false;
@@ -254,7 +254,7 @@
             this.BtnShowManagerOffer.Location = new System.Drawing.Point(400, 200);
             this.BtnShowManagerOffer.Name = "BtnShowManagerOffer";
             this.BtnShowManagerOffer.Size = new System.Drawing.Size(100, 40);
-            this.BtnShowManagerOffer.TabIndex = 21;
+            this.BtnShowManagerOffer.TabIndex = 9;
             this.BtnShowManagerOffer.Text = "Manager offer";
             this.BtnShowManagerOffer.UseVisualStyleBackColor = true;
             this.BtnShowManagerOffer.Click += new System.EventHandler(this.BtnShowManagerOffer_Click);
@@ -275,7 +275,7 @@
             this.BtnAcceptClubOffer.Location = new System.Drawing.Point(645, 250);
             this.BtnAcceptClubOffer.Name = "BtnAcceptClubOffer";
             this.BtnAcceptClubOffer.Size = new System.Drawing.Size(100, 40);
-            this.BtnAcceptClubOffer.TabIndex = 31;
+            this.BtnAcceptClubOffer.TabIndex = 13;
             this.BtnAcceptClubOffer.Text = "Accept";
             this.BtnAcceptClubOffer.UseVisualStyleBackColor = false;
             this.BtnAcceptClubOffer.Visible = false;
@@ -287,7 +287,7 @@
             this.BtnRejectClubOffer.Location = new System.Drawing.Point(645, 300);
             this.BtnRejectClubOffer.Name = "BtnRejectClubOffer";
             this.BtnRejectClubOffer.Size = new System.Drawing.Size(100, 40);
-            this.BtnRejectClubOffer.TabIndex = 32;
+            this.BtnRejectClubOffer.TabIndex = 14;
             this.BtnRejectClubOffer.Text = "Reject";
             this.BtnRejectClubOffer.UseVisualStyleBackColor = false;
             this.BtnRejectClubOffer.Visible = false;

@@ -155,7 +155,7 @@ namespace FootballTransfer.Offers
             this.TxtSelectedPlayerName.Name = "TxtSelectedPlayerName";
             this.TxtSelectedPlayerName.ReadOnly = true;
             this.TxtSelectedPlayerName.Size = new System.Drawing.Size(157, 26);
-            this.TxtSelectedPlayerName.TabIndex = 31;
+            this.TxtSelectedPlayerName.TabIndex = 4;
             // 
             // TxtSelectedPlayerEmail
             // 
@@ -164,7 +164,7 @@ namespace FootballTransfer.Offers
             this.TxtSelectedPlayerEmail.Name = "TxtSelectedPlayerEmail";
             this.TxtSelectedPlayerEmail.ReadOnly = true;
             this.TxtSelectedPlayerEmail.Size = new System.Drawing.Size(157, 26);
-            this.TxtSelectedPlayerEmail.TabIndex = 32;
+            this.TxtSelectedPlayerEmail.TabIndex = 5;
             // 
             // TxtClubName
             // 
@@ -173,7 +173,7 @@ namespace FootballTransfer.Offers
             this.TxtClubName.Name = "TxtClubName";
             this.TxtClubName.ReadOnly = true;
             this.TxtClubName.Size = new System.Drawing.Size(157, 26);
-            this.TxtClubName.TabIndex = 33;
+            this.TxtClubName.TabIndex = 6;
             // 
             // TxtClubEmail
             // 
@@ -182,7 +182,7 @@ namespace FootballTransfer.Offers
             this.TxtClubEmail.Name = "TxtClubEmail";
             this.TxtClubEmail.ReadOnly = true;
             this.TxtClubEmail.Size = new System.Drawing.Size(157, 26);
-            this.TxtClubEmail.TabIndex = 34;
+            this.TxtClubEmail.TabIndex = 7;
             // 
             // TxtClubLeague
             // 
@@ -191,7 +191,7 @@ namespace FootballTransfer.Offers
             this.TxtClubLeague.Name = "TxtClubLeague";
             this.TxtClubLeague.ReadOnly = true;
             this.TxtClubLeague.Size = new System.Drawing.Size(157, 26);
-            this.TxtClubLeague.TabIndex = 35;
+            this.TxtClubLeague.TabIndex = 8;
             // 
             // TxtContractDuraction
             // 
@@ -199,7 +199,8 @@ namespace FootballTransfer.Offers
             this.TxtContractDuraction.Location = new System.Drawing.Point(201, 355);
             this.TxtContractDuraction.Name = "TxtContractDuraction";
             this.TxtContractDuraction.Size = new System.Drawing.Size(157, 26);
-            this.TxtContractDuraction.TabIndex = 36;
+            this.TxtContractDuraction.TabIndex = 1;
+            this.TxtContractDuraction.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             this.TxtContractDuraction.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumberOnly_KeyPress);
             // 
             // TxtContractSalary
@@ -208,7 +209,8 @@ namespace FootballTransfer.Offers
             this.TxtContractSalary.Location = new System.Drawing.Point(201, 395);
             this.TxtContractSalary.Name = "TxtContractSalary";
             this.TxtContractSalary.Size = new System.Drawing.Size(157, 26);
-            this.TxtContractSalary.TabIndex = 37;
+            this.TxtContractSalary.TabIndex = 2;
+            this.TxtContractSalary.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             this.TxtContractSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumberOnly_KeyPress);
             // 
             // BtnCreateContract
@@ -216,7 +218,7 @@ namespace FootballTransfer.Offers
             this.BtnCreateContract.Location = new System.Drawing.Point(230, 440);
             this.BtnCreateContract.Name = "BtnCreateContract";
             this.BtnCreateContract.Size = new System.Drawing.Size(100, 40);
-            this.BtnCreateContract.TabIndex = 38;
+            this.BtnCreateContract.TabIndex = 3;
             this.BtnCreateContract.Text = "Create contract";
             this.BtnCreateContract.UseVisualStyleBackColor = true;
             this.BtnCreateContract.Click += new System.EventHandler(this.BtnCreateContract_Click);

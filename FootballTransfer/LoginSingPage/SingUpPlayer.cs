@@ -46,7 +46,7 @@ namespace FootballTransfer
                 else
                 {
                     DataProvider.AddPlayer(player);
-                    this.DialogResult = DialogResult.OK;
+                    DialogResult = DialogResult.OK;
                 }
             }
             else

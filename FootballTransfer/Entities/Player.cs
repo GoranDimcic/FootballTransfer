@@ -20,5 +20,9 @@ namespace FootballTransfer.Entities
         public string ManagerOffer { get; set; }
 
         public string ClubOffer { get; set; }
+
+        public List<ManagerOffer> ManagerOffers { get; set; }
+
+        public List<ClubOffer> ClubOffers { get; set; }
     }
 }

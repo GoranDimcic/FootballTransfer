@@ -43,7 +43,7 @@ namespace FootballTransfer.Login
                 else
                 {
                     DataProvider.AddManager(manager);
-                    this.DialogResult = DialogResult.OK;
+                    DialogResult = DialogResult.OK;
                 }
             }
             else

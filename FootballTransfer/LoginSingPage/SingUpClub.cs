@@ -45,7 +45,7 @@ namespace FootballTransfer.Login
                 else
                 {
                     DataProvider.AddClub(club);
-                    this.DialogResult = DialogResult.OK;
+                    DialogResult = DialogResult.OK;
                 }
             }
             else
