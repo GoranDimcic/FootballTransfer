@@ -274,6 +274,9 @@
     <EmbeddedResource Include="ViewPage\PlayerView.resx">
       <DependentUpon>PlayerView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewPage\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

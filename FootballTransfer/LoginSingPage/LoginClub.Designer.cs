@@ -44,7 +44,7 @@ namespace FootballTransfer.Login
             this.BtnLoginAsClub.Location = new System.Drawing.Point(150, 225);
             this.BtnLoginAsClub.Name = "BtnLoginAsClub";
             this.BtnLoginAsClub.Size = new System.Drawing.Size(150, 50);
-            this.BtnLoginAsClub.TabIndex = 11;
+            this.BtnLoginAsClub.TabIndex = 6;
             this.BtnLoginAsClub.Text = "Login";
             this.BtnLoginAsClub.UseVisualStyleBackColor = true;
             this.BtnLoginAsClub.Click += new System.EventHandler(this.BtnLoginAsClub_Click);
@@ -57,7 +57,7 @@ namespace FootballTransfer.Login
             this.lblPassword.Location = new System.Drawing.Point(16, 177);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(106, 25);
-            this.lblPassword.TabIndex = 10;
+            this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Password";
             // 
             // lblEmail
@@ -68,7 +68,7 @@ namespace FootballTransfer.Login
             this.lblEmail.Location = new System.Drawing.Point(50, 127);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(72, 25);
-            this.lblEmail.TabIndex = 9;
+            this.lblEmail.TabIndex = 1;
             this.lblEmail.Text = "E-mail";
             // 
             // txtPasswordLoginClub
@@ -77,7 +77,7 @@ namespace FootballTransfer.Login
             this.txtPasswordLoginClub.Location = new System.Drawing.Point(150, 175);
             this.txtPasswordLoginClub.Name = "txtPasswordLoginClub";
             this.txtPasswordLoginClub.Size = new System.Drawing.Size(150, 29);
-            this.txtPasswordLoginClub.TabIndex = 8;
+            this.txtPasswordLoginClub.TabIndex = 5;
             this.txtPasswordLoginClub.UseSystemPasswordChar = true;
             this.txtPasswordLoginClub.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
@@ -87,7 +87,7 @@ namespace FootballTransfer.Login
             this.txtEmailLoginClub.Location = new System.Drawing.Point(150, 125);
             this.txtEmailLoginClub.Name = "txtEmailLoginClub";
             this.txtEmailLoginClub.Size = new System.Drawing.Size(150, 29);
-            this.txtEmailLoginClub.TabIndex = 7;
+            this.txtEmailLoginClub.TabIndex = 4;
             this.txtEmailLoginClub.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEnterClick_KeyDown);
             // 
             // lblLoginPlayer
@@ -98,7 +98,7 @@ namespace FootballTransfer.Login
             this.lblLoginPlayer.Location = new System.Drawing.Point(165, 80);
             this.lblLoginPlayer.Name = "lblLoginPlayer";
             this.lblLoginPlayer.Size = new System.Drawing.Size(108, 25);
-            this.lblLoginPlayer.TabIndex = 6;
+            this.lblLoginPlayer.TabIndex = 3;
             this.lblLoginPlayer.Text = "Club login";
             // 
             // LoginClub

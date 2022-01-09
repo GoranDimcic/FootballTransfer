@@ -37,6 +37,28 @@ namespace FootballTransfer
             return getPlayer;
         }
 
+        public static Player GetNewPlayer(string PlayerEmail)
+        {
+            ISession session = SessionManager.GetSession();
+            Player getPlayer = new Player();
+
+            if (session == null)
+                return null;
+
+            Row playerData = session.Execute("select * from \"Player\" where \"email\"='" + PlayerEmail + "'").FirstOrDefault();
+
+            if (playerData != null)
+            {
+                getPlayer.Email = playerData["email"].ToString();
+                getPlayer.Name = playerData["name"].ToString();
+                getPlayer.Country = playerData["country"].ToString();
+                getPlayer.Position = playerData["position"].ToString();
+                getPlayer.Position = playerData["position"].ToString();
+            }
+
+            return getPlayer;
+        }
+
         public static List<Player> GetPlayers()
         {
             ISession session = SessionManager.GetSession();
